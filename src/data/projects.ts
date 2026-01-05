@@ -1,10 +1,13 @@
 import { Project } from "../types";
 
 export const projectsData: Project[] = [
-  // --- PROJETO 1: PREVMAX (Já existente) ---
+  // ========================================================================
+  // PROJETOS ATIVOS (Seus 2 projetos reais)
+  // ========================================================================
   {
     id: "prevmax-previdencia",
     title: "PrevMax — Case",
+    status: "active", // Marcado como ativo
     embedUrl:
       "https://embed.figma.com/proto/UowipTJL4ggqVwP828F6Eb/Portf%C3%B3lio-PLATAFORMA?page-id=0%3A1&node-id=4-4108&viewport=575%2C347%2C0.06&scaling=scale-down&content-scaling=fixed&starting-point-node-id=4%3A4094&embed-host=share",
     description:
@@ -52,7 +55,7 @@ Os componentes foram projetados no Figma e implementados de forma paralela no St
 Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identidade visual e cores foram adaptados para fins de portfólio, preservando a confidencialidade da empresa e mantendo a fidelidade ao processo, às decisões de design e aos desafios enfrentados.
     `,
     imageUrl: "/prevmax-capa.png",
-    category: "design",
+    category: "UX Strategy",
     tags: ["UX Research", "Design System", "Acessibilidade"],
     technologies: ["Figma", "Miro", "Microsoft Clarity", "Prototipagem"],
     client: "PrevMax",
@@ -86,12 +89,10 @@ Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identi
       },
     ],
   },
-
-  // --- PROJETO 2: SISTEMA DE NOTIFICAÇÕES (NOVO) ---
   {
     id: "sistema-notificacoes",
     title: "Redesign de Navegação e Sistema de Notificações",
-    // Se tiver link do Figma para este projeto, coloque aqui entre aspas:
+    status: "active", // Marcado como ativo
     embedUrl: "",
     description:
       "Solução focada em resolver gaps de comunicação crítica e modernizar a navegação de um sistema legado, utilizando heurísticas de Nielsen e padrões mentais consolidados.",
@@ -127,11 +128,11 @@ Garantia de 100% de rastreabilidade de quem leu os comunicados obrigatórios via
 **Satisfação do Usuário**
 Melhoria na percepção visual do sistema devido ao facelift do Header e organização da Inbox.
     `,
-    imageUrl: "/notificacoes-capa.png", // ⚠️ Lembre de colocar essa imagem na pasta public
-    category: "design",
+    imageUrl: "/notificacoes-capa.png",
+    category: "UI Design",
     tags: ["UI Design", "Heurísticas", "Arquitetura de Informação"],
     technologies: ["Figma", "Design System", "Prototipagem"],
-    client: "Confidencial", // Ou o nome do cliente se puder revelar
+    client: "Confidencial",
     role: "Product Designer",
     liveUrl: "#",
     githubUrl: "#",
@@ -149,5 +150,66 @@ Melhoria na percepção visual do sistema devido ao facelift do Header e organiz
         title: "Painel do Usuário: Inbox e Preferências",
       },
     ],
+  },
+
+  // ========================================================================
+  // PROJETOS FUTUROS (EM BREVE)
+  // ========================================================================
+  {
+    id: "crm-financeiro",
+    title: "Portal CRM ",
+    status: "coming-soon",
+    description:
+      "Gestão de relacionamento com cliente focado em cashback e portais administrativos.",
+    imageUrl: "",
+    category: "Web",
+    tags: ["Product Design", "B2B"],
+  },
+  {
+    id: "gestao-buffet",
+    title: "Sistema de Gestão de Buffet",
+    status: "coming-soon",
+    description:
+      "Interface para configuração de layouts de rampas e gestão de recipientes gastronômicos.",
+    imageUrl: "",
+    category: "Tablet App",
+    tags: ["UX Strategy", "User Flow"],
+  },
+  {
+    id: "sistema-pesagem",
+    title: "App de reserva de restaurante",
+    status: "coming-soon",
+    description:
+      "Solução para agendamento de reservas e otimização de filas em restaurante",
+    imageUrl: "",
+    category: "UI",
+    tags: ["Research", "UX/UI Design"],
+  },
+  {
+    id: "analise-genealogica",
+    title: "Melhorias do design system",
+    status: "coming-soon",
+    description: "Melhorias do design system",
+    imageUrl: "",
+    category: "UX/UI Design",
+    tags: ["Research", "UX Strategy"],
+  },
+  {
+    id: "landing-page-saas",
+    title: "Conciliação de parcelas em lote",
+    status: "coming-soon",
+    description: "Melhorias no fluxo de conciliação de parcelas em lote",
+    imageUrl: "",
+    category: "UX/UI Design",
+    tags: ["Web", "UX Strategy", "Design System"],
+  },
+  {
+    id: "dashboard-analytics",
+    title: "Esteira de sessão e CNAB",
+    status: "coming-soon",
+    description: "Painel de controle para esteira de sessão e CNAB.",
+    imageUrl: "",
+    category: "UX/UI Design",
+    tags: ["Dashboard", "UI Design"],
   },
 ];

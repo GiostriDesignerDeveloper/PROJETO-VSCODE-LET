@@ -1,6 +1,7 @@
 export interface Project {
   id: string;
   title: string;
+  status?: "active" | "coming-soon"; // <--- O segredo está aqui
   description: string;
   fullDescription?: string;
   imageUrl: string;
@@ -9,9 +10,8 @@ export interface Project {
   technologies?: string[];
   client?: string;
   role?: string;
-  timeline?: string; // Se você já adicionou antes
   liveUrl?: string;
   githubUrl?: string;
   embedUrl?: string;
-  gallery?: { url: string; title: string }[];
+  gallery?: any[];
 }
