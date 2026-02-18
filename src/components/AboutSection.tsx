@@ -47,12 +47,12 @@ const AboutSection = () => {
               Minha história
             </h3>
             <p className="text-gray-600 mb-4">
-              Atualmente, sou UX/UI Designer com formação em Design de Ambientes
+              Atualmente, sou Product Designer (UX/UI) com formação em Design de Ambientes
               pela Universidade Estadual de Minas Gerais e estou envolvida com
               design de interfaces e experiência do usuário há 3 anos.
             </p>
             <p className="text-gray-600 mb-6">
-              Designer de UX/UI com foco em transformar comportamento humano em
+             Product Designer (UX/UI) com foco em transformar comportamento humano em
               decisões de interface claras, eficientes e embasadas. Atuo
               conectando estética e funcionalidade com base em heurísticas de
               usabilidade, KPIs e fundamentos da psicologia cognitiva. Tenho
