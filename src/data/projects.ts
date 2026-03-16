@@ -156,6 +156,15 @@ Melhoria na percepção visual do sistema devido ao facelift do Header e organiz
   // PROJETOS FUTUROS (EM BREVE)
   // ========================================================================
   {
+    id: "analise-genealogica",
+    title: "Melhorias do design system",
+    status: "coming-soon",
+    description: "Melhorias do design system",
+    imageUrl: "",
+    category: "UX/UI Design",
+    tags: ["Research", "UX Strategy"],
+  },
+  {
     id: "crm-financeiro",
     title: "Portal CRM ",
     status: "coming-soon",
@@ -185,15 +194,7 @@ Melhoria na percepção visual do sistema devido ao facelift do Header e organiz
     category: "UI",
     tags: ["Research", "UX/UI Design"],
   },
-  {
-    id: "analise-genealogica",
-    title: "Melhorias do design system",
-    status: "coming-soon",
-    description: "Melhorias do design system",
-    imageUrl: "",
-    category: "UX/UI Design",
-    tags: ["Research", "UX Strategy"],
-  },
+  
   {
     id: "landing-page-saas",
     title: "Conciliação de parcelas em lote",
