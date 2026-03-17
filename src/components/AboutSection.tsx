@@ -49,7 +49,7 @@ const AboutSection = () => {
             <p className="text-gray-600 mb-4">
               Atualmente, sou Product Designer (UX/UI) com formação em Design de Ambientes
               pela Universidade Estadual de Minas Gerais e estou envolvida com
-              design de interfaces e experiência do usuário há 3 anos.
+              design de interfaces e experiência do usuário há 4 anos.
             </p>
             <p className="text-gray-600 mb-6">
              Product Designer (UX/UI) com foco em transformar comportamento humano em
