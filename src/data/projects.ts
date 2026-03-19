@@ -151,7 +151,72 @@ Melhoria na percepção visual do sistema devido ao facelift do Header e organiz
       },
     ],
   },
+// --- PROJETO 3: DESIGN SYSTEM (NOVO) ---
+  {
+    id: "evolucao-design-system",
+    title: "Evolução e Escalabilidade de Design System",
+    embedUrl: "", // Deixe vazio se não for embedar o Figma
+    description:
+      "Estruturação de Design Ops, adoção de Figma Variables e mentoria técnica para elevar a maturidade de um Design System corporativo em constante evolução.",
+    fullDescription: `
+**O CONTEXTO**
+Ao assumir o projeto, a empresa já possuía um Design System inicial, porém com uma estrutura "básica" que não acompanhava a velocidade de crescimento dos produtos. Faltava padronização em níveis mais profundos (tokens) e documentação funcional, o que gerava gargalos no hand-off e retrabalho constante.
 
+**O DESAFIO**
+Transformar uma biblioteca visual estática em um ecossistema de design vivo, escalável e de fácil manutenção, sem pausar as entregas do dia a dia (trocar o pneu com o carro andando). Além disso, havia o desafio cultural de aculturar o time de design sobre boas práticas de componentização.
+
+**ESTRATÉGIA E EXECUÇÃO (DESIGN OPS)**
+Para garantir que o Design System fosse não apenas um repositório, mas uma ferramenta de aceleração, atuei nas seguintes frentes:
+
+**1. Arquitetura de Variáveis e Tokens**
+• Implementação avançada de Figma Variables, estruturando coleções lógicas para Espaçamentos, Border Radius e Cores (com suporte nativo a Light/Dark Mode).
+• Separação de cores primitivas (paleta base) de cores semânticas (tokens de ação, erro, sucesso), blindando o sistema contra quebras visuais e facilitando a manutenção em massa.
+
+**2. Componentização Avançada e Documentação**
+• Reestruturação de componentes complexos (Headers, Side Navigations, Badges) utilizando Auto Layout, propriedades de componentes (Variants, Booleans) e regras de acessibilidade.
+• Criação de guias de uso exaustivos: cada componente passou a ter documentação de anatomia, estados (Default, Hover, Disabled), regras de comportamento e princípios de UX atrelados (ex: quando usar cada tipo de navegação).
+
+**3. Cultura e Mentoria**
+• A tecnologia não se sustenta sem as pessoas. Promovi o repasse de conhecimento prático sobre componentização e uso de variáveis, elevando a barra técnica de todo o time de design e garantindo que o sistema fosse adotado e mantido corretamente.
+
+**IMPACTO E BUSINESS KPIs**
+
+**Redução de Design Debt (Dívida Técnica)**
+A padronização via variáveis reduziu drasticamente o tempo gasto corrigindo inconsistências visuais em diferentes telas do produto.
+
+**Time-to-Market (Velocidade de Entrega)**
+Com componentes robustos e bem documentados, o esforço cognitivo na criação de novas interfaces caiu consideravelmente, permitindo ao time focar na estratégia e no usuário, não no "desenho do botão".
+
+**Onboarding e Curva de Aprendizado**
+A documentação profunda serve como material de treinamento instantâneo para novos designers e desenvolvedores, garantindo alinhamento técnico desde o dia zero.
+    `,
+    imageUrl: "/ds-capa.png", // ⚠️ Lembre de salvar uma capa com esse nome
+    category: "design",
+    tags: ["Design System", "Design Ops", "Figma Variables"],
+    technologies: ["Figma", "Tokens", "Documentação", "Mentoria"],
+    client: "Teknisa", // Ou "Confidencial"
+    role: "Product Designer / UI",
+    liveUrl: "#",
+    githubUrl: "#",
+    gallery: [
+      {
+        url: "/ds-variaveis.png", // ⚠️ Imagem das suas Figma Variables
+        title: "Estruturação de Variáveis: Espaçamentos, Radius e Modos de Cor",
+      },
+      {
+        url: "/ds-cores.png", // ⚠️ Imagem da sua paleta de cores primitivas
+        title: "Inventário de Cores Primitivas e Escalas",
+      },
+      {
+        url: "/ds-documentacao.png", // ⚠️ Imagem da documentação do Header
+        title: "Documentação Funcional: Regras de UX e Anatomia de Componentes",
+      },
+      {
+        url: "/ds-pastas.png", // ⚠️ Imagem da organização das pastas
+        title: "Taxonomia e Organização Lógica do Repositório",
+      },
+    ],
+  },
   // ========================================================================
   // PROJETOS FUTUROS (EM BREVE)
   // ========================================================================
