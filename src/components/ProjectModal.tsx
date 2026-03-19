@@ -21,7 +21,6 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
     if (!text) return null;
     return text.split("**").map((part, index) =>
       index % 2 === 1 ? (
-        // 👇 MUDANÇA AQUI: Troquei 'mb-4' por 'mb-1' para diminuir o espaço
         <strong key={index} className="text-gray-900 font-bold block mt-8 mb-1">
           {part}
         </strong>
@@ -47,11 +46,11 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
         </button>
 
         {/* Capa */}
-        <div className="w-full relative">
+        <div className="w-full relative bg-gray-50">
           <img
             src={project.imageUrl}
             alt={project.title}
-            className="w-full h-auto max-h-[500px] object-cover"
+            className="w-full h-auto max-h-[500px] object-contain mx-auto"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end">
             <div className="p-8 md:p-12 text-white w-full">
@@ -115,13 +114,14 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
               </h3>
               <div className="grid grid-cols-1 gap-16">
                 {project.gallery.map((item, index) => (
-                  <div key={index} className="space-y-4">
+                  <div key={index} className="space-y-4 flex flex-col items-center">
+                    {/* 👇 MUDANÇA AQUI: Ajuste do tamanho das imagens da galeria */}
                     <img
                       src={item.url}
                       alt={item.title}
-                      className="w-full rounded-xl shadow-lg border border-gray-100"
+                      className="max-w-full h-auto max-h-[700px] object-contain rounded-xl shadow-lg border border-gray-100"
                     />
-                    <p className="text-center text-gray-600 font-medium text-lg italic border-l-4 border-blue-600 pl-4 py-1 bg-gray-50 rounded-r">
+                    <p className="w-full text-center text-gray-600 font-medium text-lg italic border-l-4 border-blue-600 pl-4 py-1 bg-gray-50 rounded-r">
                       {item.title}
                     </p>
                   </div>
