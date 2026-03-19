@@ -289,6 +289,54 @@ A criação de um ambiente controlado e rastreável melhorou os níveis de compl
       },
     ],
   },
+  // --- PROJETO 5: HEALTHDASH (AUDITORIA UX) ---
+  {
+    id: "healthdash-auditoria-usabilidade",
+    title: "HealthDash — Auditoria e Interface Responsiva",
+    embedUrl: "", 
+    description:
+      "Auditoria heurística e proposta de redesign responsivo para um sistema de gestão nutricional hospitalar, focado em eficiência operacional e segurança do paciente.",
+    fullDescription: `
+**1. O DESAFIO (CONTEXTO)**
+Otimizar a interface de um sistema de gestão nutricional hospitalar utilizado em dispositivos móveis (tablets). O objetivo era garantir que nutricionistas e equipes de copa pudessem acessar dados críticos de pacientes com rapidez e precisão, mesmo em ambientes de alta pressão.
+
+**2. METODOLOGIA: AUDITORIA DE INTERFACE (HEURÍSTICAS DE UX)**
+Realizei uma análise minuciosa identificando falhas críticas que impactavam a Eficiência Operacional e a Acessibilidade.
+
+**Principais Problemas Mapeados:**
+• **Hierarquia Visual e Legibilidade:** Títulos e dados do paciente tinham o mesmo peso visual, dificultando a leitura rápida (Scannability).
+• **Conflito de Atenção:** Imagens de fundo competiam com dados vitais do paciente, prejudicando o contraste.
+• **Falhas de Acessibilidade em Touch Targets:** Ícones e botões possuíam áreas de toque inferiores ao padrão de 44x44px, gerando erros de interação em tablets.
+• **Quebra de Responsividade:** O layout "desintegrava" ao alternar entre as orientações paisagem e retrato, ocultando botões de ação críticos como "Salvar".
+
+**3. SOLUÇÕES E MELHORIAS PROPOSTAS**
+Com base em fundamentos científicos de design e usabilidade, propus as seguintes refatorações:
+
+• **Estabelecimento de Hierarquia Tipográfica:** Uso de pesos variados (Bold para dados, Regular para rótulos) para guiar o olho do usuário instantaneamente para a informação necessária.
+• **Otimização de Componentes de Formulário:** Substituição de modais centrais (que eram cobertos pelo teclado virtual) por páginas dedicadas ou grids fluidos.
+• **Feedback Visual de Status:** Implementação de estados visuais claros (Tags/Badges) para indicar o status da prescrição (Ativa, Em Espera, Concluída).
+• **Grid Responsivo e Ergonômico:** Reconstrução da interface sobre um grid fluido, permitindo a navegação lateral facilitada para o alcance do polegar em tablets.
+• **Redução de Carga Cognitiva:** Padronização de ícones universais (como a lupa para busca e setas para navegação entre pacientes) para tornar a interface intuitiva sem necessidade de treinamento.
+
+**4. VISÃO ESTRATÉGICA (BUSINESS KPIs)**
+As melhorias propostas visam impactar diretamente os seguintes indicadores:
+
+**Time-on-Task (Eficiência)**
+Redução do tempo necessário para preencher uma prescrição dietética ao eliminar ciclos de erro com teclado e rolagem de modal.
+
+**Error Rate (Segurança do Paciente)**
+Minimizar toques acidentais e interpretação errada de dados através de contraste e touch targets adequados.
+    `,
+    imageUrl: "/healthdash-capa.png", // ⚠️ Lembre de colocar essa imagem de ilustração na pasta public
+    category: "design",
+    tags: ["UX Audit", "Healthcare", "Responsive Design", "Heurísticas"],
+    technologies: ["Figma", "UX Research", "Acessibilidade", "UI Design"],
+    client: "HealthDash", 
+    role: "UX/UI Designer",
+    liveUrl: "#",
+    githubUrl: "#",
+    // Galeria removida para focar na capa ilustrativa e no peso estratégico do texto.
+  },
   // ========================================================================
   // PROJETOS FUTUROS (EM BREVE)
   // ========================================================================
