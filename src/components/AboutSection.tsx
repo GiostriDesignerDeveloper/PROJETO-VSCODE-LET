@@ -52,15 +52,9 @@ const AboutSection = () => {
               design de interfaces e experiência do usuário há 4 anos.
             </p>
             <p className="text-gray-600 mb-6">
-             Product Designer (UX/UI) com foco em transformar comportamento humano em
-              decisões de interface claras, eficientes e embasadas. Atuo
-              conectando estética e funcionalidade com base em heurísticas de
-              usabilidade, KPIs e fundamentos da psicologia cognitiva. Tenho
-              experiência em pesquisa comportamental, arquitetura da informação,
-              prototipação (Figma), testes de usabilidade e desenvolvimento de
-              soluções digitais responsivas. Valorizo consistência visual,
-              lógica de navegação e colaboração com times de produto, tecnologia
-              e negócio.
+             Product Designer (UI/UX) com 4 anos de experiência  em produtos digitais B2B e ecossistemas de alta complexidade. Minha atuação é pautada pela entrega de valor estratégico através de UX Research, Design Systems escaláveis e análise de KPIs de produto.
+
+Atualmente, na Teknisa , atuo ativamente no refinamento técnico do Design System. Implementei estruturas avançadas de variáveis e componentização complexa no Figma, focando em Eficiência Operacional para reduzir o débito técnico e otimizar o processo de handover. O amadurecimento dessa estrutura despertou o interesse de outras unidades de negócio na replicação desse padrão, contribuindo para o Brand Equity interno da companhia.
               <p className="text-gray-600 mb-6">
                 Estou constantemente me atualizando, aprendendo novas linguagens
                 de programação (HTML,CSS, Javascript) e aprofundando meu
@@ -70,6 +64,19 @@ const AboutSection = () => {
                 problemas reais. Estou sempre buscando formas de validar
                 decisões com dados, e priorizo decisões orientadas por testes e
                 evidências.
+
+                Projeto destaque :
+Responsável pela concepção e design do novo sistema de gerenciamento de desperdícios em restaurantes, focado em transformar regras de negócio densas em uma interface digital intuitiva para cozinhas industriais. Por meio de UX Research e Discovery  (entrevistas qualitativas e desk research), mapeei dores reais para projetar um fluxo de pesagem eficiente, visando a futura redução de perdas financeiras e maior precisão nos dados operacionais dos clientes.
+
+Tenho passagens estratégicas pelo CDC Bank, redesenhando fluxos financeiros críticos (Conciliação e Operações), e pela JCM Consultores.
+Principais empresas: Teknisa, CDC Bank, JCM Consultores, Givisiez.
+Habilidades & Stack:
+
+* Estratégia e Operação: UX Research, Discovery, Design Systems (Tokens/Variables) e métricas de usabilidade, Storytelling.
+* Design & Prototipação: Figma (Avançado), Arquitetura da Informação e fluxos complexos.
+* Interface com Tech: Estudos em Front-end (React, HTML/CSS) e uso de IAs generativas para otimização de workflow.
+* Formação: Graduada em Design pela UEMG, com estudos complementares em Neurociência Cognitiva da Criatividade.
+* Idiomas: Inglês B2 Upper Intermediate (EF SET).
               </p>
             </p>
             <Link
