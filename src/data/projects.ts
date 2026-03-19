@@ -127,6 +127,9 @@ Garantia de 100% de rastreabilidade de quem leu os comunicados obrigatórios via
 
 **Satisfação do Usuário**
 Melhoria na percepção visual do sistema devido ao facelift do Header e organização da Inbox.
+
+**NOTA DE CONFIDENCIALIDADE**
+Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identidade visual e cores foram adaptados para fins de portfólio, preservando a confidencialidade da empresa e mantendo a fidelidade ao processo, às decisões de design e aos desafios enfrentados.
     `,
     imageUrl: "/notificacoes-capa.png",
     category: "UI Design",
@@ -189,6 +192,9 @@ Com componentes robustos e bem documentados, o esforço cognitivo na criação d
 
 **Onboarding e Curva de Aprendizado**
 A documentação profunda serve como material de treinamento instantâneo para novos designers e desenvolvedores, garantindo alinhamento técnico desde o dia zero.
+
+**NOTA DE CONFIDENCIALIDADE**
+Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identidade visual e cores foram adaptados para fins de portfólio, preservando a confidencialidade da empresa e mantendo a fidelidade ao processo, às decisões de design e aos desafios enfrentados.
     `,
     imageUrl: "/ds-capa.png", // ⚠️ Lembre de salvar uma capa com esse nome
     category: "design",
@@ -256,6 +262,9 @@ A clareza na interface de comparação de múltiplas propostas elevou a taxa de 
 
 **Adoção e Governança**
 A criação de um ambiente controlado e rastreável melhorou os níveis de compliance (conformidade) do processo de compras corporativas.
+
+**NOTA DE CONFIDENCIALIDADE**
+Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identidade visual e cores foram adaptados para fins de portfólio, preservando a confidencialidade da empresa e mantendo a fidelidade ao processo, às decisões de design e aos desafios enfrentados.
     `,
     // 👇 ESCOLHI ESTA IMAGEM COMO CAPA POR MOSTRAR O CORAÇÃO DO SISTEMA
     imageUrl: "/cotação.png", 
@@ -326,6 +335,9 @@ Redução do tempo necessário para preencher uma prescrição dietética ao eli
 
 **Error Rate (Segurança do Paciente)**
 Minimizar toques acidentais e interpretação errada de dados através de contraste e touch targets adequados.
+
+**NOTA DE CONFIDENCIALIDADE**
+Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identidade visual e cores foram adaptados para fins de portfólio, preservando a confidencialidade da empresa e mantendo a fidelidade ao processo, às decisões de design e aos desafios enfrentados.
     `,
     imageUrl: "/healthdash-capa.png", // ⚠️ Lembre de colocar essa imagem de ilustração na pasta public
     category: "design",
