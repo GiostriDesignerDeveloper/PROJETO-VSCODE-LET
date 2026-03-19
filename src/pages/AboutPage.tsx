@@ -155,10 +155,7 @@ Responsável pela concepção e design do novo sistema de gerenciamento de despe
 
 Tenho passagens estratégicas pelo CDC Bank, redesenhando fluxos financeiros críticos (Conciliação e Operações), e pela JCM Consultores.
 
-
-                </p>
-                <p>
-                  Principais empresas: Teknisa, CDC Bank, JCM Consultores, Givisiez.
+Principais empresas: Teknisa, CDC Bank, JCM Consultores, Givisiez.
 
 Habilidades & Stack:
 
@@ -167,6 +164,11 @@ Habilidades & Stack:
 * Interface com Tech: Estudos em Front-end (React, HTML/CSS) e uso de IAs generativas para otimização de workflow.
 * Formação: Graduada em Design pela UEMG, com estudos complementares em Neurociência Cognitiva da Criatividade.
 * Idiomas: Inglês B2 Upper Intermediate (EF SET).
+                </p>
+                <p>
+                  Tenho forte colaboração com times de Produto, Engenharia e
+                  Stakeholders, traduzindo requisitos técnicos e regulatórios em
+                  experiências claras, escaláveis e viáveis.
                 </p>
               </div>
             </section>

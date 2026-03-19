@@ -217,6 +217,78 @@ A documentação profunda serve como material de treinamento instantâneo para n
       },
     ],
   },
+  // --- PROJETO 4: PLATAFORMA B2B DE COMPRAS (ATUALIZADO COM IMAGENS REAIS) ---
+  {
+    id: "plataforma-b2b-compras",
+    title: "Plataforma B2B de Compras e Cotações",
+    embedUrl: "", // Adicione o link do protótipo do Figma se houver
+    description:
+      "Estruturação end-to-end de um sistema B2B, otimizando o fluxo de negociação entre empresas e fornecedores com foco em eficiência operacional e redução de carga cognitiva.",
+    fullDescription: `
+**O CONTEXTO E O DESAFIO**
+O ecossistema de compras corporativas costuma ser fragmentado e burocrático. O desafio deste projeto foi centralizar todo o fluxo de compras — da solicitação de cotação à geração da ordem de compra final. O objetivo do negócio era claro: aumentar a governança, garantir o melhor custo-benefício nas negociações e acelerar a tomada de decisão através de um ambiente transparente e estruturado.
+
+**PAIR DESIGN E CO-CRIAÇÃO**
+A complexidade de um produto B2B dessa magnitude exige colaboração contínua. Atuei neste projeto em forte dinâmica de Pair Design com a designer Amanda Guimarães. Dividir o discovery e o delivery nos permitiu debater fluxos críticos com maior profundidade, cruzar diferentes perspectivas de usabilidade e garantir entregas mais robustas, mantendo o alinhamento constante com os times de Produto e Engenharia.
+
+**ESTRATÉGIA DE UX E MINHA ATUAÇÃO**
+Foquei na estruturação do produto e no desenho de fluxos de alta criticidade, garantindo que a complexidade do sistema legado não fosse repassada para a interface do usuário:
+
+**1. Mapeamento de Perfis e Permissões**
+• Modelagem de arquitetura de informação e jornadas distintas para múltiplos atores (Compradores, Fornecedores e Administradores), blindando o sistema com uma definição clara de regras de negócio e acessos.
+
+**2. Redução de Carga Cognitiva**
+• Desenho de interfaces focadas na comparação simultânea de propostas. O uso de padrões visuais claros e hierarquia de informação bem definida facilitou a análise de variáveis complexas por parte dos compradores, apoiando uma tomada de decisão mais rápida e segura.
+
+**3. Equilíbrio entre Automação e Controle Humano**
+• Estruturação de fluxos de cotação e negociação que aproveitam a automação do sistema para eliminar retrabalho, mas mantêm pontos de verificação cruciais na mão do usuário, garantindo segurança operacional.
+
+**4. Validação e Usabilidade**
+• Planejamento estratégico de testes de usabilidade para validação das interfaces pós-desenvolvimento, definindo objetivos de pesquisa, recrutamento de perfis corretos e métricas de sucesso baseadas na experiência real do usuário B2B.
+
+**IMPACTO E BUSINESS KPIs ATINGIDOS (UX Metrics)**
+
+**Time-to-Task (Eficiência Operacional)**
+A centralização do fluxo e a integração inteligente com sistemas legados reduziram o tempo de execução e o retrabalho histórico nas negociações.
+
+**Task Success Rate**
+A clareza na interface de comparação de múltiplas propostas elevou a taxa de sucesso e a assertividade na escolha de fornecedores, impactando diretamente o *bottom line* da empresa.
+
+**Adoção e Governança**
+A criação de um ambiente controlado e rastreável melhorou os níveis de compliance (conformidade) do processo de compras corporativas.
+    `,
+    // 👇 ESCOLHI ESTA IMAGEM COMO CAPA POR MOSTRAR O CORAÇÃO DO SISTEMA
+    imageUrl: "/cotação.png", 
+    category: "design",
+    tags: ["UX Strategy", "B2B", "Pair Design"],
+    technologies: ["Figma", "Auto Layout", "Pair Design", "Testes de Usabilidade"],
+    client: "Confidencial",
+    role: "UX/UI Designer",
+    liveUrl: "#",
+    githubUrl: "#",
+    gallery: [
+      {
+        url: "/negociação.png",
+        title: "Fluxo de Negociação: Gestão de status e termos entre partes.",
+      },
+      {
+        url: "/cadastro-preços-fornecedores.png",
+        title: "Comparação de Propostas: Base de dados estruturada para análise de preços e fornecedores.",
+      },
+      {
+        url: "/cadastro_fornecedor.jpg",
+        title: "Cadastro de Fornecedor: Estruturação de dados complexos com Auto Layout.",
+      },
+      {
+        url: "/perfil-edição.png",
+        title: "Edição de Perfil: Mapeamento de perfis e gestão de dados do usuário.",
+      },
+      {
+        url: "/login.jpg",
+        title: "Portal de Acesso: Entrada do ecossistema B2B.",
+      },
+    ],
+  },
   // ========================================================================
   // PROJETOS FUTUROS (EM BREVE)
   // ========================================================================
