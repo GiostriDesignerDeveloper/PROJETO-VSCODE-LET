@@ -1,69 +1,119 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Briefcase, GraduationCap } from "lucide-react"; // Removi o ícone Download
+import { Briefcase, GraduationCap } from "lucide-react";
 
 const AboutPage = () => {
+  // Utilizamos JSX direto na descrição para permitir uma formatação rica (negritos e listas)
   const experiences = [
     {
       period: "Jul 2025 - Atual",
       title: "UI/UX Designer",
       company: "Teknisa",
-      description: `
-• Condução de pesquisas qualitativas e diagnósticos operacionais com key users de sistemas corporativos B2B, identificando dores reais, gaps de processo e exceções críticas.
-• Estruturação de formulários de diagnóstico UX com foco na redução de carga cognitiva e aumento da taxa de resposta, gerando insumos acionáveis para decisões de produto.
-• Tradução de regras de negócio e requisitos técnicos em soluções de design claras, viáveis e orientadas à usabilidade.
-• Mapeamento e redesign de fluxos complexos, priorizando eficiência operacional e redução de etapas manuais.
-• Análise e otimização de jornadas com foco na redução de cliques, eliminação de redundâncias e simplificação do uso.
-• Criação de mapas de fluxo unificados, alinhando necessidades do usuário, dependências técnicas e objetivos de negócio.
-• Desenvolvimento de interfaces e protótipos navegáveis no Figma, com layouts orientados a dados, hierarquia visual clara e aderência a heurísticas de usabilidade e Design System.
-• Atuação colaborativa com Product Managers, Tech Leads e stakeholders, viabilizando decisões orientadas a dados.
-`,
+      description: (
+        <div className="space-y-4 mt-4 text-gray-700">
+          <div>
+            <strong className="text-gray-900 block mb-2">Responsável por:</strong>
+            <ul className="list-disc pl-5 space-y-1">
+              <li><strong>UX Research e Discovery:</strong> Condução de pesquisas qualitativas, diagnósticos operacionais, entrevistas, desk research, card sorting e testes de usabilidade com key users de sistemas corporativos.</li>
+              <li><strong>Mapeamento de Processos End-to-End:</strong> Levantamento de dores, gaps operacionais e regras de negócio complexas, traduzindo insumos técnicos em requisitos de design funcionais.</li>
+              <li><strong>Design de Interação e Interface:</strong> Desenvolvimento de wireframes, protótipos navegáveis e layouts no Figma, com foco em hierarquia visual, acessibilidade e conformidade com heurísticas.</li>
+              <li><strong>Arquitetura e Redesign de Fluxos:</strong> Criação de mapas de fluxo unificados e redesign de jornadas críticas (Recebimento Requisição Produção Resíduos), priorizando a simplificação.</li>
+              <li><strong>Articulação e Estratégia:</strong> Colaboração constante com Tech Leads e stakeholders para viabilizar decisões de produto orientadas a dados.</li>
+            </ul>
+          </div>
+          <div>
+            <strong className="text-gray-900 block mb-2">Realizações a destacar:</strong>
+            <ul className="list-disc pl-5 space-y-1">
+              <li><strong>Eficiência Operacional:</strong> Redesenhei jornadas críticas de ponta a ponta, focando na redução de cliques e etapas manuais, gerando maior fluidez nos processos.</li>
+              <li><strong>Otimização de Diagnósticos UX:</strong> Estruturei formulários com foco em redução de carga cognitiva, aumentando a taxa de resposta e fornecendo insumos mais acionáveis.</li>
+              <li><strong>Alinhamento de Regras de Negócio:</strong> Traduzi dependências técnicas e exceções operacionais complexas em interfaces claras.</li>
+              <li><strong>Decisão Orientada a Dados:</strong> Mitiguei riscos de desenvolvimento através do levantamento de requisitos e testes de aderência técnica.</li>
+            </ul>
+          </div>
+        </div>
+      ),
     },
     {
       period: "Out 2024 - Jul 2025",
-      title: "UI/UX Designer",
+      title: "Product Designer",
       company: "CDC Bank",
-      description: `
-• Estruturação e evolução do Design System corporativo, acelerando o time-to-design e reduzindo o esforço na criação de novas interfaces e componentes reutilizáveis.
-• Redesign da jornada de conciliação de pagamentos, simplificando fluxos críticos e contribuindo para a redução de chamados ao suporte e retrabalho operacional.
-• Criação de wireframes e protótipos navegáveis no Figma, apoiando testes com usuários, validações com stakeholders e decisões orientadas a dados.
-• Atuação colaborativa com as equipes de Produto e Desenvolvimento, garantindo consistência visual, aderência às regras de negócio e viabilidade técnica das soluções.
-• Criação de melhorias e redesenhos em fluxos estratégicos, incluindo:
-  – Fluxo de conciliação financeira
-  – Central de notificações
-  – Modais de definição de parâmetros de alçada de crédito
-  – Cadastro unificado de usuários e entidades
-  – Esteira de cessão CNAB
-  – Reformulação do fluxo de recompra
-  – Otimizações na esteira de operações
-  – Reorganização da hierarquia e estrutura de containers
-`,
+      description: (
+        <div className="space-y-4 mt-4 text-gray-700">
+          <div>
+            <strong className="text-gray-900 block mb-2">Responsável por:</strong>
+            <ul className="list-disc pl-5 space-y-1">
+              <li><strong>Arquitetura e Prototipação:</strong> Organização da arquitetura da informação e criação de wireframes e protótipos navegáveis no Figma para validações rápidas.</li>
+              <li><strong>Design de Produto (BaaS & CaaS):</strong> Design e evolução de interfaces para soluções de Banking as a Service e Content as a Service, focando em eficiência operacional.</li>
+              <li><strong>Refinamento de Fluxos Operacionais:</strong> Redesign de fluxos financeiros, incluindo conciliação, central de notificações, alçadas de crédito, cadastro unificado, e esteira de operações.</li>
+              <li><strong>Governança:</strong> Evolução e manutenção do Design System para garantir consistência visual e escalabilidade.</li>
+              <li><strong>Colaboração Multidisciplinar:</strong> Atuação integrada com PMs e desenvolvedores para garantir viabilidade técnica.</li>
+            </ul>
+          </div>
+          <div>
+            <strong className="text-gray-900 block mb-2">Realizações a destacar:</strong>
+            <ul className="list-disc pl-5 space-y-1">
+              <li><strong>Otimização da Jornada de Conciliação:</strong> Redesenho do fluxo, reduzindo fricções operacionais, erros de uso e volume de chamados ao suporte.</li>
+              <li><strong>Escalabilidade e Time-to-Market:</strong> A criação do Design System permitiu aceleração nas entregas de novas funcionalidades e consistência entre produtos.</li>
+              <li><strong>Decisões Orientadas a Dados:</strong> Implementação de testes com usuários antes do desenvolvimento, mitigando riscos de retrabalho.</li>
+              <li><strong>Eficiência em Fluxos Complexos:</strong> Melhoria da usabilidade em interfaces de back-office, reduzindo o tempo de execução de tarefas críticas.</li>
+            </ul>
+          </div>
+        </div>
+      ),
     },
     {
       period: "Dez 2022 - Jun 2024",
-      title: "UI/UX Designer",
+      title: "Product Designer",
       company: "JCM Consultores",
-      description: `
-• Atuação no design de interfaces para uma plataforma de previdência complementar fechada, considerando requisitos regulatórios, regras de negócio complexas e as necessidades de um público com maior demanda por acessibilidade e clareza.
-• Condução de pesquisas e análises de dados para embasar decisões de design, reduzindo suposições e aumentando a assertividade das soluções propostas.
-• Criação e manutenção de um Design System, promovendo consistência visual, reutilização de componentes e ganho de eficiência no desenvolvimento de novas funcionalidades.
-• Desenvolvimento de interfaces e componentes do style guide, garantindo coerência entre produtos, facilidade de manutenção e escalabilidade da interface.
-• Realização de design reviews contínuos, elevando a qualidade das entregas, reduzindo inconsistências e alinhando o time às boas práticas de UX e UI.
-• Tradução de regras de negócio complexas em fluxos intuitivos, priorizando usabilidade, acessibilidade e redução de erros operacionais.
-`,
+      description: (
+        <div className="space-y-4 mt-4 text-gray-700">
+          <div>
+            <strong className="text-gray-900 block mb-2">Responsável por:</strong>
+            <ul className="list-disc pl-5 space-y-1">
+              <li><strong>UX Research e Discovery:</strong> Condução ponta a ponta (entrevistas, desk research, card sorting, testes de usabilidade e análise de dados).</li>
+              <li><strong>Design de Interface (UI):</strong> Desenvolvimento focado em usabilidade, acessibilidade e redução de carga cognitiva para fluxos financeiros complexos.</li>
+              <li><strong>Estruturação de Design System:</strong> Criação e manutenção de style guide completo e documentação técnica.</li>
+              <li><strong>Prototipação e Alinhamento:</strong> Tradução de requisitos operacionais em fluxos claros para alinhamento entre stakeholders e tech.</li>
+              <li><strong>Colaboração e Qualidade:</strong> Atuação em times ágeis, design reviews e cerimônias de produto.</li>
+            </ul>
+          </div>
+          <div>
+            <strong className="text-gray-900 block mb-2">Realizações a destacar:</strong>
+            <ul className="list-disc pl-5 space-y-1">
+              <li><strong>Design para Acessibilidade (Público 60+):</strong> Plataforma de previdência com redução de carga cognitiva, mitigando erros e aumentando a autonomia dos usuários sêniores.</li>
+              <li><strong>Mitigação de Riscos via Research:</strong> Decisões de design embasadas em dados qualitativos e quantitativos antes da implementação.</li>
+              <li><strong>Escalabilidade Técnica:</strong> Aumento da eficiência do time de desenvolvimento via Design System, reduzindo inconsistências visuais.</li>
+              <li><strong>Maturidade de Design:</strong> Fortalecimento da cultura de design com processos replicáveis e documentação robusta.</li>
+            </ul>
+          </div>
+        </div>
+      ),
     },
     {
-      period: "Jan 2022 - Jan 2023",
+      period: "Jan 2022 - Nov 2022",
       title: "UI/UX Designer Freelancer",
       company: "Givisiez – Transformação Digital",
-      description: `
-• Pesquisa e análise de dados do produto, da marca e do cliente potencial, apoiando decisões estratégicas de design.
-• Criação e manutenção do Design System, promovendo consistência visual e reutilização de componentes.
-• Criação de interfaces e componentes do style guide, garantindo padronização e escalabilidade.
-• Realização de design reviews desenvolvidos pela equipe, assegurando qualidade e aderência às boas práticas de UX e UI.
-• Análise de feedbacks de usuários e stakeholders para evolução contínua dos produtos.
-• Proposição e implementação de melhorias nos produtos, com foco em usabilidade, clareza e eficiência da experiência.
-`,
+      description: (
+        <div className="space-y-4 mt-4 text-gray-700">
+          <div>
+            <strong className="text-gray-900 block mb-2">Responsável por:</strong>
+            <ul className="list-disc pl-5 space-y-1">
+              <li><strong>UX Research e Estratégia:</strong> Condução de pesquisas de mercado e análise de dados de clientes para soluções personalizadas.</li>
+              <li><strong>Design de Interface (UI):</strong> Criação de interfaces e componentes focados em usabilidade e clareza.</li>
+              <li><strong>Design System e Padronização:</strong> Manutenção de componentes e style guides, garantindo consistência em todos os pontos de contato.</li>
+            </ul>
+          </div>
+          <div>
+            <strong className="text-gray-900 block mb-2">Realizações a destacar:</strong>
+            <ul className="list-disc pl-5 space-y-1">
+              <li><strong>Personalização Orientada a Dados:</strong> Soluções sob medida com alta aderência estratégica às expectativas do cliente final.</li>
+              <li><strong>Eficiência e Consistência:</strong> Redução de falhas de comunicação visual e aumento do time-to-market através de padronização.</li>
+              <li><strong>Ciclo de Melhoria Contínua:</strong> Otimização de produtos baseada em feedback real, elevando a satisfação do usuário.</li>
+              <li><strong>Escalabilidade de Componentes:</strong> Facilitação do desenvolvimento garantindo o crescimento do produto sem perder a identidade.</li>
+            </ul>
+          </div>
+        </div>
+      ),
     },
   ];
 
@@ -144,32 +194,32 @@ const AboutPage = () => {
               </h2>
               <div className="prose prose-lg max-w-none text-gray-700 space-y-4">
                 <p>
-                  Product Designer (UI/UX) com 4 anos de experiência  em produtos digitais B2B e ecossistemas de alta complexidade. Minha atuação é pautada pela entrega de valor estratégico através de UX Research, Design Systems escaláveis e análise de KPIs de produto.
-
-Atualmente, na Teknisa , atuo ativamente no refinamento técnico do Design System. Implementei estruturas avançadas de variáveis e componentização complexa no Figma, focando em Eficiência Operacional para reduzir o débito técnico e otimizar o processo de handover. O amadurecimento dessa estrutura despertou o interesse de outras unidades de negócio na replicação desse padrão, contribuindo para o Brand Equity interno da companhia.
-
+                  <strong>Product Designer (UI/UX) com 4 anos de experiência</strong> em produtos digitais B2B e ecossistemas de alta complexidade. Minha atuação é pautada pela entrega de valor estratégico através de UX Research, Design Systems escaláveis e análise de KPIs de produto.
                 </p>
                 <p>
-                  Projeto destaque :
-Responsável pela concepção e design do novo sistema de gerenciamento de desperdícios em restaurantes, focado em transformar regras de negócio densas em uma interface digital intuitiva para cozinhas industriais. Por meio de UX Research e Discovery  (entrevistas qualitativas e desk research), mapeei dores reais para projetar um fluxo de pesagem eficiente, visando a futura redução de perdas financeiras e maior precisão nos dados operacionais dos clientes.
-
-Tenho passagens estratégicas pelo CDC Bank, redesenhando fluxos financeiros críticos (Conciliação e Operações), e pela JCM Consultores.
-
-Principais empresas: Teknisa, CDC Bank, JCM Consultores, Givisiez.
-
-Habilidades & Stack:
-
-* Estratégia e Operação: UX Research, Discovery, Design Systems (Tokens/Variables) e métricas de usabilidade, Storytelling.
-* Design & Prototipação: Figma (Avançado), Arquitetura da Informação e fluxos complexos.
-* Interface com Tech: Estudos em Front-end (React, HTML/CSS) e uso de IAs generativas para otimização de workflow.
-* Formação: Graduada em Design pela UEMG, com estudos complementares em Neurociência Cognitiva da Criatividade.
-* Idiomas: Inglês B2 Upper Intermediate (EF SET).
+                  Atualmente, na <strong>Teknisa</strong>, atuo ativamente no refinamento técnico do Design System. Implementei estruturas avançadas de variáveis e componentização complexa no Figma, focando em Eficiência Operacional para reduzir o débito técnico e otimizar o processo de handover. O amadurecimento dessa estrutura despertou o interesse de outras unidades de negócio na replicação desse padrão, contribuindo para o Brand Equity interno da companhia.
                 </p>
                 <p>
-                  Tenho forte colaboração com times de Produto, Engenharia e
-                  Stakeholders, traduzindo requisitos técnicos e regulatórios em
-                  experiências claras, escaláveis e viáveis.
+                  <strong>Projeto destaque:</strong><br />
+                  Responsável pela concepção e design do novo sistema de gerenciamento de desperdícios em restaurantes, focado em transformar regras de negócio densas em uma interface digital intuitiva para cozinhas industriais. Por meio de UX Research e Discovery (entrevistas qualitativas e desk research), mapeei dores reais para projetar um fluxo de pesagem eficiente, visando a futura redução de perdas financeiras e maior precisão nos dados operacionais dos clientes.
                 </p>
+                <p>
+                  Tenho passagens estratégicas pelo <strong>CDC Bank</strong>, redesenhando fluxos financeiros críticos (Conciliação e Operações), e pela <strong>JCM Consultores</strong>.
+                </p>
+                <p>
+                  <strong>Principais empresas:</strong> Teknisa, CDC Bank, JCM Consultores, Givisiez.
+                </p>
+
+                <div className="pt-4">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Habilidades & Stack:</h3>
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li><strong>Estratégia e Operação:</strong> UX Research, Discovery, Design Systems (Tokens/Variables) e métricas de usabilidade, Storytelling.</li>
+                    <li><strong>Design & Prototipação:</strong> Figma (Avançado), Arquitetura da Informação e fluxos complexos.</li>
+                    <li><strong>Interface com Tech:</strong> Estudos em Front-end (React, HTML/CSS) e uso de IAs generativas para otimização de workflow.</li>
+                    <li><strong>Formação:</strong> Graduada em Design pela UEMG, com estudos complementares em Neurociência Cognitiva da Criatividade.</li>
+                    <li><strong>Idiomas:</strong> Inglês B2 Upper Intermediate (EF SET).</li>
+                  </ul>
+                </div>
               </div>
             </section>
 
@@ -196,7 +246,8 @@ Habilidades & Stack:
                       {exp.title}
                     </h3>
                     <p className="text-gray-600 font-medium">{exp.company}</p>
-                    <div className="mt-2 text-gray-700 whitespace-pre-line leading-relaxed">
+                    {/* A descrição agora é renderizada diretamente como elemento React */}
+                    <div className="mt-2 text-gray-700 leading-relaxed">
                       {exp.description}
                     </div>
                   </div>
@@ -279,8 +330,6 @@ Habilidades & Stack:
                   ))}
                 </div>
               </div>
-
-              {/* REMOVI O BOTÃO DE DOWNLOAD AQUI */}
 
               {/* Contact */}
               <div className="mt-8 text-center">
