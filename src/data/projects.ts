@@ -226,7 +226,7 @@ A documentação profunda serve como material de treinamento instantâneo para n
       "Estruturação end-to-end de um sistema B2B, otimizando o fluxo de negociação entre empresas e fornecedores com foco em eficiência operacional e redução de carga cognitiva.",
     fullDescription: `
 **O CONTEXTO E O DESAFIO**
-O ecossistema de compras corporativas costuma ser fragmentado e burocrático. O desafio deste projeto foi centralizar todo o fluxo de compras — da solicitação de cotação à geração da ordem de compra final. O objetivo do negócio era claro: aumentar a governança, garantir o melhor custo-benefício nas negociações e acelerar a tomada de decisão através de um ambiente transparente e estruturado.
+O ecossistema de compras corporativas costuma ser fragmentado e burocrático. O desafio deste projeto foi centralizar todo o fluxo de compras, da solicitação de cotação à geração da ordem de compra final. O objetivo do negócio era claro: aumentar a governança, garantir o melhor custo-benefício nas negociações e acelerar a tomada de decisão através de um ambiente transparente e estruturado.
 
 **PAIR DESIGN E CO-CRIAÇÃO**
 A complexidade de um produto B2B dessa magnitude exige colaboração contínua. Atuei neste projeto em forte dinâmica de Pair Design com a designer Amanda Guimarães. Dividir o discovery e o delivery nos permitiu debater fluxos críticos com maior profundidade, cruzar diferentes perspectivas de usabilidade e garantir entregas mais robustas, mantendo o alinhamento constante com os times de Produto e Engenharia.
