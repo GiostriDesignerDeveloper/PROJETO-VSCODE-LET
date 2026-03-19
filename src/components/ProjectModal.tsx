@@ -16,12 +16,13 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
     return () => window.removeEventListener("keydown", handleEsc);
   }, [onClose]);
 
-  // Função mágica que transforma **texto** em negrito
+  // Função que transforma **texto** em negrito da forma correta (inline)
   const renderDescription = (text: string) => {
     if (!text) return null;
     return text.split("**").map((part, index) =>
       index % 2 === 1 ? (
-        <strong key={index} className="text-gray-900 font-bold block mt-8 mb-1">
+        // 👇 Removi o 'block mt-8 mb-1' para o negrito ficar na mesma linha da bolinha!
+        <strong key={index} className="text-gray-900 font-bold">
           {part}
         </strong>
       ) : (
