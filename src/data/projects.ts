@@ -5,8 +5,8 @@ export const projectsData: Project[] = [
   // PROJETOS ATIVOS (Seus 2 projetos reais)
   // ========================================================================
   {
-    id: "prevmax-previdencia",
-    title: "PrevMax — previdencia",
+    id: "prevmax-previdência",
+    title: "PrevMax — previdência",
     status: "active", // Marcado como ativo
     embedUrl:
       "https://embed.figma.com/proto/UowipTJL4ggqVwP828F6Eb/Portf%C3%B3lio-PLATAFORMA?page-id=0%3A1&node-id=4-4108&viewport=575%2C347%2C0.06&scaling=scale-down&content-scaling=fixed&starting-point-node-id=4%3A4094&embed-host=share",
