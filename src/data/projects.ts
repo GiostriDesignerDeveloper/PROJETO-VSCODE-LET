@@ -220,16 +220,7 @@ A documentação profunda serve como material de treinamento instantâneo para n
   // ========================================================================
   // PROJETOS FUTUROS (EM BREVE)
   // ========================================================================
-  {
-    id: "analise-genealogica",
-    title: "Melhorias do design system",
-    status: "coming-soon",
-    description: "Melhorias do design system",
-    imageUrl: "",
-    category: "UX/UI Design",
-    tags: ["Research", "UX Strategy"],
-  },
-  {
+    {
     id: "crm-financeiro",
     title: "Portal CRM ",
     status: "coming-soon",

@@ -144,21 +144,29 @@ const AboutPage = () => {
               </h2>
               <div className="prose prose-lg max-w-none text-gray-700 space-y-4">
                 <p>
-                  Sou UI/UX Designer com experiência em produtos digitais B2B e
-                  plataformas financeiras, atuando desde a fase de discovery até
-                  a entrega de soluções orientadas à usabilidade, acessibilidade
-                  e regras de negócio.
+                  Product Designer (UI/UX) com 4 anos de experiência  em produtos digitais B2B e ecossistemas de alta complexidade. Minha atuação é pautada pela entrega de valor estratégico através de UX Research, Design Systems escaláveis e análise de KPIs de produto.
+
+Atualmente, na Teknisa , atuo ativamente no refinamento técnico do Design System. Implementei estruturas avançadas de variáveis e componentização complexa no Figma, focando em Eficiência Operacional para reduzir o débito técnico e otimizar o processo de handover. O amadurecimento dessa estrutura despertou o interesse de outras unidades de negócio na replicação desse padrão, contribuindo para o Brand Equity interno da companhia.
+
                 </p>
                 <p>
-                  Minha atuação combina pesquisa com usuários, análise de
-                  processos e design de interfaces para sistemas complexos,
-                  sempre com foco em reduzir carga cognitiva, eliminar
-                  redundâncias e aumentar eficiência operacional.
+                  Projeto destaque :
+Responsável pela concepção e design do novo sistema de gerenciamento de desperdícios em restaurantes, focado em transformar regras de negócio densas em uma interface digital intuitiva para cozinhas industriais. Por meio de UX Research e Discovery  (entrevistas qualitativas e desk research), mapeei dores reais para projetar um fluxo de pesagem eficiente, visando a futura redução de perdas financeiras e maior precisão nos dados operacionais dos clientes.
+
+Tenho passagens estratégicas pelo CDC Bank, redesenhando fluxos financeiros críticos (Conciliação e Operações), e pela JCM Consultores.
+
+
                 </p>
                 <p>
-                  Tenho forte colaboração com times de Produto, Engenharia e
-                  Stakeholders, traduzindo requisitos técnicos e regulatórios em
-                  experiências claras, escaláveis e viáveis.
+                  Principais empresas: Teknisa, CDC Bank, JCM Consultores, Givisiez.
+
+Habilidades & Stack:
+
+* Estratégia e Operação: UX Research, Discovery, Design Systems (Tokens/Variables) e métricas de usabilidade, Storytelling.
+* Design & Prototipação: Figma (Avançado), Arquitetura da Informação e fluxos complexos.
+* Interface com Tech: Estudos em Front-end (React, HTML/CSS) e uso de IAs generativas para otimização de workflow.
+* Formação: Graduada em Design pela UEMG, com estudos complementares em Neurociência Cognitiva da Criatividade.
+* Idiomas: Inglês B2 Upper Intermediate (EF SET).
                 </p>
               </div>
             </section>
