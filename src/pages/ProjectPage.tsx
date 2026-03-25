@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { projectsData } from '../data/projects';
 import { ArrowLeft, ExternalLink, Github as GitHub } from 'lucide-react';
@@ -10,7 +10,6 @@ const ProjectPage = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate loading data from an API
     const timer = setTimeout(() => {
       const foundProject = projectsData.find(p => p.id === id);
       setProject(foundProject || null);
@@ -19,6 +18,20 @@ const ProjectPage = () => {
 
     return () => clearTimeout(timer);
   }, [id]);
+
+  // Nossa função mágica de negrito importada do Modal para a Página!
+  const renderDescription = (text: string) => {
+    if (!text) return null;
+    return text.split("**").map((part, index) =>
+      index % 2 === 1 ? (
+        <strong key={index} className="text-gray-900 font-bold">
+          {part}
+        </strong>
+      ) : (
+        part
+      )
+    );
+  };
 
   if (loading) {
     return (
@@ -31,13 +44,13 @@ const ProjectPage = () => {
   if (!project) {
     return (
       <div className="container mx-auto px-4 pt-32 pb-20 text-center">
-        <h1 className="text-3xl font-bold text-gray-900 mb-4">Project Not Found</h1>
-        <p className="text-gray-600 mb-8">Sorry, the project you're looking for doesn't exist or has been removed.</p>
+        <h1 className="text-3xl font-bold text-gray-900 mb-4">Projeto não encontrado</h1>
+        <p className="text-gray-600 mb-8">Desculpe, o projeto que você procura não existe ou foi removido.</p>
         <Link 
           to="/#projects"
           className="inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors font-medium"
         >
-          Back to Projects
+          Voltar aos Projetos
         </Link>
       </div>
     );
@@ -52,7 +65,7 @@ const ProjectPage = () => {
             to="/#projects"
             className="inline-flex items-center text-blue-300 hover:text-blue-200 mb-8 transition-colors"
           >
-            <ArrowLeft size={16} className="mr-2" /> Back to Projects
+            <ArrowLeft size={16} className="mr-2" /> Voltar aos Projetos
           </Link>
           
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">{project.title}</h1>
@@ -61,7 +74,7 @@ const ProjectPage = () => {
             {project.tags.map((tag, index) => (
               <span 
                 key={index} 
-                className="inline-block px-3 py-1 bg-blue-900/50 text-blue-100 text-sm rounded-md"
+                className="inline-block px-3 py-1 bg-blue-900/50 text-blue-100 text-sm font-medium rounded-md"
               >
                 {tag}
               </span>
@@ -77,7 +90,7 @@ const ProjectPage = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2">
             {/* Main Image */}
-            <div className="mb-8 rounded-lg overflow-hidden shadow-lg">
+            <div className="mb-8 rounded-lg overflow-hidden shadow-lg border border-gray-100">
               <img 
                 src={project.imageUrl} 
                 alt={project.title} 
@@ -86,70 +99,78 @@ const ProjectPage = () => {
             </div>
             
             {/* Description */}
-            <div className="prose prose-lg max-w-none">
-              <h2>About this Project</h2>
-              <p>
-                {project.fullDescription || project.description + " " + project.description}
-              </p>
+            <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed whitespace-pre-wrap">
+              {renderDescription(project.fullDescription || project.description)}
               
-              <h2>Challenges</h2>
-              <p>
-                During the development of this project, several challenges were encountered. The main challenge was ensuring optimal performance across all devices while maintaining a rich, interactive user experience.
-              </p>
-              
-              <h2>Solution</h2>
-              <p>
-                To address these challenges, a combination of modern frontend technologies was employed. Performance optimizations included code splitting, lazy loading, and asset optimization. The responsive design was implemented using a mobile-first approach to ensure a seamless experience across devices.
-              </p>
-              
-              {/* Gallery */}
+              {/* Protótipo Interativo */}
+              {project.embedUrl && (
+                <div className="mt-12 mb-12">
+                  <h3 className="text-2xl font-bold text-gray-900 border-b pb-4 mb-6">
+                    Protótipo Interativo
+                  </h3>
+                  <p className="text-gray-600 mb-4">
+                    Teste a interface real abaixo (pode levar alguns segundos para carregar):
+                  </p>
+                  <div className="w-full h-[500px] md:h-[600px] bg-gray-50 border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+                    <iframe
+                      style={{ border: "none" }}
+                      width="100%"
+                      height="100%"
+                      src={project.embedUrl}
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                </div>
+              )}
+
+              {/* Galeria */}
               {project.gallery && project.gallery.length > 0 && (
-                <>
-                  <h2>Project Gallery</h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 not-prose">
-                    {project.gallery.map((image, index) => (
-                      <div key={index} className="rounded-lg overflow-hidden shadow-md">
+                <div className="mt-16 space-y-16">
+                  <h3 className="text-2xl font-bold text-gray-900 border-b pb-4">
+                    Galeria do Projeto
+                  </h3>
+                  <div className="grid grid-cols-1 gap-16 not-prose">
+                    {project.gallery.map((item: any, index: number) => (
+                      <div key={index} className="space-y-4 flex flex-col items-center">
                         <img 
-                          src={image} 
-                          alt={`${project.title} - Image ${index + 1}`} 
-                          className="w-full h-auto"
+                          src={item.url} 
+                          alt={item.title} 
+                          className="max-w-full h-auto max-h-[700px] object-contain rounded-xl shadow-lg border border-gray-100"
                         />
+                        <p className="w-full text-center text-gray-600 font-medium text-lg italic border-l-4 border-blue-600 pl-4 py-1 bg-gray-50 rounded-r">
+                          {item.title}
+                        </p>
                       </div>
                     ))}
                   </div>
-                </>
+                </div>
               )}
             </div>
           </div>
           
-          {/* Sidebar */}
+          {/* Sidebar Lateral */}
           <div>
-            <div className="bg-gray-50 rounded-lg p-6 shadow-md sticky top-24">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Project Details</h3>
+            <div className="bg-gray-50 rounded-lg p-6 shadow-md sticky top-24 border border-gray-100">
+              <h3 className="text-xl font-bold text-gray-900 mb-6">Detalhes do Projeto</h3>
               
-              <div className="space-y-4">
+              <div className="space-y-5">
                 <div>
-                  <h4 className="text-sm font-medium text-gray-500">CLIENT</h4>
-                  <p className="text-gray-800">{project.client || 'Personal Project'}</p>
+                  <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">CLIENTE</h4>
+                  <p className="text-gray-800 font-medium">{project.client || 'Projeto Pessoal'}</p>
                 </div>
                 
                 <div>
-                  <h4 className="text-sm font-medium text-gray-500">TIMELINE</h4>
-                  <p className="text-gray-800">{project.timeline || '4 weeks'}</p>
+                  <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">ATUAÇÃO</h4>
+                  <p className="text-gray-800 font-medium">{project.role || 'UX/UI Designer'}</p>
                 </div>
                 
                 <div>
-                  <h4 className="text-sm font-medium text-gray-500">ROLE</h4>
-                  <p className="text-gray-800">{project.role || 'Full-stack Developer'}</p>
-                </div>
-                
-                <div>
-                  <h4 className="text-sm font-medium text-gray-500">TECHNOLOGIES</h4>
-                  <div className="flex flex-wrap gap-2 mt-1">
+                  <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">TECNOLOGIAS</h4>
+                  <div className="flex flex-wrap gap-2 mt-2">
                     {project.technologies?.map((tech, index) => (
                       <span 
                         key={index} 
-                        className="inline-block px-2 py-1 bg-gray-200 text-gray-700 text-xs rounded-md"
+                        className="inline-block px-3 py-1 bg-white border border-gray-200 text-gray-700 text-xs font-semibold rounded-md shadow-sm"
                       >
                         {tech}
                       </span>
@@ -159,25 +180,14 @@ const ProjectPage = () => {
               </div>
               
               <div className="mt-8 space-y-3">
-                {project.liveUrl && (
+                {project.liveUrl && project.liveUrl !== '#' && (
                   <a 
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center w-full px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors font-medium"
+                    className="flex items-center justify-center w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors font-medium shadow-md"
                   >
-                    View Live Site <ExternalLink size={16} className="ml-2" />
-                  </a>
-                )}
-                
-                {project.githubUrl && (
-                  <a 
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center w-full px-4 py-2 bg-gray-800 hover:bg-gray-900 text-white rounded-md transition-colors font-medium"
-                  >
-                    View Source Code <GitHub size={16} className="ml-2" />
+                    Acessar Projeto <ExternalLink size={18} className="ml-2" />
                   </a>
                 )}
               </div>
