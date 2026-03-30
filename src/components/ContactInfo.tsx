@@ -36,7 +36,7 @@ const ContactInfo: React.FC = () => {
             </p>
             <p className="text-gray-900 font-medium">Belo Horizonte, MG - BR</p>
             <p className="text-sm text-gray-500 mt-1">
-              Disponível para trabalho remoto
+              Disponível para trabalho remoto, híbrido e presencial.
             </p>
           </div>
         </div>
