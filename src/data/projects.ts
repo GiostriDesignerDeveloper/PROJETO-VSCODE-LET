@@ -359,7 +359,7 @@ Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identi
       "Refatoração ágil de fluxo de conciliação bancária, focando em visibilidade de processamento, redução de carga cognitiva e eficiência operacional sob restrições técnicas.",
     fullDescription: `
 **1. O DESAFIO E A DEMANDA**
-O projeto consistiu na refatoração ágil de um sistema de gestão financeira robusto, focado na **Conciliação de Parcelas em Lote**. A demanda exigia solucionar falhas críticas de usabilidade e visibilidade de processos sob uma condição de alta pressão por entrega e implementação imediata[cite: 466, 468, 473].
+O projeto consistiu na refatoração ágil de um sistema de gestão financeira robusto, focado na **Conciliação de Parcelas em Lote**. A demanda exigia solucionar falhas críticas de usabilidade e visibilidade de processos sob uma condição de alta pressão por entrega e implementação imediata.
 
 **2. ESTRATÉGIA DE DESIGN E RESTRIÇÕES**
 Para garantir a viabilidade do projeto e o cumprimento dos prazos, adotei uma postura pragmática baseada em dois pilares fundamentais:
@@ -376,7 +376,7 @@ Apliquei a heurística de visibilidade do status do sistema para reduzir a incer
 
 **B. Prevenção de Erros em Operações Críticas**
 • **Modais de Confirmação:** Implementação de interrupções deliberadas em ações de alto impacto (como o envio da conciliação), garantindo que o usuário valide a operação e mitigando riscos financeiros.
-• **Navegação Orientada:** Reorganização do fluxo de conciliação através de botões de "Avançar" e "Voltar", transformando um processo denso em uma jornada lógica e sequencial[cite: 495].
+• **Navegação Orientada:** Reorganização do fluxo de conciliação através de botões de "Avançar" e "Voltar", transformando um processo denso em uma jornada lógica e sequencial.
 
 **4. IMPACTO E BUSINESS**
 
@@ -387,7 +387,7 @@ A metodologia de design direto para produção reduziu drasticamente o ciclo de 
 A centralização de ações (Enviar, Limpar, Relatórios) e a flexibilidade de exportação (PDF/CSV) otimizaram o tempo gasto pelo colaborador em cada sessão de conciliação.
 
 **Redução de Suporte**
-A clareza nos feedbacks de erro e progresso visam reduzir chamados de suporte relacionados à incerteza do processamento de dados[cite: 470, 476, 485, 486].
+A clareza nos feedbacks de erro e progresso visam reduzir chamados de suporte relacionados à incerteza do processamento de dados.
 
 **NOTA DE CONFIDENCIALIDADE**
 Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identidade visual e cores foram adaptados para fins de portfólio, preservando a confidencialidade da empresa e mantendo a fidelidade ao processo, às decisões de design e aos desafios enfrentados.
