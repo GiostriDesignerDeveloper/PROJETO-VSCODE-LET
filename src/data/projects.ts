@@ -118,7 +118,7 @@ A maior complexidade do projeto. O gestor precisava de poder de segmentação gr
 • Lei de Jakob: Utilizei o padrão mental de "Caixa de Entrada" de e-mails (Inbox / Lidos / Arquivados). Ao replicar um padrão conhecido, reduzimos a curva de aprendizado a zero.
 • Controle do Usuário: Adicionei uma tela de "Preferências de Notificação". Permitir que o usuário decida o que quer receber (Toggle On/Off) respeita a heurística de Controle e Liberdade do Usuário, evitando frustração e descadastramentos mentais.
 
-**IMPACTO E MÉTRICAS**
+**IMPACTOS E MÉTRICAS**
 
 **Taxa de Abertura**
 Aumento esperado devido à centralização no Header (onde o usuário já olha frequentemente).
@@ -183,7 +183,7 @@ Para garantir que o Design System fosse não apenas um repositório, mas uma fer
 **3. Cultura e Mentoria**
 • A tecnologia não se sustenta sem as pessoas. Promovi o repasse de conhecimento prático sobre componentização e uso de variáveis, elevando a barra técnica de todo o time de design e garantindo que o sistema fosse adotado e mantido corretamente.
 
-**IMPACTO E MÉTRICAS**
+**IMPACTOS E MÉTRICAS**
 
 **Redução de Design Debt (Dívida Técnica)**
 A padronização via variáveis reduziu drasticamente o tempo gasto corrigindo inconsistências visuais em diferentes telas do produto.
@@ -192,7 +192,7 @@ A padronização via variáveis reduziu drasticamente o tempo gasto corrigindo i
 Com componentes robustos e bem documentados, o esforço cognitivo na criação de novas interfaces caiu consideravelmente, permitindo ao time focar na estratégia e no usuário, não no "desenho do botão".
 
 **Onboarding e Curva de Aprendizado**
-A documentação profunda está servindo como material de treinamento instantâneo para novos designers e desenvolvedores, garantindo alinhamento técnico desde o dia zero.
+A documentação profunda está servindo como material de treinamento instantâneo para novos designers e desenvolvedores, garantindo alinhamento técnico desde o dia inicial.
 
 **NOTA DE CONFIDENCIALIDADE**
 Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identidade visual e cores foram adaptados para fins de portfólio, preservando a confidencialidade da empresa e mantendo a fidelidade ao processo, às decisões de design e aos desafios enfrentados.
@@ -236,13 +236,13 @@ Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identi
 O ecossistema de compras corporativas costuma ser fragmentado e burocrático. O desafio deste projeto foi centralizar todo o fluxo de compras, da solicitação de cotação à geração da ordem de compra final. O objetivo do negócio era claro: aumentar a governança, garantir o melhor custo-benefício nas negociações e acelerar a tomada de decisão através de um ambiente transparente e estruturado.
 
 **PAIR DESIGN E CO-CRIAÇÃO**
-A complexidade de um produto B2B dessa magnitude exige colaboração contínua. Atuei neste projeto em forte dinâmica de Pair Design com a designer Amanda Guimarães. Dividir o discovery e o delivery nos permitiu debater fluxos críticos com maior profundidade, cruzar diferentes perspectivas de usabilidade e garantir entregas mais robustas, mantendo o alinhamento constante com os times de Produto e Engenharia.
+A complexidade de um produto B2B dessa magnitude exige colaboração contínua. Atuei neste projeto em forte dinâmica com a designer Amanda Guimarães. Dividir o discovery e o delivery nos permitiu debater fluxos críticos com maior profundidade, cruzar diferentes perspectivas de usabilidade e garantir entregas mais robustas, mantendo o alinhamento constante com os times de Produto e Engenharia.
 
 **ESTRATÉGIA DE UX E MINHA ATUAÇÃO**
 Foquei na estruturação do produto e no desenho de fluxos de alta criticidade, garantindo que a complexidade do sistema legado não fosse repassada para a interface do usuário:
 
 **1. Mapeamento de Perfis e Permissões**
-• Modelagem de arquitetura de informação e jornadas distintas para múltiplos atores (Compradores, Fornecedores e Administradores), blindando o sistema com uma definição clara de regras de negócio e acessos.
+• Modelagem de arquitetura de informação e jornadas distintas para múltiplos usuários (Compradores, Fornecedores e Administradores), blindando o sistema com uma definição clara de regras de negócio e acessos.
 
 **2. Redução de Carga Cognitiva**
 • Desenho de interfaces focadas na comparação simultânea de propostas. O uso de padrões visuais claros e hierarquia de informação bem definida facilitou a análise de variáveis complexas por parte dos compradores, apoiando uma tomada de decisão mais rápida e segura.
@@ -251,15 +251,15 @@ Foquei na estruturação do produto e no desenho de fluxos de alta criticidade, 
 • Estruturação de fluxos de cotação e negociação que aproveitam a automação do sistema para eliminar retrabalho, mas mantêm pontos de verificação cruciais na mão do usuário, garantindo segurança operacional.
 
 **4. Validação e Usabilidade**
-• Planejamento estratégico de testes de usabilidade para validação das interfaces pós-desenvolvimento, definindo objetivos de pesquisa, recrutamento de perfis corretos e métricas de sucesso baseadas na experiência real do usuário B2B.
+• Planejamento estratégico de testes de usabilidade para validação das interfaces pós-desenvolvimento, definindo objetivos da pesquisa, recrutamento de perfis corretos e métricas de sucesso baseadas na experiência real do usuário B2B.
 
-**IMPACTO E BUSINESS KPIs ATINGIDOS (UX Metrics)**
+**IMPACTOS E MÉTRICAS**
 
 **Time-to-Task (Eficiência Operacional)**
 A centralização do fluxo e a integração inteligente com sistemas legados reduziram o tempo de execução e o retrabalho histórico nas negociações.
 
 **Task Success Rate**
-A clareza na interface de comparação de múltiplas propostas elevou a taxa de sucesso e a assertividade na escolha de fornecedores, impactando diretamente o *bottom line* da empresa.
+A clareza na interface de comparação de múltiplas propostas elevou a taxa de sucesso e a assertividade na escolha de fornecedores, impactando diretamente oS resultados finais da empresa.
 
 **Adoção e Governança**
 A criação de um ambiente controlado e rastreável melhorou os níveis de compliance (conformidade) do processo de compras corporativas.
@@ -328,7 +328,7 @@ Com base em fundamentos científicos de design e usabilidade, propus as seguinte
 • **Grid Responsivo e Ergonômico:** Reconstrução da interface sobre um grid fluido, permitindo a navegação lateral facilitada para o alcance do polegar em tablets.
 • **Redução de Carga Cognitiva:** Padronização de ícones universais (como a lupa para busca e setas para navegação entre pacientes) para tornar a interface intuitiva sem necessidade de treinamento.
 
-**4. VISÃO ESTRATÉGICA (BUSINESS KPIs)**
+**4.IMPACTOS E MÉTRICAS**
 As melhorias propostas visam impactar diretamente os seguintes indicadores:
 
 **Time-on-Task (Eficiência)**
