@@ -182,7 +182,7 @@ Para garantir que o Design System fosse não apenas um repositório, mas uma fer
 **3. Cultura e Mentoria**
 • A tecnologia não se sustenta sem as pessoas. Promovi o repasse de conhecimento prático sobre componentização e uso de variáveis, elevando a barra técnica de todo o time de design e garantindo que o sistema fosse adotado e mantido corretamente.
 
-**IMPACTO E BUSINESS KPIs**
+**IMPACTO E INDICADORES DE DESEMPENHO**
 
 **Redução de Design Debt (Dívida Técnica)**
 A padronização via variáveis reduziu drasticamente o tempo gasto corrigindo inconsistências visuais em diferentes telas do produto.
@@ -191,7 +191,7 @@ A padronização via variáveis reduziu drasticamente o tempo gasto corrigindo i
 Com componentes robustos e bem documentados, o esforço cognitivo na criação de novas interfaces caiu consideravelmente, permitindo ao time focar na estratégia e no usuário, não no "desenho do botão".
 
 **Onboarding e Curva de Aprendizado**
-A documentação profunda serve como material de treinamento instantâneo para novos designers e desenvolvedores, garantindo alinhamento técnico desde o dia zero.
+A documentação profunda está servindo como material de treinamento instantâneo para novos designers e desenvolvedores, garantindo alinhamento técnico desde o dia zero.
 
 **NOTA DE CONFIDENCIALIDADE**
 Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identidade visual e cores foram adaptados para fins de portfólio, preservando a confidencialidade da empresa e mantendo a fidelidade ao processo, às decisões de design e aos desafios enfrentados.
@@ -348,6 +348,76 @@ Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identi
     liveUrl: "#",
     githubUrl: "#",
     // Galeria removida para focar na capa ilustrativa e no peso estratégico do texto.
+  },
+  // --- PROJETO 6: SMARTSETTLEMENT (FINTECH / AGILIDADE) ---
+  {
+    id: "smartsettlement-gestao-financeira",
+    title: "SmartSettlement — Gestão de Conciliação Financeira",
+    status: "active",
+    embedUrl: "", 
+    description:
+      "Refatoração ágil de fluxo de conciliação bancária, focando em visibilidade de processamento, redução de carga cognitiva e eficiência operacional sob restrições técnicas.",
+    fullDescription: `
+**1. O DESAFIO E A DEMANDA**
+O projeto consistiu na refatoração ágil de um sistema de gestão financeira robusto, focado na **Conciliação de Parcelas em Lote**. A demanda exigia solucionar falhas críticas de usabilidade e visibilidade de processos sob uma condição de alta pressão por entrega e implementação imediata[cite: 466, 468, 473].
+
+**2. ESTRATÉGIA DE DESIGN E RESTRIÇÕES**
+Para garantir a viabilidade do projeto e o cumprimento dos prazos, adotei uma postura pragmática baseada em dois pilares fundamentais:
+
+• **Preservação do Ecossistema:** O UI Kit e o Design System não foram alterados para evitar impactos em um sistema já consolidado e garantir que a prioridade permanecesse na funcionalidade e na segurança da informação.
+• **Documentação Ágil (Lean Design):** Devido à urgência, utilizei anotações de fluxo e sinalizações visuais diretamente sobre as interfaces (redlining), acelerando o entendimento do time de engenharia e eliminando o custo de tempo de protótipos interativos complexos.
+
+**3. SOLUÇÕES IMPLEMENTADAS: UX & CARGA COGNITIVA**
+
+**A. Visibilidade e Feedback de Sistema**
+Apliquei a heurística de visibilidade do status do sistema para reduzir a incerteza do operador financeiro durante o processamento de grandes volumes de dados:
+• **Indicação de Progresso:** Introdução de barras de progresso e mensagens de status (Aguardando, Processando) para evitar interrupções precoces pelo usuário.
+• **Scanning Veloz:** Tabela otimizada com feedbacks visuais imediatos (ícones de sucesso e erro), permitindo a identificação de falhas em segundos.
+
+**B. Prevenção de Erros em Operações Críticas**
+• **Modais de Confirmação:** Implementação de interrupções deliberadas em ações de alto impacto (como o envio da conciliação), garantindo que o usuário valide a operação e mitigando riscos financeiros.
+• **Navegação Orientada:** Reorganização do fluxo de conciliação através de botões de "Avançar" e "Voltar", transformando um processo denso em uma jornada lógica e sequencial[cite: 495].
+
+**4. IMPACTO E BUSINESS**
+
+**Agilidade de Desenvolvimento (Time-to-Market)**
+A metodologia de design direto para produção reduziu drasticamente o ciclo de entrega das melhorias.
+
+**Eficiência Operacional (Time-on-Task)**
+A centralização de ações (Enviar, Limpar, Relatórios) e a flexibilidade de exportação (PDF/CSV) otimizaram o tempo gasto pelo colaborador em cada sessão de conciliação.
+
+**Redução de Suporte**
+A clareza nos feedbacks de erro e progresso visam reduzir chamados de suporte relacionados à incerteza do processamento de dados[cite: 470, 476, 485, 486].
+
+**NOTA DE CONFIDENCIALIDADE**
+Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identidade visual e cores foram adaptados para fins de portfólio, preservando a confidencialidade da empresa e mantendo a fidelidade ao processo, às decisões de design e aos desafios enfrentados.
+    `,
+    imageUrl: "/smartsettlement-capa.png", 
+    category: "design",
+    tags: ["Fintech", "UX Strategy", "Agile Design", "Finance"],
+    technologies: ["Figma", "Redlining", "Arquitetura de Informação", "Lean UX"],
+    client: "Confidencial",
+    role: "Product Designer",
+    liveUrl: "#",
+    githubUrl: "#",
+    gallery: [
+      {
+        url: "/smartsettlement-dados.png",
+        title: "Interface Principal: Hierarquia de dados e ações rápidas.",
+      },
+      {
+        url: "/smartsettlement-loading.png",
+        title: "Feedback de Sistema: Visibilidade do status de processamento.",
+      },
+      {
+        url: "/smartsettlement-modal.png",
+        title: "Prevenção de Erro: Modal de confirmação para ações críticas.",
+      },
+      {
+        url: "/smartsettlement-fluxo.png",
+        title: "Documentação de Fluxo: Mapeamento de interações e estados.",
+      },
+    ],
   },
   // ========================================================================
   // PROJETOS FUTUROS (EM BREVE)
