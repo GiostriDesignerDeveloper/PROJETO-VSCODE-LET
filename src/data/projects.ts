@@ -453,16 +453,7 @@ Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identi
     tags: ["Research", "UX/UI Design"],
   },
   
-  {
-    id: "landing-page-saas",
-    title: "Conciliação de parcelas em lote",
-    status: "coming-soon",
-    description: "Melhorias no fluxo de conciliação de parcelas em lote",
-    imageUrl: "",
-    category: "UX/UI Design",
-    tags: ["Web", "UX Strategy", "Design System"],
-  },
-  {
+   {
     id: "dashboard-analytics",
     title: "Esteira de sessão e CNAB",
     status: "coming-soon",
