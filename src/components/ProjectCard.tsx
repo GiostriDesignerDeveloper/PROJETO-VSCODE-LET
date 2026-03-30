@@ -18,7 +18,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
         ${
           isComingSoon
             ? "bg-gray-50 border-2 border-dashed border-gray-300 cursor-default opacity-80"
-            : "bg-white border border-gray-100 shadow-sm hover:shadow-xl cursor-pointer"
+            : "bg-white border border-gray-100 shadow-sm hover:shadow-xl cursor-pointer hover:-translate-y-1"
         }
       `}
       onClick={() => !isComingSoon && onClick(project)}
@@ -35,7 +35,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
             />
           )}
 
-          {/* Se for Em Breve, mostra o cadeado */}
+          {/* Se for Em Breve, mostra o grande cadeado central */}
           {isComingSoon && (
             <div className="flex items-center justify-center h-full text-gray-400">
               <Lock size={32} />
@@ -43,19 +43,19 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
           )}
         </div>
 
-        {/* Overlay Hover (Apenas para ativos) */}
+        {/* Overlay Hover Premium (Apenas para ativos) */}
         {!isComingSoon && (
-          <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-            <span className="text-white font-medium flex items-center gap-2">
+          <div className="absolute inset-0 bg-blue-900/70 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <span className="text-white font-medium flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
               Ver detalhes <ArrowRight size={18} />
             </span>
           </div>
         )}
 
-        {/* Badge "Em Breve" */}
+        {/* Badge "Em Breve / Em Desenvolvimento" */}
         {isComingSoon && (
-          <div className="absolute top-3 right-3 bg-gray-200 text-gray-600 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-            Em Breve
+          <div className="absolute top-3 right-3 bg-gray-200 text-gray-600 text-[10px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wider flex items-center gap-1.5">
+            <Lock size={12} /> Em Desenvolvimento
           </div>
         )}
       </div>
@@ -74,48 +74,28 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
         </div>
 
         <h3
-          className={`text-xl font-bold mb-2 transition-colors ${
-            isComingSoon ? "text-gray-500" : "text-gray-900 hover:text-blue-600"
+          className={`text-xl font-bold mb-3 transition-colors duration-300 ${
+            isComingSoon ? "text-gray-500" : "text-gray-900 group-hover:text-blue-600"
           }`}
         >
           {project.title}
         </h3>
 
-        <p className="text-gray-600 text-sm mb-4 line-clamp-3 flex-grow">
+        <p className="text-gray-600 text-sm mb-6 line-clamp-3">
           {project.description}
         </p>
 
-        <div className="flex flex-wrap gap-2 mb-6">
+        {/* mt-auto empurra as tags para o final do card, mantendo o alinhamento perfeito entre eles */}
+        <div className="flex flex-wrap gap-2 mt-auto">
           {project.tags.slice(0, 3).map((tag, index) => (
             <span
               key={index}
-              className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded"
+              className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded font-medium"
             >
               {tag}
             </span>
           ))}
         </div>
-
-        <button
-          disabled={isComingSoon}
-          className={`
-            w-full py-2 px-4 rounded-lg text-sm font-medium flex items-center justify-center gap-2 transition-colors border
-            ${
-              isComingSoon
-                ? "bg-gray-100 text-gray-400 border-gray-200 cursor-not-allowed"
-                : "border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
-            }
-          `}
-        >
-          {isComingSoon ? (
-            <>
-              {" "}
-              <Lock size={14} /> Em Desenvolvimento{" "}
-            </>
-          ) : (
-            "Ver Detalhes"
-          )}
-        </button>
       </div>
     </div>
   );
