@@ -301,7 +301,7 @@ Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identi
   // --- PROJETO 5: HEALTHDASH (AUDITORIA UX) ---
   {
     id: "healthdash-auditoria-usabilidade",
-    title: "HealthDash — Auditoria e Interface Responsiva",
+    title: "Auditoria e Interface Responsiva",
     embedUrl: "", 
     description:
       "Auditoria heurística e proposta de redesign responsivo para um sistema de gestão nutricional hospitalar, focado em eficiência operacional e segurança do paciente.",
