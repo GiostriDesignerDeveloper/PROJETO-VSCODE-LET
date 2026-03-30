@@ -352,7 +352,7 @@ Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identi
   // --- PROJETO 6: SMARTSETTLEMENT (FINTECH / AGILIDADE) ---
   {
     id: "smartsettlement-gestao-financeira",
-    title: "SmartSettlement — Gestão de Conciliação Financeira",
+    title: "Gestão de Conciliação Financeira",
     status: "active",
     embedUrl: "", 
     description:
