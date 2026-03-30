@@ -1,5 +1,4 @@
 import React from "react";
-// Removi o import do ContactForm pois não vamos mais usar
 import { Mail, MapPin, Github, Linkedin } from "lucide-react";
 
 const Contact = () => {
@@ -21,7 +20,6 @@ const Contact = () => {
 
       {/* --- CARTÃO DE CONTATO (Centralizado) --- */}
       <div className="container mx-auto px-4 py-16">
-        {/* Aqui eu defini uma largura máxima (max-w-xl) e margem automática (mx-auto) para centralizar */}
         <div className="max-w-xl mx-auto">
           <div className="bg-gray-50 rounded-xl p-8 border border-gray-100 shadow-lg">
             <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
@@ -73,7 +71,7 @@ const Contact = () => {
                 <div className="flex justify-center gap-4">
                   {/* LinkedIn */}
                   <a
-                    href="https://linkedin.com" // ⚠️ Lembre de colocar seu link real aqui
+                    href="https://linkedin.com/in/leticiagouveiag"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-white p-4 rounded-xl border border-gray-200 text-gray-600 hover:text-blue-600 hover:border-blue-200 transition-all shadow-sm hover:shadow-md hover:-translate-y-1"
@@ -82,7 +80,7 @@ const Contact = () => {
                   </a>
                   {/* GitHub */}
                   <a
-                    href="https://github.com" // ⚠️ Lembre de colocar seu link real aqui
+                    href="https://github.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-white p-4 rounded-xl border border-gray-200 text-gray-600 hover:text-gray-900 hover:border-gray-400 transition-all shadow-sm hover:shadow-md hover:-translate-y-1"
