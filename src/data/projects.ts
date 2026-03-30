@@ -286,7 +286,7 @@ Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identi
         title: "Comparação de Propostas: Base de dados estruturada para análise de preços e fornecedores.",
       },
       {
-        url: "/cadastro_fornecedor.jpg",
+        url: "/cadastro_fornecedor.png",
         title: "Cadastro de Fornecedor: Estruturação de dados complexos com Auto Layout.",
       },
       {
