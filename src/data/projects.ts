@@ -294,7 +294,7 @@ Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identi
         title: "Edição de Perfil: Mapeamento de perfis e gestão de dados do usuário.",
       },
       {
-        url: "/login.jpg",
+        url: "/login.png",
         title: "Portal de Acesso: Entrada do ecossistema B2B.",
       },
     ],
