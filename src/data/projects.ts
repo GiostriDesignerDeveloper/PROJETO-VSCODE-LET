@@ -28,6 +28,7 @@ O projeto seguiu uma abordagem estruturada, colaborativa e orientada a negócio:
 • Priorização de transparência, segurança de dados e acessibilidade
 
 **2. Pesquisa e Estratégia**
+• Pesquisa qualitativa com operadores que lidam com fundos de pensão para entender dores, necessidades e comportamentos
 • Benchmarking de plataformas do mesmo segmento
 • Definição de personas com foco em perfil etário, comportamento financeiro e letramento digital
 • User story mapping para visualização de fluxos críticos e priorização de backlog
@@ -182,7 +183,7 @@ Para garantir que o Design System fosse não apenas um repositório, mas uma fer
 **3. Cultura e Mentoria**
 • A tecnologia não se sustenta sem as pessoas. Promovi o repasse de conhecimento prático sobre componentização e uso de variáveis, elevando a barra técnica de todo o time de design e garantindo que o sistema fosse adotado e mantido corretamente.
 
-**IMPACTO E INDICADORES DE DESEMPENHO**
+**IMPACTO E MÉTRICAS**
 
 **Redução de Design Debt (Dívida Técnica)**
 A padronização via variáveis reduziu drasticamente o tempo gasto corrigindo inconsistências visuais em diferentes telas do produto.
