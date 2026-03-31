@@ -48,7 +48,7 @@ const ContactInfo: React.FC = () => {
         <div className="flex gap-3">
           {/* LinkedIn */}
           <a
-            href="http://www.linkedin.com/in/leticiagouveiag" // ⚠️ LEMBRE DE TROCAR AQUI
+            href="https://www.linkedin.com/in/leticiagouveiag"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-gray-50 p-3 rounded-lg text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors border border-gray-200"
@@ -59,7 +59,7 @@ const ContactInfo: React.FC = () => {
 
           {/* GitHub */}
           <a
-            href="https://github.com/GiostriDesignerDeveloper" // ⚠️ LEMBRE DE TROCAR AQUI
+            href="https://github.com/GiostriDesignerDeveloper"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-gray-50 p-3 rounded-lg text-gray-600 hover:bg-gray-100 hover:text-gray-900 transition-colors border border-gray-200"
