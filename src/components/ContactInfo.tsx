@@ -36,10 +36,7 @@ const ContactInfo: React.FC = () => {
             </p>
             <p className="text-gray-900 font-medium">Belo Horizonte, MG - BR</p>
             <p className="text-sm text-gray-500 mt-2">
-              Entre em contato<<<<<<< HEAD
-=======
               Disponível para contato por e-mail e LinkedIn.
->>>>>>> c4a4a92d41576405a188062fa63ebb3554fdea61
             </p>
           </div>
         </div>
