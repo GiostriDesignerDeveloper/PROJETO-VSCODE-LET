@@ -65,7 +65,7 @@ const Contact = () => {
               {/* Redes Sociais */}
               <div className="pt-8 border-t border-gray-200 mt-8">
                 <p className="text-sm font-medium text-gray-500 mb-4 text-center">
-                  Redes Sociais
+                  Links para minhas redes  
                 </p>
                 <div className="flex justify-center gap-4">
                   {/* LinkedIn */}
