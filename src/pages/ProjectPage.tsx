@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { projectsData } from '../data/projects';
-import { ArrowLeft, ExternalLink, Github as GitHub } from 'lucide-react';
+import { ArrowLeft, ExternalLink } from 'lucide-react';
 import { Project } from '../types';
 
 const ProjectPage = () => {
@@ -19,7 +19,6 @@ const ProjectPage = () => {
     return () => clearTimeout(timer);
   }, [id]);
 
-  // Nossa função mágica de negrito importada do Modal para a Página!
   const renderDescription = (text: string) => {
     if (!text) return null;
     return text.split("**").map((part, index) =>
@@ -135,7 +134,7 @@ const ProjectPage = () => {
                         <img 
                           src={item.url} 
                           alt={item.title} 
-                          className="max-w-full h-auto max-h-[700px] object-contain rounded-xl shadow-lg border border-gray-100"
+                          className="w-full h-auto rounded-xl shadow-lg border border-gray-100"
                         />
                         <p className="w-full text-center text-gray-600 font-medium text-lg italic border-l-4 border-blue-600 pl-4 py-1 bg-gray-50 rounded-r">
                           {item.title}
@@ -156,12 +155,12 @@ const ProjectPage = () => {
               <div className="space-y-5">
                 <div>
                   <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">CLIENTE</h4>
-                  <p className="text-gray-800 font-medium">{project.client || 'Projeto Pessoal'}</p>
+                  <p className="text-gray-800 font-medium">{(project as any).client || 'Projeto Pessoal'}</p>
                 </div>
                 
                 <div>
                   <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">ATUAÇÃO</h4>
-                  <p className="text-gray-800 font-medium">{project.role || 'UX/UI Designer'}</p>
+                  <p className="text-gray-800 font-medium">{(project as any).role || 'UX/UI Designer'}</p>
                 </div>
                 
                 <div>
