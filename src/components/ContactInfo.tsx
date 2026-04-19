@@ -31,9 +31,7 @@ const ContactInfo: React.FC = () => {
             <MapPin size={24} />
           </div>
           <div>
-            <p className="text-sm font-medium text-gray-500 mb-1">
-              Localização
-            </p>
+            <p className="text-sm font-medium text-gray-500 mb-1">Localização</p>
             <p className="text-gray-900 font-medium">Belo Horizonte, MG - BR</p>
           </div>
         </div>
