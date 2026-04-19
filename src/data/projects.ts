@@ -89,43 +89,51 @@ Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identi
     ]
   },
   {
-    id: "sistema-notificacoes",
+    id: "redesign-navegacao-notificacoes",
     title: "Redesign de Navegação e Sistema de Notificações",
-    status: "active", // Marcado como ativo
+    status: "active",
     embedUrl: "",
-    description:
-      "Solução focada em resolver gaps de comunicação crítica e modernizar a navegação de um sistema legado, utilizando heurísticas de Nielsen e padrões mentais consolidados.",
+    description: "Redesign estratégico de navegação e criação de um sistema de notificações para garantir conformidade corporativa e reduzir a carga cognitiva do usuário.",
     fullDescription: `
-**CONTEXTO**
-O sistema legado sofria com um gap de comunicação crítica. Informações vitais (como atualizações de sistema ou avisos de conformidade) eram ignoradas ou perdidas em e-mails externos. Além disso, a navegação superior (Header) estava visualmente datada e consumia espaço excessivo sem entregar valor operacional.
+**PROBLEMA DE NEGÓCIO**
+O sistema legado apresentava uma falha crítica na entrega de comunicações vitais, como atualizações de conformidade e avisos técnicos. Essas informações eram perdidas em fluxos de e-mails externos ou ignoradas pelos usuários. Paralelamente, a navegação superior (Header) era visualmente datada e ineficiente, consumindo espaço operacional valioso sem entregar retorno funcional.
 
-**A SOLUÇÃO VISUAL**
-A solução foi desenhada em três pilares, focando na consistência visual e na redução da carga cognitiva:
+**OBJETIVO**
+Centralizar a comunicação crítica dentro da plataforma, modernizar a navegação para otimizar a área de trabalho e implementar um sistema de rastreabilidade que garanta conformidade jurídica e administrativa.
 
-**1. Redesign do Header**
-• Limpeza Visual: Apliquei a Heurística de Estética e Design Minimalista (Nielsen), removendo ruídos visuais e reorganizando os elementos.
-• Feedback de Status: Introdução do ícone de sino com badge de contador. Isso atende à heurística de Visibilidade do Status do Sistema, informando o usuário passivamente sobre novas interações.
-• Acessibilidade: Melhor contraste e áreas de clique (Lei de Fitts) otimizadas para o menu de perfil e ações rápidas.
+**DIAGNÓSTICO**
+• **Gap de Comunicação:** Informações sensíveis dispersas e sem garantia de recebimento.
+• **Interface Ineficiente:** Header com alto ruído visual e baixa economia de escala.
+• **Falta de Rastreabilidade:** Inexistência de métricas de leitura para mensagens obrigatórias.
+• **Baixa Autonomia:** Usuários impossibilitados de gerenciar o volume de alertas recebidos.
 
-**2. Painel do Gestor**
-A maior complexidade do projeto. O gestor precisava de poder de segmentação granular.
-• Fluxo de Criação: Desenvolvi um fluxo onde o gestor define "Quem recebe" (Grupos: Admin, Operadores, etc.), "Onde estão" (Filtro por UF) e "Validade da mensagem".
-• Rastreabilidade: Implementação de um dashboard que exibe não apenas o envio, mas a taxa de leitura. Isso transforma a notificação em uma ferramenta jurídica/administrativa de comprovação de ciência.
+**IMPACTO DIRETO:**
+• Risco de descumprimento de normas (Compliance).
+• Sobrecarga cognitiva devido à desorganização visual.
+• Aumento de tickets de suporte por "falta de aviso".
 
-**3. Painel do Usuário**
-• Lei de Jakob: Utilizei o padrão mental de "Caixa de Entrada" de e-mails (Inbox / Lidos / Arquivados). Ao replicar um padrão conhecido, reduzimos a curva de aprendizado a zero.
-• Controle do Usuário: Adicionei uma tela de "Preferências de Notificação". Permitir que o usuário decida o que quer receber (Toggle On/Off) respeita a heurística de Controle e Liberdade do Usuário, evitando frustração e descadastramentos mentais.
+**HIPÓTESE**
+Se centralizarmos as comunicações em um sistema de notificações passivo no Header (usando feedbacks de status) e estruturarmos painéis de gestão segmentados, aumentaremos a taxa de abertura das mensagens e garantiremos a ciência documental dos usuários sobre avisos críticos.
 
-**IMPACTOS E MÉTRICAS**
+**PROCESSO DE DISCOVERY**
+• **Análise de Heurísticas:** Auditoria focada em Estética e Design Minimalista para identificar ruídos desnecessários na navegação antiga.
+• **Mapeamento de Requisitos Legais:** Identificação da necessidade de segmentação granular (Quem, Onde, Quando) para validade jurídica das mensagens.
+• **Estudo de Modelos Mentais:** Aplicação da Lei de Jakob para entender como usuários interagem com caixas de entrada tradicionais e replicar essa facilidade.
+• **Análise Ergonômica:** Aplicação da Lei de Fitts para otimizar áreas de clique e menus de perfil, visando reduzir o esforço motor.
 
-**Taxa de Abertura**
-Aumento esperado devido à centralização no Header (onde o usuário já olha frequentemente).
+**SOLUÇÃO DE DESIGN**
+• **Redesign do Header:** Limpeza visual e introdução da Heurística de Visibilidade do Status do Sistema através de badges de contagem.
+• **Painel do Gestor (Hub de Governança):** Criação de fluxo segmentado por grupos e localização (UF), com dashboard de taxa de leitura em tempo real.
+• **Painel do Usuário (Inbox Experience):** Interface baseada em padrões de e-mail (Inbox/Arquivados) e central de preferências para garantir Controle e Liberdade do Usuário.
 
-**Conformidade**
-Garantia de 100% de rastreabilidade de quem leu os comunicados obrigatórios via Painel do Gestor.
+**MÉTRICAS CONSIDERADAS**
+• **Taxa de Abertura (Open Rate):** Aumento do engajamento com notificações centralizadas.
+• **Índice de Conformidade:** Garantia de 100% de rastreabilidade para comunicados obrigatórios.
+• **Satisfação do Usuário:** Percepção de modernização e limpeza do sistema.
+• **Curva de Aprendizado:** Redução do tempo de adaptação à nova funcionalidade (pela adoção de padrões conhecidos).
 
-**Satisfação do Usuário**
-Melhoria na percepção visual do sistema devido ao facelift do Header e organização da Inbox.
+**RESULTADO ESPERADO**
+A solução transforma a comunicação do sistema em um ativo administrativo seguro, reduzindo o risco de conformidade. A interface modernizada melhora a eficiência operacional ao otimizar o Header e oferecer ao usuário o controle sobre sua própria jornada de informação.
 
 **NOTA DE CONFIDENCIALIDADE**
 Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identidade visual e cores foram adaptados para fins de portfólio, preservando a confidencialidade da empresa e mantendo a fidelidade ao processo, às decisões de design e aos desafios enfrentados.
@@ -150,123 +158,141 @@ Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identi
       {
         url: "/notificacoes-user.png",
         title: "Painel do Usuário: Inbox e Preferências",
-      },
-    ],
+      }
+    ]
   },
 // --- PROJETO 3: DESIGN SYSTEM (NOVO) ---
   {
     id: "evolucao-design-system",
     title: "Evolução e Escalabilidade de Design System",
-    embedUrl: "", // Deixe vazio se não for embedar o Figma
-    description:
-      "Estruturação de Design Ops, adoção de Figma Variables e mentoria técnica para elevar a maturidade de um Design System corporativo em constante evolução.",
+    status: "active",
+    embedUrl: "",
+    description: "Estruturação de Design Ops e maturidade sistêmica através de Figma Variables e documentação funcional para acelerar o ciclo de entrega de produtos.",
     fullDescription: `
-**O CONTEXTO**
-Ao assumir o projeto, a empresa já possuía um Design System inicial, porém com uma estrutura "básica" que não acompanhava a velocidade de crescimento dos produtos. Faltava padronização em níveis mais profundos (tokens) e documentação funcional, o que gerava gargalos no hand-off e retrabalho constante.
+**PROBLEMA DE NEGÓCIO**
+A biblioteca de design existente era estática e básica, não acompanhando a velocidade de crescimento dos produtos. A falta de padronização em níveis profundos (tokens) e a ausência de documentação funcional geravam gargalos constantes no hand-off, resultando em retrabalho para o time de design e inconsistências na implementação pelo time de engenharia.
 
-**O DESAFIO**
-Transformar uma biblioteca visual estática em um ecossistema de design vivo, escalável e de fácil manutenção, sem pausar as entregas do dia a dia (trocar o pneu com o carro andando). Além disso, havia o desafio cultural de aculturar o time de design sobre boas práticas de componentização.
+**OBJETIVO**
+Transformar uma biblioteca visual limitada em um ecossistema de design vivo e escalável (Design Ops), otimizando a manutenção do sistema e acelerando a prototipação e o desenvolvimento sem interromper as entregas contínuas.
 
-**ESTRATÉGIA E EXECUÇÃO (DESIGN OPS)**
-Para garantir que o Design System fosse não apenas um repositório, mas uma ferramenta de aceleração, atuei nas seguintes frentes:
+**DIAGNÓSTICO**
+• **Dívida Técnica Visual:** Falta de padronização em níveis de tokens de design.
+• **Gargalo de Hand-off:** Documentação inexistente ou insuficiente para desenvolvedores.
+• **Inconsistência de Componentes:** Uso variado de elementos que deveriam ser globais.
+• **Barreira Cultural:** Necessidade de aculturar o time sobre boas práticas de componentização avançada.
 
-**1. Arquitetura de Variáveis e Tokens**
-• Implementação avançada de Figma Variables, estruturando coleções lógicas para Espaçamentos, Border Radius e Cores (com suporte nativo a Light/Dark Mode).
-• Separação de cores primitivas (paleta base) de cores semânticas (tokens de ação, erro, sucesso), blindando o sistema contra quebras visuais e facilitando a manutenção em massa.
+**IMPACTO DIRETO:**
+• Aumento do retrabalho (Rework Rate).
+• Lentidão no ciclo de vida do produto (Time-to-Market).
+• Alta curva de aprendizado para novos membros da equipe.
 
-**2. Componentização Avançada e Documentação**
-• Reestruturação de componentes complexos (Headers, Side Navigations, Badges) utilizando Auto Layout, propriedades de componentes (Variants, Booleans) e regras de acessibilidade.
-• Criação de guias de uso exaustivos: cada componente passou a ter documentação de anatomia, estados (Default, Hover, Disabled), regras de comportamento e princípios de UX atrelados (ex: quando usar cada tipo de navegação).
+**HIPÓTESE**
+Se implementarmos uma arquitetura de tokens via Figma Variables e estruturarmos uma documentação funcional profunda de componentes, reduziremos o esforço cognitivo na criação de interfaces e garantiremos uma fidelidade de 1:1 entre design e código.
 
-**3. Cultura e Mentoria**
-• A tecnologia não se sustenta sem as pessoas. Promovi o repasse de conhecimento prático sobre componentização e uso de variáveis, elevando a barra técnica de todo o time de design e garantindo que o sistema fosse adotado e mantido corretamente.
+**PROCESSO DE DISCOVERY**
+Para elevar a maturidade do sistema, o projeto seguiu uma investigação técnica rigorosa:
+• **Auditoria de Interface:** Mapeamento de todos os componentes existentes para identificar inconsistências e redundâncias.
+• **Entrevistas com Engenharia:** Diagnóstico dos principais pontos de atrito durante o hand-off para entender quais informações técnicas eram vitais na documentação.
+• **Benchmarking de Design Ops:** Estudo de padrões de mercado para estruturação de coleções lógicas de variáveis (Espaçamentos, Border Radius e Cores Semânticas).
+• **Mapeamento de Regras de Negócio:** Definição de tokens de suporte nativo a Light/Dark Mode alinhados à identidade da marca.
 
-**IMPACTOS E MÉTRICAS**
+**SOLUÇÃO DE DESIGN**
+• **Arquitetura de Variáveis e Tokens:** Estruturação de coleções lógicas e separação entre cores primitivas e semânticas, blindando o sistema contra quebras visuais.
+• **Componentização Avançada:** Reestruturação de componentes complexos utilizando Auto Layout, Variants, Booleans e regras de acessibilidade.
+• **Documentação Funcional:** Criação de guias exaustivos com anatomia, estados, comportamentos e princípios de UX atrelados a cada componente.
+• **Mentoria e Cultura:** Repasse de conhecimento técnico para o time, garantindo a adoção correta e a sustentabilidade do ecossistema.
 
-**Redução de Design Debt (Dívida Técnica)**
-A padronização via variáveis reduziu drasticamente o tempo gasto corrigindo inconsistências visuais em diferentes telas do produto.
+**MÉTRICAS CONSIDERADAS**
+• **Redução de Design Debt:** Diminuição do tempo gasto corrigindo inconsistências visuais.
+• **Velocidade de Entrega (Time-to-Market):** Agilidade na criação de novas telas utilizando a biblioteca otimizada.
+• **Eficiência de Onboarding:** Redução do tempo de aprendizado de novos designers através da documentação viva.
+• **Fidelidade de Implementação:** Consistência entre o protótipo e o produto final (Storybook/Chromatic).
 
-**Time-to-Market (Velocidade de Entrega)**
-Com componentes robustos e bem documentados, o esforço cognitivo na criação de novas interfaces caiu consideravelmente, permitindo ao time focar na estratégia e no usuário, não no "desenho do botão".
-
-**Onboarding e Curva de Aprendizado**
-A documentação profunda está servindo como material de treinamento instantâneo para novos designers e desenvolvedores, garantindo alinhamento técnico desde o dia inicial.
+**RESULTADO ESPERADO**
+Um fluxo de trabalho otimizado onde o Design System atua como um acelerador estratégico, permitindo que o time foque em estratégia e experiência do usuário, enquanto a interface mantém consistência absoluta e escalabilidade técnica.
 
 **NOTA DE CONFIDENCIALIDADE**
 Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identidade visual e cores foram adaptados para fins de portfólio, preservando a confidencialidade da empresa e mantendo a fidelidade ao processo, às decisões de design e aos desafios enfrentados.
     `,
-    imageUrl: "/ds-capa.png", // ⚠️ Lembre de salvar uma capa com esse nome
+    imageUrl: "/ds-capa.png",
     category: "design",
     tags: ["Design System", "Design Ops", "Figma Variables"],
     technologies: ["Figma", "Tokens", "Documentação", "Mentoria"],
-    client: "Teknisa", // Ou "Confidencial"
+    client: "Confidencial",
     role: "Product Designer / UI",
     liveUrl: "#",
     githubUrl: "#",
     gallery: [
       {
-        url: "/ds-variaveis.png", // ⚠️ Imagem das suas Figma Variables
+        url: "/ds-variaveis.png",
         title: "Estruturação de Variáveis: Espaçamentos, Radius e Modos de Cor",
       },
       {
-        url: "/ds-cores.png", // ⚠️ Imagem da sua paleta de cores primitivas
+        url: "/ds-cores.png",
         title: "Inventário de Cores Primitivas e Escalas",
       },
       {
-        url: "/ds-documentacao.png", // ⚠️ Imagem da documentação do Header
+        url: "/ds-documentacao.png",
         title: "Documentação Funcional: Regras de UX e Anatomia de Componentes",
       },
       {
-        url: "/ds-pastas.png", // ⚠️ Imagem da organização das pastas
+        url: "/ds-pastas.png",
         title: "Taxonomia e Organização Lógica do Repositório",
-      },
-    ],
+      }
+    ]
   },
   // --- PROJETO 4: PLATAFORMA B2B DE COMPRAS (ATUALIZADO COM IMAGENS REAIS) ---
   {
     id: "plataforma-b2b-compras",
     title: "Plataforma B2B de Compras e Cotações",
-    embedUrl: "", // Adicione o link do protótipo do Figma se houver
-    description:
-      "Estruturação end-to-end de um sistema B2B, otimizando o fluxo de negociação entre empresas e fornecedores com foco em eficiência operacional e redução de carga cognitiva.",
+    status: "active",
+    embedUrl: "",
+    description: "Estruturação end-to-end de um ecossistema de compras, otimizando negociações corporativas com foco na redução da carga cognitiva e eficiência operacional.",
     fullDescription: `
-**O CONTEXTO E O DESAFIO**
-O ecossistema de compras corporativas costuma ser fragmentado e burocrático. O desafio deste projeto foi centralizar todo o fluxo de compras, da solicitação de cotação à geração da ordem de compra final. O objetivo do negócio era claro: aumentar a governança, garantir o melhor custo-benefício nas negociações e acelerar a tomada de decisão através de um ambiente transparente e estruturado.
+**PROBLEMA DE NEGÓCIO**
+O ecossistema de compras corporativas era fragmentado e altamente burocrático. A falta de uma plataforma centralizadora para cotações e ordens de compra resultava em retrabalho, perda de dados e dificuldade em comparar propostas, prejudicando a governança e a agilidade nas negociações.
 
-**PAIR DESIGN E CO-CRIAÇÃO**
-A complexidade de um produto B2B dessa magnitude exige colaboração contínua. Atuei neste projeto em forte dinâmica com a designer Amanda Guimarães. Dividir o discovery e o delivery nos permitiu debater fluxos críticos com maior profundidade, cruzar diferentes perspectivas de usabilidade e garantir entregas mais robustas, mantendo o alinhamento constante com os times de Produto e Engenharia.
+**OBJETIVO**
+Centralizar o fluxo de compras de ponta a ponta (solicitação à ordem de compra) em um ambiente transparente e estruturado, garantindo o melhor custo-benefício e acelerando a tomada de decisão.
 
-**ESTRATÉGIA DE UX E MINHA ATUAÇÃO**
-Foquei na estruturação do produto e no desenho de fluxos de alta criticidade, garantindo que a complexidade do sistema legado não fosse repassada para a interface do usuário:
+**DIAGNÓSTICO**
+• **Descentralização:** Informações espalhadas em sistemas legados e planilhas.
+• **Alta Carga Cognitiva:** Dificuldade na análise de variáveis complexas durante a comparação de propostas.
+• **Falta de Governança:** Ausência de rastreabilidade clara sobre quem aprovou ou alterou os termos das negociações.
+• **Fluxo não Orientado:** Processos que permitiam falhas e omissões por parte de compradores e fornecedores.
 
-**1. Mapeamento de Perfis e Permissões**
-• Modelagem de arquitetura de informação e jornadas distintas para múltiplos usuários (Compradores, Fornecedores e Administradores), blindando o sistema com uma definição clara de regras de negócio e acessos.
+**IMPACTO DIRETO:**
+• Baixa eficiência nas negociações (Time-on-Task elevado).
+• Custos ocultos devido à dificuldade de auditar orçamentos.
+• Risco de baixa adesão devido à complexidade da interface.
 
-**2. Redução de Carga Cognitiva**
-• Desenho de interfaces focadas na comparação simultânea de propostas. O uso de padrões visuais claros e hierarquia de informação bem definida facilitou a análise de variáveis complexas por parte dos compradores, apoiando uma tomada de decisão mais rápida e segura.
+**HIPÓTESE**
+Se mapearmos as jornadas e permissões de forma clara e criarmos interfaces focadas na comparação simultânea e visualização de dados, reduziremos a carga cognitiva e o retrabalho, aumentando a assertividade das compras e a governança do sistema.
 
-**3. Equilíbrio entre Automação e Controle Humano**
-• Estruturação de fluxos de cotação e negociação que aproveitam a automação do sistema para eliminar retrabalho, mas mantêm pontos de verificação cruciais na mão do usuário, garantindo segurança operacional.
+**PROCESSO DE DISCOVERY**
+Este projeto foi conduzido utilizando a metodologia de Pair Design em colaboração com a designer Amanda Guimarães, o que permitiu um nível mais profundo de investigação:
+• **Mapeamento de Atores:** Definição da arquitetura de informação e jornadas exclusivas para os perfis de Compradores, Fornecedores e Administradores.
+• **Co-criação Interdisciplinar:** Alinhamento contínuo com as equipes de Produto e Engenharia para garantir que as regras de negócio fossem blindadas sem sacrificar a usabilidade.
+• **Estratégia de Validação:** Planejamento antecipado de testes de usabilidade, com definição de métricas e critérios de recrutamento, para validar a aderência do sistema pós-desenvolvimento.
 
-**4. Validação e Usabilidade**
-• Planejamento estratégico de testes de usabilidade para validação das interfaces pós-desenvolvimento, definindo objetivos da pesquisa, recrutamento de perfis corretos e métricas de sucesso baseadas na experiência real do usuário B2B.
+**SOLUÇÃO DE DESIGN**
+• **Redução de Carga Cognitiva:** Criação de padrões visuais claros e uma forte hierarquia de informação para permitir a análise lado-a-lado de variáveis e propostas.
+• **Automação Controlada:** Desenho de fluxos que automatizam tarefas repetitivas (eliminando retrabalho), mas mantêm pontos críticos de validação humana para garantir a segurança da operação.
+• **Ecossistema Integrado:** Estruturação end-to-end do produto, garantindo que a complexidade dos sistemas legados de fundo não transbordasse para a tela do usuário.
 
-**IMPACTOS E MÉTRICAS**
+**MÉTRICAS CONSIDERADAS**
+• **Eficiência Operacional (Time-to-Task):** Redução do tempo necessário para completar o ciclo de cotação.
+• **Task Success Rate:** Aumento da assertividade na escolha de fornecedores devido à clareza na comparação de propostas.
+• **Governança (Compliance):** Melhoria no nível de rastreabilidade e segurança documental das compras.
+• **Adoção do Produto (Feature Adoption):** Transição bem-sucedida do modelo analógico/fragmentado para o digital centralizado.
 
-**Time-to-Task (Eficiência Operacional)**
-A centralização do fluxo e a integração inteligente com sistemas legados reduziram o tempo de execução e o retrabalho histórico nas negociações.
-
-**Task Success Rate**
-A clareza na interface de comparação de múltiplas propostas elevou a taxa de sucesso e a assertividade na escolha de fornecedores, impactando diretamente oS resultados finais da empresa.
-
-**Adoção e Governança**
-A criação de um ambiente controlado e rastreável melhorou os níveis de compliance (conformidade) do processo de compras corporativas.
+**RESULTADO ESPERADO**
+A plataforma eleva a maturidade do processo de compras da empresa, transformando uma atividade burocrática em uma operação estratégica. A solução garante conformidade legal e resulta em negociações mais rápidas e com maior custo-benefício (impactando o *bottom line* da companhia).
 
 **NOTA DE CONFIDENCIALIDADE**
 Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identidade visual e cores foram adaptados para fins de portfólio, preservando a confidencialidade da empresa e mantendo a fidelidade ao processo, às decisões de design e aos desafios enfrentados.
     `,
-    // 👇 ESCOLHI ESTA IMAGEM COMO CAPA POR MOSTRAR O CORAÇÃO DO SISTEMA
-    imageUrl: "/cotação.png", 
+    imageUrl: "/cotacao.png",
     category: "design",
     tags: ["UX Strategy", "B2B", "Pair Design"],
     technologies: ["Figma", "Auto Layout", "Pair Design", "Testes de Usabilidade"],
@@ -276,117 +302,133 @@ Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identi
     githubUrl: "#",
     gallery: [
       {
-        url: "/negociação.png",
+        url: "/negociacao.png",
         title: "Fluxo de Negociação: Gestão de status e termos entre partes.",
       },
       {
-        url: "/cadastro-preços-fornecedores.png",
+        url: "/cadastro-precos-fornecedores.png",
         title: "Comparação de Propostas: Base de dados estruturada para análise de preços e fornecedores.",
       },
       {
-        url: "/cadastro_fornecedor.png",
+        url: "/cadastro-fornecedor.png",
         title: "Cadastro de Fornecedor: Estruturação de dados complexos com Auto Layout.",
       },
       {
-        url: "/perfil-edição.png",
+        url: "/perfil-edicao.png",
         title: "Edição de Perfil: Mapeamento de perfis e gestão de dados do usuário.",
       },
       {
         url: "/login.png",
         title: "Portal de Acesso: Entrada do ecossistema B2B.",
-      },
-    ],
+      }
+    ]
   },
   // --- PROJETO 5: HEALTHDASH (AUDITORIA UX) ---
   {
-    id: "healthdash-auditoria-usabilidade",
-    title: "Auditoria e Interface Responsiva",
+    id: "healthdash-analise-usabilidade",
+    title: "Análise de Usabilidade e Interface Responsiva",
+    status: "active",
     embedUrl: "", 
-    description:
-      "Auditoria heurística e proposta de redesign responsivo para um sistema de gestão nutricional hospitalar, focado em eficiência operacional e segurança do paciente.",
+    description: "Análise heurística e proposta de redesign responsivo para um sistema de gestão nutricional hospitalar, focado em eficiência operacional e segurança do paciente.",
     fullDescription: `
-**1. O DESAFIO (CONTEXTO)**
-Otimizar a interface de um sistema de gestão nutricional hospitalar utilizado em dispositivos móveis (tablets). O objetivo era garantir que nutricionistas e equipes de copa pudessem acessar dados críticos de pacientes com rapidez e precisão, mesmo em ambientes de alta pressão.
+**PROBLEMA DE NEGÓCIO**
+O sistema de gestão nutricional hospitalar, utilizado predominantemente em dispositivos móveis (tablets), apresentava barreiras de usabilidade que dificultavam o trabalho de nutricionistas e equipes de copa. Em um ambiente hospitalar de alta pressão, o acesso e o preenchimento de dados críticos dos pacientes ocorriam de forma lenta e propensa a erros.
 
-**2. METODOLOGIA: AUDITORIA DE INTERFACE (HEURÍSTICAS DE UX)**
-Realizei uma análise minuciosa identificando falhas críticas que impactavam a Eficiência Operacional e a Acessibilidade.
+**OBJETIVO**
+Otimizar a interface móvel para garantir que os profissionais de saúde acessem e registrem informações dietéticas com rapidez e precisão, reduzindo a fricção e aumentando a segurança operacional.
 
-**Principais Problemas Mapeados:**
-• **Hierarquia Visual e Legibilidade:** Títulos e dados do paciente tinham o mesmo peso visual, dificultando a leitura rápida (Scannability).
-• **Conflito de Atenção:** Imagens de fundo competiam com dados vitais do paciente, prejudicando o contraste.
-• **Falhas de Acessibilidade em Touch Targets:** Ícones e botões possuíam áreas de toque inferiores ao padrão de 44x44px, gerando erros de interação em tablets.
-• **Quebra de Responsividade:** O layout "desintegrava" ao alternar entre as orientações paisagem e retrato, ocultando botões de ação críticos como "Salvar".
+**DIAGNÓSTICO**
+• **Quebra de Responsividade:** O layout "desintegrava" ao alternar entre as orientações paisagem e retrato, ocultando botões críticos como "Salvar".
+• **Falha de Acessibilidade (Ergonomia):** Ícones e botões possuíam áreas de toque inferiores ao padrão mínimo de 44x44px, gerando cliques acidentais.
+• **Hierarquia Visual e Ruído:** Títulos e dados do paciente tinham o mesmo peso visual (baixa escaneabilidade), e imagens de fundo competiam com informações vitais, prejudicando o contraste.
 
-**3. SOLUÇÕES E MELHORIAS PROPOSTAS**
-Com base em fundamentos científicos de design e usabilidade, propus as seguintes refatorações:
+**IMPACTO DIRETO:**
+• Aumento do tempo de tarefa (Time on Task) devido a fluxos truncados e modais quebrados.
+• Risco à segurança do paciente (Error Rate) gerado por toques acidentais e má interpretação de dados.
 
-• **Estabelecimento de Hierarquia Tipográfica:** Uso de pesos variados (Bold para dados, Regular para rótulos) para guiar o olho do usuário instantaneamente para a informação necessária.
-• **Otimização de Componentes de Formulário:** Substituição de modais centrais (que eram cobertos pelo teclado virtual) por páginas dedicadas ou grids fluidos.
-• **Feedback Visual de Status:** Implementação de estados visuais claros (Tags/Badges) para indicar o status da prescrição (Ativa, Em Espera, Concluída).
+**HIPÓTESE**
+Se realizarmos uma refatoração baseada em heurísticas de usabilidade, implementando um grid responsivo, touch targets adequados e uma hierarquia visual clara, reduziremos a carga cognitiva da equipe, minimizando erros operacionais e acelerando o fluxo de prescrição dietética.
+
+**PROCESSO DE DISCOVERY**
+O projeto foi conduzido através de uma rigorosa investigação técnica e comportamental:
+• **Análise Heurística de Interface:** Avaliação minuciosa para identificar violações de usabilidade e acessibilidade na plataforma atual, baseada nos princípios de Nielsen.
+• **Análise de Contexto de Uso:** Mapeamento do cenário de uso real (tablets operados muitas vezes com uma mão enquanto o profissional se movimenta pelo hospital).
+• **Avaliação Ergonômica:** Verificação de áreas de toque, contraste e legibilidade, cruzando com diretrizes globais de acessibilidade para interfaces de toque.
+
+**SOLUÇÃO DE DESIGN**
 • **Grid Responsivo e Ergonômico:** Reconstrução da interface sobre um grid fluido, permitindo a navegação lateral facilitada para o alcance do polegar em tablets.
-• **Redução de Carga Cognitiva:** Padronização de ícones universais (como a lupa para busca e setas para navegação entre pacientes) para tornar a interface intuitiva sem necessidade de treinamento.
+• **Otimização de Interações:** Substituição de modais centrais (que eram cobertos pelo teclado virtual) por páginas dedicadas, eliminando o bloqueio de fluxo.
+• **Hierarquia Tipográfica e Feedback:** Estabelecimento de pesos variados (Bold para dados, Regular para rótulos) e implementação de estados visuais (Tags/Badges) para o status das prescrições.
+• **Redução de Carga Cognitiva:** Padronização de ícones universais e remoção de ruídos de fundo para foco total nos dados do paciente.
 
-**4.IMPACTOS E MÉTRICAS**
-As melhorias propostas visam impactar diretamente os seguintes indicadores:
+**MÉTRICAS CONSIDERADAS**
+• **Eficiência Operacional (Time-on-Task):** Redução do tempo de preenchimento ao eliminar a luta do usuário contra o teclado virtual e modais.
+• **Segurança do Paciente (Error Rate):** Minimização de toques acidentais através do dimensionamento correto dos alvos de toque.
+• **Taxa de Sucesso (Task Success Rate):** Conclusão fluida do processo de prescrição, independentemente da orientação da tela (paisagem/retrato).
 
-**Time-on-Task (Eficiência)**
-Redução do tempo necessário para preencher uma prescrição dietética ao eliminar ciclos de erro com teclado e rolagem de modal.
-
-**Error Rate (Segurança do Paciente)**
-Minimizar toques acidentais e interpretação errada de dados através de contraste e touch targets adequados.
+**RESULTADO ESPERADO**
+A nova proposta de interface reduz drasticamente o risco de erros médicos oriundos do software, melhora a ergonomia para o trabalhador da saúde e transforma um sistema engessado em uma ferramenta confiável e ágil para a operação da clínica ou hospital.
 
 **NOTA DE CONFIDENCIALIDADE**
 Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identidade visual e cores foram adaptados para fins de portfólio, preservando a confidencialidade da empresa e mantendo a fidelidade ao processo, às decisões de design e aos desafios enfrentados.
     `,
-    imageUrl: "/healthdash-capa.png", // ⚠️ Lembre de colocar essa imagem de ilustração na pasta public
+    imageUrl: "/healthdash-capa.png",
     category: "design",
-    tags: ["UX Audit", "Healthcare", "Responsive Design", "Heurísticas"],
+    tags: ["UX Analysis", "Healthcare", "Responsive Design", "Heurísticas"],
     technologies: ["Figma", "UX Research", "Acessibilidade", "UI Design"],
     client: "HealthDash", 
     role: "UX/UI Designer",
     liveUrl: "#",
-    githubUrl: "#",
-    // Galeria removida para focar na capa ilustrativa e no peso estratégico do texto.
+    githubUrl: "#"
   },
   // --- PROJETO 6: SMARTSETTLEMENT (FINTECH / AGILIDADE) ---
-  {
+ {
     id: "smartsettlement-gestao-financeira",
     title: "Gestão de Conciliação Financeira",
     status: "active",
     embedUrl: "", 
-    description:
-      "Refatoração ágil de fluxo de conciliação bancária, focando em visibilidade de processamento, redução de carga cognitiva e eficiência operacional sob restrições técnicas.",
+    description: "Refatoração ágil de fluxo de conciliação bancária, focando em visibilidade de processamento, redução de carga cognitiva e eficiência operacional sob restrições técnicas.",
     fullDescription: `
-**1. O DESAFIO E A DEMANDA**
-O projeto consistiu na refatoração ágil de um sistema de gestão financeira robusto, focado na **Conciliação de Parcelas em Lote**. A demanda exigia solucionar falhas críticas de usabilidade e visibilidade de processos sob uma condição de alta pressão por entrega e implementação imediata.
+**PROBLEMA DE NEGÓCIO**
+O sistema de gestão financeira apresentava falhas críticas de usabilidade e falta de transparência no fluxo de Conciliação de Parcelas em Lote. A ausência de feedback do sistema gerava incerteza nos operadores financeiros durante o processamento de grandes volumes de dados. Além disso, a empresa enfrentava alta pressão por entregas rápidas, exigindo melhorias imediatas que não quebrassem o ecossistema legado.
 
-**2. ESTRATÉGIA DE DESIGN E RESTRIÇÕES**
-Para garantir a viabilidade do projeto e o cumprimento dos prazos, adotei uma postura pragmática baseada em dois pilares fundamentais:
+**OBJETIVO**
+Refatorar o fluxo de conciliação bancária com extrema agilidade para aumentar a visibilidade sistêmica e prevenir erros operacionais, garantindo uma implementação rápida e segura por parte da engenharia.
 
-• **Preservação do Ecossistema:** O UI Kit e o Design System não foram alterados para evitar impactos em um sistema já consolidado e garantir que a prioridade permanecesse na funcionalidade e na segurança da informação.
-• **Documentação Ágil (Lean Design):** Devido à urgência, utilizei anotações de fluxo e sinalizações visuais diretamente sobre as interfaces (redlining), acelerando o entendimento do time de engenharia e eliminando o custo de tempo de protótipos interativos complexos.
+**DIAGNÓSTICO**
+• **Cegueira Operacional:** Falta de clareza sobre o status de processamento de arquivos pesados.
+• **Alta Carga Cognitiva:** Dificuldade para rastrear erros e sucessos em tabelas densas de dados financeiros.
+• **Riscos de Compliance:** Operações financeiras de alto impacto sendo executadas sem fricção de segurança.
+• **Restrição Técnica:** Impossibilidade de alterar o Design System ou UI Kit atual para não atrasar o cronograma.
 
-**3. SOLUÇÕES IMPLEMENTADAS: UX & CARGA COGNITIVA**
+**IMPACTO DIRETO:**
+• Insegurança do usuário ao enviar arquivos (levando a interrupções indevidas).
+• Aumento do volume de tickets de suporte solicitando status de processamentos.
+• Risco financeiro (Error Rate) em conciliações acidentais.
 
-**A. Visibilidade e Feedback de Sistema**
-Apliquei a heurística de visibilidade do status do sistema para reduzir a incerteza do operador financeiro durante o processamento de grandes volumes de dados:
-• **Indicação de Progresso:** Introdução de barras de progresso e mensagens de status (Aguardando, Processando) para evitar interrupções precoces pelo usuário.
-• **Scanning Veloz:** Tabela otimizada com feedbacks visuais imediatos (ícones de sucesso e erro), permitindo a identificação de falhas em segundos.
+**HIPÓTESE**
+Se utilizarmos uma abordagem de Lean Design para inserir feedbacks claros de sistema (barras de progresso e modais de atenção) sem alterar a fundação do UI Kit, conseguiremos reduzir a incerteza do operador, diminuir chamados de suporte e entregar a melhoria em tempo recorde.
 
-**B. Prevenção de Erros em Operações Críticas**
-• **Modais de Confirmação:** Implementação de interrupções deliberadas em ações de alto impacto (como o envio da conciliação), garantindo que o usuário valide a operação e mitigando riscos financeiros.
-• **Navegação Orientada:** Reorganização do fluxo de conciliação através de botões de "Avançar" e "Voltar", transformando um processo denso em uma jornada lógica e sequencial.
+**PROCESSO DE DISCOVERY**
+Para garantir uma entrega ágil sob alta restrição técnica, a fase de descoberta focou no mapeamento de atalhos viáveis para a engenharia:
+• **Alinhamento de Restrições:** Decisão estratégica conjunta com Produto e Desenvolvimento de preservar o Design System para focar unicamente na solução funcional.
+• **Auditoria de Fluxos Críticos:** Identificação exata dos momentos onde o usuário perdia a clareza sobre a ação do sistema.
+• **Redlining e Especificação Ágil:** Substituição de protótipos interativos complexos por documentação direta nas interfaces (anotações de fluxo e sinalizações visuais), acelerando o hand-off e o entendimento técnico.
 
-**4. IMPACTO E BUSINESS**
+**SOLUÇÃO DE DESIGN**
+• **Visibilidade e Feedback de Sistema:** Introdução de barras de progresso e mensagens de status (Aguardando, Processando) para blindar interrupções precoces.
+• **Scanning Veloz na Interface:** Tabelas otimizadas com feedbacks visuais imediatos (ícones de sucesso/check verde e erro vermelho), permitindo identificar falhas rapidamente.
+• **Prevenção de Erros:** Implementação de modais de confirmação como fricção deliberada antes de ações financeiras irreversíveis.
+• **Navegação Orientada:** Reorganização do fluxo de conciliação com steppers lógicos ("Avançar" e "Voltar"), reduzindo a sobrecarga mental.
 
-**Agilidade de Desenvolvimento (Time-to-Market)**
-A metodologia de design direto para produção reduziu drasticamente o ciclo de entrega das melhorias.
+**MÉTRICAS CONSIDERADAS**
+• **Time-to-Market (Agilidade):** Redução do ciclo de entrega do design para a engenharia.
+• **Eficiência Operacional (Time-on-Task):** Centralização de ações (Enviar, Limpar, Relatórios) e flexibilidade de exportação (PDF/CSV) otimizando o tempo por sessão.
+• **Taxa de Sucesso e Segurança (Error Rate):** Mitigação de execuções financeiras acidentais.
+• **Redução de Suporte:** Queda esperada em chamados por dúvidas de processamento sistêmico.
 
-**Eficiência Operacional (Time-on-Task)**
-A centralização de ações (Enviar, Limpar, Relatórios) e a flexibilidade de exportação (PDF/CSV) otimizaram o tempo gasto pelo colaborador em cada sessão de conciliação.
-
-**Redução de Suporte**
-A clareza nos feedbacks de erro e progresso visam reduzir chamados de suporte relacionados à incerteza do processamento de dados.
+**RESULTADO ESPERADO**
+A adoção da metodologia de design direto para produção entrega um impacto massivo em pouquíssimo tempo. O colaborador ganha uma jornada segura e com feedbacks claros, enquanto a empresa reduz seus custos operacionais de suporte e otimiza o *time-to-market*.
 
 **NOTA DE CONFIDENCIALIDADE**
 Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identidade visual e cores foram adaptados para fins de portfólio, preservando a confidencialidade da empresa e mantendo a fidelidade ao processo, às decisões de design e aos desafios enfrentados.
