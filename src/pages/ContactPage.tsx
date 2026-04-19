@@ -58,7 +58,7 @@ const Contact = () => {
                     Belo Horizonte, MG - BR
                   </p>
                   <p className="text-sm text-gray-500 mt-1">
-                    Disponível para trabalho remoto
+                    Disponível para contato.
                   </p>
                 </div>
               </div>
