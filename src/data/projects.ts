@@ -4,53 +4,51 @@ export const projectsData: Project[] = [
   // ========================================================================
   // PROJETOS ATIVOS (Seus 2 projetos reais)
   // ========================================================================
-  {
-    id: "prevmax-previdência",
-    title: "PrevMax — previdência",
-    status: "active", // Marcado como ativo
-    embedUrl:
-      "https://embed.figma.com/proto/UowipTJL4ggqVwP828F6Eb/Portf%C3%B3lio-PLATAFORMA?page-id=0%3A1&node-id=4-4108&viewport=575%2C347%2C0.06&scaling=scale-down&content-scaling=fixed&starting-point-node-id=4%3A4094&embed-host=share",
-    description:
-      "Plataforma de previdência complementar com foco em acessibilidade, clareza de informações financeiras e conformidade regulatória.",
+{
+    id: "prevmax-previdencia",
+    title: "PrevMax — Previdência Complementar",
+    status: "active",
+    embedUrl: "https://embed.figma.com/proto/UowipTJL4ggqVwP828F6Eb/Portf%C3%B3lio-PLATAFORMA?page-id=0%3A1&node-id=4-4108&viewport=575%2C347%2C0.06&scaling=scale-down&content-scaling=fixed&starting-point-node-id=4%3A4094&embed-host=share",
+    description: "Plataforma de previdência complementar com foco em acessibilidade, clareza de informações financeiras e conformidade regulatória.",
     fullDescription: `
-**VISÃO GERAL DO PROJETO**
-Projeto de design e estruturação de uma plataforma digital de previdência complementar fechada, voltada para participantes de fundos de pensão privados. O foco esteve em clareza, conformidade legal, acessibilidade e suporte à tomada de decisão consciente, considerando um público majoritariamente maduro e com baixo letramento digital.
+**PROBLEMA DE NEGÓCIO**
+Participantes de fundos de pensão enfrentavam dificuldades para gerir seus planos devido à alta complexidade das regras previdenciárias e interfaces pouco intuitivas. O cenário era agravado por um público majoritariamente maduro e com baixo letramento digital, gerando dependência de canais de suporte físico e baixa autonomia nas decisões financeiras.
 
-**O DESAFIO**
-Traduzir regras previdenciárias complexas, altamente reguladas e sensíveis, em uma experiência simples, confiável e orientada à autonomia do usuário, sem comprometer segurança, precisão das informações ou requisitos legais.
+**OBJETIVO**
+Traduzir regras reguladas e sensíveis em uma jornada digital simples e inclusiva, promovendo a autonomia do usuário na gestão de seu futuro financeiro sem comprometer a conformidade legal.
+
+**DIAGNÓSTICO**
+• **Barreira Cognitiva:** Linguagem técnica e fluxos burocráticos que afastavam o usuário.
+• **Baixo Letramento Digital:** Necessidade de interface extremamente acessível e intuitiva para o perfil etário.
+• **Fragmentação de Informação:** Dados de saldo, contribuições e benefícios dispersos.
+
+**Impacto direto:**
+• Alta taxa de erro em simulações (Error Rate).
+• Baixa confiança na plataforma digital (Trust & Safety).
+
+**HIPÓTESE**
+Se estruturarmos a arquitetura de informação com foco em clareza, acessibilidade (WCAG) e suporte à tomada de decisão (simuladores), aumentaremos a confiança e a adesão dos participantes ao canal digital, reduzindo custos operacionais de atendimento.
 
 **PROCESSO DE DISCOVERY**
-O projeto seguiu uma abordagem estruturada, colaborativa e orientada a negócio:
+Para guiar a solução e validar as hipóteses, o projeto seguiu uma abordagem estruturada e orientada ao negócio:
 
-**1. Levantamento de Requisitos e Stakeholders**
-• Alinhamento com stakeholders sobre expectativas, restrições legais e regras previdenciárias
-• Mapeamento de requisitos funcionais, técnicos e de interface
-• Priorização de transparência, segurança de dados e acessibilidade
+**1. Levantamento de Requisitos:** Alinhamento com stakeholders sobre restrições legais, mapeamento de requisitos funcionais e priorização de transparência e acessibilidade.
+**2. Pesquisa e Estratégia:** Pesquisa qualitativa com operadores, benchmarking de mercado, definição de personas (foco em letramento digital) e User Story Mapping para priorização de fluxos críticos.
+**3. Ideação e Testes:** Prototipação orientada a regras de negócio (não apenas estética) e testes iterativos com usuários para ajustes contínuos baseados em feedback qualitativo.
 
-**2. Pesquisa e Estratégia**
-• Pesquisa qualitativa com operadores que lidam com fundos de pensão para entender dores, necessidades e comportamentos
-• Benchmarking de plataformas do mesmo segmento
-• Definição de personas com foco em perfil etário, comportamento financeiro e letramento digital
-• User story mapping para visualização de fluxos críticos e priorização de backlog
-• Criação de sitemap alinhado às regras de negócio
+**SOLUÇÃO DE DESIGN**
+• **Fluxos Simplificados:** Redesenho ágil das jornadas de adesão, consulta de saldos e simulação de benefícios.
+• **Design Inclusivo:** Aplicação de boas práticas de usabilidade voltadas especificamente para o público maduro.
+• **Componentização Estratégica (Design System):** Desenvolvimento colaborativo com Front-end. Os componentes foram desenhados no Figma, implementados no Storybook e validados via Chromatic, garantindo fidelidade e eficiência.
 
-**3. Ideação, Prototipação e Testes**
-• Prototipação orientada às regras de negócio, não apenas à estética
-• Criação de design system escalável, com componentes reutilizáveis
-• Aplicação de boas práticas de usabilidade e design inclusivo
-• Testes com usuários e stakeholders, com ajustes contínuos baseados em feedback qualitativo
+**MÉTRICAS CONSIDERADAS**
+• Taxa de conclusão do fluxo (Task Success Rate) em simulações de benefício.
+• Redução de erros (Error Rate) em formulários de adesão.
+• Tempo de tarefa (Time on Task) na consulta de extratos e saldos.
+• Adoção da funcionalidade (Feature Adoption) nos canais digitais.
 
-**A SOLUÇÃO**
-• Experiência digital clara, segura e adequada a um contexto financeiro sensível
-• Fluxos simplificados para:
-  – Adesão ao plano
-  – Consulta de saldos e movimentações
-  – Simulação de contribuições e benefícios
-
-**DESIGN SYSTEM**
-O Design System foi desenvolvido de forma colaborativa com o time de Front-end, atuando como um ativo estratégico do produto para garantir consistência visual, eficiência no desenvolvimento e previsibilidade da experiência do usuário.
-
-Os componentes foram projetados no Figma e implementados de forma paralela no Storybook, permitindo documentação viva, versionamento e reutilização consistente ao longo do produto. Cada componente passou por validação visual e de comportamento utilizando o Chromatic, assegurando fidelidade entre design e implementação.
+**RESULTADO ESPERADO**
+A plataforma remove a fricção e o medo de lidar com finanças, transformando a previdência em um ativo compreensível. A solução reduz a carga operacional de suporte, garantindo retenção, engajamento e segurança jurídica para a empresa.
 
 **NOTA DE CONFIDENCIALIDADE**
 Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identidade visual e cores foram adaptados para fins de portfólio, preservando a confidencialidade da empresa e mantendo a fidelidade ao processo, às decisões de design e aos desafios enfrentados.
@@ -87,8 +85,8 @@ Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identi
       {
         url: "/prevmax-components.png",
         title: "Biblioteca de Componentes e UI Kit",
-      },
-    ],
+      }
+    ]
   },
   {
     id: "sistema-notificacoes",
