@@ -311,7 +311,7 @@ Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identi
       },
       {
         url: "/cadastro-fornecedor.png",
-        title: "Cadastro de Fornecedor: Estruturação de dados complexos com Auto Layout.",
+        title: "Cadastro de Fornecedor: Estruturação de dados.",
       },
       {
         url: "/perfil-edicao.png",
