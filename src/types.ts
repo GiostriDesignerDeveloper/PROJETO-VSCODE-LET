@@ -1,4 +1,3 @@
-// 1. Criamos esse tipo para facilitar
 export interface TranslatedText {
   pt: string;
   en: string;
@@ -6,16 +5,20 @@ export interface TranslatedText {
 
 export interface Project {
   id: string;
-  title: TranslatedText;       // Mudou de string para TranslatedText
-  description: TranslatedText; // Mudou de string para TranslatedText
-  fullDescription: TranslatedText; // Mudou de string para TranslatedText
+  title: TranslatedText;
+  description: TranslatedText;
+  fullDescription: TranslatedText;
+  client?: string;
+  role?: string;
+  status?: string;
   imageUrl: string;
+  embedUrl?: string; // Para o protótipo interativo do Figma
+  liveUrl?: string;
   category: string;
   tags: string[];
-  technologies: string[];
-  client: string;
-  role: string;
-  liveUrl?: string;
-  embedUrl?: string;
-  gallery?: { url: string; title: string }[];
+  technologies?: string[];
+  gallery?: {
+    url: string;
+    title: string;
+  }[];
 }
