@@ -1,17 +1,21 @@
+// 1. Criamos esse tipo para facilitar
+export interface TranslatedText {
+  pt: string;
+  en: string;
+}
+
 export interface Project {
   id: string;
-  title: string;
-  status?: "active" | "coming-soon"; // <--- O segredo está aqui
-  description: string;
-  fullDescription?: string;
+  title: TranslatedText;       // Mudou de string para TranslatedText
+  description: TranslatedText; // Mudou de string para TranslatedText
+  fullDescription: TranslatedText; // Mudou de string para TranslatedText
   imageUrl: string;
   category: string;
   tags: string[];
-  technologies?: string[];
-  client?: string;
-  role?: string;
+  technologies: string[];
+  client: string;
+  role: string;
   liveUrl?: string;
-  githubUrl?: string;
   embedUrl?: string;
-  gallery?: any[];
+  gallery?: { url: string; title: string }[];
 }
