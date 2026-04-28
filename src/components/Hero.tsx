@@ -1,4 +1,3 @@
-import React from "react";
 // 1. IMPORTAÇÃO: Trazemos a nossa ferramenta mágica de tradução
 import { useLanguage } from "../contexts/LanguageContext"; 
 
