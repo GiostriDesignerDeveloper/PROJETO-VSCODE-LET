@@ -2,15 +2,22 @@ import { Project } from "../types";
 
 export const projectsData: Project[] = [
   // ========================================================================
-  // PROJETOS ATIVOS (Seus 2 projetos reais)
+  // PROJETOS ATIVOS
   // ========================================================================
-{
+  {
     id: "prevmax-previdencia",
-    title: "PrevMax — Previdência Complementar",
+    title: {
+      pt: "PrevMax — Previdência Complementar",
+      en: "PrevMax — Complementary Pension"
+    },
     status: "active",
     embedUrl: "https://embed.figma.com/proto/UowipTJL4ggqVwP828F6Eb/Portf%C3%B3lio-PLATAFORMA?page-id=0%3A1&node-id=4-4108&viewport=575%2C347%2C0.06&scaling=scale-down&content-scaling=fixed&starting-point-node-id=4%3A4094&embed-host=share",
-    description: "Plataforma de previdência complementar com foco em acessibilidade, clareza de informações financeiras e conformidade regulatória.",
-    fullDescription: `
+    description: {
+      pt: "Plataforma de previdência complementar com foco em acessibilidade, clareza de informações financeiras e conformidade regulatória.",
+      en: "Complementary pension platform focused on accessibility, clarity of financial information, and regulatory compliance."
+    },
+    fullDescription: {
+      pt: `
 **PROBLEMA DE NEGÓCIO**
 Participantes de fundos de pensão enfrentavam dificuldades para gerir seus planos devido à alta complexidade das regras previdenciárias e interfaces pouco intuitivas. O cenário era agravado por um público majoritariamente maduro e com baixo letramento digital, gerando dependência de canais de suporte físico e baixa autonomia nas decisões financeiras.
 
@@ -52,49 +59,81 @@ A plataforma remove a fricção e o medo de lidar com finanças, transformando a
 
 **NOTA DE CONFIDENCIALIDADE**
 Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identidade visual e cores foram adaptados para fins de portfólio, preservando a confidencialidade da empresa e mantendo a fidelidade ao processo, às decisões de design e aos desafios enfrentados.
-    `,
+      `,
+      en: `
+**BUSINESS PROBLEM**
+Pension fund participants faced difficulties managing their plans due to the high complexity of pension rules and unintuitive interfaces. The scenario was aggravated by a mostly mature audience with low digital literacy, generating dependence on physical support channels and low autonomy in financial decisions.
+
+**OBJECTIVE**
+Translate highly regulated and sensitive rules into a simple and inclusive digital journey, promoting user autonomy in managing their financial future without compromising legal compliance.
+
+**DIAGNOSIS**
+• **Cognitive Barrier:** Technical language and bureaucratic flows that alienated the user.
+• **Low Digital Literacy:** Need for an extremely accessible and intuitive interface for the age profile.
+• **Information Fragmentation:** Dispersed balance, contribution, and benefit data.
+
+**Direct Impact:**
+• High error rate in simulations.
+• Low trust in the digital platform (Trust & Safety).
+
+**HYPOTHESIS**
+If we structure the information architecture focusing on clarity, accessibility (WCAG), and decision-making support (simulators), we will increase participants' trust and feature adoption in the digital channel, reducing operational support costs.
+
+**DISCOVERY PROCESS**
+To guide the solution and validate hypotheses, the project followed a structured, business-oriented approach:
+
+**1. Requirements Gathering:** Alignment with stakeholders on legal restrictions, functional requirements mapping, and prioritizing transparency and accessibility.
+**2. Research & Strategy:** Qualitative research with operators, market benchmarking, persona definition (focusing on digital literacy), and User Story Mapping to prioritize critical flows.
+**3. Ideation & Testing:** Prototyping oriented to business rules (not just aesthetics) and iterative user testing for continuous adjustments based on qualitative feedback.
+
+**DESIGN SOLUTION**
+• **Simplified Flows:** Agile redesign of enrollment journeys, balance inquiries, and benefit simulations.
+• **Inclusive Design:** Application of usability best practices aimed specifically at the mature audience.
+• **Strategic Componentization (Design System):** Collaborative development with Front-end. Components were designed in Figma, implemented in Storybook, and validated via Chromatic, ensuring fidelity and efficiency.
+
+**METRICS CONSIDERED**
+• Task Success Rate in benefit simulations.
+• Error Rate reduction in enrollment forms.
+• Time on Task for statement and balance inquiries.
+• Feature Adoption across digital channels.
+
+**EXPECTED RESULT**
+The platform removes the friction and fear of dealing with finances, transforming pensions into a comprehensible asset. The solution reduces the operational support load, ensuring retention, engagement, and legal security for the company.
+
+**CONFIDENTIALITY NOTE**
+This project was developed in a corporate context. The product name, visual identity, and colors were adapted for portfolio purposes, preserving the company's confidentiality while maintaining fidelity to the process, design decisions, and challenges faced.
+      `
+    },
     imageUrl: "/prevmax-capa.png",
     category: "UX Strategy",
     tags: ["UX Research", "Design System", "Acessibilidade"],
-    technologies: ["Figma", "Miro", "Microsoft Clarity", "Prototipagem"],
+    technologies: ["Figma", "Miro", "Microsoft Clarity", "Prototyping"],
     client: "PrevMax",
     role: "Product Designer",
     liveUrl: "#",
-    githubUrl: "#",
     gallery: [
-      {
-        url: "/prevmax-processo.png",
-        title: "Processo de Design & Metodologia",
-      },
-      {
-        url: "/prevmax-benchmark.png",
-        title: "Análise de Mercado (Benchmarking)",
-      },
-      {
-        url: "/prevmax-research.png",
-        title: "Personas e Mapeamento de Histórias (User Story Map)",
-      },
-      {
-        url: "/prevmax-flow.png",
-        title: "Fluxo do Usuário e Arquitetura de Informação",
-      },
-      {
-        url: "/prevmax-styleguide.png",
-        title: "Style Guide: Tipografia e Cores Acessíveis",
-      },
-      {
-        url: "/prevmax-components.png",
-        title: "Biblioteca de Componentes e UI Kit",
-      }
+      { url: "/prevmax-processo.png", title: "Processo de Design & Metodologia" },
+      { url: "/prevmax-benchmark.png", title: "Análise de Mercado (Benchmarking)" },
+      { url: "/prevmax-research.png", title: "Personas e Mapeamento de Histórias (User Story Map)" },
+      { url: "/prevmax-flow.png", title: "Fluxo do Usuário e Arquitetura de Informação" },
+      { url: "/prevmax-styleguide.png", title: "Style Guide: Tipografia e Cores Acessíveis" },
+      { url: "/prevmax-components.png", title: "Biblioteca de Componentes e UI Kit" }
     ]
   },
   {
     id: "redesign-navegacao-notificacoes",
-    title: "Redesign de Navegação e Sistema de Notificações",
+    title: {
+      pt: "Redesign de Navegação e Sistema de Notificações",
+      en: "Navigation Redesign and Notification System"
+    },
     status: "active",
     embedUrl: "",
-    description: "Redesign estratégico de navegação e criação de um sistema de notificações para garantir conformidade corporativa e reduzir a carga cognitiva do usuário.",
-    fullDescription: `
+    description: {
+      pt: "Redesign estratégico de navegação e criação de um sistema de notificações para garantir conformidade corporativa e reduzir a carga cognitiva do usuário.",
+      en: "Strategic navigation redesign and creation of a notification system to ensure corporate compliance and reduce user cognitive load."
+    },
+    fullDescription: {
+      pt: `
 **PROBLEMA DE NEGÓCIO**
 O sistema legado apresentava uma falha crítica na entrega de comunicações vitais, como atualizações de conformidade e avisos técnicos. Essas informações eram perdidas em fluxos de e-mails externos ou ignoradas pelos usuários. Paralelamente, a navegação superior (Header) era visualmente datada e ineficiente, consumindo espaço operacional valioso sem entregar retorno funcional.
 
@@ -137,38 +176,79 @@ A solução transforma a comunicação do sistema em um ativo administrativo seg
 
 **NOTA DE CONFIDENCIALIDADE**
 Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identidade visual e cores foram adaptados para fins de portfólio, preservando a confidencialidade da empresa e mantendo a fidelidade ao processo, às decisões de design e aos desafios enfrentados.
-    `,
+      `,
+      en: `
+**BUSINESS PROBLEM**
+The legacy system had a critical flaw in delivering vital communications, such as compliance updates and technical notices. This information was lost in external email flows or ignored by users. Concurrently, the top navigation (Header) was visually outdated and inefficient, consuming valuable operational space without functional return.
+
+**OBJECTIVE**
+Centralize critical communication within the platform, modernize navigation to optimize the workspace, and implement a traceability system that ensures legal and administrative compliance.
+
+**DIAGNOSIS**
+• **Communication Gap:** Sensitive information dispersed with no guarantee of receipt.
+• **Inefficient Interface:** Header with high visual noise and low economy of scale.
+• **Lack of Traceability:** Absence of read metrics for mandatory messages.
+• **Low Autonomy:** Users unable to manage the volume of received alerts.
+
+**DIRECT IMPACT:**
+• Risk of non-compliance.
+• Cognitive overload due to visual disorganization.
+• Increase in support tickets due to "lack of notice".
+
+**HYPOTHESIS**
+If we centralize communications in a passive notification system in the Header (using status feedback) and structure segmented management panels, we will increase the message open rate and ensure users' documented awareness of critical notices.
+
+**DISCOVERY PROCESS**
+• **Heuristic Analysis:** Audit focused on Aesthetics and Minimalist Design to identify unnecessary noise in the old navigation.
+• **Legal Requirements Mapping:** Identification of the need for granular segmentation (Who, Where, When) for the legal validity of messages.
+• **Mental Models Study:** Application of Jakob's Law to understand how users interact with traditional inboxes and replicate that ease.
+• **Ergonomic Analysis:** Application of Fitts's Law to optimize click areas and profile menus, aiming to reduce motor effort.
+
+**DESIGN SOLUTION**
+• **Header Redesign:** Visual cleanup and introduction of the System Status Visibility Heuristic through count badges.
+• **Manager Panel (Governance Hub):** Creation of a segmented flow by groups and location, with a real-time read rate dashboard.
+• **User Panel (Inbox Experience):** Interface based on email standards (Inbox/Archived) and a preference center to ensure User Control and Freedom.
+
+**METRICS CONSIDERED**
+• **Open Rate:** Increased engagement with centralized notifications.
+• **Compliance Index:** Guarantee of 100% traceability for mandatory communications.
+• **User Satisfaction:** Perception of modernization and system cleanup.
+• **Learning Curve:** Reduction in adaptation time to the new feature.
+
+**EXPECTED RESULT**
+The solution transforms system communication into a secure administrative asset, reducing compliance risk. The modernized interface improves operational efficiency by optimizing the Header and giving the user control over their own information journey.
+
+**CONFIDENTIALITY NOTE**
+This project was developed in a corporate context. The product name, visual identity, and colors were adapted for portfolio purposes, preserving the company's confidentiality while maintaining fidelity to the process, design decisions, and challenges faced.
+      `
+    },
     imageUrl: "/notificacoes-capa.png",
     category: "UI Design",
-    tags: ["UI Design", "Heurísticas", "Arquitetura de Informação"],
-    technologies: ["Figma", "Design System", "Prototipagem"],
+    tags: ["UI Design", "Heurísticas", "Information Architecture"],
+    technologies: ["Figma", "Design System", "Prototyping"],
     client: "Confidencial",
     role: "Product Designer",
     liveUrl: "#",
-    githubUrl: "#",
     gallery: [
-      {
-        url: "/notificacoes-header.png",
-        title: "Redesign do Header com Heurísticas de Nielsen",
-      },
-      {
-        url: "/notificacoes-gestor.png",
-        title: "Painel do Gestor: Segmentação e Rastreabilidade",
-      },
-      {
-        url: "/notificacoes-user.png",
-        title: "Painel do Usuário: Inbox e Preferências",
-      }
+      { url: "/notificacoes-header.png", title: "Redesign do Header com Heurísticas de Nielsen" },
+      { url: "/notificacoes-gestor.png", title: "Painel do Gestor: Segmentação e Rastreabilidade" },
+      { url: "/notificacoes-user.png", title: "Painel do Usuário: Inbox e Preferências" }
     ]
   },
-// --- PROJETO 3: DESIGN SYSTEM (NOVO) ---
   {
     id: "evolucao-design-system",
-    title: "Evolução e Escalabilidade de Design System",
+    title: {
+      pt: "Evolução e Escalabilidade de Design System",
+      en: "Design System Evolution & Scalability"
+    },
     status: "active",
     embedUrl: "",
-    description: "Estruturação de Design Ops e maturidade sistêmica através de Figma Variables e documentação funcional para acelerar o ciclo de entrega de produtos.",
-    fullDescription: `
+    description: {
+      pt: "Estruturação de Design Ops e maturidade sistêmica através de Figma Variables e documentação funcional para acelerar o ciclo de entrega de produtos.",
+      en: "Structuring Design Ops and systemic maturity through Figma Variables and functional documentation to accelerate the product delivery cycle."
+    },
+    fullDescription: {
+      pt: `
 **PROBLEMA DE NEGÓCIO**
 A biblioteca de design existente era estática e básica, não acompanhando a velocidade de crescimento dos produtos. A falta de padronização em níveis profundos (tokens) e a ausência de documentação funcional geravam gargalos constantes no hand-off, resultando em retrabalho para o time de design e inconsistências na implementação pelo time de engenharia.
 
@@ -213,42 +293,82 @@ Um fluxo de trabalho otimizado onde o Design System atua como um acelerador estr
 
 **NOTA DE CONFIDENCIALIDADE**
 Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identidade visual e cores foram adaptados para fins de portfólio, preservando a confidencialidade da empresa e mantendo a fidelidade ao processo, às decisões de design e aos desafios enfrentados.
-    `,
+      `,
+      en: `
+**BUSINESS PROBLEM**
+The existing design library was static and basic, failing to keep up with the speed of product growth. The lack of standardization at deep levels (tokens) and the absence of functional documentation created constant bottlenecks in the hand-off, resulting in rework for the design team and implementation inconsistencies by the engineering team.
+
+**OBJECTIVE**
+Transform a limited visual library into a living, scalable design ecosystem (Design Ops), optimizing system maintenance and accelerating prototyping and development without interrupting continuous deliveries.
+
+**DIAGNOSIS**
+• **Visual Technical Debt:** Lack of standardization at design token levels.
+• **Hand-off Bottleneck:** Non-existent or insufficient documentation for developers.
+• **Component Inconsistency:** Varied use of elements that should be global.
+• **Cultural Barrier:** Need to acculturate the team on advanced componentization best practices.
+
+**DIRECT IMPACT:**
+• Increased Rework Rate.
+• Sluggishness in the product lifecycle (Time-to-Market).
+• High learning curve for new team members.
+
+**HYPOTHESIS**
+If we implement a token architecture via Figma Variables and structure deep functional component documentation, we will reduce cognitive effort in interface creation and guarantee a 1:1 fidelity between design and code.
+
+**DISCOVERY PROCESS**
+To elevate the system's maturity, the project followed rigorous technical investigation:
+• **Interface Audit:** Mapping all existing components to identify inconsistencies and redundancies.
+• **Engineering Interviews:** Diagnosis of main friction points during hand-off to understand which technical information was vital in the documentation.
+• **Design Ops Benchmarking:** Study of market standards to structure logical variable collections (Spacing, Border Radius, and Semantic Colors).
+• **Business Rules Mapping:** Definition of native support tokens for Light/Dark Mode aligned with the brand identity.
+
+**DESIGN SOLUTION**
+• **Variables and Tokens Architecture:** Structuring logical collections and separating primitive and semantic colors, shielding the system against visual breaks.
+• **Advanced Componentization:** Restructuring complex components using Auto Layout, Variants, Booleans, and accessibility rules.
+• **Functional Documentation:** Creation of exhaustive guides with anatomy, states, behaviors, and UX principles tied to each component.
+• **Mentorship and Culture:** Transfer of technical knowledge to the team, ensuring correct adoption and ecosystem sustainability.
+
+**METRICS CONSIDERED**
+• **Design Debt Reduction:** Decrease in time spent fixing visual inconsistencies.
+• **Time-to-Market (Delivery Speed):** Agility in creating new screens using the optimized library.
+• **Onboarding Efficiency:** Reduced learning time for new designers through living documentation.
+• **Implementation Fidelity:** Consistency between the prototype and the final product (Storybook/Chromatic).
+
+**EXPECTED RESULT**
+An optimized workflow where the Design System acts as a strategic accelerator, allowing the team to focus on strategy and user experience, while the interface maintains absolute consistency and technical scalability.
+
+**CONFIDENTIALITY NOTE**
+This project was developed in a corporate context. The product name, visual identity, and colors were adapted for portfolio purposes, preserving the company's confidentiality while maintaining fidelity to the process, design decisions, and challenges faced.
+      `
+    },
     imageUrl: "/ds-capa.png",
-    category: "design",
+    category: "Design System",
     tags: ["Design System", "Design Ops", "Figma Variables"],
-    technologies: ["Figma", "Tokens", "Documentação", "Mentoria"],
+    technologies: ["Figma", "Tokens", "Documentation", "Mentorship"],
     client: "Confidencial",
     role: "Product Designer / UI",
     liveUrl: "#",
-    githubUrl: "#",
     gallery: [
-      {
-        url: "/ds-variaveis.png",
-        title: "Estruturação de Variáveis: Espaçamentos, Radius e Modos de Cor",
-      },
-      {
-        url: "/ds-cores.png",
-        title: "Inventário de Cores Primitivas e Escalas",
-      },
-      {
-        url: "/ds-documentacao.png",
-        title: "Documentação Funcional: Regras de UX e Anatomia de Componentes",
-      },
-      {
-        url: "/ds-pastas.png",
-        title: "Taxonomia e Organização Lógica do Repositório",
-      }
+      { url: "/ds-variaveis.png", title: "Estruturação de Variáveis: Espaçamentos, Radius e Modos de Cor" },
+      { url: "/ds-cores.png", title: "Inventário de Cores Primitivas e Escalas" },
+      { url: "/ds-documentacao.png", title: "Documentação Funcional: Regras de UX e Anatomia de Componentes" },
+      { url: "/ds-pastas.png", title: "Taxonomia e Organização Lógica do Repositório" }
     ]
   },
-  // --- PROJETO 4: PLATAFORMA B2B DE COMPRAS (ATUALIZADO COM IMAGENS REAIS) ---
   {
     id: "plataforma-b2b-compras",
-    title: "Plataforma B2B de Compras e Cotações",
+    title: {
+      pt: "Plataforma B2B de Compras e Cotações",
+      en: "B2B Purchasing & Quotation Platform"
+    },
     status: "active",
     embedUrl: "",
-    description: "Estruturação end-to-end de um ecossistema de compras, otimizando negociações corporativas com foco na redução da carga cognitiva e eficiência operacional.",
-    fullDescription: `
+    description: {
+      pt: "Estruturação end-to-end de um ecossistema de compras, otimizando negociações corporativas com foco na redução da carga cognitiva e eficiência operacional.",
+      en: "End-to-end structuring of a purchasing ecosystem, optimizing corporate negotiations with a focus on reducing cognitive load and operational efficiency."
+    },
+    fullDescription: {
+      pt: `
 **PROBLEMA DE NEGÓCIO**
 O ecossistema de compras corporativas era fragmentado e altamente burocrático. A falta de uma plataforma centralizadora para cotações e ordens de compra resultava em retrabalho, perda de dados e dificuldade em comparar propostas, prejudicando a governança e a agilidade nas negociações.
 
@@ -281,7 +401,7 @@ Este projeto foi conduzido utilizando a metodologia de Pair Design em colaboraç
 • **Ecossistema Integrado:** Estruturação end-to-end do produto, garantindo que a complexidade dos sistemas legados de fundo não transbordasse para a tela do usuário.
 
 **MÉTRICAS CONSIDERADAS**
-• **Eficiência Operacional (Time-to-Task):** Redução do tempo necessário para completar o ciclo de cotação.
+• **Eficiência Operacional (Time-on-Task):** Redução do tempo necessário para completar o ciclo de cotação.
 • **Task Success Rate:** Aumento da assertividade na escolha de fornecedores devido à clareza na comparação de propostas.
 • **Governança (Compliance):** Melhoria no nível de rastreabilidade e segurança documental das compras.
 • **Adoção do Produto (Feature Adoption):** Transição bem-sucedida do modelo analógico/fragmentado para o digital centralizado.
@@ -291,46 +411,81 @@ A plataforma eleva a maturidade do processo de compras da empresa, transformando
 
 **NOTA DE CONFIDENCIALIDADE**
 Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identidade visual e cores foram adaptados para fins de portfólio, preservando a confidencialidade da empresa e mantendo a fidelidade ao processo, às decisões de design e aos desafios enfrentados.
-    `,
+      `,
+      en: `
+**BUSINESS PROBLEM**
+The corporate purchasing ecosystem was fragmented and highly bureaucratic. The lack of a centralizing platform for quotes and purchase orders resulted in rework, data loss, and difficulty comparing proposals, harming governance and agility in negotiations.
+
+**OBJECTIVE**
+Centralize the end-to-end purchasing flow (from request to purchase order) in a transparent and structured environment, ensuring the best cost-benefit and accelerating decision-making.
+
+**DIAGNOSIS**
+• **Decentralization:** Information scattered across legacy systems and spreadsheets.
+• **High Cognitive Load:** Difficulty analyzing complex variables while comparing proposals.
+• **Lack of Governance:** Absence of clear traceability on who approved or altered negotiation terms.
+• **Unguided Flow:** Processes that allowed failures and omissions by buyers and suppliers.
+
+**DIRECT IMPACT:**
+• Low negotiation efficiency (High Time-on-Task).
+• Hidden costs due to the difficulty of auditing budgets.
+• Risk of low adoption due to interface complexity.
+
+**HYPOTHESIS**
+If we map journeys and permissions clearly and create interfaces focused on simultaneous comparison and data visualization, we will reduce cognitive load and rework, increasing purchasing assertiveness and system governance.
+
+**DISCOVERY PROCESS**
+This project was conducted using the Pair Design methodology in collaboration with designer Amanda Guimarães, which allowed a deeper level of investigation:
+• **Actor Mapping:** Definition of information architecture and exclusive journeys for Buyer, Supplier, and Administrator profiles.
+• **Interdisciplinary Co-creation:** Continuous alignment with Product and Engineering teams to ensure business rules were shielded without sacrificing usability.
+• **Validation Strategy:** Early planning of usability tests, with definition of metrics and recruitment criteria, to validate system adherence post-development.
+
+**DESIGN SOLUTION**
+• **Cognitive Load Reduction:** Creation of clear visual patterns and a strong information hierarchy to allow side-by-side analysis of variables and proposals.
+• **Controlled Automation:** Design of flows that automate repetitive tasks (eliminating rework) but maintain critical human validation points to ensure operational security.
+• **Integrated Ecosystem:** End-to-end product structuring, ensuring the complexity of back-end legacy systems didn't overflow to the user screen.
+
+**METRICS CONSIDERED**
+• **Operational Efficiency (Time-on-Task):** Reduction in the time required to complete the quotation cycle.
+• **Task Success Rate:** Increased assertiveness in supplier choice due to clarity in proposal comparison.
+• **Governance (Compliance):** Improvement in the level of traceability and documentary security of purchases.
+• **Feature Adoption:** Successful transition from the analog/fragmented model to the centralized digital one.
+
+**EXPECTED RESULT**
+The platform elevates the maturity of the company's purchasing process, transforming a bureaucratic activity into a strategic operation. The solution ensures legal compliance and results in faster negotiations with greater cost-benefit (impacting the company's bottom line).
+
+**CONFIDENTIALITY NOTE**
+This project was developed in a corporate context. The product name, visual identity, and colors were adapted for portfolio purposes, preserving the company's confidentiality while maintaining fidelity to the process, design decisions, and challenges faced.
+      `
+    },
     imageUrl: "/cotacao.png",
-    category: "design",
+    category: "UX/UI Design",
     tags: ["UX Strategy", "B2B", "Pair Design"],
-    technologies: ["Figma", "Auto Layout", "Pair Design", "Testes de Usabilidade"],
+    technologies: ["Figma", "Auto Layout", "Usability Testing"],
     client: "Confidencial",
     role: "UX/UI Designer",
     liveUrl: "#",
-    githubUrl: "#",
     gallery: [
-      {
-        url: "/negociacao.png",
-        title: "Fluxo de Negociação: Gestão de status e termos entre partes.",
-      },
-      {
-        url: "/cadastro-precos-fornecedores.png",
-        title: "Comparação de Propostas: Base de dados estruturada para análise de preços e fornecedores.",
-      },
-      {
-        url: "/cadastro-fornecedor.png",
-        title: "Cadastro de Fornecedor: Estruturação de dados.",
-      },
-      {
-        url: "/perfil-edicao.png",
-        title: "Edição de Perfil: Mapeamento de perfis e gestão de dados do usuário.",
-      },
-      {
-        url: "/login.png",
-        title: "Portal de Acesso: Entrada do ecossistema B2B.",
-      }
+      { url: "/negociacao.png", title: "Fluxo de Negociação: Gestão de status e termos entre partes." },
+      { url: "/cadastro-precos-fornecedores.png", title: "Comparação de Propostas: Base de dados estruturada para análise de preços e fornecedores." },
+      { url: "/cadastro-fornecedor.png", title: "Cadastro de Fornecedor: Estruturação de dados." },
+      { url: "/perfil-edicao.png", title: "Edição de Perfil: Mapeamento de perfis e gestão de dados do usuário." },
+      { url: "/login.png", title: "Portal de Acesso: Entrada do ecossistema B2B." }
     ]
   },
-  // --- PROJETO 5: HEALTHDASH (AUDITORIA UX) ---
   {
     id: "healthdash-analise-usabilidade",
-    title: "Análise de Usabilidade e Interface Responsiva",
+    title: {
+      pt: "Análise de Usabilidade e Interface Responsiva",
+      en: "Usability Analysis & Responsive Interface"
+    },
     status: "active",
     embedUrl: "", 
-    description: "Análise heurística e proposta de redesign responsivo para um sistema de gestão nutricional hospitalar, focado em eficiência operacional e segurança do paciente.",
-    fullDescription: `
+    description: {
+      pt: "Análise heurística e proposta de redesign responsivo para um sistema de gestão nutricional hospitalar, focado em eficiência operacional e segurança do paciente.",
+      en: "Heuristic analysis and responsive redesign proposal for a hospital nutritional management system, focused on operational efficiency and patient safety."
+    },
+    fullDescription: {
+      pt: `
 **PROBLEMA DE NEGÓCIO**
 O sistema de gestão nutricional hospitalar, utilizado predominantemente em dispositivos móveis (tablets), apresentava barreiras de usabilidade que dificultavam o trabalho de nutricionistas e equipes de copa. Em um ambiente hospitalar de alta pressão, o acesso e o preenchimento de dados críticos dos pacientes ocorriam de forma lenta e propensa a erros.
 
@@ -371,24 +526,72 @@ A nova proposta de interface reduz drasticamente o risco de erros médicos oriun
 
 **NOTA DE CONFIDENCIALIDADE**
 Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identidade visual e cores foram adaptados para fins de portfólio, preservando a confidencialidade da empresa e mantendo a fidelidade ao processo, às decisões de design e aos desafios enfrentados.
-    `,
+      `,
+      en: `
+**BUSINESS PROBLEM**
+The hospital nutritional management system, used predominantly on mobile devices (tablets), presented usability barriers that hindered the work of nutritionists and pantry teams. In a high-pressure hospital environment, accessing and entering critical patient data occurred slowly and was prone to errors.
+
+**OBJECTIVE**
+Optimize the mobile interface to ensure healthcare professionals access and record dietary information quickly and accurately, reducing friction and increasing operational safety.
+
+**DIAGNOSIS**
+• **Responsiveness Breakage:** The layout "disintegrated" when switching between landscape and portrait orientations, hiding critical buttons like "Save".
+• **Accessibility Failure (Ergonomics):** Icons and buttons had touch areas below the minimum 44x44px standard, generating accidental clicks.
+• **Visual Hierarchy and Noise:** Titles and patient data had the same visual weight (low scannability), and background images competed with vital information, impairing contrast.
+
+**DIRECT IMPACT:**
+• Increased Time on Task due to truncated flows and broken modals.
+• Risk to patient safety (Error Rate) generated by accidental touches and misinterpretation of data.
+
+**HYPOTHESIS**
+If we perform a refactoring based on usability heuristics, implementing a responsive grid, adequate touch targets, and a clear visual hierarchy, we will reduce the team's cognitive load, minimizing operational errors and accelerating the dietary prescription flow.
+
+**DISCOVERY PROCESS**
+The project was conducted through rigorous technical and behavioral investigation:
+• **Heuristic Interface Analysis:** Detailed evaluation to identify usability and accessibility violations in the current platform, based on Nielsen's principles.
+• **Context of Use Analysis:** Mapping the real use scenario (tablets often operated with one hand while the professional moves around the hospital).
+• **Ergonomic Evaluation:** Verification of touch areas, contrast, and readability, cross-referencing with global accessibility guidelines for touch interfaces.
+
+**DESIGN SOLUTION**
+• **Responsive and Ergonomic Grid:** Rebuilding the interface on a fluid grid, allowing easy lateral navigation for thumb reach on tablets.
+• **Interaction Optimization:** Replacing central modals (which were covered by the virtual keyboard) with dedicated pages, eliminating flow blockage.
+• **Typographic Hierarchy and Feedback:** Establishing varied weights (Bold for data, Regular for labels) and implementing visual states (Tags/Badges) for prescription status.
+• **Cognitive Load Reduction:** Standardization of universal icons and removal of background noise for total focus on patient data.
+
+**METRICS CONSIDERED**
+• **Operational Efficiency (Time-on-Task):** Reduction of filling time by eliminating the user's struggle against the virtual keyboard and modals.
+• **Patient Safety (Error Rate):** Minimization of accidental touches through correct sizing of touch targets.
+• **Task Success Rate:** Fluid conclusion of the prescription process, regardless of screen orientation (landscape/portrait).
+
+**EXPECTED RESULT**
+The new interface proposal drastically reduces the risk of medical errors stemming from the software, improves ergonomics for the healthcare worker, and transforms a rigid system into a reliable and agile tool for clinic or hospital operations.
+
+**CONFIDENTIALITY NOTE**
+This project was developed in a corporate context. The product name, visual identity, and colors were adapted for portfolio purposes, preserving the company's confidentiality while maintaining fidelity to the process, design decisions, and challenges faced.
+      `
+    },
     imageUrl: "/healthdash-capa.png",
-    category: "design",
-    tags: ["UX Analysis", "Healthcare", "Responsive Design", "Heurísticas"],
-    technologies: ["Figma", "UX Research", "Acessibilidade", "UI Design"],
+    category: "UX Research",
+    tags: ["UX Analysis", "Healthcare", "Responsive Design", "Heuristics"],
+    technologies: ["Figma", "UX Research", "Accessibility", "UI Design"],
     client: "HealthDash", 
     role: "UX/UI Designer",
-    liveUrl: "#",
-    githubUrl: "#"
+    liveUrl: "#"
   },
-  // --- PROJETO 6: SMARTSETTLEMENT (FINTECH / AGILIDADE) ---
- {
+  {
     id: "smartsettlement-gestao-financeira",
-    title: "Gestão de Conciliação Financeira",
+    title: {
+      pt: "Gestão de Conciliação Financeira",
+      en: "Financial Reconciliation Management"
+    },
     status: "active",
     embedUrl: "", 
-    description: "Refatoração ágil de fluxo de conciliação bancária, focando em visibilidade de processamento, redução de carga cognitiva e eficiência operacional sob restrições técnicas.",
-    fullDescription: `
+    description: {
+      pt: "Refatoração ágil de fluxo de conciliação bancária, focando em visibilidade de processamento, redução de carga cognitiva e eficiência operacional sob restrições técnicas.",
+      en: "Agile refactoring of bank reconciliation flow, focusing on processing visibility, cognitive load reduction, and operational efficiency under technical constraints."
+    },
+    fullDescription: {
+      pt: `
 **PROBLEMA DE NEGÓCIO**
 O sistema de gestão financeira apresentava falhas críticas de usabilidade e falta de transparência no fluxo de Conciliação de Parcelas em Lote. A ausência de feedback do sistema gerava incerteza nos operadores financeiros durante o processamento de grandes volumes de dados. Além disso, a empresa enfrentava alta pressão por entregas rápidas, exigindo melhorias imediatas que não quebrassem o ecossistema legado.
 
@@ -432,75 +635,133 @@ A adoção da metodologia de design direto para produção entrega um impacto ma
 
 **NOTA DE CONFIDENCIALIDADE**
 Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identidade visual e cores foram adaptados para fins de portfólio, preservando a confidencialidade da empresa e mantendo a fidelidade ao processo, às decisões de design e aos desafios enfrentados.
-    `,
+      `,
+      en: `
+**BUSINESS PROBLEM**
+The financial management system had critical usability flaws and a lack of transparency in the Batch Installment Reconciliation flow. The absence of system feedback generated uncertainty among financial operators when processing large volumes of data. Furthermore, the company faced high pressure for quick deliveries, requiring immediate improvements that wouldn't break the legacy ecosystem.
+
+**OBJECTIVE**
+Refactor the bank reconciliation flow with extreme agility to increase systemic visibility and prevent operational errors, ensuring quick and safe implementation by engineering.
+
+**DIAGNOSIS**
+• **Operational Blindness:** Lack of clarity on the processing status of heavy files.
+• **High Cognitive Load:** Difficulty tracking errors and successes in dense financial data tables.
+• **Compliance Risks:** High-impact financial operations being executed without security friction.
+• **Technical Constraint:** Inability to alter the current Design System or UI Kit to avoid delaying the schedule.
+
+**DIRECT IMPACT:**
+• User insecurity when sending files (leading to improper interruptions).
+• Increased volume of support tickets requesting processing status.
+• Financial risk (Error Rate) in accidental reconciliations.
+
+**HYPOTHESIS**
+If we use a Lean Design approach to insert clear system feedback (progress bars and attention modals) without altering the UI Kit foundation, we will be able to reduce operator uncertainty, decrease support calls, and deliver the improvement in record time.
+
+**DISCOVERY PROCESS**
+To ensure an agile delivery under high technical constraints, the discovery phase focused on mapping viable shortcuts for engineering:
+• **Constraint Alignment:** Strategic joint decision with Product and Development to preserve the Design System to focus solely on the functional solution.
+• **Critical Flow Audit:** Exact identification of moments where the user lost clarity on the system's action.
+• **Redlining and Agile Specification:** Replacement of complex interactive prototypes with direct documentation on the interfaces (flow annotations and visual cues), accelerating hand-off and technical understanding.
+
+**DESIGN SOLUTION**
+• **System Visibility and Feedback:** Introduction of progress bars and status messages (Waiting, Processing) to shield early interruptions.
+• **Fast Scanning Interface:** Optimized tables with immediate visual feedback (success icons/green check and red error), allowing rapid failure identification.
+• **Error Prevention:** Implementation of confirmation modals as deliberate friction before irreversible financial actions.
+• **Guided Navigation:** Reorganization of the reconciliation flow with logical steppers ("Next" and "Back"), reducing mental overload.
+
+**METRICS CONSIDERED**
+• **Time-to-Market (Agility):** Reduction in the design delivery cycle to engineering.
+• **Operational Efficiency (Time-on-Task):** Centralization of actions (Send, Clear, Reports) and export flexibility (PDF/CSV) optimizing time per session.
+• **Success and Security Rate (Error Rate):** Mitigation of accidental financial executions.
+• **Support Reduction:** Expected drop in tickets regarding systemic processing doubts.
+
+**EXPECTED RESULT**
+Adopting the direct-to-production design methodology delivers a massive impact in very little time. The employee gains a safe journey with clear feedback, while the company reduces its operational support costs and optimizes time-to-market.
+
+**CONFIDENTIALITY NOTE**
+This project was developed in a corporate context. The product name, visual identity, and colors were adapted for portfolio purposes, preserving the company's confidentiality while maintaining fidelity to the process, design decisions, and challenges faced.
+      `
+    },
     imageUrl: "/smartsettlement-capa.png", 
-    category: "design",
+    category: "Fintech",
     tags: ["Fintech", "UX Strategy", "Agile Design", "Finance"],
-    technologies: ["Figma", "Redlining", "Arquitetura de Informação", "Lean UX"],
+    technologies: ["Figma", "Redlining", "Information Architecture", "Lean UX"],
     client: "Confidencial",
     role: "Product Designer",
     liveUrl: "#",
-    githubUrl: "#",
     gallery: [
-      {
-        url: "/smartsettlement-dados.png",
-        title: "Interface Principal: Hierarquia de dados e ações rápidas.",
-      },
-      {
-        url: "/smartsettlement-loading.png",
-        title: "Feedback de Sistema: Visibilidade do status de processamento.",
-      },
-      {
-        url: "/smartsettlement-modal.png",
-        title: "Prevenção de Erro: Modal de confirmação para ações críticas.",
-      },
-      {
-        url: "/smartsettlement-fluxo.png",
-        title: "Documentação de Fluxo: Mapeamento de interações e estados.",
-      },
+      { url: "/smartsettlement-dados.png", title: "Interface Principal: Hierarquia de dados e ações rápidas." },
+      { url: "/smartsettlement-loading.png", title: "Feedback de Sistema: Visibilidade do status de processamento." },
+      { url: "/smartsettlement-modal.png", title: "Prevenção de Erro: Modal de confirmação para ações críticas." },
+      { url: "/smartsettlement-fluxo.png", title: "Documentação de Fluxo: Mapeamento de interações e estados." }
     ],
   },
+  
   // ========================================================================
   // PROJETOS FUTUROS (EM BREVE)
   // ========================================================================
-    {
+  {
     id: "crm-financeiro",
-    title: "Portal CRM ",
+    title: {
+      pt: "Portal CRM",
+      en: "CRM Portal"
+    },
     status: "coming-soon",
-    description:
-      "Gestão de relacionamento com cliente focado em cashback e portais administrativos.",
+    description: {
+      pt: "Gestão de relacionamento com cliente focado em cashback e portais administrativos.",
+      en: "Customer relationship management focused on cashback and administrative portals."
+    },
     imageUrl: "",
     category: "Web",
     tags: ["Product Design", "B2B"],
+    fullDescription: { pt: "", en: "" }
   },
   {
     id: "gestao-buffet",
-    title: "Sistema de Gestão de Buffet",
+    title: {
+      pt: "Sistema de Gestão de Buffet",
+      en: "Buffet Management System"
+    },
     status: "coming-soon",
-    description:
-      "Interface para configuração de layouts de rampas e gestão de recipientes gastronômicos.",
+    description: {
+      pt: "Interface para configuração de layouts de rampas e gestão de recipientes gastronômicos.",
+      en: "Interface for configuring ramp layouts and managing gastronomic containers."
+    },
     imageUrl: "",
     category: "Tablet App",
     tags: ["UX Strategy", "User Flow"],
+    fullDescription: { pt: "", en: "" }
   },
   {
     id: "sistema-pesagem",
-    title: "App de reserva de restaurante",
+    title: {
+      pt: "App de reserva de restaurante",
+      en: "Restaurant Booking App"
+    },
     status: "coming-soon",
-    description:
-      "Solução para agendamento de reservas e otimização de filas em restaurante",
+    description: {
+      pt: "Solução para agendamento de reservas e otimização de filas em restaurante.",
+      en: "Solution for scheduling reservations and optimizing restaurant queues."
+    },
     imageUrl: "",
     category: "UI",
     tags: ["Research", "UX/UI Design"],
+    fullDescription: { pt: "", en: "" }
   },
-  
-   {
+  {
     id: "dashboard-analytics",
-    title: "Esteira de sessão e CNAB",
+    title: {
+      pt: "Esteira de sessão e CNAB",
+      en: "Session and CNAB Pipeline"
+    },
     status: "coming-soon",
-    description: "Painel de controle para esteira de sessão e CNAB.",
+    description: {
+      pt: "Painel de controle para esteira de sessão e CNAB.",
+      en: "Control panel for session and CNAB pipeline."
+    },
     imageUrl: "",
     category: "UX/UI Design",
     tags: ["Dashboard", "UI Design"],
-  },
+    fullDescription: { pt: "", en: "" }
+  }
 ];

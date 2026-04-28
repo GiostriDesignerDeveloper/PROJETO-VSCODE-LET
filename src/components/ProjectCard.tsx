@@ -1,15 +1,20 @@
-import React from "react";
 import { ArrowRight, Lock } from "lucide-react";
 import { Project } from "../types";
+import { useLanguage } from "../contexts/LanguageContext"; // 1. Importamos a inteligência de idioma
 
 interface ProjectCardProps {
   project: Project;
   onClick: (project: Project) => void;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
-  // Verificação de segurança: se o status não estiver definido, assume que é ativo
+const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
+  const { language } = useLanguage(); // 2. Descobrimos qual idioma está ativo ('pt' ou 'en')
+  
   const isComingSoon = project.status === "coming-soon";
+
+  // 3. Mini-dicionário local para os botõezinhos do card
+  const viewDetailsText = language === 'pt' ? 'Ver detalhes' : 'View details';
+  const comingSoonText = language === 'pt' ? 'Em Desenvolvimento' : 'In Development';
 
   return (
     <div
@@ -24,18 +29,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
       onClick={() => !isComingSoon && onClick(project)}
     >
       <div className="relative h-48 overflow-hidden">
-        {/* Container da Imagem ou Placeholder */}
         <div className={`w-full h-full ${isComingSoon ? "bg-gray-200" : ""}`}>
-          {/* Se for Ativo, mostra a imagem */}
           {!isComingSoon && (
             <img
               src={project.imageUrl}
-              alt={project.title}
+              alt={project.title[language]} // Lemos a imagem com o título traduzido
               className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
             />
           )}
 
-          {/* Se for Em Breve, mostra o grande cadeado central */}
           {isComingSoon && (
             <div className="flex items-center justify-center h-full text-gray-400">
               <Lock size={32} />
@@ -43,19 +45,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
           )}
         </div>
 
-        {/* Overlay Hover Premium (Apenas para ativos) */}
         {!isComingSoon && (
           <div className="absolute inset-0 bg-blue-900/70 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
             <span className="text-white font-medium flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
-              Ver detalhes <ArrowRight size={18} />
+              {viewDetailsText} <ArrowRight size={18} />
             </span>
           </div>
         )}
 
-        {/* Badge "Em Breve / Em Desenvolvimento" */}
         {isComingSoon && (
           <div className="absolute top-3 right-3 bg-gray-200 text-gray-600 text-[10px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wider flex items-center gap-1.5">
-            <Lock size={12} /> Em Desenvolvimento
+            <Lock size={12} /> {comingSoonText}
           </div>
         )}
       </div>
@@ -78,14 +78,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
             isComingSoon ? "text-gray-500" : "text-gray-900 group-hover:text-blue-600"
           }`}
         >
-          {project.title}
+          {/* AQUI A MÁGICA: Puxamos o título na língua certa! */}
+          {project.title[language]} 
         </h3>
 
         <p className="text-gray-600 text-sm mb-6 line-clamp-3">
-          {project.description}
+          {/* E aqui puxamos a descrição! */}
+          {project.description[language]}
         </p>
 
-        {/* mt-auto empurra as tags para o final do card, mantendo o alinhamento perfeito entre eles */}
         <div className="flex flex-wrap gap-2 mt-auto">
           {project.tags.slice(0, 3).map((tag, index) => (
             <span

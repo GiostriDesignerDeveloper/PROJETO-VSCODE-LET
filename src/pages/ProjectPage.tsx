@@ -3,11 +3,13 @@ import { useParams, Link } from 'react-router-dom';
 import { projectsData } from '../data/projects';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 import { Project } from '../types';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const ProjectPage = () => {
   const { id } = useParams<{ id: string }>();
   const [project, setProject] = useState<Project | null>(null);
   const [loading, setLoading] = useState(true);
+  const { language } = useLanguage(); // Puxa o idioma ativo!
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -43,13 +45,17 @@ const ProjectPage = () => {
   if (!project) {
     return (
       <div className="container mx-auto px-4 pt-32 pb-20 text-center">
-        <h1 className="text-3xl font-bold text-gray-900 mb-4">Projeto não encontrado</h1>
-        <p className="text-gray-600 mb-8">Desculpe, o projeto que você procura não existe ou foi removido.</p>
+        <h1 className="text-3xl font-bold text-gray-900 mb-4">
+          {language === 'pt' ? 'Projeto não encontrado' : 'Project not found'}
+        </h1>
+        <p className="text-gray-600 mb-8">
+          {language === 'pt' ? 'Desculpe, o projeto que você procura não existe ou foi removido.' : 'Sorry, the project you are looking for does not exist or has been removed.'}
+        </p>
         <Link 
           to="/#projects"
           className="inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors font-medium"
         >
-          Voltar aos Projetos
+          {language === 'pt' ? 'Voltar aos Projetos' : 'Back to Projects'}
         </Link>
       </div>
     );
@@ -57,17 +63,20 @@ const ProjectPage = () => {
 
   return (
     <div className="pt-24 pb-20">
-      {/* Hero Section */}
+      {/* Hero Section do Projeto */}
       <div className="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-16">
         <div className="container mx-auto px-4">
           <Link 
             to="/#projects"
             className="inline-flex items-center text-blue-300 hover:text-blue-200 mb-8 transition-colors"
           >
-            <ArrowLeft size={16} className="mr-2" /> Voltar aos Projetos
+            <ArrowLeft size={16} className="mr-2" /> 
+            {language === 'pt' ? 'Voltar aos Projetos' : 'Back to Projects'}
           </Link>
           
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">{project.title}</h1>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+            {project.title[language]}
+          </h1>
           
           <div className="flex flex-wrap gap-2 mb-6">
             {project.tags.map((tag, index) => (
@@ -80,35 +89,35 @@ const ProjectPage = () => {
             ))}
           </div>
           
-          <p className="text-lg text-gray-300 max-w-3xl">{project.description}</p>
+          <p className="text-lg text-gray-300 max-w-3xl">
+            {project.description[language]}
+          </p>
         </div>
       </div>
       
-      {/* Project Content */}
+      {/* Conteúdo do Projeto */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2">
-            {/* Main Image */}
             <div className="mb-8 rounded-lg overflow-hidden shadow-lg border border-gray-100">
               <img 
                 src={project.imageUrl} 
-                alt={project.title} 
+                alt={project.title[language]} 
                 className="w-full h-auto"
               />
             </div>
             
-            {/* Description */}
             <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed whitespace-pre-wrap">
-              {renderDescription(project.fullDescription || project.description)}
+              {renderDescription(project.fullDescription[language])}
               
               {/* Protótipo Interativo */}
               {project.embedUrl && (
                 <div className="mt-12 mb-12">
                   <h3 className="text-2xl font-bold text-gray-900 border-b pb-4 mb-6">
-                    Protótipo Interativo
+                    {language === 'pt' ? 'Protótipo Interativo' : 'Interactive Prototype'}
                   </h3>
                   <p className="text-gray-600 mb-4">
-                    Teste a interface real abaixo (pode levar alguns segundos para carregar):
+                    {language === 'pt' ? 'Teste a interface real abaixo (pode levar alguns segundos para carregar):' : 'Test the real interface below (it may take a few seconds to load):'}
                   </p>
                   <div className="w-full h-[500px] md:h-[600px] bg-gray-50 border border-gray-200 rounded-xl overflow-hidden shadow-sm">
                     <iframe
@@ -126,7 +135,7 @@ const ProjectPage = () => {
               {project.gallery && project.gallery.length > 0 && (
                 <div className="mt-16 space-y-16">
                   <h3 className="text-2xl font-bold text-gray-900 border-b pb-4">
-                    Galeria do Projeto
+                    {language === 'pt' ? 'Galeria do Projeto' : 'Project Gallery'}
                   </h3>
                   <div className="grid grid-cols-1 gap-16 not-prose">
                     {project.gallery.map((item: any, index: number) => (
@@ -150,21 +159,29 @@ const ProjectPage = () => {
           {/* Sidebar Lateral */}
           <div>
             <div className="bg-gray-50 rounded-lg p-6 shadow-md sticky top-24 border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-6">Detalhes do Projeto</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-6">
+                {language === 'pt' ? 'Detalhes do Projeto' : 'Project Details'}
+              </h3>
               
               <div className="space-y-5">
                 <div>
-                  <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">CLIENTE</h4>
-                  <p className="text-gray-800 font-medium">{(project as any).client || 'Projeto Pessoal'}</p>
+                  <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">
+                    {language === 'pt' ? 'CLIENTE' : 'CLIENT'}
+                  </h4>
+                  <p className="text-gray-800 font-medium">{(project as any).client || (language === 'pt' ? 'Projeto Pessoal' : 'Personal Project')}</p>
                 </div>
                 
                 <div>
-                  <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">ATUAÇÃO</h4>
+                  <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">
+                    {language === 'pt' ? 'ATUAÇÃO' : 'ROLE'}
+                  </h4>
                   <p className="text-gray-800 font-medium">{(project as any).role || 'UX/UI Designer'}</p>
                 </div>
                 
                 <div>
-                  <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">TECNOLOGIAS</h4>
+                  <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">
+                    {language === 'pt' ? 'TECNOLOGIAS' : 'TECHNOLOGIES'}
+                  </h4>
                   <div className="flex flex-wrap gap-2 mt-2">
                     {project.technologies?.map((tech, index) => (
                       <span 
@@ -186,7 +203,7 @@ const ProjectPage = () => {
                     rel="noopener noreferrer"
                     className="flex items-center justify-center w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors font-medium shadow-md"
                   >
-                    Acessar Projeto <ExternalLink size={18} className="ml-2" />
+                    {language === 'pt' ? 'Acessar Projeto' : 'View Live Project'} <ExternalLink size={18} className="ml-2" />
                   </a>
                 )}
               </div>
