@@ -7,7 +7,7 @@ const translations = {
     "nav.projects": "Projetos",
     "nav.experience": "Experiências",
     "nav.contact": "Contato",
-    "lang.switch": "🇺🇸 EN",
+    "lang.switch": "🇧🇷 PT",
     
     // Textos do Hero divididos para manter o azul!
     "hero.title.1": "Design orientado por ",
@@ -22,7 +22,7 @@ const translations = {
     "nav.projects": "Projects",
     "nav.experience": "Experience",
     "nav.contact": "Contact",
-    "lang.switch": "🇧🇷 PT",
+    "lang.switch": "🇺🇸 EN",
     
     // Textos do Hero em Inglês (adaptando a gramática)
     "hero.title.1": "Behavior and ",
