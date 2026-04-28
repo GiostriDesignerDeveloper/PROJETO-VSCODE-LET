@@ -9,9 +9,12 @@ const translations = {
     "nav.contact": "Contato",
     "lang.switch": "🇺🇸 EN",
     
-    // Textos do Hero
-    "hero.greeting": "Olá, sou a Letícia",
-    "hero.title": "Design orientado por comportamentos e dados para produtos digitais.",
+    // Textos do Hero divididos para manter o azul!
+    "hero.title.1": "Design orientado por ",
+    "hero.title.blue1": "comportamentos",
+    "hero.title.2": " e ",
+    "hero.title.blue2": "dados",
+    "hero.title.3": " para produtos digitais.",
     "hero.subtitle": "Olá, sou a Letícia designer focada em criar soluções visuais baseadas em usabilidade e métricas de negócio.",
   },
   en: {
@@ -21,9 +24,12 @@ const translations = {
     "nav.contact": "Contact",
     "lang.switch": "🇧🇷 PT",
     
-    // Textos do Hero (Inglês)
-    "hero.greeting": "Hello, I'm Letícia",
-    "hero.title": "Behavior and data-driven design for digital products.",
+    // Textos do Hero em Inglês (adaptando a gramática)
+    "hero.title.1": "Behavior and ",
+    "hero.title.blue1": "data-driven",
+    "hero.title.2": " ",
+    "hero.title.blue2": "design",
+    "hero.title.3": " for digital products.",
     "hero.subtitle": "Hi, I'm Letícia, a designer focused on creating visual solutions based on usability and business metrics.",
   }
 };
