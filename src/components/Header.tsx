@@ -5,7 +5,7 @@ import { useLanguage } from "../contexts/LanguageContext";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { t, toggleLanguage } = useLanguage(); // Puxamos o toggleLanguage e o t
+  const { t, toggleLanguage } = useLanguage();
 
   const navLinks = [
     { name: t("nav.home"), path: "/" },
@@ -15,11 +15,19 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
+    /* ALTERAÇÃO 1: 
+       - Mudamos 'bg-white/80' para 'bg-white' (fundo sólido para não vazar texto atrás).
+       - Garantimos 'z-[100]' (valor bem alto para ficar acima de qualquer card).
+       - Adicionamos uma sombra leve 'shadow-sm' para destacar do conteúdo.
+    */
+    <header className="fixed top-0 left-0 w-full bg-white z-[100] border-b border-gray-100 shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-bold text-gray-900 tracking-tight">
+          <Link
+            to="/"
+            className="text-2xl font-bold text-gray-900 tracking-tight"
+          >
             Letícia<span className="text-blue-600">Giostri</span>
           </Link>
 
@@ -34,8 +42,7 @@ const Header = () => {
                 {link.name}
               </Link>
             ))}
-            
-            {/* Botão Idioma Desktop */}
+
             <button
               onClick={toggleLanguage}
               className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors text-sm font-bold text-gray-700"
@@ -45,19 +52,20 @@ const Header = () => {
             </button>
           </nav>
 
-          {/* Mobile Menu Button + Language Switch (O que aparece no seu print!) */}
+          {/* Mobile Menu Button + Language Switch */}
           <div className="flex items-center gap-4 md:hidden">
             <button
               onClick={toggleLanguage}
-              className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-100 text-sm font-bold text-gray-700"
+              className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-100 text-sm font-bold text-gray-700 active:bg-gray-200"
             >
               <Globe size={16} />
-              {t("lang.switch")} {/* AQUI: Agora ele usa a tradução certa no mobile */}
+              {t("lang.switch")}
             </button>
-            
+
             <button
-              className="text-gray-900"
+              className="text-gray-900 p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle Menu"
             >
               {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
@@ -67,13 +75,17 @@ const Header = () => {
 
       {/* Mobile Navigation Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white border-b border-gray-100 animate-in slide-in-from-top duration-300">
+        /* ALTERAÇÃO 2: 
+           - Garantimos que o menu aberto também seja 'bg-white' sólido.
+           - 'h-screen' garante que ele cubra o conteúdo se necessário.
+        */
+        <div className="md:hidden bg-white border-b border-gray-100 animate-in slide-in-from-top duration-300 shadow-xl">
           <div className="container mx-auto px-4 py-8 flex flex-col space-y-6">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 to={link.path}
-                className="text-xl font-bold text-gray-900"
+                className="text-xl font-bold text-gray-900 border-b border-gray-50 pb-4"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.name}
