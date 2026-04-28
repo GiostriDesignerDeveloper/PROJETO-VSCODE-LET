@@ -1,11 +1,13 @@
-import React from "react";
 import { Mail, MapPin, Linkedin, Github } from "lucide-react";
+import { useLanguage } from "../contexts/LanguageContext"; // 1. Importando o hook
 
-const ContactInfo: React.FC = () => {
+const ContactInfo = () => {
+  const { t } = useLanguage(); // 2. Ativando a tradução
+
   return (
     <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
       <h3 className="text-xl font-bold text-gray-900 mb-8">
-        Informações de Contato
+        {t("contact.info.title")}
       </h3>
 
       <div className="space-y-6 mb-8">
@@ -15,7 +17,9 @@ const ContactInfo: React.FC = () => {
             <Mail size={24} />
           </div>
           <div>
-            <p className="text-sm font-medium text-gray-500 mb-1">Email</p>
+            <p className="text-sm font-medium text-gray-500 mb-1">
+              {t("contact.info.email.label")}
+            </p>
             <a
               href="mailto:leticiagouveiadesign@gmail.com"
               className="text-gray-900 font-medium hover:text-blue-600 transition-colors"
@@ -31,15 +35,21 @@ const ContactInfo: React.FC = () => {
             <MapPin size={24} />
           </div>
           <div>
-            <p className="text-sm font-medium text-gray-500 mb-1">Localização</p>
-            <p className="text-gray-900 font-medium">Belo Horizonte, MG - BR</p>
+            <p className="text-sm font-medium text-gray-500 mb-1">
+              {t("contact.info.location.label")}
+            </p>
+            <p className="text-gray-900 font-medium">
+              {t("contact.info.location.value")}
+            </p>
           </div>
         </div>
       </div>
 
       {/* Divisória e Redes Sociais */}
       <div className="border-t border-gray-100 pt-8">
-        <p className="text-sm font-medium text-gray-500 mb-4">Redes Sociais</p>
+        <p className="text-sm font-medium text-gray-500 mb-4">
+          {t("contact.social.label")}
+        </p>
         <div className="flex gap-3">
           {/* LinkedIn */}
           <a
