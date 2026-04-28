@@ -1,6 +1,6 @@
-import React, { createContext, useState, useContext, ReactNode } from 'react';
+import { createContext, useState, useContext, ReactNode } from 'react';
 
-// Aqui você vai adicionar todos os textos do seu site no futuro!
+// Aqui fica o nosso dicionário ÚNICO e unificado!
 const translations = {
   pt: {
     "nav.home": "Início",
@@ -8,6 +8,11 @@ const translations = {
     "nav.experience": "Experiências",
     "nav.contact": "Contato",
     "lang.switch": "🇺🇸 EN",
+    
+    // Textos do Hero
+    "hero.greeting": "Olá, sou a Letícia",
+    "hero.title": "Design orientado por comportamentos e dados para produtos digitais.",
+    "hero.subtitle": "Olá, sou a Letícia designer focada em criar soluções visuais baseadas em usabilidade e métricas de negócio.",
   },
   en: {
     "nav.home": "Home",
@@ -15,6 +20,11 @@ const translations = {
     "nav.experience": "Experience",
     "nav.contact": "Contact",
     "lang.switch": "🇧🇷 PT",
+    
+    // Textos do Hero (Inglês)
+    "hero.greeting": "Hello, I'm Letícia",
+    "hero.title": "Behavior and data-driven design for digital products.",
+    "hero.subtitle": "Hi, I'm Letícia, a designer focused on creating visual solutions based on usability and business metrics.",
   }
 };
 
