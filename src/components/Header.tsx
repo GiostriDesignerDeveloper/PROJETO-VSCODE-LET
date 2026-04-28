@@ -26,7 +26,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 w-full z-[999] transition-all duration-300 ${
         isScrolled || isMenuOpen
           ? "bg-white/95 backdrop-blur-sm shadow-sm py-4"
           : "bg-transparent py-6"
@@ -34,8 +34,8 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         
-        {/* LOGO ATUALIZADA: Tipografia Pessoal */}
-        <Link to="/" className="text-2xl font-bold text-gray-900 z-50 tracking-tight">
+        {/* LOGO ATUALIZADA: Com Z-index altíssimo para ficar acima do menu */}
+        <Link to="/" className="text-2xl font-bold text-gray-900 relative z-[1000] tracking-tight">
           Letícia<span className="text-blue-600">Giostri</span>
         </Link>
 
@@ -73,21 +73,21 @@ const Header = () => {
         {/* Mobile Menu Button (Hamburger) */}
         <button
           onClick={toggleMenu}
-          className="md:hidden text-gray-900 hover:text-blue-600 transition-colors focus:outline-none z-50"
+          className="md:hidden text-gray-900 hover:text-blue-600 transition-colors focus:outline-none relative z-[1000]"
           aria-label="Alternar menu"
         >
           {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
 
-        {/* Mobile Navigation Overlay */}
+        {/* Mobile Navigation Overlay - Fundo Totalmente Opaco */}
         <div
-          className={`fixed inset-0 bg-white z-40 flex flex-col items-center justify-center transition-all duration-300 ${
+          className={`fixed top-0 left-0 w-full h-[100dvh] bg-white z-[998] flex flex-col items-center justify-center transition-all duration-300 ${
             isMenuOpen
               ? "opacity-100 visible translate-y-0"
               : "opacity-0 invisible -translate-y-4"
           }`}
         >
-          <div className="flex flex-col items-center space-y-8 text-xl">
+          <div className="flex flex-col items-center space-y-8 text-2xl">
             {navLinks.map((link) =>
               link.isAnchor ? (
                 <a
