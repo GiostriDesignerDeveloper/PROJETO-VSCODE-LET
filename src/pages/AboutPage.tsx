@@ -1,4 +1,4 @@
-import { Briefcase, GraduationCap, Award, Globe2 } from "lucide-react";
+import { Briefcase, GraduationCap, Award, Globe2, User } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 
 const AboutPage = () => {
@@ -199,7 +199,7 @@ const AboutPage = () => {
 
   return (
     <div className="pt-24 pb-20 bg-gray-50 min-h-screen">
-      {/* Header / Hero Section */}
+      {/* Header / Hero Section (Simplificado, já que temos o Resumo detalhado abaixo) */}
       <div className="bg-blue-600 text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
@@ -207,8 +207,8 @@ const AboutPage = () => {
           </h1>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
             {language === 'pt' 
-              ? 'Product Designer (UX/UI) com 4 anos de experiência em produtos SaaS B2B e sistemas complexos. Atuação end-to-end em discovery, definição e entrega, com foco em tomada de decisão orientada a dados.' 
-              : 'Product Designer (UX/UI) with 4 years of experience in B2B SaaS products and complex systems. End-to-end action in discovery, definition, and delivery, focusing on data-driven decision making.'}
+              ? 'Conheça minha trajetória, habilidades técnicas e o impacto das minhas entregas.' 
+              : 'Discover my trajectory, technical skills, and the impact of my deliveries.'}
           </p>
         </div>
       </div>
@@ -216,8 +216,47 @@ const AboutPage = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
           
-          {/* Main Content: Experiences */}
-          <div className="lg:col-span-2">
+          {/* Main Content: Resumo + Experiences */}
+          <div className="lg:col-span-2 space-y-12">
+            
+            {/* NOVO: Seção de Resumo */}
+            <section className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
+              <div className="flex items-center mb-6 border-b pb-4">
+                <User size={28} className="text-blue-600 mr-3" />
+                <h2 className="text-2xl font-bold text-gray-900">
+                  {language === 'pt' ? 'Resumo Profissional' : 'Professional Summary'}
+                </h2>
+              </div>
+              <div className="space-y-4 text-gray-700 leading-relaxed">
+                {language === 'pt' ? (
+                  <>
+                    <p>
+                      Product Designer (UX/UI) com 4 anos de experiência em produtos SaaS B2B e sistemas complexos. Atuação end-to-end em discovery, definição e entrega, com foco em tomada de decisão orientada a dados, arquitetura da informação e design de fluxos críticos.
+                    </p>
+                    <p>
+                      Experiência na evolução de Design Systems escaláveis, colaborando com times de produto e engenharia para aumentar consistência, eficiência e velocidade de entrega.
+                    </p>
+                    <p>
+                      Histórico de atuação em contextos de alta complexidade (ERP e sistemas financeiros), traduzindo regras de negócio em soluções intuitivas, com impacto em eficiência operacional, redução de fricção e melhoria da experiência do usuário.
+                    </p>
+                  </>
+                ) : (
+                  <>
+                    <p>
+                      Product Designer (UX/UI) with 4 years of experience in B2B SaaS products and complex systems. End-to-end action in discovery, definition, and delivery, focusing on data-driven decision making, information architecture, and critical flow design.
+                    </p>
+                    <p>
+                      Experience in the evolution of scalable Design Systems, collaborating with product and engineering teams to increase consistency, efficiency, and delivery speed.
+                    </p>
+                    <p>
+                      Track record of working in highly complex contexts (ERP and financial systems), translating business rules into intuitive solutions, with an impact on operational efficiency, friction reduction, and user experience improvement.
+                    </p>
+                  </>
+                )}
+              </div>
+            </section>
+
+            {/* Seção de Experiência Profissional */}
             <section className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
               <div className="flex items-center mb-8 border-b pb-4">
                 <Briefcase size={28} className="text-blue-600 mr-3" />
