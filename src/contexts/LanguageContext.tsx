@@ -29,6 +29,7 @@ const translations = {
     
     "aboutpage.hero.title": "Sobre mim",
     "aboutpage.hero.subtitle": "UI/UX Designer com foco em produtos digitais complexos, sistemas corporativos e decisões orientadas a dados.",
+    "aboutpage.trajectory": "Minha trajetória", // <-- OLHA ELA AQUI!
     "aboutpage.skills": "Habilidades",
     "aboutpage.cat.ux": "UX & Produto",
     "aboutpage.cat.ui": "UI & Design System",
@@ -90,6 +91,7 @@ const translations = {
 
     "aboutpage.hero.title": "About me",
     "aboutpage.hero.subtitle": "UI/UX Designer focused on complex digital products, corporate systems, and data-driven decisions.",
+    "aboutpage.trajectory": "My trajectory", // <-- E AQUI EM INGLÊS!
     "aboutpage.skills": "Skills",
     "aboutpage.cat.ux": "UX & Product",
     "aboutpage.cat.ui": "UI & Design System",

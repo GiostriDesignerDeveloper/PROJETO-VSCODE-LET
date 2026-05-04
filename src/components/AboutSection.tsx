@@ -38,14 +38,13 @@ const AboutSection = () => {
           </h2>
         </div>
 
-        {/* Grid Principal: Flex-col no mobile garante que um bloco venha DEPOIS do outro */}
+        {/* Grid Principal */}
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
-          
-          {/* BLOCO DE CARDS: No mobile ele vem primeiro agora para limpar o fluxo */}
+          {/* BLOCO DE CARDS (Mobile: Primeiro / Desktop: Direita) */}
           <div className="w-full lg:w-1/2 order-1 lg:order-2 grid grid-cols-1 sm:grid-cols-2 gap-6 relative z-10">
             {skills.map((skill, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="bg-white p-6 rounded-xl shadow-md border border-gray-100 relative z-20"
               >
                 <div className="mb-4">{skill.icon}</div>
@@ -59,36 +58,55 @@ const AboutSection = () => {
             ))}
           </div>
 
-          {/* BLOCO DE TEXTO: Biografia */}
+          {/* BLOCO DE TEXTO (Mobile: Segundo / Desktop: Esquerda) */}
           <div className="w-full lg:w-1/2 order-2 lg:order-1 relative z-0">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">
               {t("about.history.title")}
             </h3>
-            
+
             <div className="space-y-6 text-gray-600 leading-relaxed text-lg">
               <p>
-                <strong>{language === 'pt' ? 'Product Designer (UI/UX) com 4 anos de experiência' : 'Product Designer (UI/UX) with 4 years of experience'}</strong> 
-                {t("about.bio.p1").replace("Product Designer (UI/UX) com 4 anos de experiência ", "").replace("Product Designer (UI/UX) with 4 years of experience ", "")}
+                <strong>
+                  {language === "pt"
+                    ? "Product Designer (UI/UX) com 4 anos de experiência"
+                    : "Product Designer (UI/UX) with 4 years of experience"}
+                </strong>
+                {t("about.bio.p1")
+                  .replace(
+                    "Product Designer (UI/UX) com 4 anos de experiência ",
+                    "",
+                  )
+                  .replace(
+                    "Product Designer (UI/UX) with 4 years of experience ",
+                    "",
+                  )}
               </p>
-              
+
               <p>{t("about.bio.p2")}</p>
-              
+
+              {/* CORREÇÃO DA PALAVRA "ESTRATÉGIA" AQUI */}
               <div className="pt-4 border-t border-gray-100">
                 <h4 className="text-lg font-bold text-gray-900 mb-4">
                   {t("about.skills.title")}
                 </h4>
                 <ul className="grid grid-cols-1 gap-2 text-base">
                   <li className="flex gap-2">
-                    <span className="text-blue-600 font-bold">Strategy:</span> 
-                    UX Research, Discovery, Design Systems, Metrics.
+                    <span className="text-blue-600 font-bold">
+                      {language === "pt" ? "Estratégia:" : "Strategy:"}
+                    </span>
+                    UX Research, Discovery, Design Systems, Usability Metrics.
                   </li>
                   <li className="flex gap-2">
-                    <span className="text-blue-600 font-bold">Design:</span> 
-                    Figma (Variables), Information Architecture.
+                    <span className="text-blue-600 font-bold">
+                      {language === "pt" ? "Design:" : "Design:"}
+                    </span>
+                    Figma (Tokens/Variables), Information Architecture.
                   </li>
                   <li className="flex gap-2">
-                    <span className="text-blue-600 font-bold">Tech:</span> 
-                    React, Tailwind, HTML/CSS.
+                    <span className="text-blue-600 font-bold">
+                      {language === "pt" ? "Tech:" : "Tech:"}
+                    </span>
+                    React, HTML/CSS.
                   </li>
                 </ul>
               </div>
@@ -103,7 +121,6 @@ const AboutSection = () => {
               </Link>
             </div>
           </div>
-          
         </div>
       </div>
     </section>
