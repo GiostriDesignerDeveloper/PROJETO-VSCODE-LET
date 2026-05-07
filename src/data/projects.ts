@@ -383,7 +383,7 @@ Centralizar o fluxo de compras de ponta a ponta (solicitação à ordem de compr
 
 **IMPACTO DIRETO:**
 • Baixa eficiência nas negociações (Time-on-Task elevado).
-• Custos ocultos devido à dificuldade de auditar orçamentos.
+• Custos ocultos devido a dificuldade de auditar orçamentos.
 • Risco de baixa adesão devido à complexidade da interface.
 
 **HIPÓTESE**
@@ -695,6 +695,93 @@ This project was developed in a corporate context. The product name, visual iden
       { url: "/smartsettlement-modal.png", title: "Prevenção de Erro: Modal de confirmação para ações críticas." },
       { url: "/smartsettlement-fluxo.png", title: "Documentação de Fluxo: Mapeamento de interações e estados." }
     ],
+  },
+  {
+    id: "compliance-kyc",
+    title: {
+      pt: "Sistema de Inteligência em Compliance (KYC/KYB)",
+      en: "Compliance & Risk Prevention Intelligence System (KYC/KYB)"
+    },
+    status: "active",
+    embedUrl: "",
+    description: {
+      pt: "Plataforma centralizada de inteligência para análise profunda de CPFs e CNPJs, mitigando riscos de fraudes e reduzindo a fadiga de decisão dos analistas.",
+      en: "Centralized intelligence platform for deep analysis of SSNs and EINs, mitigating fraud risks and reducing decision fatigue for analysts."
+    },
+    fullDescription: {
+      pt: `
+**CONTEXTO DO NEGÓCIO**
+No cenário de expansão comercial e abertura de novos negócios, a segurança operacional é o pilar principal. Grandes empresas e holdings dependem de uma análise profunda de CPFs e CNPJs para mitigar riscos de fraudes, lavagem de dinheiro e envolvimento com atividades ilícitas. O desafio era transformar um processo de investigação manual, lento e fragmentado em uma plataforma de inteligência centralizada.
+
+**O PROBLEMA**
+Analistas de compliance enfrentavam uma alta carga cognitiva e fadiga de decisão. A necessidade de consultar múltiplas fontes para identificar o "Beneficiário Final" (UBO), verificar o status de PEP (Pessoa Exposta Politicamente) ou sinalizações de PLD (Prevenção à Lavagem de Dinheiro) gerava um gargalo operacional. 
+
+O risco: Dados dispersos aumentavam a chance de erros humanos, permitindo transações suspeitas ou parcerias com entidades não idôneas.
+
+**HIPÓTESE DE DESIGN**
+Acreditamos que, ao centralizar a jornada de consulta em uma interface baseada em visualização de dados hierárquicos e indicadores de risco claros (red flags), reduziríamos o tempo de análise e aumentaríamos a precisão na detecção de anomalias, garantindo que o analista foque no julgamento estratégico e não na coleta de dados.
+
+**MINHA ATUAÇÃO COMO PRODUCT DESIGNER**
+Neste projeto, atuei desde a imersão na dor do usuário até a entrega da interface final, focando na simplificação de fluxos densos:
+
+• **Combate à Fadiga Mental:** Projetar para compliance é lidar com dados exaustivos. Apliquei princípios de psicologia cognitiva para reduzir o ruído visual, garantindo que informações críticas (como notificações de transações suspeitas) tivessem prioridade na hierarquia visual.
+• **Arquitetura de Informação Estratégica:** Estruturei o fluxo de "Cadastro Unificado" e "Pesquisa Prévia" para permitir uma navegação intuitiva entre os dados de uma Holding e seus donos reais, eliminando a troca de contexto entre abas.
+• **Consistência e Usabilidade:** Utilizei leis de UX (como a Lei de Jakob e a Lei de Proximidade) para agrupar informações relacionadas, facilitando a escaneabilidade do perfil completo do investigado.
+
+**SOLUÇÃO PROPOSTA**
+A plataforma permite uma análise 360º de perfis, automatizando a busca por históricos e vínculos societários.
+
+• **Módulos de Risco:** Dashboards que sinalizam imediatamente se um perfil é PEP ou possui dados suspeitos.
+• **Fluxo de Aprovação:** Sistema integrado para que a decisão de compliance seja registrada e auditável, garantindo governança.
+
+**MÉTRICAS DE SUCESSO (UX/UI METRICS)**
+Para validar a eficácia do redesign e da nova arquitetura, o foco foi em métricas quantitativas e qualitativas:
+
+• **Redução do Time on Task:** Diminuição do tempo médio necessário para validar a idoneidade de um novo parceiro.
+• **Task Success Rate:** Aumento na taxa de identificação correta de beneficiários finais sem necessidade de suporte externo.
+• **Redução de Carga Cognitiva:** Validada através de testes de usabilidade, observando a facilidade do analista em localizar alertas críticos na interface.
+      `,
+      en: `
+**BUSINESS CONTEXT**
+In the scenario of commercial expansion and the opening of new businesses, operational security is the main pillar. Large companies and holdings depend on a deep analysis of SSNs and EINs to mitigate risks of fraud, money laundering, and involvement with illicit activities. The challenge was to transform a manual, slow, and fragmented investigation process into a centralized intelligence platform.
+
+**THE PROBLEM**
+Compliance analysts faced high cognitive load and decision fatigue. The need to consult multiple sources to identify the Ultimate Beneficial Owner (UBO), check the PEP (Politically Exposed Person) status, or AML (Anti-Money Laundering) flags generated an operational bottleneck. 
+
+The risk: Scattered data increased the chance of human errors, allowing suspicious transactions or partnerships with non-reputable entities.
+
+**DESIGN HYPOTHESIS**
+We believed that by centralizing the consultation journey in an interface based on hierarchical data visualization and clear risk indicators (red flags), we would reduce analysis time and increase accuracy in detecting anomalies, ensuring the analyst focuses on strategic judgment rather than data collection.
+
+**MY ROLE AS A PRODUCT DESIGNER**
+In this project, I worked from immersing in the user's pain points to delivering the final interface, focusing on simplifying dense flows:
+
+• **Combating Mental Fatigue:** Designing for compliance means dealing with exhaustive data. I applied cognitive psychology principles to reduce visual noise, ensuring critical information (like suspicious transaction notifications) had priority in the visual hierarchy.
+• **Strategic Information Architecture:** I structured the "Unified Registration" and "Prior Research" flow to allow intuitive navigation between a Holding's data and its real owners, eliminating context switching between tabs.
+• **Consistency and Usability:** I used UX laws (such as Jakob's Law and the Law of Proximity) to group related information, facilitating the scannability of the investigated party's complete profile.
+
+**PROPOSED SOLUTION**
+The platform allows a 360º analysis of profiles, automating the search for histories and corporate links.
+
+• **Risk Modules:** Dashboards that immediately flag if a profile is PEP or has suspicious data.
+• **Approval Flow:** Integrated system so the compliance decision is registered and auditable, ensuring governance.
+
+**SUCCESS METRICS (UX/UI METRICS)**
+To validate the effectiveness of the redesign and the new architecture, the focus was on quantitative and qualitative metrics:
+
+• **Time on Task Reduction:** Decrease in the average time needed to validate the suitability of a new partner.
+• **Task Success Rate:** Increase in the rate of correct identification of ultimate beneficial owners without external support.
+• **Cognitive Load Reduction:** Validated through usability testing, observing the analyst's ease in locating critical alerts in the interface.
+      `
+    },
+    imageUrl: "/compliance-capa.png", // Substitua pelo caminho da sua imagem
+    category: "UX/UI Design & Architecture",
+    tags: ["UX Research", "Information Architecture", "B2B SaaS"],
+    technologies: ["Figma", "Data Visualization", "Usability Testing"],
+    client: "Confidencial",
+    role: "Product Designer",
+    liveUrl: "#",
+    gallery: []
   },
   
   // ========================================================================
