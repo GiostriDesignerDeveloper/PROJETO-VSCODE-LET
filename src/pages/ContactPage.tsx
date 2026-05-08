@@ -1,4 +1,4 @@
-import { Mail, MapPin, Github, Linkedin } from "lucide-react";
+import { Mail, MapPin, Github, Linkedin, Smartphone } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 
 const ContactPage = () => {
@@ -35,6 +35,21 @@ const ContactPage = () => {
                 </p>
                 <a href="mailto:leticiagouveiadesign@gmail.com" className="text-lg font-medium text-gray-900 hover:text-blue-600 transition-colors">
                   leticiagouveiadesign@gmail.com
+                </a>
+              </div>
+            </div>
+
+            {/* Item: Celular */}
+            <div className="flex items-center gap-6">
+              <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center shrink-0">
+                <Smartphone className="text-blue-600" size={24} />
+              </div>
+              <div>
+                <p className="text-sm font-medium text-gray-400">
+                  Celular
+                </p>
+                <a href="https://wa.me/5531988802901" target="_blank" rel="noopener noreferrer" className="text-lg font-medium text-gray-900 hover:text-blue-600 transition-colors">
+                  (31) 98880-2901
                 </a>
               </div>
             </div>
