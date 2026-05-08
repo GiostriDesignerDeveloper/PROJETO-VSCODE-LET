@@ -704,10 +704,9 @@ This project was developed in a corporate context. The product name, visual iden
     role: "Product Designer / UI",
     liveUrl: "#",
     gallery: [
-      { url: "/ds-variaveis.png", title: "Estruturação de Variáveis: Espaçamentos, Radius e Modos de Cor" },
+      { url: "/ds-variaveis.png", title: "Estruturação de Variáveis: Espaçamentos, Radius e Modos de Cor / Taxonomia e Organização Lógica do Repositório" },
       { url: "/ds-cores.png", title: "Inventário de Cores Primitivas e Escalas" },
-      { url: "/ds-documentacao.png", title: "Documentação Funcional: Regras de UX e Anatomia de Componentes" },
-      { url: "/ds-pastas.png", title: "Taxonomia e Organização Lógica do Repositório" }
+      { url: "/ds-documentacao.png", title: "Documentação Funcional: Regras de UX e Anatomia de Componentes" },      
     ]
   },
    {
