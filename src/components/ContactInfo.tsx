@@ -1,4 +1,4 @@
-import { Mail, MapPin, Linkedin, Github } from "lucide-react";
+import { Mail, MapPin, Linkedin, Github, Smartphone } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext"; // 1. Importando o hook
 
 const ContactInfo = () => {
@@ -25,6 +25,26 @@ const ContactInfo = () => {
               className="text-gray-900 font-medium hover:text-blue-600 transition-colors"
             >
               leticiagouveiadesign@gmail.com
+            </a>
+          </div>
+        </div>
+
+        {/* Item Celular (WhatsApp) */}
+        <div className="flex items-start gap-4">
+          <div className="bg-blue-50 p-3 rounded-lg text-blue-600 shrink-0">
+            <Smartphone size={24} />
+          </div>
+          <div>
+            <p className="text-sm font-medium text-gray-500 mb-1">
+              Celular
+            </p>
+            <a
+              href="https://wa.me/5531988802901"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-900 font-medium hover:text-blue-600 transition-colors"
+            >
+              (31) 98880-2901
             </a>
           </div>
         </div>
