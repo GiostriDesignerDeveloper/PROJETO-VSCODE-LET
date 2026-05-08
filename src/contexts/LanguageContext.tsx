@@ -16,7 +16,7 @@ const translations = {
     "hero.title.2": " e ",
     "hero.title.blue2": "dados",
     "hero.title.3": " para produtos digitais.",
-    "hero.subtitle": "Olá, sou a Letícia designer focada em criar soluções visuais baseadas em usabilidade e métricas de negócio.",
+    "hero.subtitle": "Olá, sou a Letícia, designer focada em transformar fluxos complexos em experiências mais claras, acessíveis e eficientes para usuários e negócios.",
 
     // About (Home e Interna)
     "about.title": "Sobre mim",
@@ -29,7 +29,7 @@ const translations = {
     
     "aboutpage.hero.title": "Sobre mim",
     "aboutpage.hero.subtitle": "UI/UX Designer com foco em produtos digitais complexos, sistemas corporativos e decisões orientadas a dados.",
-    "aboutpage.trajectory": "Minha trajetória", // <-- OLHA ELA AQUI!
+    "aboutpage.trajectory": "Minha trajetória",
     "aboutpage.skills": "Habilidades",
     "aboutpage.cat.ux": "UX & Produto",
     "aboutpage.cat.ui": "UI & Design System",
@@ -78,7 +78,7 @@ const translations = {
     "hero.title.2": " ",
     "hero.title.blue2": "design",
     "hero.title.3": " for digital products.",
-    "hero.subtitle": "Hi, I'm Letícia, a designer focused on creating visual solutions based on usability and business metrics.",
+    "hero.subtitle": "Hi, I'm Letícia, a designer focused on transforming complex flows into clearer, more accessible, and efficient experiences for users and businesses.",
 
     // About
     "about.title": "About me",
@@ -91,7 +91,7 @@ const translations = {
 
     "aboutpage.hero.title": "About me",
     "aboutpage.hero.subtitle": "UI/UX Designer focused on complex digital products, corporate systems, and data-driven decisions.",
-    "aboutpage.trajectory": "My trajectory", // <-- E AQUI EM INGLÊS!
+    "aboutpage.trajectory": "My trajectory",
     "aboutpage.skills": "Skills",
     "aboutpage.cat.ux": "UX & Product",
     "aboutpage.cat.ui": "UI & Design System",
