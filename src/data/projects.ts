@@ -315,14 +315,14 @@ Transform a limited visual library into a living, scalable design ecosystem (Des
 **HYPOTHESIS**
 If we implement a token architecture via Figma Variables and structure deep functional component documentation, we will reduce cognitive effort in interface creation and guarantee a 1:1 fidelity between design and code.
 
-**DISCOVERY PROCESS**
+**PROCESSO DE DISCOVERY**
 To elevate the system's maturity, the project followed rigorous technical investigation:
 • **Interface Audit:** Mapping all existing components to identify inconsistencies and redundancies.
 • **Engineering Interviews:** Diagnosis of main friction points during hand-off to understand which technical information was vital in the documentation.
 • **Design Ops Benchmarking:** Study of market standards to structure logical variable collections (Spacing, Border Radius, and Semantic Colors).
 • **Business Rules Mapping:** Definition of native support tokens for Light/Dark Mode aligned with the brand identity.
 
-**DESIGN SOLUTION**
+**SOLUÇÃO DE DESIGN**
 • **Variables and Tokens Architecture:** Structuring logical collections and separating primitive and semantic colors, shielding the system against visual breaks.
 • **Advanced Componentization:** Restructuring complex components using Auto Layout, Variants, Booleans, and accessibility rules.
 • **Functional Documentation:** Creation of exhaustive guides with anatomy, states, behaviors, and UX principles tied to each component.
@@ -410,7 +410,7 @@ Este projeto foi conduzido utilizando a metodologia de Pair Design em colaboraç
 A plataforma eleva a maturidade do processo de compras da empresa, transformando uma atividade burocrática em uma operação estratégica. A solução garante conformidade legal e resulta em negociações mais rápidas e com maior custo-benefício (impactando o *bottom line* da companhia).
 
 **NOTA DE CONFIDENCIALIDADE**
-Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identidade visual e cores foram adaptados para fins de portfólio, preservando a confidencialidade da empresa e mantendo a fidelidade ao processo, às decisões de design e aos desafios enfrentados.
+Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identidade visual e cores foram adaptados para fins of portfolio, preservando a confidencialidade da empresa e mantendo a fidelidade ao processo, às decisões de design e aos desafios enfrentados.
       `,
       en: `
 **BUSINESS PROBLEM**
@@ -566,13 +566,13 @@ The project was conducted through rigorous technical and behavioral investigatio
 **EXPECTED RESULT**
 The new interface proposal drastically reduces the risk of medical errors stemming from the software, improves ergonomics for the healthcare worker, and transforms a rigid system into a reliable and agile tool for clinic or hospital operations.
 
-**CONFIDENTIALITY NOTE**
-This project was developed in a corporate context. The product name, visual identity, and colors were adapted for portfolio purposes, preserving the company's confidentiality while maintaining fidelity to the process, design decisions, and challenges faced.
+**NOTA DE CONFIDENCIALIDADE**
+Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identidade visual e cores foram adaptados para fins de portfólio, preservando a confidencialidade da empresa e mantendo a fidelidade ao processo, às decisões de design e aos desafios enfrentados.
       `
     },
     imageUrl: "/healthdash-capa.png",
     category: "UX Research",
-    tags: ["UX Analysis", "Healthcare", "Responsive Design", "Heuristics"],
+    tags: ["UX Analysis", "Healthcare", "Responsive Design", "Heurísticas"],
     technologies: ["Figma", "UX Research", "Accessibility", "UI Design"],
     client: "HealthDash", 
     role: "UX/UI Designer",
@@ -678,7 +678,7 @@ To ensure an agile delivery under high technical constraints, the discovery phas
 **EXPECTED RESULT**
 Adopting the direct-to-production design methodology delivers a massive impact in very little time. The employee gains a safe journey with clear feedback, while the company reduces its operational support costs and optimizes time-to-market.
 
-**CONFIDENTIALITY NOTE**
+**NOTA DE CONFIDENCIALIDADE**
 This project was developed in a corporate context. The product name, visual identity, and colors were adapted for portfolio purposes, preserving the company's confidentiality while maintaining fidelity to the process, design decisions, and challenges faced.
       `
     },
@@ -699,89 +699,132 @@ This project was developed in a corporate context. The product name, visual iden
   {
     id: "compliance-kyc",
     title: {
-      pt: "Sistema de Inteligência em Compliance (KYC/KYB)",
-      en: "Compliance & Risk Prevention Intelligence System (KYC/KYB)"
+      pt: "Plataforma de Inteligência em Compliance e Fraudes",
+      en: "Compliance & Fraud Intelligence Platform"
     },
     status: "active",
     embedUrl: "",
     description: {
-      pt: "Plataforma centralizada de inteligência para análise profunda de CPFs e CNPJs, mitigando riscos de fraudes e reduzindo a fadiga de decisão dos analistas.",
-      en: "Centralized intelligence platform for deep analysis of SSNs and EINs, mitigating fraud risks and reducing decision fatigue for analysts."
+      pt: "Centralização de inteligência investigativa e automação de compliance para mitigar riscos de fraudes e reduzir a fadiga de decisão operacional.",
+      en: "Centralization of investigative intelligence and compliance automation to mitigate fraud risks and reduce operational decision fatigue."
     },
     fullDescription: {
       pt: `
-**CONTEXTO DO NEGÓCIO**
-No cenário de expansão comercial e abertura de novos negócios, a segurança operacional é o pilar principal. Grandes empresas e holdings dependem de uma análise profunda de CPFs e CNPJs para mitigar riscos de fraudes, lavagem de dinheiro e envolvimento com atividades ilícitas. O desafio era transformar um processo de investigação manual, lento e fragmentado em uma plataforma de inteligência centralizada.
+**PROBLEMA DE NEGÓCIO**
+No cenário de expansão comercial e abertura de novos negócios, grandes empresas e holdings dependem de uma análise profunda de CPFs e CNPJs para mitigar riscos de fraudes e lavagem de dinheiro. O processo anterior era manual, lento e fragmentado, forçando analistas a consultarem múltiplas fontes isoladas, o que gerava um gargalo operacional crítico e alto risco de erro humano.
 
-**O PROBLEMA**
-Analistas de compliance enfrentavam uma alta carga cognitiva e fadiga de decisão. A necessidade de consultar múltiplas fontes para identificar o "Beneficiário Final" (UBO), verificar o status de PEP (Pessoa Exposta Politicamente) ou sinalizações de PLD (Prevenção à Lavagem de Dinheiro) gerava um gargalo operacional. 
+**OBJETIVO**
+Transformar a investigação manual em uma plataforma de inteligência centralizada, reduzindo a carga cognitiva dos analistas e garantindo que o foco permaneça no julgamento estratégico e na detecção de anomalias, e não na coleta braçal de dados.
 
-O risco: Dados dispersos aumentavam a chance de erros humanos, permitindo transações suspeitas ou parcerias com entidades não idôneas.
+**DIAGNÓSTICO**
+• **Dados Dispersos:** Dificuldade em identificar o "Beneficiário Final" (UBO) e status de PEP (Pessoa Exposta Politicamente).
+• **Fadiga de Decisão:** Alta complexidade para cruzar informações de conformidade (PLD).
+• **Impacto direto:**
+  • Risco de aceitação de parcerias com entidades não idôneas.
+  • Aumento do tempo de tarefa (Time on Task) e baixa previsibilidade do processo.
 
-**HIPÓTESE DE DESIGN**
-Acreditamos que, ao centralizar a jornada de consulta em uma interface baseada em visualização de dados hierárquicos e indicadores de risco claros (red flags), reduziríamos o tempo de análise e aumentaríamos a precisão na detecção de anomalias, garantindo que o analista foque no julgamento estratégico e não na coleta de dados.
+**HIPÓTESE**
+Se centralizarmos a jornada de consulta em uma interface baseada em visualização de dados hierárquicos e indicadores de risco claros (red flags), reduziremos o tempo de análise e aumentaremos a precisão na detecção de fraudes, garantindo governança auditável.
 
-**MINHA ATUAÇÃO COMO PRODUCT DESIGNER**
-Neste projeto, atuei desde a imersão na dor do usuário até a entrega da interface final, focando na simplificação de fluxos densos:
+**PROCESSO DE DISCOVERY**
+A fase de descoberta foi fundamental para mapear a complexidade do sistema e as dores da operação:
+• **Mapeamento de Processos (As-Is):** Identificação dos pontos de quebra no fluxo atual de trabalho dos operadores (Ver imagem: Fluxo Atual).
+• **Imersão Qualitativa:** Levantamento estruturado das dores e ganhos reais da equipe de análise (Ver imagem: Discovery).
+• **Definição de Personas:** Construção de perfis detalhados para direcionar a experiência às necessidades reais da operação (Ver imagem: Personas).
+• **Matriz de Hipóteses:** Validação de problemas e oportunidades através da lógica "Acreditamos que / Acontece por conta de" (Ver imagem: Hipóteses).
+• **Arquitetura de Informação:** Estruturação da plataforma unificada e definição das fases do roadmap estratégico (Ver imagem: Arquitetura).
+• **Novo Fluxo do Usuário (To-Be):** Redesenho da jornada focada em automação e agilidade na tomada de decisão (Ver imagem: Novo Fluxo).
 
-• **Combate à Fadiga Mental:** Projetar para compliance é lidar com dados exaustivos. Apliquei princípios de psicologia cognitiva para reduzir o ruído visual, garantindo que informações críticas (como notificações de transações suspeitas) tivessem prioridade na hierarquia visual.
-• **Arquitetura de Informação Estratégica:** Estruturei o fluxo de "Cadastro Unificado" e "Pesquisa Prévia" para permitir uma navegação intuitiva entre os dados de uma Holding e seus donos reais, eliminando a troca de contexto entre abas.
-• **Consistência e Usabilidade:** Utilizei leis de UX (como a Lei de Jakob e a Lei de Proximidade) para agrupar informações relacionadas, facilitando a escaneabilidade do perfil completo do investigado.
+**SOLUÇÃO DE DESIGN**
+• **Dashboard de Visão Geral:** Painel de monitoramento gerencial que resume o volume operado e o status dos cadastros, permitindo uma leitura rápida da saúde da operação de compliance (Ver imagem: Dashboard Geral).
+• **Combate à Fadiga Mental:** Interface desenhada para priorizar alertas críticos e "red flags", reduzindo o ruído visual em dados exaustivos (Ver imagem: Monitoramento).
+• **Estrutura Hierárquica:** Visualização em organograma para identificação intuitiva de vínculos societários e donos reais / UBO (Ver imagem: Estrutura Societária).
+• **Gestão Unificada de Cadastros:** Centralização de perfis (PF/CNPJ), documentos e contratos em módulos integrados e auditáveis (Ver imagens: Gestão de Cadastros, Documentos, Contratos).
+• **Eficiência na Busca:** Implementação de painéis de filtros avançados para otimizar a localização de perfis e históricos (Ver imagens: Filtros Avançados, Informações CNPJ).
+• **Visão Sistêmica:** Entrega de um ecossistema completo, incluindo gestão de estados vazios e documentação técnica para engenharia (Ver imagem: Visão Geral UI).
 
-**SOLUÇÃO PROPOSTA**
-A plataforma permite uma análise 360º de perfis, automatizando a busca por históricos e vínculos societários.
+**MÉTRICAS CONSIDERADAS**
+• **Redução do Time-on-Task:** Diminuição do tempo médio para validar a idoneidade de parceiros.
+• **Task Success Rate:** Aumento na assertividade da identificação de riscos sem suporte externo.
+• **Adoção e Governança:** Melhoria nos níveis de conformidade e rastreabilidade das decisões.
 
-• **Módulos de Risco:** Dashboards que sinalizam imediatamente se um perfil é PEP ou possui dados suspeitos.
-• **Fluxo de Aprovação:** Sistema integrado para que a decisão de compliance seja registrada e auditável, garantindo governança.
+**RESULTADO ESPERADO**
+Uma operação de compliance mais ágil, segura e escalável, onde a tecnologia automatiza a coleta de evidências e o analista atua com precisão cirúrgica na mitigação de riscos.
 
-**MÉTRICAS DE SUCESSO (UX/UI METRICS)**
-Para validar a eficácia do redesign e da nova arquitetura, o foco foi em métricas quantitativas e qualitativas:
-
-• **Redução do Time on Task:** Diminuição do tempo médio necessário para validar a idoneidade de um novo parceiro.
-• **Task Success Rate:** Aumento na taxa de identificação correta de beneficiários finais sem necessidade de suporte externo.
-• **Redução de Carga Cognitiva:** Validada através de testes de usabilidade, observando a facilidade do analista em localizar alertas críticos na interface.
+**NOTA DE CONFIDENCIALIDADE**
+Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identidade visual e cores foram adaptados para fins de portfólio, preservando a confidencialidade da empresa e mantendo a fidelidade ao processo e às decisões de design.
       `,
       en: `
-**BUSINESS CONTEXT**
-In the scenario of commercial expansion and the opening of new businesses, operational security is the main pillar. Large companies and holdings depend on a deep analysis of SSNs and EINs to mitigate risks of fraud, money laundering, and involvement with illicit activities. The challenge was to transform a manual, slow, and fragmented investigation process into a centralized intelligence platform.
+**BUSINESS PROBLEM**
+In the scenario of commercial expansion and opening of new businesses, large companies and holdings depend on deep analysis of SSNs and EINs to mitigate fraud and money laundering risks. The previous process was manual, slow, and fragmented, forcing analysts to consult multiple isolated sources, which generated a critical operational bottleneck and a high risk of human error.
 
-**THE PROBLEM**
-Compliance analysts faced high cognitive load and decision fatigue. The need to consult multiple sources to identify the Ultimate Beneficial Owner (UBO), check the PEP (Politically Exposed Person) status, or AML (Anti-Money Laundering) flags generated an operational bottleneck. 
+**OBJECTIVE**
+Transform manual investigation into a centralized intelligence platform, reducing the cognitive load of analysts and ensuring the focus remains on strategic judgment and anomaly detection, not manual data collection.
 
-The risk: Scattered data increased the chance of human errors, allowing suspicious transactions or partnerships with non-reputable entities.
+**DIAGNOSIS**
+• **Scattered Data:** Difficulty identifying the Ultimate Beneficial Owner (UBO) and PEP (Politically Exposed Person) status.
+• **Decision Fatigue:** High complexity in crossing compliance information (AML).
+• **Direct impact:**
+  • Risk of accepting partnerships with non-reputable entities.
+  • Increased Time on Task and low process predictability.
 
-**DESIGN HYPOTHESIS**
-We believed that by centralizing the consultation journey in an interface based on hierarchical data visualization and clear risk indicators (red flags), we would reduce analysis time and increase accuracy in detecting anomalies, ensuring the analyst focuses on strategic judgment rather than data collection.
+**HYPOTHESIS**
+If we centralize the consultation journey in an interface based on hierarchical data visualization and clear risk indicators (red flags), we will reduce analysis time and increase precision in fraud detection, ensuring auditable governance.
 
-**MY ROLE AS A PRODUCT DESIGNER**
-In this project, I worked from immersing in the user's pain points to delivering the final interface, focusing on simplifying dense flows:
+**DISCOVERY PROCESS**
+The discovery phase was fundamental to mapping the system's complexity and the operation's pain points:
+• **Process Mapping (As-Is):** Identification of breaking points in the operators' current workflow (See gallery: Current Flow).
+• **Qualitative Immersion:** Structured survey of the analysis team's real pains and gains (See gallery: Discovery).
+• **Persona Definition:** Construction of detailed profiles to direct the experience to the operation's real needs (See gallery: Personas).
+• **Hypothesis Matrix:** Validation of problems and opportunities using the "We believe that / Happens because of" logic (See gallery: Hypotheses).
+• **Information Architecture:** Structuring the unified platform and defining strategic roadmap phases (See gallery: Architecture).
+• **New User Flow (To-Be):** Redesign of the journey focused on automation and agility in decision making (See gallery: New Flow).
 
-• **Combating Mental Fatigue:** Designing for compliance means dealing with exhaustive data. I applied cognitive psychology principles to reduce visual noise, ensuring critical information (like suspicious transaction notifications) had priority in the visual hierarchy.
-• **Strategic Information Architecture:** I structured the "Unified Registration" and "Prior Research" flow to allow intuitive navigation between a Holding's data and its real owners, eliminating context switching between tabs.
-• **Consistency and Usability:** I used UX laws (such as Jakob's Law and the Law of Proximity) to group related information, facilitating the scannability of the investigated party's complete profile.
+**DESIGN SOLUTION**
+• **General Overview Dashboard:** Management monitoring panel that summarizes the operated volume and registration status, allowing a quick read of the compliance operation's health (See gallery: General Dashboard).
+• **Combating Mental Fatigue:** Interface designed to prioritize critical alerts and red flags, reducing visual noise in exhaustive data (See gallery: Monitoring).
+• **Hierarchical Structure:** Organizational chart visualization for intuitive identification of corporate links and real owners / UBO (See gallery: Corporate Structure).
+• **Unified Registration Management:** Centralization of profiles (Individual/Corporate), documents, and contracts in integrated and auditable modules (See gallery: Registration Management, Documents, Contracts).
+• **Search Efficiency:** Implementation of advanced filter panels to optimize the location of profiles and histories (See gallery: Advanced Filters, EIN Information).
+• **Systemic Vision:** Delivery of a complete ecosystem, including empty states management and technical documentation for engineering (See gallery: General UI Overview).
 
-**PROPOSED SOLUTION**
-The platform allows a 360º analysis of profiles, automating the search for histories and corporate links.
+**METRICS CONSIDERED**
+• **Time-on-Task Reduction:** Decrease in average time to validate partner suitability.
+• **Task Success Rate:** Increase in assertiveness of risk identification without external support.
+• **Adoption and Governance:** Improvement in compliance levels and decision traceability.
 
-• **Risk Modules:** Dashboards that immediately flag if a profile is PEP or has suspicious data.
-• **Approval Flow:** Integrated system so the compliance decision is registered and auditable, ensuring governance.
+**EXPECTED RESULT**
+A more agile, secure, and scalable compliance operation, where technology automates evidence collection and the analyst acts with surgical precision in risk mitigation.
 
-**SUCCESS METRICS (UX/UI METRICS)**
-To validate the effectiveness of the redesign and the new architecture, the focus was on quantitative and qualitative metrics:
-
-• **Time on Task Reduction:** Decrease in the average time needed to validate the suitability of a new partner.
-• **Task Success Rate:** Increase in the rate of correct identification of ultimate beneficial owners without external support.
-• **Cognitive Load Reduction:** Validated through usability testing, observing the analyst's ease in locating critical alerts in the interface.
+**CONFIDENTIALITY NOTE**
+This project was developed in a corporate context. The product name, visual identity, and colors were adapted for portfolio purposes, preserving the company's confidentiality while maintaining fidelity to the process and design decisions.
       `
     },
-    imageUrl: "/compliance-capa.png", // Substitua pelo caminho da sua imagem
+    imageUrl: "/compliance-capa.png",
     category: "UX/UI Design & Architecture",
-    tags: ["UX Research", "Information Architecture", "B2B SaaS"],
-    technologies: ["Figma", "Data Visualization", "Usability Testing"],
+    tags: ["UX Strategy", "Discovery", "Compliance", "B2B"],
+    technologies: ["Miro", "Mapeamento de Fluxos", "Arquitetura de Informação", "UX Research"],
     client: "Confidencial",
     role: "Product Designer",
     liveUrl: "#",
-    gallery: []
+    gallery: [
+      { url: "/compliance-fluxo-atual.jpg", title: "Fluxo Atual: Mapeamento de gargalos operacionais." },
+      { url: "/compliance-dores-ganhos.jpg", title: "Discovery: Levantamento de dores e ganhos dos operadores." },
+      { url: "/compliance-personas.jpg", title: "Personas: Perfis detalhados do time de operação." },
+      { url: "/compliance-hipoteses.jpg", title: "Hipóteses: Matriz de validação de problemas e soluções." },
+      { url: "/compliance-arquitetura.jpg", title: "Arquitetura: Estrutura da plataforma e fases de entrega." },
+      { url: "/compliance-fluxo-novo.jpg", title: "Novo Fluxo: Jornada otimizada para o analista." },
+      { url: "/compliance-dashboard-geral.jpg", title: "Dashboard Geral: Monitoramento gerencial de volumes e cadastros." },
+      { url: "/compliance-visao-geral.png", title: "Visão Geral UI: Mapeamento de telas, componentes e estados." },
+      { url: "/compliance-monitoramento.jpg", title: "Monitoramento: Dashboard core com Score de Risco e alertas PEP." },
+      { url: "/compliance-estrutura-societaria.png", title: "Estrutura Societária: Visualização hierárquica para identificação de UBO." },
+      { url: "/compliance-gestao-cadastros.png", title: "Gestão de Cadastros: Listagem inteligente com status visuais." },
+      { url: "/compliance-filtros.png", title: "Filtros Avançados: Otimização da busca e refinamento de dados." },
+      { url: "/compliance-info-cnpj.png", title: "Informações CNPJ: Perfil detalhado organizado por módulos." },
+      { url: "/compliance-documentos.png", title: "Documentos: Interface de gestão e validação documental." },
+      { url: "/compliance-detalhes-doc.png", title: "Detalhes Documentais: Rastreabilidade e histórico de alterações." },
+      { url: "/compliance-contratos.png", title: "Contratos: Organização de vigências e arquivos contratuais." }
+    ]
   },
   
   // ========================================================================
