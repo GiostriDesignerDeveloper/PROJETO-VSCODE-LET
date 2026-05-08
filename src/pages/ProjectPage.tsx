@@ -99,14 +99,8 @@ const ProjectPage = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2">
-            <div className="mb-8 rounded-lg overflow-hidden shadow-lg border border-gray-100">
-              <img 
-                src={project.imageUrl} 
-                alt={project.title[language]} 
-                className="w-full h-auto"
-              />
-            </div>
             
+            {/* TEXTO DO PROJETO AGORA COMEÇA DIRETO AQUI (Sem a imagem gigante) */}
             <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed whitespace-pre-wrap">
               {renderDescription(project.fullDescription[language])}
               
