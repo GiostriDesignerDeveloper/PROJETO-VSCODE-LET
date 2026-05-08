@@ -807,8 +807,7 @@ This project was developed in a corporate context. The product name, visual iden
     client: "Confidencial",
     role: "Product Designer",
     liveUrl: "#",
-    gallery: [
-      { url: "/compliance-fluxo-atual.png", title: "Fluxo Atual: Mapeamento de gargalos operacionais." },
+    gallery: [      
       { url: "/compliance-dores-ganhos.png", title: "Discovery: Levantamento de dores e ganhos dos operadores." },
       { url: "/compliance-personas.png", title: "Personas: Perfis detalhados do time de operação." },
       { url: "/compliance-hipoteses.png", title: "Hipóteses: Matriz de validação de problemas e soluções." },
