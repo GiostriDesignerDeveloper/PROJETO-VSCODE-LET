@@ -4,358 +4,7 @@ export const projectsData: Project[] = [
   // ========================================================================
   // PROJETOS ATIVOS
   // ========================================================================
-  {
-    id: "prevmax-previdencia",
-    title: {
-      pt: "PrevMax — Previdência Complementar",
-      en: "PrevMax — Complementary Pension"
-    },
-    status: "active",
-    embedUrl: "https://embed.figma.com/proto/UowipTJL4ggqVwP828F6Eb/Portf%C3%B3lio-PLATAFORMA?page-id=0%3A1&node-id=4-4108&viewport=575%2C347%2C0.06&scaling=scale-down&content-scaling=fixed&starting-point-node-id=4%3A4094&embed-host=share",
-    description: {
-      pt: "Plataforma de previdência complementar com foco em acessibilidade, clareza de informações financeiras e conformidade regulatória.",
-      en: "Complementary pension platform focused on accessibility, clarity of financial information, and regulatory compliance."
-    },
-    fullDescription: {
-      pt: `
-**PROBLEMA DE NEGÓCIO**
-Participantes de fundos de pensão enfrentavam dificuldades para gerir seus planos devido à alta complexidade das regras previdenciárias e interfaces pouco intuitivas. O cenário era agravado por um público majoritariamente maduro e com baixo letramento digital, gerando dependência de canais de suporte físico e baixa autonomia nas decisões financeiras.
-
-**OBJETIVO**
-Traduzir regras reguladas e sensíveis em uma jornada digital simples e inclusiva, promovendo a autonomia do usuário na gestão de seu futuro financeiro sem comprometer a conformidade legal.
-
-**DIAGNÓSTICO**
-• **Barreira Cognitiva:** Linguagem técnica e fluxos burocráticos que afastavam o usuário.
-• **Baixo Letramento Digital:** Necessidade de interface extremamente acessível e intuitiva para o perfil etário.
-• **Fragmentação de Informação:** Dados de saldo, contribuições e benefícios dispersos.
-
-**Impacto direto:**
-• Alta taxa de erro em simulações (Error Rate).
-• Baixa confiança na plataforma digital (Trust & Safety).
-
-**HIPÓTESE**
-Se estruturarmos a arquitetura de informação com foco em clareza, acessibilidade (WCAG) e suporte à tomada de decisão (simuladores), aumentaremos a confiança e a adesão dos participantes ao canal digital, reduzindo custos operacionais de atendimento.
-
-**PROCESSO DE DISCOVERY**
-Para guiar a solução e validar as hipóteses, o projeto seguiu uma abordagem estruturada e orientada ao negócio:
-
-**1. Levantamento de Requisitos:** Alinhamento com stakeholders sobre restrições legais, mapeamento de requisitos funcionais e priorização de transparência e acessibilidade.
-**2. Pesquisa e Estratégia:** Pesquisa qualitativa com operadores, benchmarking de mercado, definição de personas (foco em letramento digital) e User Story Mapping para priorização de fluxos críticos.
-**3. Ideação e Testes:** Prototipação orientada a regras de negócio (não apenas estética) e testes iterativos com usuários para ajustes contínuos baseados em feedback qualitativo.
-
-**SOLUÇÃO DE DESIGN**
-• **Fluxos Simplificados:** Redesenho ágil das jornadas de adesão, consulta de saldos e simulação de benefícios.
-• **Design Inclusivo:** Aplicação de boas práticas de usabilidade voltadas especificamente para o público maduro.
-• **Componentização Estratégica (Design System):** Desenvolvimento colaborativo com Front-end. Os componentes foram desenhados no Figma, implementados no Storybook e validados via Chromatic, garantindo fidelidade e eficiência.
-
-**MÉTRICAS CONSIDERADAS**
-• Taxa de conclusão do fluxo (Task Success Rate) em simulações de benefício.
-• Redução de erros (Error Rate) em formulários de adesão.
-• Tempo de tarefa (Time on Task) na consulta de extratos e saldos.
-• Adoção da funcionalidade (Feature Adoption) nos canais digitais.
-
-**RESULTADO ESPERADO**
-A plataforma remove a fricção e o medo de lidar com finanças, transformando a previdência em um ativo compreensível. A solução reduz a carga operacional de suporte, garantindo retenção, engajamento e segurança jurídica para a empresa.
-
-**NOTA DE CONFIDENCIALIDADE**
-Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identidade visual e cores foram adaptados para fins de portfólio, preservando a confidencialidade da empresa e mantendo a fidelidade ao processo, às decisões de design e aos desafios enfrentados.
-      `,
-      en: `
-**BUSINESS PROBLEM**
-Pension fund participants faced difficulties managing their plans due to the high complexity of pension rules and unintuitive interfaces. The scenario was aggravated by a mostly mature audience with low digital literacy, generating dependence on physical support channels and low autonomy in financial decisions.
-
-**OBJECTIVE**
-Translate highly regulated and sensitive rules into a simple and inclusive digital journey, promoting user autonomy in managing their financial future without compromising legal compliance.
-
-**DIAGNOSIS**
-• **Cognitive Barrier:** Technical language and bureaucratic flows that alienated the user.
-• **Low Digital Literacy:** Need for an extremely accessible and intuitive interface for the age profile.
-• **Information Fragmentation:** Dispersed balance, contribution, and benefit data.
-
-**Direct Impact:**
-• High error rate in simulations.
-• Low trust in the digital platform (Trust & Safety).
-
-**HYPOTHESIS**
-If we structure the information architecture focusing on clarity, accessibility (WCAG), and decision-making support (simulators), we will increase participants' trust and feature adoption in the digital channel, reducing operational support costs.
-
-**DISCOVERY PROCESS**
-To guide the solution and validate hypotheses, the project followed a structured, business-oriented approach:
-
-**1. Requirements Gathering:** Alignment with stakeholders on legal restrictions, functional requirements mapping, and prioritizing transparency and accessibility.
-**2. Research & Strategy:** Qualitative research with operators, market benchmarking, persona definition (focusing on digital literacy), and User Story Mapping to prioritize critical flows.
-**3. Ideation & Testing:** Prototyping oriented to business rules (not just aesthetics) and iterative user testing for continuous adjustments based on qualitative feedback.
-
-**DESIGN SOLUTION**
-• **Simplified Flows:** Agile redesign of enrollment journeys, balance inquiries, and benefit simulations.
-• **Inclusive Design:** Application of usability best practices aimed specifically at the mature audience.
-• **Strategic Componentization (Design System):** Collaborative development with Front-end. Components were designed in Figma, implemented in Storybook, and validated via Chromatic, ensuring fidelity and efficiency.
-
-**METRICS CONSIDERED**
-• Task Success Rate in benefit simulations.
-• Error Rate reduction in enrollment forms.
-• Time on Task for statement and balance inquiries.
-• Feature Adoption across digital channels.
-
-**EXPECTED RESULT**
-The platform removes the friction and fear of dealing with finances, transforming pensions into a comprehensible asset. The solution reduces the operational support load, ensuring retention, engagement, and legal security for the company.
-
-**CONFIDENTIALITY NOTE**
-This project was developed in a corporate context. The product name, visual identity, and colors were adapted for portfolio purposes, preserving the company's confidentiality while maintaining fidelity to the process, design decisions, and challenges faced.
-      `
-    },
-    imageUrl: "/prevmax-capa.png",
-    category: "UX Strategy",
-    tags: ["UX Research", "Design System", "Acessibilidade"],
-    technologies: ["Figma", "Miro", "Microsoft Clarity", "Prototyping"],
-    client: "PrevMax",
-    role: "Product Designer",
-    liveUrl: "#",
-    gallery: [
-      { url: "/prevmax-processo.png", title: "Processo de Design & Metodologia" },
-      { url: "/prevmax-benchmark.png", title: "Análise de Mercado (Benchmarking)" },
-      { url: "/prevmax-research.png", title: "Personas e Mapeamento de Histórias (User Story Map)" },
-      { url: "/prevmax-flow.png", title: "Fluxo do Usuário e Arquitetura de Informação" },
-      { url: "/prevmax-styleguide.png", title: "Style Guide: Tipografia e Cores Acessíveis" },
-      { url: "/prevmax-components.png", title: "Biblioteca de Componentes e UI Kit" }
-    ]
-  },
-  {
-    id: "redesign-navegacao-notificacoes",
-    title: {
-      pt: "Redesign de Navegação e Sistema de Notificações",
-      en: "Navigation Redesign and Notification System"
-    },
-    status: "active",
-    embedUrl: "",
-    description: {
-      pt: "Redesign estratégico de navegação e criação de um sistema de notificações para garantir conformidade corporativa e reduzir a carga cognitiva do usuário.",
-      en: "Strategic navigation redesign and creation of a notification system to ensure corporate compliance and reduce user cognitive load."
-    },
-    fullDescription: {
-      pt: `
-**PROBLEMA DE NEGÓCIO**
-O sistema legado apresentava uma falha crítica na entrega de comunicações vitais, como atualizações de conformidade e avisos técnicos. Essas informações eram perdidas em fluxos de e-mails externos ou ignoradas pelos usuários. Paralelamente, a navegação superior (Header) era visualmente datada e ineficiente, consumindo espaço operacional valioso sem entregar retorno funcional.
-
-**OBJETIVO**
-Centralizar a comunicação crítica dentro da plataforma, modernizar a navegação para otimizar a área de trabalho e implementar um sistema de rastreabilidade que garanta conformidade jurídica e administrativa.
-
-**DIAGNÓSTICO**
-• **Gap de Comunicação:** Informações sensíveis dispersas e sem garantia de recebimento.
-• **Interface Ineficiente:** Header com alto ruído visual e baixa economia de escala.
-• **Falta de Rastreabilidade:** Inexistência de métricas de leitura para mensagens obrigatórias.
-• **Baixa Autonomia:** Usuários impossibilitados de gerenciar o volume de alertas recebidos.
-
-**IMPACTO DIRETO:**
-• Risco de descumprimento de normas (Compliance).
-• Sobrecarga cognitiva devido à desorganização visual.
-• Aumento de tickets de suporte por "falta de aviso".
-
-**HIPÓTESE**
-Se centralizarmos as comunicações em um sistema de notificações passivo no Header (usando feedbacks de status) e estruturarmos painéis de gestão segmentados, aumentaremos a taxa de abertura das mensagens e garantiremos a ciência documental dos usuários sobre avisos críticos.
-
-**PROCESSO DE DISCOVERY**
-• **Análise de Heurísticas:** Auditoria focada em Estética e Design Minimalista para identificar ruídos desnecessários na navegação antiga.
-• **Mapeamento de Requisitos Legais:** Identificação da necessidade de segmentação granular (Quem, Onde, Quando) para validade jurídica das mensagens.
-• **Estudo de Modelos Mentais:** Aplicação da Lei de Jakob para entender como usuários interagem com caixas de entrada tradicionais e replicar essa facilidade.
-• **Análise Ergonômica:** Aplicação da Lei de Fitts para otimizar áreas de clique e menus de perfil, visando reduzir o esforço motor.
-
-**SOLUÇÃO DE DESIGN**
-• **Redesign do Header:** Limpeza visual e introdução da Heurística de Visibilidade do Status do Sistema através de badges de contagem.
-• **Painel do Gestor (Hub de Governança):** Criação de fluxo segmentado por grupos e localização (UF), com dashboard de taxa de leitura em tempo real.
-• **Painel do Usuário (Inbox Experience):** Interface baseada em padrões de e-mail (Inbox/Arquivados) e central de preferências para garantir Controle e Liberdade do Usuário.
-
-**MÉTRICAS CONSIDERADAS**
-• **Taxa de Abertura (Open Rate):** Aumento do engajamento com notificações centralizadas.
-• **Índice de Conformidade:** Garantia de 100% de rastreabilidade para comunicados obrigatórios.
-• **Satisfação do Usuário:** Percepção de modernização e limpeza do sistema.
-• **Curva de Aprendizado:** Redução do tempo de adaptação à nova funcionalidade (pela adoção de padrões conhecidos).
-
-**RESULTADO ESPERADO**
-A solução transforma a comunicação do sistema em um ativo administrativo seguro, reduzindo o risco de conformidade. A interface modernizada melhora a eficiência operacional ao otimizar o Header e oferecer ao usuário o controle sobre sua própria jornada de informação.
-
-**NOTA DE CONFIDENCIALIDADE**
-Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identidade visual e cores foram adaptados para fins de portfólio, preservando a confidencialidade da empresa e mantendo a fidelidade ao processo, às decisões de design e aos desafios enfrentados.
-      `,
-      en: `
-**BUSINESS PROBLEM**
-The legacy system had a critical flaw in delivering vital communications, such as compliance updates and technical notices. This information was lost in external email flows or ignored by users. Concurrently, the top navigation (Header) was visually outdated and inefficient, consuming valuable operational space without functional return.
-
-**OBJECTIVE**
-Centralize critical communication within the platform, modernize navigation to optimize the workspace, and implement a traceability system that ensures legal and administrative compliance.
-
-**DIAGNOSIS**
-• **Communication Gap:** Sensitive information dispersed with no guarantee of receipt.
-• **Inefficient Interface:** Header with high visual noise and low economy of scale.
-• **Lack of Traceability:** Absence of read metrics for mandatory messages.
-• **Low Autonomy:** Users unable to manage the volume of received alerts.
-
-**DIRECT IMPACT:**
-• Risk of non-compliance.
-• Cognitive overload due to visual disorganization.
-• Increase in support tickets due to "lack of notice".
-
-**HYPOTHESIS**
-If we centralize communications in a passive notification system in the Header (using status feedback) and structure segmented management panels, we will increase the message open rate and ensure users' documented awareness of critical notices.
-
-**DISCOVERY PROCESS**
-• **Heuristic Analysis:** Audit focused on Aesthetics and Minimalist Design to identify unnecessary noise in the old navigation.
-• **Legal Requirements Mapping:** Identification of the need for granular segmentation (Who, Where, When) for the legal validity of messages.
-• **Mental Models Study:** Application of Jakob's Law to understand how users interact with traditional inboxes and replicate that ease.
-• **Ergonomic Analysis:** Application of Fitts's Law to optimize click areas and profile menus, aiming to reduce motor effort.
-
-**DESIGN SOLUTION**
-• **Header Redesign:** Visual cleanup and introduction of the System Status Visibility Heuristic through count badges.
-• **Manager Panel (Governance Hub):** Creation of a segmented flow by groups and location, with a real-time read rate dashboard.
-• **User Panel (Inbox Experience):** Interface based on email standards (Inbox/Archived) and a preference center to ensure User Control and Freedom.
-
-**METRICS CONSIDERED**
-• **Open Rate:** Increased engagement with centralized notifications.
-• **Compliance Index:** Guarantee of 100% traceability for mandatory communications.
-• **User Satisfaction:** Perception of modernization and system cleanup.
-• **Learning Curve:** Reduction in adaptation time to the new feature.
-
-**EXPECTED RESULT**
-The solution transforms system communication into a secure administrative asset, reducing compliance risk. The modernized interface improves operational efficiency by optimizing the Header and giving the user control over their own information journey.
-
-**CONFIDENTIALITY NOTE**
-This project was developed in a corporate context. The product name, visual identity, and colors were adapted for portfolio purposes, preserving the company's confidentiality while maintaining fidelity to the process, design decisions, and challenges faced.
-      `
-    },
-    imageUrl: "/notificacoes-capa.png",
-    category: "UI Design",
-    tags: ["UI Design", "Heurísticas", "Information Architecture"],
-    technologies: ["Figma", "Design System", "Prototyping"],
-    client: "Confidencial",
-    role: "Product Designer",
-    liveUrl: "#",
-    gallery: [
-      { url: "/notificacoes-header.png", title: "Redesign do Header com Heurísticas de Nielsen" },
-      { url: "/notificacoes-gestor.png", title: "Painel do Gestor: Segmentação e Rastreabilidade" },
-      { url: "/notificacoes-user.png", title: "Painel do Usuário: Inbox e Preferências" }
-    ]
-  },
-  {
-    id: "evolucao-design-system",
-    title: {
-      pt: "Evolução e Escalabilidade de Design System",
-      en: "Design System Evolution & Scalability"
-    },
-    status: "active",
-    embedUrl: "",
-    description: {
-      pt: "Estruturação de Design Ops e maturidade sistêmica através de Figma Variables e documentação funcional para acelerar o ciclo de entrega de produtos.",
-      en: "Structuring Design Ops and systemic maturity through Figma Variables and functional documentation to accelerate the product delivery cycle."
-    },
-    fullDescription: {
-      pt: `
-**PROBLEMA DE NEGÓCIO**
-A biblioteca de design existente era estática e básica, não acompanhando a velocidade de crescimento dos produtos. A falta de padronização em níveis profundos (tokens) e a ausência de documentação funcional geravam gargalos constantes no hand-off, resultando em retrabalho para o time de design e inconsistências na implementação pelo time de engenharia.
-
-**OBJETIVO**
-Transformar uma biblioteca visual limitada em um ecossistema de design vivo e escalável (Design Ops), otimizando a manutenção do sistema e acelerando a prototipação e o desenvolvimento sem interromper as entregas contínuas.
-
-**DIAGNÓSTICO**
-• **Dívida Técnica Visual:** Falta de padronização em níveis de tokens de design.
-• **Gargalo de Hand-off:** Documentação inexistente ou insuficiente para desenvolvedores.
-• **Inconsistência de Componentes:** Uso variado de elementos que deveriam ser globais.
-• **Barreira Cultural:** Necessidade de aculturar o time sobre boas práticas de componentização avançada.
-
-**IMPACTO DIRETO:**
-• Aumento do retrabalho (Rework Rate).
-• Lentidão no ciclo de vida do produto (Time-to-Market).
-• Alta curva de aprendizado para novos membros da equipe.
-
-**HIPÓTESE**
-Se implementarmos uma arquitetura de tokens via Figma Variables e estruturarmos uma documentação funcional profunda de componentes, reduziremos o esforço cognitivo na criação de interfaces e garantiremos uma fidelidade de 1:1 entre design e código.
-
-**PROCESSO DE DISCOVERY**
-Para elevar a maturidade do sistema, o projeto seguiu uma investigação técnica rigorosa:
-• **Auditoria de Interface:** Mapeamento de todos os componentes existentes para identificar inconsistências e redundâncias.
-• **Entrevistas com Engenharia:** Diagnóstico dos principais pontos de atrito durante o hand-off para entender quais informações técnicas eram vitais na documentação.
-• **Benchmarking de Design Ops:** Estudo de padrões de mercado para estruturação de coleções lógicas de variáveis (Espaçamentos, Border Radius e Cores Semânticas).
-• **Mapeamento de Regras de Negócio:** Definição de tokens de suporte nativo a Light/Dark Mode alinhados à identidade da marca.
-
-**SOLUÇÃO DE DESIGN**
-• **Arquitetura de Variáveis e Tokens:** Estruturação de coleções lógicas e separação entre cores primitivas e semânticas, blindando o sistema contra quebras visuais.
-• **Componentização Avançada:** Reestruturação de componentes complexos utilizando Auto Layout, Variants, Booleans e regras de acessibilidade.
-• **Documentação Funcional:** Criação de guias exaustivos com anatomia, estados, comportamentos e princípios de UX atrelados a cada componente.
-• **Mentoria e Cultura:** Repasse de conhecimento técnico para o time, garantindo a adoção correta e a sustentabilidade do ecossistema.
-
-**MÉTRICAS CONSIDERADAS**
-• **Redução de Design Debt:** Diminuição do tempo gasto corrigindo inconsistências visuais.
-• **Velocidade de Entrega (Time-to-Market):** Agilidade na criação de novas telas utilizando a biblioteca otimizada.
-• **Eficiência de Onboarding:** Redução do tempo de aprendizado de novos designers através da documentação viva.
-• **Fidelidade de Implementação:** Consistência entre o protótipo e o produto final (Storybook/Chromatic).
-
-**RESULTADO ESPERADO**
-Um fluxo de trabalho otimizado onde o Design System atua como um acelerador estratégico, permitindo que o time foque em estratégia e experiência do usuário, enquanto a interface mantém consistência absoluta e escalabilidade técnica.
-
-**NOTA DE CONFIDENCIALIDADE**
-Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identidade visual e cores foram adaptados para fins de portfólio, preservando a confidencialidade da empresa e mantendo a fidelidade ao processo, às decisões de design e aos desafios enfrentados.
-      `,
-      en: `
-**BUSINESS PROBLEM**
-The existing design library was static and basic, failing to keep up with the speed of product growth. The lack of standardization at deep levels (tokens) and the absence of functional documentation created constant bottlenecks in the hand-off, resulting in rework for the design team and implementation inconsistencies by the engineering team.
-
-**OBJECTIVE**
-Transform a limited visual library into a living, scalable design ecosystem (Design Ops), optimizing system maintenance and accelerating prototyping and development without interrupting continuous deliveries.
-
-**DIAGNOSIS**
-• **Visual Technical Debt:** Lack of standardization at design token levels.
-• **Hand-off Bottleneck:** Non-existent or insufficient documentation for developers.
-• **Component Inconsistency:** Varied use of elements that should be global.
-• **Cultural Barrier:** Need to acculturate the team on advanced componentization best practices.
-
-**DIRECT IMPACT:**
-• Increased Rework Rate.
-• Sluggishness in the product lifecycle (Time-to-Market).
-• High learning curve for new team members.
-
-**HYPOTHESIS**
-If we implement a token architecture via Figma Variables and structure deep functional component documentation, we will reduce cognitive effort in interface creation and guarantee a 1:1 fidelity between design and code.
-
-**PROCESSO DE DISCOVERY**
-To elevate the system's maturity, the project followed rigorous technical investigation:
-• **Interface Audit:** Mapping all existing components to identify inconsistencies and redundancies.
-• **Engineering Interviews:** Diagnosis of main friction points during hand-off to understand which technical information was vital in the documentation.
-• **Design Ops Benchmarking:** Study of market standards to structure logical variable collections (Spacing, Border Radius, and Semantic Colors).
-• **Business Rules Mapping:** Definition of native support tokens for Light/Dark Mode aligned with the brand identity.
-
-**SOLUÇÃO DE DESIGN**
-• **Variables and Tokens Architecture:** Structuring logical collections and separating primitive and semantic colors, shielding the system against visual breaks.
-• **Advanced Componentization:** Restructuring complex components using Auto Layout, Variants, Booleans, and accessibility rules.
-• **Functional Documentation:** Creation of exhaustive guides with anatomy, states, behaviors, and UX principles tied to each component.
-• **Mentorship and Culture:** Transfer of technical knowledge to the team, ensuring correct adoption and ecosystem sustainability.
-
-**METRICS CONSIDERED**
-• **Design Debt Reduction:** Decrease in time spent fixing visual inconsistencies.
-• **Time-to-Market (Delivery Speed):** Agility in creating new screens using the optimized library.
-• **Onboarding Efficiency:** Reduced learning time for new designers through living documentation.
-• **Implementation Fidelity:** Consistency between the prototype and the final product (Storybook/Chromatic).
-
-**EXPECTED RESULT**
-An optimized workflow where the Design System acts as a strategic accelerator, allowing the team to focus on strategy and user experience, while the interface maintains absolute consistency and technical scalability.
-
-**CONFIDENTIALITY NOTE**
-This project was developed in a corporate context. The product name, visual identity, and colors were adapted for portfolio purposes, preserving the company's confidentiality while maintaining fidelity to the process, design decisions, and challenges faced.
-      `
-    },
-    imageUrl: "/ds-capa.png",
-    category: "Design System",
-    tags: ["Design System", "Design Ops", "Figma Variables"],
-    technologies: ["Figma", "Tokens", "Documentation", "Mentorship"],
-    client: "Confidencial",
-    role: "Product Designer / UI",
-    liveUrl: "#",
-    gallery: [
-      { url: "/ds-variaveis.png", title: "Estruturação de Variáveis: Espaçamentos, Radius e Modos de Cor" },
-      { url: "/ds-cores.png", title: "Inventário de Cores Primitivas e Escalas" },
-      { url: "/ds-documentacao.png", title: "Documentação Funcional: Regras de UX e Anatomia de Componentes" },
-      { url: "/ds-pastas.png", title: "Taxonomia e Organização Lógica do Repositório" }
-    ]
-  },
-  {
+ {
     id: "plataforma-b2b-compras",
     title: {
       pt: "Plataforma B2B de Compras e Cotações",
@@ -472,6 +121,7 @@ This project was developed in a corporate context. The product name, visual iden
       { url: "/login.png", title: "Portal de Acesso: Entrada do ecossistema B2B." }
     ]
   },
+    
   {
     id: "healthdash-analise-usabilidade",
     title: {
@@ -823,6 +473,357 @@ This project was developed in a corporate context. The product name, visual iden
       { url: "/compliance-documentos.png", title: "Documentos: Interface de gestão e validação documental." },
       { url: "/compliance-detalhes-doc.png", title: "Detalhes Documentais: Rastreabilidade e histórico de alterações." },
       { url: "/compliance-contratos.png", title: "Contratos: Organização de vigências e arquivos contratuais." }
+    ]
+  },
+  {
+    id: "redesign-navegacao-notificacoes",
+    title: {
+      pt: "Redesign de Navegação e Sistema de Notificações",
+      en: "Navigation Redesign and Notification System"
+    },
+    status: "active",
+    embedUrl: "",
+    description: {
+      pt: "Redesign estratégico de navegação e criação de um sistema de notificações para garantir conformidade corporativa e reduzir a carga cognitiva do usuário.",
+      en: "Strategic navigation redesign and creation of a notification system to ensure corporate compliance and reduce user cognitive load."
+    },
+    fullDescription: {
+      pt: `
+**PROBLEMA DE NEGÓCIO**
+O sistema legado apresentava uma falha crítica na entrega de comunicações vitais, como atualizações de conformidade e avisos técnicos. Essas informações eram perdidas em fluxos de e-mails externos ou ignoradas pelos usuários. Paralelamente, a navegação superior (Header) era visualmente datada e ineficiente, consumindo espaço operacional valioso sem entregar retorno funcional.
+
+**OBJETIVO**
+Centralizar a comunicação crítica dentro da plataforma, modernizar a navegação para otimizar a área de trabalho e implementar um sistema de rastreabilidade que garanta conformidade jurídica e administrativa.
+
+**DIAGNÓSTICO**
+• **Gap de Comunicação:** Informações sensíveis dispersas e sem garantia de recebimento.
+• **Interface Ineficiente:** Header com alto ruído visual e baixa economia de escala.
+• **Falta de Rastreabilidade:** Inexistência de métricas de leitura para mensagens obrigatórias.
+• **Baixa Autonomia:** Usuários impossibilitados de gerenciar o volume de alertas recebidos.
+
+**IMPACTO DIRETO:**
+• Risco de descumprimento de normas (Compliance).
+• Sobrecarga cognitiva devido à desorganização visual.
+• Aumento de tickets de suporte por "falta de aviso".
+
+**HIPÓTESE**
+Se centralizarmos as comunicações em um sistema de notificações passivo no Header (usando feedbacks de status) e estruturarmos painéis de gestão segmentados, aumentaremos a taxa de abertura das mensagens e garantiremos a ciência documental dos usuários sobre avisos críticos.
+
+**PROCESSO DE DISCOVERY**
+• **Análise de Heurísticas:** Auditoria focada em Estética e Design Minimalista para identificar ruídos desnecessários na navegação antiga.
+• **Mapeamento de Requisitos Legais:** Identificação da necessidade de segmentação granular (Quem, Onde, Quando) para validade jurídica das mensagens.
+• **Estudo de Modelos Mentais:** Aplicação da Lei de Jakob para entender como usuários interagem com caixas de entrada tradicionais e replicar essa facilidade.
+• **Análise Ergonômica:** Aplicação da Lei de Fitts para otimizar áreas de clique e menus de perfil, visando reduzir o esforço motor.
+
+**SOLUÇÃO DE DESIGN**
+• **Redesign do Header:** Limpeza visual e introdução da Heurística de Visibilidade do Status do Sistema através de badges de contagem.
+• **Painel do Gestor (Hub de Governança):** Criação de fluxo segmentado por grupos e localização (UF), com dashboard de taxa de leitura em tempo real.
+• **Painel do Usuário (Inbox Experience):** Interface baseada em padrões de e-mail (Inbox/Arquivados) e central de preferências para garantir Controle e Liberdade do Usuário.
+
+**MÉTRICAS CONSIDERADAS**
+• **Taxa de Abertura (Open Rate):** Aumento do engajamento com notificações centralizadas.
+• **Índice de Conformidade:** Garantia de 100% de rastreabilidade para comunicados obrigatórios.
+• **Satisfação do Usuário:** Percepção de modernização e limpeza do sistema.
+• **Curva de Aprendizado:** Redução do tempo de adaptação à nova funcionalidade (pela adoção de padrões conhecidos).
+
+**RESULTADO ESPERADO**
+A solução transforma a comunicação do sistema em um ativo administrativo seguro, reduzindo o risco de conformidade. A interface modernizada melhora a eficiência operacional ao otimizar o Header e oferecer ao usuário o controle sobre sua própria jornada de informação.
+
+**NOTA DE CONFIDENCIALIDADE**
+Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identidade visual e cores foram adaptados para fins de portfólio, preservando a confidencialidade da empresa e mantendo a fidelidade ao processo, às decisões de design e aos desafios enfrentados.
+      `,
+      en: `
+**BUSINESS PROBLEM**
+The legacy system had a critical flaw in delivering vital communications, such as compliance updates and technical notices. This information was lost in external email flows or ignored by users. Concurrently, the top navigation (Header) was visually outdated and inefficient, consuming valuable operational space without functional return.
+
+**OBJECTIVE**
+Centralize critical communication within the platform, modernize navigation to optimize the workspace, and implement a traceability system that ensures legal and administrative compliance.
+
+**DIAGNOSIS**
+• **Communication Gap:** Sensitive information dispersed with no guarantee of receipt.
+• **Inefficient Interface:** Header with high visual noise and low economy of scale.
+• **Lack of Traceability:** Absence of read metrics for mandatory messages.
+• **Low Autonomy:** Users unable to manage the volume of received alerts.
+
+**DIRECT IMPACT:**
+• Risk of non-compliance.
+• Cognitive overload due to visual disorganization.
+• Increase in support tickets due to "lack of notice".
+
+**HYPOTHESIS**
+If we centralize communications in a passive notification system in the Header (using status feedback) and structure segmented management panels, we will increase the message open rate and ensure users' documented awareness of critical notices.
+
+**DISCOVERY PROCESS**
+• **Heuristic Analysis:** Audit focused on Aesthetics and Minimalist Design to identify unnecessary noise in the old navigation.
+• **Legal Requirements Mapping:** Identification of the need for granular segmentation (Who, Where, When) for the legal validity of messages.
+• **Mental Models Study:** Application of Jakob's Law to understand how users interact with traditional inboxes and replicate that ease.
+• **Ergonomic Analysis:** Application of Fitts's Law to optimize click areas and profile menus, aiming to reduce motor effort.
+
+**DESIGN SOLUTION**
+• **Header Redesign:** Visual cleanup and introduction of the System Status Visibility Heuristic through count badges.
+• **Manager Panel (Governance Hub):** Creation of a segmented flow by groups and location, with a real-time read rate dashboard.
+• **User Panel (Inbox Experience):** Interface based on email standards (Inbox/Archived) and a preference center to ensure User Control and Freedom.
+
+**METRICS CONSIDERED**
+• **Open Rate:** Increased engagement with centralized notifications.
+• **Compliance Index:** Guarantee of 100% traceability for mandatory communications.
+• **User Satisfaction:** Perception of modernization and system cleanup.
+• **Learning Curve:** Reduction in adaptation time to the new feature.
+
+**EXPECTED RESULT**
+The solution transforms system communication into a secure administrative asset, reducing compliance risk. The modernized interface improves operational efficiency by optimizing the Header and giving the user control over their own information journey.
+
+**CONFIDENTIALITY NOTE**
+This project was developed in a corporate context. The product name, visual identity, and colors were adapted for portfolio purposes, preserving the company's confidentiality while maintaining fidelity to the process, design decisions, and challenges faced.
+      `
+    },
+    imageUrl: "/notificacoes-capa.png",
+    category: "UI Design",
+    tags: ["UI Design", "Heurísticas", "Information Architecture"],
+    technologies: ["Figma", "Design System", "Prototyping"],
+    client: "Confidencial",
+    role: "Product Designer",
+    liveUrl: "#",
+    gallery: [
+      { url: "/notificacoes-header.png", title: "Redesign do Header com Heurísticas de Nielsen" },
+      { url: "/notificacoes-gestor.png", title: "Painel do Gestor: Segmentação e Rastreabilidade" },
+      { url: "/notificacoes-user.png", title: "Painel do Usuário: Inbox e Preferências" }
+    ]
+  },
+  {
+    id: "evolucao-design-system",
+    title: {
+      pt: "Evolução e Escalabilidade de Design System",
+      en: "Design System Evolution & Scalability"
+    },
+    status: "active",
+    embedUrl: "",
+    description: {
+      pt: "Estruturação de Design Ops e maturidade sistêmica através de Figma Variables e documentação funcional para acelerar o ciclo de entrega de produtos.",
+      en: "Structuring Design Ops and systemic maturity through Figma Variables and functional documentation to accelerate the product delivery cycle."
+    },
+    fullDescription: {
+      pt: `
+**PROBLEMA DE NEGÓCIO**
+A biblioteca de design existente era estática e básica, não acompanhando a velocidade de crescimento dos produtos. A falta de padronização em níveis profundos (tokens) e a ausência de documentação funcional geravam gargalos constantes no hand-off, resultando em retrabalho para o time de design e inconsistências na implementação pelo time de engenharia.
+
+**OBJETIVO**
+Transformar uma biblioteca visual limitada em um ecossistema de design vivo e escalável (Design Ops), otimizando a manutenção do sistema e acelerando a prototipação e o desenvolvimento sem interromper as entregas contínuas.
+
+**DIAGNÓSTICO**
+• **Dívida Técnica Visual:** Falta de padronização em níveis de tokens de design.
+• **Gargalo de Hand-off:** Documentação inexistente ou insuficiente para desenvolvedores.
+• **Inconsistência de Componentes:** Uso variado de elementos que deveriam ser globais.
+• **Barreira Cultural:** Necessidade de aculturar o time sobre boas práticas de componentização avançada.
+
+**IMPACTO DIRETO:**
+• Aumento do retrabalho (Rework Rate).
+• Lentidão no ciclo de vida do produto (Time-to-Market).
+• Alta curva de aprendizado para novos membros da equipe.
+
+**HIPÓTESE**
+Se implementarmos uma arquitetura de tokens via Figma Variables e estruturarmos uma documentação funcional profunda de componentes, reduziremos o esforço cognitivo na criação de interfaces e garantiremos uma fidelidade de 1:1 entre design e código.
+
+**PROCESSO DE DISCOVERY**
+Para elevar a maturidade do sistema, o projeto seguiu uma investigação técnica rigorosa:
+• **Auditoria de Interface:** Mapeamento de todos os componentes existentes para identificar inconsistências e redundâncias.
+• **Entrevistas com Engenharia:** Diagnóstico dos principais pontos de atrito durante o hand-off para entender quais informações técnicas eram vitais na documentação.
+• **Benchmarking de Design Ops:** Estudo de padrões de mercado para estruturação de coleções lógicas de variáveis (Espaçamentos, Border Radius e Cores Semânticas).
+• **Mapeamento de Regras de Negócio:** Definição de tokens de suporte nativo a Light/Dark Mode alinhados à identidade da marca.
+
+**SOLUÇÃO DE DESIGN**
+• **Arquitetura de Variáveis e Tokens:** Estruturação de coleções lógicas e separação entre cores primitivas e semânticas, blindando o sistema contra quebras visuais.
+• **Componentização Avançada:** Reestruturação de componentes complexos utilizando Auto Layout, Variants, Booleans e regras de acessibilidade.
+• **Documentação Funcional:** Criação de guias exaustivos com anatomia, estados, comportamentos e princípios de UX atrelados a cada componente.
+• **Mentoria e Cultura:** Repasse de conhecimento técnico para o time, garantindo a adoção correta e a sustentabilidade do ecossistema.
+
+**MÉTRICAS CONSIDERADAS**
+• **Redução de Design Debt:** Diminuição do tempo gasto corrigindo inconsistências visuais.
+• **Velocidade de Entrega (Time-to-Market):** Agilidade na criação de novas telas utilizando a biblioteca otimizada.
+• **Eficiência de Onboarding:** Redução do tempo de aprendizado de novos designers através da documentação viva.
+• **Fidelidade de Implementação:** Consistência entre o protótipo e o produto final (Storybook/Chromatic).
+
+**RESULTADO ESPERADO**
+Um fluxo de trabalho otimizado onde o Design System atua como um acelerador estratégico, permitindo que o time foque em estratégia e experiência do usuário, enquanto a interface mantém consistência absoluta e escalabilidade técnica.
+
+**NOTA DE CONFIDENCIALIDADE**
+Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identidade visual e cores foram adaptados para fins de portfólio, preservando a confidencialidade da empresa e mantendo a fidelidade ao processo, às decisões de design e aos desafios enfrentados.
+      `,
+      en: `
+**BUSINESS PROBLEM**
+The existing design library was static and basic, failing to keep up with the speed of product growth. The lack of standardization at deep levels (tokens) and the absence of functional documentation created constant bottlenecks in the hand-off, resulting in rework for the design team and implementation inconsistencies by the engineering team.
+
+**OBJECTIVE**
+Transform a limited visual library into a living, scalable design ecosystem (Design Ops), optimizing system maintenance and accelerating prototyping and development without interrupting continuous deliveries.
+
+**DIAGNOSIS**
+• **Visual Technical Debt:** Lack of standardization at design token levels.
+• **Hand-off Bottleneck:** Non-existent or insufficient documentation for developers.
+• **Component Inconsistency:** Varied use of elements that should be global.
+• **Cultural Barrier:** Need to acculturate the team on advanced componentization best practices.
+
+**DIRECT IMPACT:**
+• Increased Rework Rate.
+• Sluggishness in the product lifecycle (Time-to-Market).
+• High learning curve for new team members.
+
+**HYPOTHESIS**
+If we implement a token architecture via Figma Variables and structure deep functional component documentation, we will reduce cognitive effort in interface creation and guarantee a 1:1 fidelity between design and code.
+
+**PROCESSO DE DISCOVERY**
+To elevate the system's maturity, the project followed rigorous technical investigation:
+• **Interface Audit:** Mapping all existing components to identify inconsistencies and redundancies.
+• **Engineering Interviews:** Diagnosis of main friction points during hand-off to understand which technical information was vital in the documentation.
+• **Design Ops Benchmarking:** Study of market standards to structure logical variable collections (Spacing, Border Radius, and Semantic Colors).
+• **Business Rules Mapping:** Definition of native support tokens for Light/Dark Mode aligned with the brand identity.
+
+**SOLUÇÃO DE DESIGN**
+• **Variables and Tokens Architecture:** Structuring logical collections and separating primitive and semantic colors, shielding the system against visual breaks.
+• **Advanced Componentization:** Restructuring complex components using Auto Layout, Variants, Booleans, and accessibility rules.
+• **Functional Documentation:** Creation of exhaustive guides with anatomy, states, behaviors, and UX principles tied to each component.
+• **Mentorship and Culture:** Transfer of technical knowledge to the team, ensuring correct adoption and ecosystem sustainability.
+
+**METRICS CONSIDERED**
+• **Design Debt Reduction:** Decrease in time spent fixing visual inconsistencies.
+• **Time-to-Market (Delivery Speed):** Agility in creating new screens using the optimized library.
+• **Onboarding Efficiency:** Reduced learning time for new designers through living documentation.
+• **Implementation Fidelity:** Consistency between the prototype and the final product (Storybook/Chromatic).
+
+**EXPECTED RESULT**
+An optimized workflow where the Design System acts as a strategic accelerator, allowing the team to focus on strategy and user experience, while the interface maintains absolute consistency and technical scalability.
+
+**CONFIDENTIALITY NOTE**
+This project was developed in a corporate context. The product name, visual identity, and colors were adapted for portfolio purposes, preserving the company's confidentiality while maintaining fidelity to the process, design decisions, and challenges faced.
+      `
+    },
+    imageUrl: "/ds-capa.png",
+    category: "Design System",
+    tags: ["Design System", "Design Ops", "Figma Variables"],
+    technologies: ["Figma", "Tokens", "Documentation", "Mentorship"],
+    client: "Confidencial",
+    role: "Product Designer / UI",
+    liveUrl: "#",
+    gallery: [
+      { url: "/ds-variaveis.png", title: "Estruturação de Variáveis: Espaçamentos, Radius e Modos de Cor" },
+      { url: "/ds-cores.png", title: "Inventário de Cores Primitivas e Escalas" },
+      { url: "/ds-documentacao.png", title: "Documentação Funcional: Regras de UX e Anatomia de Componentes" },
+      { url: "/ds-pastas.png", title: "Taxonomia e Organização Lógica do Repositório" }
+    ]
+  },
+   {
+    id: "prevmax-previdencia",
+    title: {
+      pt: "PrevMax — Previdência Complementar",
+      en: "PrevMax — Complementary Pension"
+    },
+    status: "active",
+    embedUrl: "https://embed.figma.com/proto/UowipTJL4ggqVwP828F6Eb/Portf%C3%B3lio-PLATAFORMA?page-id=0%3A1&node-id=4-4108&viewport=575%2C347%2C0.06&scaling=scale-down&content-scaling=fixed&starting-point-node-id=4%3A4094&embed-host=share",
+    description: {
+      pt: "Plataforma de previdência complementar com foco em acessibilidade, clareza de informações financeiras e conformidade regulatória.",
+      en: "Complementary pension platform focused on accessibility, clarity of financial information, and regulatory compliance."
+    },
+    fullDescription: {
+      pt: `
+**PROBLEMA DE NEGÓCIO**
+Participantes de fundos de pensão enfrentavam dificuldades para gerir seus planos devido à alta complexidade das regras previdenciárias e interfaces pouco intuitivas. O cenário era agravado por um público majoritariamente maduro e com baixo letramento digital, gerando dependência de canais de suporte físico e baixa autonomia nas decisões financeiras.
+
+**OBJETIVO**
+Traduzir regras reguladas e sensíveis em uma jornada digital simples e inclusiva, promovendo a autonomia do usuário na gestão de seu futuro financeiro sem comprometer a conformidade legal.
+
+**DIAGNÓSTICO**
+• **Barreira Cognitiva:** Linguagem técnica e fluxos burocráticos que afastavam o usuário.
+• **Baixo Letramento Digital:** Necessidade de interface extremamente acessível e intuitiva para o perfil etário.
+• **Fragmentação de Informação:** Dados de saldo, contribuições e benefícios dispersos.
+
+**Impacto direto:**
+• Alta taxa de erro em simulações (Error Rate).
+• Baixa confiança na plataforma digital (Trust & Safety).
+
+**HIPÓTESE**
+Se estruturarmos a arquitetura de informação com foco em clareza, acessibilidade (WCAG) e suporte à tomada de decisão (simuladores), aumentaremos a confiança e a adesão dos participantes ao canal digital, reduzindo custos operacionais de atendimento.
+
+**PROCESSO DE DISCOVERY**
+Para guiar a solução e validar as hipóteses, o projeto seguiu uma abordagem estruturada e orientada ao negócio:
+
+**1. Levantamento de Requisitos:** Alinhamento com stakeholders sobre restrições legais, mapeamento de requisitos funcionais e priorização de transparência e acessibilidade.
+**2. Pesquisa e Estratégia:** Pesquisa qualitativa com operadores, benchmarking de mercado, definição de personas (foco em letramento digital) e User Story Mapping para priorização de fluxos críticos.
+**3. Ideação e Testes:** Prototipação orientada a regras de negócio (não apenas estética) e testes iterativos com usuários para ajustes contínuos baseados em feedback qualitativo.
+
+**SOLUÇÃO DE DESIGN**
+• **Fluxos Simplificados:** Redesenho ágil das jornadas de adesão, consulta de saldos e simulação de benefícios.
+• **Design Inclusivo:** Aplicação de boas práticas de usabilidade voltadas especificamente para o público maduro.
+• **Componentização Estratégica (Design System):** Desenvolvimento colaborativo com Front-end. Os componentes foram desenhados no Figma, implementados no Storybook e validados via Chromatic, garantindo fidelidade e eficiência.
+
+**MÉTRICAS CONSIDERADAS**
+• Taxa de conclusão do fluxo (Task Success Rate) em simulações de benefício.
+• Redução de erros (Error Rate) em formulários de adesão.
+• Tempo de tarefa (Time on Task) na consulta de extratos e saldos.
+• Adoção da funcionalidade (Feature Adoption) nos canais digitais.
+
+**RESULTADO ESPERADO**
+A plataforma remove a fricção e o medo de lidar com finanças, transformando a previdência em um ativo compreensível. A solução reduz a carga operacional de suporte, garantindo retenção, engajamento e segurança jurídica para a empresa.
+
+**NOTA DE CONFIDENCIALIDADE**
+Este projeto foi desenvolvido em contexto corporativo. O nome do produto, identidade visual e cores foram adaptados para fins de portfólio, preservando a confidencialidade da empresa e mantendo a fidelidade ao processo, às decisões de design e aos desafios enfrentados.
+      `,
+      en: `
+**BUSINESS PROBLEM**
+Pension fund participants faced difficulties managing their plans due to the high complexity of pension rules and unintuitive interfaces. The scenario was aggravated by a mostly mature audience with low digital literacy, generating dependence on physical support channels and low autonomy in financial decisions.
+
+**OBJECTIVE**
+Translate highly regulated and sensitive rules into a simple and inclusive digital journey, promoting user autonomy in managing their financial future without compromising legal compliance.
+
+**DIAGNOSIS**
+• **Cognitive Barrier:** Technical language and bureaucratic flows that alienated the user.
+• **Low Digital Literacy:** Need for an extremely accessible and intuitive interface for the age profile.
+• **Information Fragmentation:** Dispersed balance, contribution, and benefit data.
+
+**Direct Impact:**
+• High error rate in simulations.
+• Low trust in the digital platform (Trust & Safety).
+
+**HYPOTHESIS**
+If we structure the information architecture focusing on clarity, accessibility (WCAG), and decision-making support (simulators), we will increase participants' trust and feature adoption in the digital channel, reducing operational support costs.
+
+**DISCOVERY PROCESS**
+To guide the solution and validate hypotheses, the project followed a structured, business-oriented approach:
+
+**1. Requirements Gathering:** Alignment with stakeholders on legal restrictions, functional requirements mapping, and prioritizing transparency and accessibility.
+**2. Research & Strategy:** Qualitative research with operators, market benchmarking, persona definition (focusing on digital literacy), and User Story Mapping to prioritize critical flows.
+**3. Ideation & Testing:** Prototyping oriented to business rules (not just aesthetics) and iterative user testing for continuous adjustments based on qualitative feedback.
+
+**DESIGN SOLUTION**
+• **Simplified Flows:** Agile redesign of enrollment journeys, balance inquiries, and benefit simulations.
+• **Inclusive Design:** Application of usability best practices aimed specifically at the mature audience.
+• **Strategic Componentization (Design System):** Collaborative development with Front-end. Components were designed in Figma, implemented in Storybook, and validated via Chromatic, ensuring fidelity and efficiency.
+
+**METRICS CONSIDERED**
+• Task Success Rate in benefit simulations.
+• Error Rate reduction in enrollment forms.
+• Time on Task for statement and balance inquiries.
+• Feature Adoption across digital channels.
+
+**EXPECTED RESULT**
+The platform removes the friction and fear of dealing with finances, transforming pensions into a comprehensible asset. The solution reduces the operational support load, ensuring retention, engagement, and legal security for the company.
+
+**CONFIDENTIALITY NOTE**
+This project was developed in a corporate context. The product name, visual identity, and colors were adapted for portfolio purposes, preserving the company's confidentiality while maintaining fidelity to the process, design decisions, and challenges faced.
+      `
+    },
+    imageUrl: "/prevmax-capa.png",
+    category: "UX Strategy",
+    tags: ["UX Research", "Design System", "Acessibilidade"],
+    technologies: ["Figma", "Miro", "Microsoft Clarity", "Prototyping"],
+    client: "PrevMax",
+    role: "Product Designer",
+    liveUrl: "#",
+    gallery: [
+      { url: "/prevmax-processo.png", title: "Processo de Design & Metodologia" },
+      { url: "/prevmax-benchmark.png", title: "Análise de Mercado (Benchmarking)" },
+      { url: "/prevmax-research.png", title: "Personas e Mapeamento de Histórias (User Story Map)" },
+      { url: "/prevmax-flow.png", title: "Fluxo do Usuário e Arquitetura de Informação" },
+      { url: "/prevmax-styleguide.png", title: "Style Guide: Tipografia e Cores Acessíveis" },
+      { url: "/prevmax-components.png", title: "Biblioteca de Componentes e UI Kit" }
     ]
   },
   
