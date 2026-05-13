@@ -1,6 +1,15 @@
 import { Mail, MapPin, Linkedin, Github, Smartphone } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext"; // 1. Importando o hook
+import { trackContactClick } from '../utils/analytics';
 
+// No seu link ou botão:
+<a 
+  href="https://wa.me/seu-numero" 
+  onClick={() => trackContactClick('WhatsApp')}
+  target="_blank"
+>
+  WhatsApp
+</a>
 const ContactInfo = () => {
   const { t } = useLanguage(); // 2. Ativando a tradução
 
@@ -97,5 +106,4 @@ const ContactInfo = () => {
     </div>
   );
 };
-
 export default ContactInfo;

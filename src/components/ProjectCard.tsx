@@ -1,6 +1,7 @@
 import { ArrowRight, Lock } from "lucide-react";
 import { Project } from "../types";
-import { useLanguage } from "../contexts/LanguageContext"; // 1. Importamos a inteligência de idioma
+import { useLanguage } from "../contexts/LanguageContext";
+import { trackProjectView } from "../utils/analytics";
 
 interface ProjectCardProps {
   project: Project;
@@ -8,94 +9,81 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
-  const { language } = useLanguage(); // 2. Descobrimos qual idioma está ativo ('pt' ou 'en')
-  
-  const isComingSoon = project.status === "coming-soon";
+  const { language } = useLanguage();
 
-  // 3. Mini-dicionário local para os botõezinhos do card
-  const viewDetailsText = language === 'pt' ? 'Ver detalhes' : 'View details';
-  const comingSoonText = language === 'pt' ? 'Em Desenvolvimento' : 'In Development';
+  const handleInteraction = () => {
+    // 1. Rastreia o clique no Analytics antes de abrir
+    trackProjectView(project.title.pt);
+    
+    // 2. Chama a função de abrir o modal/página que vem via props
+    if (project.status !== "coming-soon") {
+      onClick(project);
+    }
+  };
 
   return (
-    <div
-      className={`
-        group rounded-xl overflow-hidden flex flex-col h-full transition-all duration-300
-        ${
-          isComingSoon
-            ? "bg-gray-50 border-2 border-dashed border-gray-300 cursor-default opacity-80"
-            : "bg-white border border-gray-100 shadow-sm hover:shadow-xl cursor-pointer hover:-translate-y-1"
-        }
-      `}
-      onClick={() => !isComingSoon && onClick(project)}
+    <div 
+      className={`group relative rounded-2xl overflow-hidden border transition-all duration-300 ${
+        project.status === "coming-soon" 
+          ? "bg-gray-50 border-gray-100 opacity-80" 
+          : "bg-white border-gray-100 hover:border-blue-200 hover:shadow-xl cursor-pointer"
+      }`}
+      onClick={handleInteraction}
     >
-      <div className="relative h-48 overflow-hidden">
-        <div className={`w-full h-full ${isComingSoon ? "bg-gray-200" : ""}`}>
-          {!isComingSoon && (
-            <img
-              src={project.imageUrl}
-              alt={project.title[language]} // Lemos a imagem com o título traduzido
-              className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
-            />
-          )}
-
-          {isComingSoon && (
-            <div className="flex items-center justify-center h-full text-gray-400">
-              <Lock size={32} />
-            </div>
-          )}
-        </div>
-
-        {!isComingSoon && (
-          <div className="absolute inset-0 bg-blue-900/70 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-            <span className="text-white font-medium flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
-              {viewDetailsText} <ArrowRight size={18} />
-            </span>
+      {/* Imagem do Projeto */}
+      <div className="aspect-video overflow-hidden bg-gray-100 relative">
+        {project.imageUrl ? (
+          <img 
+            src={project.imageUrl} 
+            alt={project.title[language]} 
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center">
+            {project.status === "coming-soon" && <Lock className="text-gray-300" size={40} />}
           </div>
         )}
-
-        {isComingSoon && (
-          <div className="absolute top-3 right-3 bg-gray-200 text-gray-600 text-[10px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wider flex items-center gap-1.5">
-            <Lock size={12} /> {comingSoonText}
+        
+        {project.status === "coming-soon" && (
+          <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full border border-gray-100">
+            <span className="text-[10px] font-bold text-gray-500 uppercase tracking-wider flex items-center gap-1.5">
+              <Lock size={12} /> {language === 'pt' ? 'Em breve' : 'Coming soon'}
+            </span>
           </div>
         )}
       </div>
 
-      <div className="p-6 flex flex-col flex-grow">
-        <div className="flex gap-2 mb-3">
-          <span
-            className={`px-2 py-1 text-xs font-semibold rounded uppercase tracking-wide ${
-              isComingSoon
-                ? "bg-gray-200 text-gray-500"
-                : "bg-blue-50 text-blue-600"
-            }`}
-          >
+      {/* Conteúdo */}
+      <div className="p-6">
+        <div className="flex items-center gap-2 mb-3">
+          <span className="text-[10px] font-bold text-blue-600 uppercase tracking-widest bg-blue-50 px-2 py-0.5 rounded">
             {project.category}
           </span>
         </div>
-
-        <h3
-          className={`text-xl font-bold mb-3 transition-colors duration-300 ${
-            isComingSoon ? "text-gray-500" : "text-gray-900 group-hover:text-blue-600"
-          }`}
-        >
-          {/* AQUI A MÁGICA: Puxamos o título na língua certa! */}
-          {project.title[language]} 
+        
+        <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+          {project.title[language]}
         </h3>
-
-        <p className="text-gray-600 text-sm mb-6 line-clamp-3">
-          {/* E aqui puxamos a descrição! */}
+        
+        <p className="text-gray-600 text-sm line-clamp-2 mb-6">
           {project.description[language]}
         </p>
 
-        <div className="flex flex-wrap gap-2 mt-auto">
-          {project.tags.slice(0, 3).map((tag, index) => (
-            <span
-              key={index}
-              className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded font-medium"
-            >
-              {tag}
-            </span>
-          ))}
+        <div className="flex items-center justify-between">
+          <div className="flex gap-1.5">
+            {project.tags.slice(0, 2).map((tag) => (
+              <span key={tag} className="text-[10px] text-gray-400 font-medium px-2 py-0.5 bg-gray-50 rounded border border-gray-100">
+                {tag}
+              </span>
+            ))}
+          </div>
+          
+          {project.status !== "coming-soon" && (
+            <div className="text-blue-600 flex items-center gap-1 font-bold text-sm">
+              {language === 'pt' ? 'Ver case' : 'View case'}
+              <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+            </div>
+          )}
         </div>
       </div>
     </div>
