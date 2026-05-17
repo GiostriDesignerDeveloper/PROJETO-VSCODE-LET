@@ -1,4 +1,4 @@
-import { Briefcase, GraduationCap, Award, Globe2, User } from "lucide-react";
+import { Briefcase, GraduationCap, Award, Globe2, User, Wrench } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 
 const AboutPage = () => {
@@ -97,6 +97,12 @@ const AboutPage = () => {
     "UI Design", "Trabalho em times multidisciplinares", "IAs generativas no workflow", "Front-end (HTML, CSS, React)"
   ];
 
+  const toolsPT = [
+    "Figma", "Figma AI", "Claude", "Gemini", "GPT", "Lovable", "Cursor", "V0", 
+    "Bolt", "Google Workspace", "Miro", "FigJam", "ClickUp", "Jira", "Trello", 
+    "Maze", "Google Forms", "FlowMapp", "Uizard", "Stark", "Google Analytics"
+  ];
+
   // ==========================================================
   // DADOS EM INGLÊS
   // ==========================================================
@@ -190,16 +196,23 @@ const AboutPage = () => {
     "UI Design", "Cross-functional Teamwork", "Generative AI in Workflow", "Front-end (HTML, CSS, React)"
   ];
 
+  const toolsEN = [
+    "Figma", "Figma AI", "Claude", "Gemini", "GPT", "Lovable", "Cursor", "V0", 
+    "Bolt", "Google Workspace", "Miro", "FigJam", "ClickUp", "Jira", "Trello", 
+    "Maze", "Google Forms", "FlowMapp", "Uizard", "Stark", "Google Analytics"
+  ];
+
   // ==========================================================
   // Controle de Idioma
   // ==========================================================
   const activeExperiences = language === 'pt' ? experiencesPT : experiencesEN;
   const activeExtra = language === 'pt' ? resumeExtraPT : resumeExtraEN;
   const activeSkills = language === 'pt' ? skillsPT : skillsEN;
+  const activeTools = language === 'pt' ? toolsPT : toolsEN;
 
   return (
     <div className="pt-24 pb-20 bg-gray-50 min-h-screen">
-      {/* Header / Hero Section (Simplificado, já que temos o Resumo detalhado abaixo) */}
+      {/* Header / Hero Section */}
       <div className="bg-blue-600 text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
@@ -219,7 +232,7 @@ const AboutPage = () => {
           {/* Main Content: Resumo + Experiences */}
           <div className="lg:col-span-2 space-y-12">
             
-            {/* NOVO: Seção de Resumo */}
+            {/* Seção de Resumo */}
             <section className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
               <div className="flex items-center mb-6 border-b pb-4">
                 <User size={28} className="text-blue-600 mr-3" />
@@ -281,7 +294,7 @@ const AboutPage = () => {
             </section>
           </div>
 
-          {/* Sidebar: Skills, Education, Courses, Languages */}
+          {/* Sidebar */}
           <div className="lg:col-span-1 space-y-8 lg:sticky lg:top-28">
             
             {/* Skills */}
@@ -291,8 +304,25 @@ const AboutPage = () => {
               </h3>
               <div className="flex flex-wrap gap-2">
                 {activeSkills.map((skill, i) => (
-                  <span key={i} className="px-3 py-1.5 bg-gray-50 text-gray-700 text-sm font-medium rounded-lg border border-gray-200">
+                  <span key={i} className="px-3 py-1.5 bg-blue-50 text-blue-700 text-sm font-medium rounded-lg border border-blue-100">
                     {skill}
+                  </span>
+                ))}
+              </div>
+            </section>
+
+            {/* Ferramentas / Tools */}
+            <section className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
+              <div className="flex items-center mb-6">
+                <Wrench size={24} className="text-blue-600 mr-3" />
+                <h3 className="text-xl font-bold text-gray-900">
+                  {language === 'pt' ? 'Ferramentas' : 'Tools'}
+                </h3>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {activeTools.map((tool, i) => (
+                  <span key={i} className="px-3 py-1.5 bg-gray-50 text-gray-600 text-sm font-medium rounded-lg border border-gray-200">
+                    {tool}
                   </span>
                 ))}
               </div>

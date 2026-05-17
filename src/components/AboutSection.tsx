@@ -74,39 +74,47 @@ const AboutSection = () => {
                 {t("about.bio.p1")
                   .replace(
                     "Product Designer (UI/UX) com 4 anos de experiência ",
-                    "",
+                    ""
                   )
                   .replace(
                     "Product Designer (UI/UX) with 4 years of experience ",
-                    "",
+                    ""
                   )}
               </p>
 
               <p>{t("about.bio.p2")}</p>
 
-              {/* CORREÇÃO DA PALAVRA "ESTRATÉGIA" AQUI */}
+              {/* LISTA DE HABILIDADES E FERRAMENTAS */}
               <div className="pt-4 border-t border-gray-100">
                 <h4 className="text-lg font-bold text-gray-900 mb-4">
                   {t("about.skills.title")}
                 </h4>
-                <ul className="grid grid-cols-1 gap-2 text-base">
-                  <li className="flex gap-2">
-                    <span className="text-blue-600 font-bold">
+                <ul className="grid grid-cols-1 gap-3 text-base">
+                  <li className="flex items-start gap-2">
+                    <span className="text-blue-600 font-bold shrink-0">
                       {language === "pt" ? "Estratégia:" : "Strategy:"}
                     </span>
-                    UX Research, Discovery, Design Systems, Usability Metrics.
+                    <span>UX Research, Discovery, Design Systems, Usability Metrics.</span>
                   </li>
-                  <li className="flex gap-2">
-                    <span className="text-blue-600 font-bold">
+                  <li className="flex items-start gap-2">
+                    <span className="text-blue-600 font-bold shrink-0">
                       {language === "pt" ? "Design:" : "Design:"}
                     </span>
-                    Figma (Tokens/Variables), Information Architecture.
+                    <span>Figma (Tokens/Variables), Information Architecture.</span>
                   </li>
-                  <li className="flex gap-2">
-                    <span className="text-blue-600 font-bold">
+                  <li className="flex items-start gap-2">
+                    <span className="text-blue-600 font-bold shrink-0">
                       {language === "pt" ? "Tech:" : "Tech:"}
                     </span>
-                    React, HTML/CSS.
+                    <span>React, HTML/CSS.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-blue-600 font-bold shrink-0">
+                      {language === "pt" ? "Ferramentas:" : "Tools:"}
+                    </span>
+                    <span>
+                      Figma, Figma AI, Claude, Gemini, GPT, Lovable, Cursor, V0, Bolt, Google Workspace, Miro, FigJam, ClickUp, Jira, Trello, Maze, Google Forms, FlowMapp, Uizard, Stark {language === "pt" ? "e" : "and"} Google Analytics.
+                    </span>
                   </li>
                 </ul>
               </div>
