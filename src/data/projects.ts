@@ -127,7 +127,7 @@ O design foi tratado estritamente como design orientado a riscos. O contexto fí
 
 **DECISÕES DE INTERFACE E ERGONOMIA**
 • **Prevenção de Erros (Error prevention):** Ampliamos as áreas de toque para o padrão de 44x44px. Em um escritório calmo, isso é apenas seguir um manual de UI, mas no corredor de um hospital, onde o profissional digita andando e segurando o tablet com uma mão, essa adaptação ergonômica previne cliques acidentais e garante que a dieta não seja salva no prontuário do paciente errado.
-• **Ergonomia e Fluxo Linear:** Substituímos modais obstrutivos por telas inteiras, garantindo un fluxo sequencial previsível que acomoda perfeitamente teclados virtuais, eliminando as quebras de responsividade.
+• **Ergonomia e Fluxo Linear:** Substituímos modais obstrutivos por telas inteiras, garantindo um fluxo sequencial previsível que acomoda perfeitamente teclados virtuais, eliminando as quebras de responsividade.
 
 **O QUE CONSIDERAMOS E DESCARTAMOS**
 • **Descartado:** Scroll infinito para concentrar todos os dados médicos em uma única visão.
@@ -200,7 +200,7 @@ Adotei uma abordagem de "**lean UX**" focada em "**delivery under constraint**".
 • **O que escolhemos:** Intervir apenas nas camadas sobrepostas (modais nativos e Badges), garantindo impacto comportamental imediato sem atrasar os "**releases**" nem exigir refatoração do UI Kit atual.
 
 **CONSEQUÊNCIAS E IMPACTO**
-A XML-intervenção enxuta solucionou o vácuo de informação. A consequência de negócio foi direta: os tickets de suporte exigindo "status do sistema" caíram drasticamente em 75% e execuções financeiras acidentais foram zeradas, provando o valor das "**trade-off decisions**" alinhadas ao desenvolvimento.
+A intervenção enxuta solucionou o vácuo de informação. A consequência de negócio foi direta: os tickets de suporte exigindo "status do sistema" caíram drasticamente em 75% e execuções financeiras acidentais foram zeradas, provando o valor das "**decisões**" alinhadas ao desenvolvimento.
       `,
       en: `
 **THE BUSINESS TENSION**
@@ -213,19 +213,19 @@ We adopted a *Lean UX* approach focused on **Delivery under constraint**. Techni
 • **System Visibility:** We implemented continuous progress bars during uploads. We named and eliminated "operational blindness" by giving systemic predictability to the user's brain. Thorough review allowed us to justify to engineering exactly where the status needed to be inserted to work.
 • **Error Prevention:** We inserted confirmation modals (**deliberate friction**) moments before irreversible financial actions, breaking the user's motor automatism.
 
-**TRADE-OFFS: WHAT WE CONSIDERED AND DISCARDED**
+**WHAT WE CONSIDERED AND DISCARDED**
 • **The Ideal:** Rewrite from scratch the architecture of the reconciliation table with new interactive components.
 • **The Possible:** Add text status to legacy tables.
 • **What we chose:** Intervene only in the overlapping layers (Native Modals and Badges), ensuring immediate behavioral impact without delaying releases or requiring refactoring of the current UI Kit.
 
 **CONSEQUENCES AND IMPACT**
-The lean intervention solved the information vacuum. The business consequence was direct: support tickets demanding "system status" dropped drastically, and accidental financial executions were zeroed out, proving the value of *Trade-off decisions* aligned with development.
+The lean intervention solved the information vacuum. The business consequence was direct: support tickets demanding "system status" dropped drastically, and accidental financial executions were zeroed out, proving the value of *decisions* aligned with development.
       `,
     },
     imageUrl: "/smartsettlement-capa.png",
     category: "Fintech",
     tags: [
-      "Trade-off decisions",
+      "Decisions",
       "Lean UX",
       "Delivery under constraint",
       "System visibility",
@@ -270,7 +270,7 @@ The lean intervention solved the information vacuum. The business consequence wa
     fullDescription: {
       pt: `
 **A TENSÃO DE NEGÓCIO**
-Analistas de compliance e PLD (Prevenção à Lavagem de Dinheiro) processam informações cruciais e ambíguas sob pressão de tempo. O custo de um falso negativo como autorizar uma holding fraudulenta ou um Beneficiário Final (UBO) ilícito tem um impacto regulatório e financeiro altíssimo. A tension estava na fadiga de decisão gerado por ferramentas fragmentadas que exibiam dados crus, deixando a correlação cognitiva a cargo do analista.
+Analistas de compliance e PLD (Prevenção à Lavagem de Dinheiro) processam informações cruciais e ambíguas sob pressão de tempo. O custo de um falso negativo como autorizar uma holding fraudulenta ou um Beneficiário Final (UBO) ilícito tem um impacto regulatório e financeiro altíssimo. A tensão estava na fadiga de decisão gerado por ferramentas fragmentadas que exibiam dados crus, deixando a correlação cognitiva a cargo do analista.
 
 **LÓGICA COMPORTAMENTAL E ARQUITETURA**
 A etapa de Discovery e imersão junto aos analistas (discovery to architecture) não visou apenas "entender dores", mas alterar ativamente a hierarquia da informação. O problema central diagnosticado não era a ausência de dados, mas a enorme carga cognitiva intrínseca de interpretá-los.
@@ -297,7 +297,7 @@ The Discovery phase and immersion with analysts (discovery to architecture) aime
 • **Cognitive Effort Reduction:** We transformed corporate link data, which previously lived in dense linear text tables, into a visual organizational chart architecture (UBO). The visual hierarchy solves the "who owns what" in seconds.
 • **Risk-driven UX:** We framed alert signals ("Red flags") and PEPs not as mere "features", but as deliberate design for a high-risk context. The Dashboard highlights primary anomalies, forcing attention before mental fatigue sets in, operating as direct prevention of type 2 errors (false negatives).
 
-**TRADE-OFFS: WHAT WE CONSIDERED AND DISCARDED**
+**WHAT WE CONSIDERED AND DISCARDED**
 • **Discarded:** An AI that automatically approved or rejected entities.
 • **Why:** Compliance requires critical human judgment in the face of legal ambiguities. We opted to use technology solely for the grouping of visual evidence (*Information hierarchy*), ensuring the speed of human auditing without removing its agency.
 
@@ -492,14 +492,14 @@ Trabalhando em estreita colaboração com outra profissional de design, que trou
 
 **DECISÕES DE ARQUITETURA E MENTORIA**
 • **Separação Primitiva x Semântica:** A separação dos tokens em lógicas estritas evitou o problema crônico de quebra sistêmica em Dark Modes ou refatorações de marca de grande impacto. O código agora entende a intenção funcional (ex: Button-Primary-Bg) e não apenas o Hex code bruto.
-• **Documentation strategy & Mentoria:** Componentes invisíveis no código não geram valor. Foi elaborada documentação exaustiva com regras de UX e comportamentos acoplados. E a solução englobou ativamente a Mentoria do time sobre "como usar o ecossistema avançado", garantindo a adoção interna da nova tecnologia.
+• **Documentation strategy e Mentoria:** Componentes invisíveis no código não geram valor. Foi elaborada documentação exaustiva com regras de UX e comportamentos acoplados. E a solução englobou ativamente a Mentoria do time sobre "como usar o ecossistema avançado", garantindo a adoção interna da nova tecnologia.
 
 **O QUE CONSIDERAMOS E DESCARTAMOS**
 • **Descartado:** Refatorar todos os componentes legados da biblioteca em uma só sprint.
 • **Por quê:** Congelaria as entregas de produto do time. Priorizamos apenas construir a camada estrutural de Tokens (Fundações) para blindar as novas criações, deixando a migração de componentes legados para o modelo *Tech debt* a longo prazo.
 
 **CONSEQUÊNCIAS E IMPACTO**
-O impacto foi o ganho de escala exponencial: uma decision tomada na raiz do Design System acelerou as prototipações de dezenas de interfaces. A consistência da implementação entre UI e Front-end solidificou a confiança e velocidade entre as squads, derrubando severamente o desperdício operacional.
+O impacto foi o ganho de escala exponencial: uma decisão tomada na raiz do Design System acelerou as prototipações de dezenas de interfaces. A consistência da implementação entre UI e Front-end solidificou a confiança e velocidade entre as squads, derrubando severamente o desperdício operacional.
       `,
       en: `
 **THE BUSINESS TENSION**
@@ -510,7 +510,7 @@ Working in close collaboration with another design professional—who brought es
 
 **ARCHITECTURE AND MENTORSHIP DECISIONS**
 • **Primitive vs. Semantic Separation:** Separating tokens into strict logic prevented the chronic problem of systemic breaking during Dark Mode shifts or major brand refactoring. The code now understands functional intent (e.g., Button-Primary-Bg) rather than just raw Hex codes.
-• **Documentation strategy & Mentorship:** Components invisible in code generate no value. Exhaustive documentation with UX rules and coupled behaviors was created. The solution actively included team Mentorship on "how to use the advanced ecosystem", ensuring internal adoption of the new technology.
+• **Documentation strategy and Mentorship:** Components invisible in code generate no value. Exhaustive documentation with UX rules and coupled behaviors was created. The solution actively included team Mentorship on "how to use the advanced ecosystem", ensuring internal adoption of the new technology.
 
 **WHAT WE CONSIDERED AND DISCARDED**
 • **Discarded:** Refactoring all legacy components in the library in a single sprint.
