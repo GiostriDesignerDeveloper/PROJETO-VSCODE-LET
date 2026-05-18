@@ -2,6 +2,7 @@ import { ArrowRight, Lock } from "lucide-react";
 import { Project } from "../types";
 import { useLanguage } from "../contexts/LanguageContext";
 import { trackProjectView } from "../utils/analytics";
+import { motion } from "framer-motion";
 
 interface ProjectCardProps {
   project: Project;
@@ -12,81 +13,99 @@ const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
   const { language } = useLanguage();
 
   const handleInteraction = () => {
-    // 1. Rastreia o clique no Analytics antes de abrir
     trackProjectView(project.title.pt);
-    
-    // 2. Chama a função de abrir o modal/página que vem via props
     if (project.status !== "coming-soon") {
       onClick(project);
     }
   };
 
+  // Função para deixar em negrito apenas o que vem antes do dois-pontos
+  const formatEditorialTitle = (title: string) => {
+    if (!title.includes(':')) {
+      return <span className="font-bold text-gray-900">{title}</span>;
+    }
+    
+    const [boldPart, ...rest] = title.split(':');
+    return (
+      <>
+        <span className="font-bold text-gray-900">{boldPart}:</span>
+        <span className="font-medium text-gray-500">{rest.join(':')}</span>
+      </>
+    );
+  };
+
   return (
-    <div 
-      className={`group relative rounded-2xl overflow-hidden border transition-all duration-300 ${
+    <motion.div 
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className={`group flex flex-col md:flex-row gap-8 md:gap-12 py-12 border-b border-gray-200 transition-all ${
         project.status === "coming-soon" 
-          ? "bg-gray-50 border-gray-100 opacity-80" 
-          : "bg-white border-gray-100 hover:border-blue-200 hover:shadow-xl cursor-pointer"
+          ? "opacity-60" 
+          : "cursor-pointer"
       }`}
       onClick={handleInteraction}
     >
-      {/* Imagem do Projeto */}
-      <div className="aspect-video overflow-hidden bg-gray-100 relative">
+      {/* Imagem do Projeto (Largura fixa de 300px no desktop, sem grayscale, alinhada no topo) */}
+      <div className="w-full md:w-[300px] aspect-[4/3] overflow-hidden bg-gray-50 border border-gray-100 relative shrink-0">
         {project.imageUrl ? (
           <img 
             src={project.imageUrl} 
-            alt={project.title[language]} 
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            alt="Capa do projeto" 
+            className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center">
-            {project.status === "coming-soon" && <Lock className="text-gray-300" size={40} />}
+            {project.status === "coming-soon" && <Lock className="text-gray-300" size={32} />}
           </div>
         )}
         
         {project.status === "coming-soon" && (
-          <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full border border-gray-100">
-            <span className="text-[10px] font-bold text-gray-500 uppercase tracking-wider flex items-center gap-1.5">
-              <Lock size={12} /> {language === 'pt' ? 'Em breve' : 'Coming soon'}
+          <div className="absolute top-3 right-3 bg-white px-2 py-1 border border-gray-200">
+            <span className="text-[9px] font-bold text-gray-500 uppercase tracking-wider flex items-center gap-1">
+              <Lock size={10} /> {language === 'pt' ? 'Em breve' : 'Soon'}
             </span>
           </div>
         )}
       </div>
 
-      {/* Conteúdo */}
-      <div className="p-6">
-        <div className="flex items-center gap-2 mb-3">
-          <span className="text-[10px] font-bold text-blue-600 uppercase tracking-widest bg-blue-50 px-2 py-0.5 rounded">
+      {/* Conteúdo principal */}
+      <div className="flex flex-col flex-grow justify-center">
+        <div className="flex items-center gap-3 mb-4">
+          <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">
             {project.category}
           </span>
-        </div>
-        
-        <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-          {project.title[language]}
-        </h3>
-        
-        <p className="text-gray-600 text-sm line-clamp-2 mb-6">
-          {project.description[language]}
-        </p>
-
-        <div className="flex items-center justify-between">
-          <div className="flex gap-1.5">
+          {/* Tags foram movidas para cima para limpar a base do card */}
+          <div className="flex gap-2">
             {project.tags.slice(0, 2).map((tag) => (
-              <span key={tag} className="text-[10px] text-gray-400 font-medium px-2 py-0.5 bg-gray-50 rounded border border-gray-100">
+              <span key={tag} className="text-[9px] text-gray-600 font-bold px-2 py-0.5 border border-gray-200 uppercase tracking-wider">
                 {tag}
               </span>
             ))}
           </div>
-          
+        </div>
+        
+        {/* Título com a tipografia tratada pela função */}
+        <h3 className="text-2xl md:text-3xl mb-4 tracking-tight leading-snug group-hover:text-gray-600 transition-colors">
+          {formatEditorialTitle(project.title[language])}
+        </h3>
+        
+        <p className="text-gray-500 text-sm md:text-base line-clamp-2 md:line-clamp-3 mb-6 leading-relaxed max-w-2xl">
+          {project.description[language]}
+        </p>
+
+        {/* CTA Discreto */}
+        <div className="mt-auto">
           {project.status !== "coming-soon" && (
-            <div className="text-blue-600 flex items-center gap-1 font-bold text-sm">
-              {language === 'pt' ? 'Ver case' : 'View case'}
-              <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+            <div className="text-gray-900 flex items-center gap-2 font-bold text-xs uppercase tracking-widest opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+              {language === 'pt' ? 'Acessar mais' : 'View more'}
+              <ArrowRight size={16} />
             </div>
           )}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

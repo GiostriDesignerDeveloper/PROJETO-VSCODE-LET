@@ -21,7 +21,6 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
     if (!text) return null;
     return text.split("**").map((part, index) =>
       index % 2 === 1 ? (
-        // 👇 Removi o 'block mt-8 mb-1' para o negrito ficar na mesma linha da bolinha!
         <strong key={index} className="text-gray-900 font-bold">
           {part}
         </strong>
@@ -32,70 +31,74 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-0 md:p-6">
+      {/* Fundo escuro */}
       <div
-        className="absolute inset-0 bg-gray-900/60 backdrop-blur-sm transition-opacity"
+        className="absolute inset-0 bg-gray-950/80 backdrop-blur-sm transition-opacity"
         onClick={onClose}
       ></div>
 
-      <div className="relative w-full max-w-5xl max-h-[95vh] bg-white rounded-2xl shadow-2xl overflow-y-auto flex flex-col animate-in fade-in zoom-in duration-200">
+      {/* Modal Principal (Cantos Retos e Fundo Branco Puro) */}
+      <div className="relative w-full max-w-5xl h-full md:max-h-[95vh] bg-white rounded-none shadow-2xl overflow-y-auto flex flex-col animate-in fade-in zoom-in-95 duration-300">
+        
+        {/* Botão Fechar (Brutalista) */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-50 p-2 bg-white/80 rounded-full hover:bg-white text-gray-800 transition-colors shadow-lg"
+          className="absolute top-4 right-4 z-50 p-3 bg-white border border-gray-200 rounded-none hover:bg-gray-900 hover:text-white hover:border-gray-900 text-gray-900 transition-colors shadow-sm"
         >
-          <X size={24} />
+          <X size={24} strokeWidth={1.5} />
         </button>
 
         {/* Capa */}
-        <div className="w-full relative bg-gray-50">
+        <div className="w-full relative bg-gray-50 border-b border-gray-100">
           <img
             src={project.imageUrl}
             alt={project.title}
-            className="w-full h-auto max-h-[500px] object-contain mx-auto"
+            className="w-full h-auto max-h-[500px] object-cover mx-auto"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end">
-            <div className="p-8 md:p-12 text-white w-full">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex items-end">
+            <div className="p-8 md:p-16 text-white w-full max-w-4xl mx-auto">
+              <h2 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight leading-[1.1]">
                 {project.title}
               </h2>
-              <div className="flex flex-wrap gap-4 text-lg opacity-90">
+              <div className="flex flex-wrap items-center gap-4 text-sm font-bold uppercase tracking-widest text-gray-300">
                 <span>{project.client}</span>
-                <span>•</span>
+                <span className="w-1.5 h-1.5 bg-white rounded-full opacity-50"></span>
                 <span>{project.role}</span>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="p-8 md:p-12 max-w-4xl mx-auto w-full">
-          {/* Tags */}
-          <div className="flex flex-wrap gap-2 mb-10">
+        <div className="p-8 md:p-16 max-w-4xl mx-auto w-full">
+          {/* Tags (Pretas e Sólidas) */}
+          <div className="flex flex-wrap gap-2 mb-12 border-b border-gray-100 pb-8">
             {project.tags.map((tag, index) => (
               <span
                 key={index}
-                className="px-4 py-2 bg-blue-50 text-blue-700 text-sm font-semibold rounded-full"
+                className="px-3 py-1 bg-gray-900 text-white text-xs font-bold uppercase tracking-wider rounded-sm"
               >
                 {tag}
               </span>
             ))}
           </div>
 
-          {/* Descrição com suporte a Negrito */}
-          <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed whitespace-pre-line">
+          {/* Descrição com suporte a Negrito (Tipografia de Leitura) */}
+          <div className="prose prose-lg max-w-none text-gray-700 leading-loose whitespace-pre-line text-[1.1rem]">
             {renderDescription(project.fullDescription || project.description)}
           </div>
 
           {/* Protótipo Interativo */}
           {project.embedUrl && (
-            <div className="mt-12 mb-12">
-              <h3 className="text-2xl font-bold text-gray-900 border-b pb-4 mb-6">
+            <div className="mt-16 mb-16">
+              <h3 className="text-sm font-bold text-gray-900 uppercase tracking-widest border-b border-gray-200 pb-4 mb-8">
                 Protótipo Interativo
               </h3>
-              <p className="text-gray-600 mb-4">
-                Teste a interface real abaixo (pode levar alguns segundos para
-                carregar):
+              <p className="text-gray-500 mb-6 text-sm">
+                Teste a interface real abaixo (pode levar alguns segundos para carregar):
               </p>
-              <div className="w-full h-[500px] md:h-[600px] bg-gray-50 border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+              {/* Moldura do Protótipo (Reta) */}
+              <div className="w-full h-[500px] md:h-[650px] bg-gray-50 border border-gray-200 rounded-none overflow-hidden">
                 <iframe
                   style={{ border: "none" }}
                   width="100%"
@@ -109,20 +112,20 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
 
           {/* Galeria */}
           {project.gallery && project.gallery.length > 0 && (
-            <div className="mt-16 space-y-16">
-              <h3 className="text-2xl font-bold text-gray-900 border-b pb-4">
+            <div className="mt-20 space-y-16">
+              <h3 className="text-sm font-bold text-gray-900 uppercase tracking-widest border-b border-gray-200 pb-4">
                 Galeria do Projeto
               </h3>
-              <div className="grid grid-cols-1 gap-16">
+              <div className="grid grid-cols-1 gap-20 mt-12">
                 {project.gallery.map((item, index) => (
-                  <div key={index} className="space-y-4 flex flex-col items-center">
-                    {/* 👇 MUDANÇA AQUI: Ajuste do tamanho das imagens da galeria */}
+                  <div key={index} className="space-y-6 flex flex-col">
+                    {/* Imagens sem sombras fofinhas, apenas contorno sutil */}
                     <img
                       src={item.url}
                       alt={item.title}
-                      className="max-w-full h-auto max-h-[700px] object-contain rounded-xl shadow-lg border border-gray-100"
+                      className="w-full h-auto object-contain border border-gray-100 bg-gray-50"
                     />
-                    <p className="w-full text-center text-gray-600 font-medium text-lg italic border-l-4 border-blue-600 pl-4 py-1 bg-gray-50 rounded-r">
+                    <p className="text-gray-500 text-sm font-bold uppercase tracking-widest border-l-2 border-gray-900 pl-4">
                       {item.title}
                     </p>
                   </div>
@@ -131,16 +134,16 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
             </div>
           )}
 
-          {/* Footer */}
-          <div className="mt-16 pt-10 border-t border-gray-100">
-            <h3 className="text-xl font-bold text-gray-900 mb-6">
-              Tecnologias Utilizadas
+          {/* Footer (Tecnologias) */}
+          <div className="mt-24 pt-12 border-t border-gray-200">
+            <h3 className="text-sm font-bold text-gray-900 uppercase tracking-widest mb-8">
+              Stack & Tools
             </h3>
-            <div className="flex flex-wrap gap-3 mb-10">
+            <div className="flex flex-wrap gap-2 mb-10">
               {(project.technologies || []).map((tech, index) => (
                 <span
                   key={index}
-                  className="px-4 py-2 border border-gray-200 text-gray-700 rounded-lg text-sm font-medium bg-gray-50"
+                  className="px-4 py-2 border border-gray-200 text-gray-600 font-bold text-xs uppercase tracking-wider rounded-sm bg-gray-50"
                 >
                   {tech}
                 </span>

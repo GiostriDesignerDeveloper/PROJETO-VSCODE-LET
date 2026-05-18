@@ -1,37 +1,29 @@
 import { Mail, MapPin, Linkedin, Github, Smartphone } from "lucide-react";
-import { useLanguage } from "../contexts/LanguageContext"; // 1. Importando o hook
+import { useLanguage } from "../contexts/LanguageContext";
 import { trackContactClick } from '../utils/analytics';
 
-// No seu link ou botão:
-<a 
-  href="https://wa.me/seu-numero" 
-  onClick={() => trackContactClick('WhatsApp')}
-  target="_blank"
->
-  WhatsApp
-</a>
 const ContactInfo = () => {
-  const { t } = useLanguage(); // 2. Ativando a tradução
+  const { t, language } = useLanguage();
 
   return (
-    <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
-      <h3 className="text-xl font-bold text-gray-900 mb-8">
+    <div className="bg-white rounded-none border border-gray-100 p-8 md:p-10 h-full">
+      <h3 className="text-sm font-bold text-gray-900 uppercase tracking-widest mb-10">
         {t("contact.info.title")}
       </h3>
 
-      <div className="space-y-6 mb-8">
+      <div className="space-y-0 flex flex-col">
+        
         {/* Item Email */}
-        <div className="flex items-start gap-4">
-          <div className="bg-blue-50 p-3 rounded-lg text-blue-600 shrink-0">
-            <Mail size={24} />
-          </div>
+        <div className="flex items-center gap-6 py-6 border-t border-gray-100">
+          <Mail size={24} className="text-gray-900 shrink-0" strokeWidth={1.5} />
           <div>
-            <p className="text-sm font-medium text-gray-500 mb-1">
+            <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">
               {t("contact.info.email.label")}
             </p>
             <a
               href="mailto:leticiagouveiadesign@gmail.com"
-              className="text-gray-900 font-medium hover:text-blue-600 transition-colors"
+              onClick={() => trackContactClick('Email_Info')}
+              className="text-lg font-medium text-gray-900 hover:text-gray-500 transition-colors"
             >
               leticiagouveiadesign@gmail.com
             </a>
@@ -39,19 +31,18 @@ const ContactInfo = () => {
         </div>
 
         {/* Item Celular (WhatsApp) */}
-        <div className="flex items-start gap-4">
-          <div className="bg-blue-50 p-3 rounded-lg text-blue-600 shrink-0">
-            <Smartphone size={24} />
-          </div>
+        <div className="flex items-center gap-6 py-6 border-t border-gray-100">
+          <Smartphone size={24} className="text-gray-900 shrink-0" strokeWidth={1.5} />
           <div>
-            <p className="text-sm font-medium text-gray-500 mb-1">
-              Celular
+            <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">
+              {language === 'pt' ? 'Celular / WhatsApp' : 'Phone / WhatsApp'}
             </p>
             <a
               href="https://wa.me/5531988802901"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-900 font-medium hover:text-blue-600 transition-colors"
+              onClick={() => trackContactClick('WhatsApp')}
+              className="text-lg font-medium text-gray-900 hover:text-gray-500 transition-colors"
             >
               (31) 98880-2901
             </a>
@@ -59,44 +50,42 @@ const ContactInfo = () => {
         </div>
 
         {/* Item Localização */}
-        <div className="flex items-start gap-4">
-          <div className="bg-blue-50 p-3 rounded-lg text-blue-600 shrink-0">
-            <MapPin size={24} />
-          </div>
+        <div className="flex items-center gap-6 py-6 border-t border-b border-gray-100">
+          <MapPin size={24} className="text-gray-900 shrink-0" strokeWidth={1.5} />
           <div>
-            <p className="text-sm font-medium text-gray-500 mb-1">
+            <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">
               {t("contact.info.location.label")}
             </p>
-            <p className="text-gray-900 font-medium">
-              {t("contact.info.location.value")}
+            <p className="text-lg font-medium text-gray-900">
+              Belo Horizonte, MG - BR
             </p>
           </div>
         </div>
       </div>
 
-      {/* Divisória e Redes Sociais */}
-      <div className="border-t border-gray-100 pt-8">
-        <p className="text-sm font-medium text-gray-500 mb-4">
+      {/* Redes Sociais Brutalistas */}
+      <div className="pt-10">
+        <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">
           {t("contact.social.label")}
         </p>
-        <div className="flex gap-3">
-          {/* LinkedIn */}
+        <div className="flex gap-4">
           <a
             href="https://www.linkedin.com/in/leticiagouveiag"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gray-50 p-3 rounded-lg text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors border border-gray-200"
+            onClick={() => trackContactClick('LinkedIn_Info')}
+            className="flex items-center justify-center w-14 h-14 bg-white border border-gray-200 text-gray-900 hover:bg-gray-900 hover:text-white transition-colors"
             aria-label="LinkedIn"
           >
             <Linkedin size={20} />
           </a>
 
-          {/* GitHub */}
           <a
             href="https://github.com/GiostriDesignerDeveloper"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gray-50 p-3 rounded-lg text-gray-600 hover:bg-gray-100 hover:text-gray-900 transition-colors border border-gray-200"
+            onClick={() => trackContactClick('GitHub_Info')}
+            className="flex items-center justify-center w-14 h-14 bg-white border border-gray-200 text-gray-900 hover:bg-gray-900 hover:text-white transition-colors"
             aria-label="GitHub"
           >
             <Github size={20} />
@@ -106,4 +95,5 @@ const ContactInfo = () => {
     </div>
   );
 };
+
 export default ContactInfo;

@@ -27,16 +27,16 @@ const ContactForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 md:p-8"
+      className="bg-white rounded-none border border-gray-100 p-6 md:p-8"
     >
       <div className="space-y-6">
         {/* Campo Nome */}
         <div>
           <label
             htmlFor="name"
-            className="block text-sm font-medium text-gray-700 mb-2"
+            className="block text-sm font-bold text-gray-900 tracking-wide mb-2 uppercase"
           >
-            Nome <span className="text-red-500">*</span>
+            Nome <span className="text-gray-400 font-normal">*</span>
           </label>
           <input
             type="text"
@@ -45,9 +45,8 @@ const ContactForm = () => {
             value={formData.name}
             onChange={handleChange}
             required
-            // 👇 Mudei aqui:
             placeholder="Digite seu nome completo"
-            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none transition-all placeholder:text-gray-400"
+            className="w-full px-4 py-3 rounded-none border border-gray-200 focus:border-gray-900 focus:ring-1 focus:ring-gray-900 outline-none transition-all placeholder:text-gray-400 bg-gray-50 hover:bg-white"
           />
         </div>
 
@@ -55,9 +54,9 @@ const ContactForm = () => {
         <div>
           <label
             htmlFor="email"
-            className="block text-sm font-medium text-gray-700 mb-2"
+            className="block text-sm font-bold text-gray-900 tracking-wide mb-2 uppercase"
           >
-            Email <span className="text-red-500">*</span>
+            Email <span className="text-gray-400 font-normal">*</span>
           </label>
           <input
             type="email"
@@ -66,9 +65,8 @@ const ContactForm = () => {
             value={formData.email}
             onChange={handleChange}
             required
-            // 👇 Mudei aqui:
             placeholder="seu.email@exemplo.com"
-            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none transition-all placeholder:text-gray-400"
+            className="w-full px-4 py-3 rounded-none border border-gray-200 focus:border-gray-900 focus:ring-1 focus:ring-gray-900 outline-none transition-all placeholder:text-gray-400 bg-gray-50 hover:bg-white"
           />
         </div>
 
@@ -76,7 +74,7 @@ const ContactForm = () => {
         <div>
           <label
             htmlFor="subject"
-            className="block text-sm font-medium text-gray-700 mb-2"
+            className="block text-sm font-bold text-gray-900 tracking-wide mb-2 uppercase"
           >
             Assunto
           </label>
@@ -86,20 +84,18 @@ const ContactForm = () => {
             name="subject"
             value={formData.subject}
             onChange={handleChange}
-            // 👇 Mudei aqui:
             placeholder="Sobre o que você quer falar?"
-            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none transition-all placeholder:text-gray-400"
+            className="w-full px-4 py-3 rounded-none border border-gray-200 focus:border-gray-900 focus:ring-1 focus:ring-gray-900 outline-none transition-all placeholder:text-gray-400 bg-gray-50 hover:bg-white"
           />
         </div>
 
         {/* Campo Mensagem */}
         <div>
-          {/* 👇 Corrigi o erro de português aqui (estava "Menssagem") */}
           <label
             htmlFor="message"
-            className="block text-sm font-medium text-gray-700 mb-2"
+            className="block text-sm font-bold text-gray-900 tracking-wide mb-2 uppercase"
           >
-            Mensagem <span className="text-red-500">*</span>
+            Mensagem <span className="text-gray-400 font-normal">*</span>
           </label>
           <textarea
             id="message"
@@ -108,15 +104,14 @@ const ContactForm = () => {
             onChange={handleChange}
             required
             rows={5}
-            // 👇 Mudei aqui:
             placeholder="Escreva sua mensagem aqui..."
-            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none transition-all placeholder:text-gray-400 resize-none"
+            className="w-full px-4 py-3 rounded-none border border-gray-200 focus:border-gray-900 focus:ring-1 focus:ring-gray-900 outline-none transition-all placeholder:text-gray-400 resize-none bg-gray-50 hover:bg-white"
           ></textarea>
         </div>
 
         <button
           type="submit"
-          className="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors font-medium flex items-center justify-center gap-2"
+          className="w-full py-4 px-6 bg-gray-900 hover:bg-black text-white rounded-none transition-colors font-bold tracking-wide flex items-center justify-center gap-2 uppercase"
         >
           Enviar mensagem <Send size={18} />
         </button>

@@ -7,14 +7,14 @@ export const projectsData: Project[] = [
   {
     id: "plataforma-b2b-compras",
     title: {
-      pt: "Plataforma B2B de Compras e Cotações",
-      en: "B2B Purchasing & Quotation Platform"
+      pt: "Redução de Carga Cognitiva: Como simplificamos decisões de alto impacto financeiro sem sacrificar a governança",
+      en: "Cognitive Load Reduction: How we reduced friction in high financial impact decisions without sacrificing governance",
     },
     status: "active",
     embedUrl: "",
     description: {
-      pt: "Como reduzimos a carga cognitiva em decisões de alto impacto financeiro, sem sacrificar a governança.",
-      en: "Designing for high-stakes decisions: reducing cognitive load in B2B procurement without sacrificing governance."
+      pt: "Plataforma B2B de Compras e Cotações",
+      en: "B2B Purchasing and Quotation Platform",
     },
     fullDescription: {
       pt: `
@@ -58,35 +58,64 @@ I used generative AI to support the strategic exploration of solutions, accelera
 
 **CONSEQUENCES AND IMPACT**
 The platform elevated the maturity of the corporate process. Reducing cognitive effort in data analysis accelerated the closing of quotes with greater cost-benefit assertiveness, ensuring 100% traceability for internal audits.
-      `
+      `,
     },
     imageUrl: "/cotacao.png",
     category: "UX/UI Design",
-    tags: ["Systems thinking", "Information architecture", "Cognitive load", "Multi-actor flows", "Governança por design"],
-    technologies: ["Figma", "Auto Layout", "Usability Testing", "Lovable", "Google Stitch"],
+    tags: [
+      "Systems thinking",
+      "Information architecture",
+      "Cognitive load",
+      "Multi-actor flows",
+      "Governança por design",
+    ],
+    technologies: [
+      "Figma",
+      "Auto Layout",
+      "Usability Testing",
+      "Lovable",
+      "Google Stitch",
+    ],
     client: "Confidencial",
     role: "UX/UI Designer",
     liveUrl: "#",
     gallery: [
-      { url: "/negociacao.png", title: "Fluxo de Negociação: Gestão de status e termos entre partes." },
-      { url: "/cadastro-precos-fornecedores.png", title: "Comparação de Propostas: Base de dados estruturada para análise de preços e fornecedores." },
-      { url: "/cadastro-fornecedor.png", title: "Cadastro de Fornecedor: Estruturação de dados." },
-      { url: "/perfil-edicao.png", title: "Edição de Perfil: Mapeamento de perfis e gestão de dados do usuário." },
-      { url: "/login.png", title: "Portal de Acesso: Entrada do ecossistema B2B." }
-    ]
+      {
+        url: "/negociacao.png",
+        title: "Fluxo de Negociação: Gestão de status e termos entre partes.",
+      },
+      {
+        url: "/cadastro-precos-fornecedores.png",
+        title:
+          "Comparação de Propostas: Base de dados estruturada para análise de preços e fornecedores.",
+      },
+      {
+        url: "/cadastro-fornecedor.png",
+        title: "Cadastro de Fornecedor: Estruturação de dados.",
+      },
+      {
+        url: "/perfil-edicao.png",
+        title:
+          "Edição de Perfil: Mapeamento de perfis e gestão de dados do usuário.",
+      },
+      {
+        url: "/login.png",
+        title: "Portal de Acesso: Entrada do ecossistema B2B.",
+      },
+    ],
   },
-    
+
   {
     id: "healthdash-analise-usabilidade",
     title: {
-      pt: "HealthDash: Análise de Usabilidade Hospitalar",
-      en: "HealthDash: Hospital Usability Analysis"
+      pt: "Quando a interface falha, o paciente paga o preço: como heurísticas de Nielsen se tornam questão de segurança operacional.",
+      en: "Interface failure as clinical risk: applying behavioral heuristics to redesign a hospital nutrition system.",
     },
     status: "active",
-    embedUrl: "", 
+    embedUrl: "",
     description: {
-      pt: "Quando a interface falha, o paciente paga o preço: como heurísticas de Nielsen se tornam questão de segurança operacional.",
-      en: "Interface failure as clinical risk: applying behavioral heuristics to redesign a hospital nutrition system."
+      pt: "HealthDash: Análise de Usabilidade Hospitalar",
+      en: "HealthDash: Hospital Usability Analysis",
     },
     fullDescription: {
       pt: `
@@ -98,7 +127,7 @@ O design foi tratado estritamente como design orientado a riscos. O contexto fí
 
 **DECISÕES DE INTERFACE E ERGONOMIA**
 • **Prevenção de Erros (Error prevention):** Ampliamos as áreas de toque para o padrão de 44x44px. Em um escritório calmo, isso é apenas seguir um manual de UI, mas no corredor de um hospital, onde o profissional digita andando e segurando o tablet com uma mão, essa adaptação ergonômica previne cliques acidentais e garante que a dieta não seja salva no prontuário do paciente errado.
-• **Ergonomia e Fluxo Linear:** Substituímos modais obstrutivos por telas inteiras, garantindo um fluxo sequencial previsível que acomoda perfeitamente teclados virtuais, eliminando as quebras de responsividade.
+• **Ergonomia e Fluxo Linear:** Substituímos modais obstrutivos por telas inteiras, garantindo un fluxo sequencial previsível que acomoda perfeitamente teclados virtuais, eliminando as quebras de responsividade.
 
 **O QUE CONSIDERAMOS E DESCARTAMOS**
 • **Descartado:** Scroll infinito para concentrar todos os dados médicos em uma única visão.
@@ -111,7 +140,7 @@ A eliminação de barreiras arquitetônicas reduziu drasticamente a incidência 
 **THE BUSINESS TENSION**
 In a hospital nutritional management system, poor usability is not just an inconvenience—it's a clinical risk. Healthcare professionals used the platform on tablets, often moving through corridors or holding the device with just one hand. The layout frequently broke, hiding vital data and creating an environment highly prone to dietary prescription errors.
 
-**BEHAVIORAL LOGIC AND CONTEXT**
+**THE BEHAVIORAL LOGIC AND CONTEXT**
 The design was treated strictly as *Risk-driven design*. The physical context (*Context of use*) guided our *Heuristic evaluation*. We observed that floating modals covering the entire screen were not just "ugly"; when the virtual keyboard popped up, it hid the main "save diet" button. This forced the nutritionist to close the keyboard to save the prescription, generating critical operational failures in the routine.
 
 **INTERFACE AND ERGONOMICS DECISIONS**
@@ -124,28 +153,34 @@ The design was treated strictly as *Risk-driven design*. The physical context (*
 
 **CONSEQUENCES AND IMPACT**
 The elimination of architectural barriers drastically reduced the incidence of "misclicks" and time-on-task. The redesign proved that adapting the platform to the user's mental and physical model is not just aesthetic, it is a vital layer of healthcare data security.
-      `
+      `,
     },
     imageUrl: "/healthdash-capa.png",
     category: "UX Research",
-    tags: ["Heuristic evaluation", "Ergonomics", "Error prevention", "Context of use", "Risk-driven design"],
+    tags: [
+      "Heuristic evaluation",
+      "Ergonomics",
+      "Error prevention",
+      "Context of use",
+      "Risk-driven design",
+    ],
     technologies: ["Figma", "UX Research", "Accessibility", "UI Design"],
-    client: "HealthDash", 
+    client: "HealthDash",
     role: "UX/UI Designer",
-    liveUrl: "#"
+    liveUrl: "#",
   },
 
   {
     id: "smartsettlement-gestao-financeira",
     title: {
-      pt: "Gestão de Conciliação Financeira",
-      en: "Financial Reconciliation Management"
+      pt: "Design sob restrição: como entregar impacto máximo sem tocar no Design System, e por que isso é a decisão certa.",
+      en: "Constrained design as strategy: maximum impact without breaking the system and the behavioral logic behind it.",
     },
     status: "active",
-    embedUrl: "", 
+    embedUrl: "",
     description: {
-      pt: "Design sob restrição: como entregar impacto máximo sem tocar no Design System, e por que isso é a decisão certa.",
-      en: "Constrained design as strategy: maximum impact without breaking the system and the behavioral logic behind it."
+      pt: "Gestão de Conciliação Financeira",
+      en: "Financial Reconciliation Management",
     },
     fullDescription: {
       pt: `
@@ -156,7 +191,7 @@ Os operadores financeiros enfrentavam um fenômeno clássico de "cegueira operac
 Adotei uma abordagem de "**lean UX**" focada em "**delivery under constraint**". Restrições técnicas não são obstáculos de design são o contexto em que o design acontece. O foco mudou de "como criar a interface mais bonita" para "qual é a menor intervenção visual capaz de mitigar a insegurança do usuário e o risco de erro?".
 
 **DECISÕES DE INTERFACE (DECISION LOG)**
-• **System Visibility:** Implementei barras de progresso contínuas durante os uploads. Nomei e eliminei a "cegueira operacional" dando previsibilidade sistêmica ao cérebro do usuário. A revisão minuciosa permitiu justificar à engenharia exatamente onde o status precisava ser inserido para funcionar.
+• **System Visibility:** Implementei barras de progresso contínuas durante os uploads. Nomeei e eliminei a "cegueira operacional" dando previsibilidade sistêmica ao cérebro do usuário. A revisão minuciosa permitiu justificar à engenharia exatamente onde o status precisava ser inserido para funcionar.
 • **Error Prevention:** Inserimos modais de confirmação (fricção deliberada) momentos antes de ações financeiras irreversíveis, quebrando o automatismo motor do usuário.
 
 **O QUE CONSIDERAMOS E DESCARTAMOS**
@@ -165,7 +200,7 @@ Adotei uma abordagem de "**lean UX**" focada em "**delivery under constraint**".
 • **O que escolhemos:** Intervir apenas nas camadas sobrepostas (modais nativos e Badges), garantindo impacto comportamental imediato sem atrasar os "**releases**" nem exigir refatoração do UI Kit atual.
 
 **CONSEQUÊNCIAS E IMPACTO**
-A intervenção enxuta solucionou o vácuo de informação. A consequência de negócio foi direta: os tickets de suporte exigindo "status do sistema" caíram drasticamente em 75% e execuções financeiras acidentais foram zeradas, provando o valor das "**trade-off decisions**" alinhadas ao desenvolvimento.
+A XML-intervenção enxuta solucionou o vácuo de informação. A consequência de negócio foi direta: os tickets de suporte exigindo "status do sistema" caíram drasticamente em 75% e execuções financeiras acidentais foram zeradas, provando o valor das "**trade-off decisions**" alinhadas ao desenvolvimento.
       `,
       en: `
 **THE BUSINESS TENSION**
@@ -185,39 +220,57 @@ We adopted a *Lean UX* approach focused on **Delivery under constraint**. Techni
 
 **CONSEQUENCES AND IMPACT**
 The lean intervention solved the information vacuum. The business consequence was direct: support tickets demanding "system status" dropped drastically, and accidental financial executions were zeroed out, proving the value of *Trade-off decisions* aligned with development.
-      `
+      `,
     },
-    imageUrl: "/smartsettlement-capa.png", 
+    imageUrl: "/smartsettlement-capa.png",
     category: "Fintech",
-    tags: ["Trade-off decisions", "Lean UX", "Delivery under constraint", "System visibility", "Error prevention"],
+    tags: [
+      "Trade-off decisions",
+      "Lean UX",
+      "Delivery under constraint",
+      "System visibility",
+      "Error prevention",
+    ],
     technologies: ["Figma", "Redlining", "Information Architecture", "Lean UX"],
     client: "Confidencial",
     role: "Product Designer",
     liveUrl: "#",
     gallery: [
-      { url: "/smartsettlement-dados.png", title: "Interface Principal: Hierarquia de dados e ações rápidas." },
-      { url: "/smartsettlement-loading.png", title: "Feedback de Sistema: Visibilidade do status de processamento." },
-      { url: "/smartsettlement-modal.png", title: "Prevenção de Erro: Modal de confirmação para ações críticas." },
-      { url: "/smartsettlement-fluxo.png", title: "Documentação de Fluxo: Mapeamento de interações e estados." }
+      {
+        url: "/smartsettlement-dados.png",
+        title: "Interface Principal: Hierarquia de dados e ações rápidas.",
+      },
+      {
+        url: "/smartsettlement-loading.png",
+        title: "Feedback de Sistema: Visibilidade do status de processamento.",
+      },
+      {
+        url: "/smartsettlement-modal.png",
+        title: "Prevenção de Erro: Modal de confirmação para ações críticas.",
+      },
+      {
+        url: "/smartsettlement-fluxo.png",
+        title: "Documentação de Fluxo: Mapeamento de interações e estados.",
+      },
     ],
   },
 
   {
     id: "compliance-kyc",
     title: {
-      pt: "Plataforma de Inteligência em Compliance e Fraudes",
-      en: "Compliance & Fraud Intelligence Platform"
+      pt: "Visualização de risco como decisão de design: como estruturar informação para que analistas detectem fraudes mais rápido e com menos erro.",
+      en: "Risk visualization as a design decision: structuring information to reduce false negatives in fraud detection.",
     },
     status: "active",
     embedUrl: "",
     description: {
-      pt: "Visualização de risco como decisão de design: como estruturar informação para que analistas detectem fraudes mais rápido e com menos erro.",
-      en: "Risk visualization as a design decision: structuring information to reduce false negatives in fraud detection."
+      pt: "Plataforma de Inteligência em Compliance e Fraudes",
+      en: "Compliance and Fraud Intelligence Platform",
     },
     fullDescription: {
       pt: `
 **A TENSÃO DE NEGÓCIO**
-Analistas de compliance e PLD (Prevenção à Lavagem de Dinheiro) processam informações cruciais e ambíguas sob pressão de tempo. O custo de um falso negativo como autorizar uma holding fraudulenta ou um Beneficiário Final (UBO) ilícito tem um impacto regulatório e financeiro altíssimo. A tensão estava na fadiga de decisão gerado por ferramentas fragmentadas que exibiam dados crus, deixando a correlação cognitiva a cargo do analista.
+Analistas de compliance e PLD (Prevenção à Lavagem de Dinheiro) processam informações cruciais e ambíguas sob pressão de tempo. O custo de um falso negativo como autorizar uma holding fraudulenta ou um Beneficiário Final (UBO) ilícito tem um impacto regulatório e financeiro altíssimo. A tension estava na fadiga de decisão gerado por ferramentas fragmentadas que exibiam dados crus, deixando a correlação cognitiva a cargo do analista.
 
 **LÓGICA COMPORTAMENTAL E ARQUITETURA**
 A etapa de Discovery e imersão junto aos analistas (discovery to architecture) não visou apenas "entender dores", mas alterar ativamente a hierarquia da informação. O problema central diagnosticado não era a ausência de dados, mas a enorme carga cognitiva intrínseca de interpretá-los.
@@ -250,45 +303,105 @@ The Discovery phase and immersion with analysts (discovery to architecture) aime
 
 **CONSEQUENCES AND IMPACT**
 By embracing risk visualization as the foundation of *AML/compliance design*, the system drastically accelerated the localization of fraudulent profiles, saved hours of manual investigation, and increased the Task Success Rate of analysts under pressure.
-      `
+      `,
     },
     imageUrl: "/compliance-capa.png",
-    category: "UX/UI Design & Architecture",
-    tags: ["Decision fatigue", "Information hierarchy", "Risk-driven UX", "Discovery to architecture", "AML/compliance design"],
-    technologies: ["Miro", "Mapeamento de Fluxos", "Arquitetura de Informação", "UX Research"],
+    category: "UX/UI Design e Arquitetura",
+    tags: [
+      "Decision fatigue",
+      "Information hierarchy",
+      "Risk-driven UX",
+      "Discovery to architecture",
+      "AML/compliance design",
+    ],
+    technologies: [
+      "Miro",
+      "Mapeamento de Fluxos",
+      "Arquitetura de Informação",
+      "UX Research",
+    ],
     client: "Confidencial",
     role: "Product Designer",
     liveUrl: "#",
-    gallery: [      
-      { url: "/compliance-dores-ganhos.png", title: "Discovery: Levantamento de dores e ganhos dos operadores." },
-      { url: "/compliance-personas.png", title: "Personas: Perfis detalhados do time de operação." },
-      { url: "/compliance-hipoteses.png", title: "Hipóteses: Matriz de validação de problemas e soluções." },
-      { url: "/compliance-arquitetura.png", title: "Arquitetura: Estrutura da plataforma e fases de entrega." },
-      { url: "/compliance-fluxo-novo.png", title: "Novo Fluxo: Jornada otimizada para o analista." },
-      { url: "/compliance-dashboard-geral.png", title: "Dashboard Geral: Monitoramento gerencial de volumes e cadastros." },
-      { url: "/compliance-visao-geral.png", title: "Visão Geral UI: Mapeamento de telas, componentes e estados." },
-      { url: "/compliance-monitoramento.png", title: "Monitoramento: Dashboard core com Score de Risco e alertas PEP." },
-      { url: "/compliance-estrutura-societaria.png", title: "Estrutura Societária: Visualização hierárquica para identificação de UBO." },
-      { url: "/compliance-gestao-cadastros.png", title: "Gestão de Cadastros: Listagem inteligente com status visuais." },
-      { url: "/compliance-filtros.png", title: "Filtros Avançados: Otimização da busca e refinamento de dados." },
-      { url: "/compliance-info-cnpj.png", title: "Informações CNPJ: Perfil detalhado organizado por módulos." },
-      { url: "/compliance-documentos.png", title: "Documentos: Interface de gestão e validação documental." },
-      { url: "/compliance-detalhes-doc.png", title: "Detalhes Documentais: Rastreabilidade e histórico de alterações." },
-      { url: "/compliance-contratos.png", title: "Contratos: Organização de vigências e arquivos contratuais." }
-    ]
+    gallery: [
+      {
+        url: "/compliance-dores-ganhos.png",
+        title: "Discovery: Levantamento de dores e ganhos dos operadores.",
+      },
+      {
+        url: "/compliance-personas.png",
+        title: "Personas: Perfis detalhados do time de operação.",
+      },
+      {
+        url: "/compliance-hipoteses.png",
+        title: "Hipóteses: Matriz de validação de problemas e soluções.",
+      },
+      {
+        url: "/compliance-arquitetura.png",
+        title: "Arquitetura: Estrutura da plataforma e fases de entrega.",
+      },
+      {
+        url: "/compliance-fluxo-novo.png",
+        title: "Novo Fluxo: Jornada otimizada para o analista.",
+      },
+      {
+        url: "/compliance-dashboard-geral.png",
+        title:
+          "Dashboard Geral: Monitoramento gerencial de volumes e cadastros.",
+      },
+      {
+        url: "/compliance-visao-geral.png",
+        title: "Visão Geral UI: Mapeamento de telas, componentes e estados.",
+      },
+      {
+        url: "/compliance-monitoramento.png",
+        title:
+          "Monitoramento: Dashboard core com Score de Risco e alertas PEP.",
+      },
+      {
+        url: "/compliance-estrutura-societaria.png",
+        title:
+          "Estrutura Societária: Visualização hierárquica para identificação de UBO.",
+      },
+      {
+        url: "/compliance-gestao-cadastros.png",
+        title: "Gestão de Cadastros: Listagem inteligente com status visuais.",
+      },
+      {
+        url: "/compliance-filtros.png",
+        title: "Filtros Avançados: Otimização da busca e refinamento de dados.",
+      },
+      {
+        url: "/compliance-info-cnpj.png",
+        title: "Informações CNPJ: Perfil detalhado organizado por módulos.",
+      },
+      {
+        url: "/compliance-documentos.png",
+        title: "Documentos: Interface de gestão e validação documental.",
+      },
+      {
+        url: "/compliance-detalhes-doc.png",
+        title:
+          "Detalhes Documentais: Rastreabilidade e histórico de alterações.",
+      },
+      {
+        url: "/compliance-contratos.png",
+        title: "Contratos: Organização de vigências e arquivos contratuais.",
+      },
+    ],
   },
 
   {
     id: "redesign-navegacao-notificacoes",
     title: {
-      pt: "Redesign de Navegação e Sistema de Notificações",
-      en: "Navigation Redesign and Notification System"
+      pt: "Quando comunicação interna se torna risco de compliance: como redesenhamos um sistema de notificações para ser juridicamente rastreável.",
+      en: "Notification design as legal infrastructure: building traceability into internal communication systems.",
     },
     status: "active",
     embedUrl: "",
     description: {
-      pt: "Quando comunicação interna se torna risco de compliance: como redesenhamos um sistema de notificações para ser juridicamente rastreável.",
-      en: "Notification design as legal infrastructure: building traceability into internal communication systems."
+      pt: "Redesign de Navegação e Sistema de Notificações",
+      en: "Navigation Redesign and Notification System",
     },
     fullDescription: {
       pt: `
@@ -325,34 +438,49 @@ Instead of inventing new floating alert flows, we adopted validated communicatio
 • **Why:** Daily systemic interruptions would cause "Banner Blindness", where users automatically close modals before reading them. We opted for passive notifications in the Header, reserving interruptive alerts strictly for security breaches.
 
 **CONSEQUENCES AND IMPACT**
-The project transcended "interface modernization", delivering a product of *Legal infrastructure* for the business. With standardization via heuristics, critical communications achieved guaranteed governance with quantifiable open metrics, protecting company liabilities invisibly within the employee's daily flow.
-      `
+The project transitioned beyond "interface modernization", delivering a product of *Legal infrastructure* for the business. With standardization via heuristics, critical communications achieved guaranteed governance with quantifiable open metrics, protecting company liabilities invisibly within the employee's daily flow.
+      `,
     },
     imageUrl: "/notificacoes-capa.png",
     category: "UI Design",
-    tags: ["Behavioral heuristics", "Mental models", "Compliance by design", "Fitts's Law", "Jakob's Law"],
+    tags: [
+      "Behavioral heuristics",
+      "Mental models",
+      "Compliance by design",
+      "Fitts's Law",
+      "Jakob's Law",
+    ],
     technologies: ["Figma", "Design System", "Prototyping"],
     client: "Confidencial",
     role: "Product Designer",
     liveUrl: "#",
     gallery: [
-      { url: "/notificacoes-header.png", title: "Redesign do Header com Heurísticas de Nielsen" },
-      { url: "/notificacoes-gestor.png", title: "Painel do Gestor: Segmentação e Rastreabilidade" },
-      { url: "/notificacoes-user.png", title: "Painel do Usuário: Inbox e Preferências" }
-    ]
+      {
+        url: "/notificacoes-header.png",
+        title: "Redesign do Header com Heurísticas de Nielsen",
+      },
+      {
+        url: "/notificacoes-gestor.png",
+        title: "Painel do Gestor: Segmentação e Rastreabilidade",
+      },
+      {
+        url: "/notificacoes-user.png",
+        title: "Painel do Usuário: Inbox e Preferências",
+      },
+    ],
   },
 
   {
     id: "evolucao-design-system",
     title: {
-      pt: "Evolução e Escalabilidade de Design System",
-      en: "Design System Evolution & Scalability"
+      pt: "Design Ops como alavanca: como uma arquitetura de tokens reduziu inconsistências e acelerou o ciclo de entrega do time.",
+      en: "Design Ops as leverage: how a token architecture reduced visual debt and accelerated team delivery velocity.",
     },
     status: "active",
     embedUrl: "",
     description: {
-      pt: "Design Ops como alavanca: como uma arquitetura de tokens reduziu inconsistências e acelerou o ciclo de entrega do time.",
-      en: "Design Ops as leverage: how a token architecture reduced visual debt and accelerated team delivery velocity."
+      pt: "Evolução e Escalabilidade de Design System",
+      en: "Design System Evolution and Scalability",
     },
     fullDescription: {
       pt: `
@@ -371,11 +499,11 @@ Trabalhando em estreita colaboração com outra profissional de design, que trou
 • **Por quê:** Congelaria as entregas de produto do time. Priorizamos apenas construir a camada estrutural de Tokens (Fundações) para blindar as novas criações, deixando a migração de componentes legados para o modelo *Tech debt* a longo prazo.
 
 **CONSEQUÊNCIAS E IMPACTO**
-O impacto foi o ganho de escala exponencial: uma decisão tomada na raiz do Design System acelerou as prototipações de dezenas de interfaces. A consistência da implementação entre UI e Front-end solidificou a confiança e velocidade entre as squads, derrubando severamente o desperdício operacional.
+O impacto foi o ganho de escala exponencial: uma decision tomada na raiz do Design System acelerou as prototipações de dezenas de interfaces. A consistência da implementação entre UI e Front-end solidificou a confiança e velocidade entre as squads, derrubando severamente o desperdício operacional.
       `,
       en: `
 **THE BUSINESS TENSION**
-As the team grew, we noticed a natural challenge: the lack of technical standardization was causing rework and operational friction in our routine.It wasn't about "organizing Figma folders", it was about *Team leverage*. Because components lacked a mathematical foundation, design approvals suffered from visual debt, and developers rebuilt the same margins multiple times, stagnating the product evolution cycle (*Scalability*).
+As the team grew, we noticed a natural challenge: the lack of technical standardization was causing rework and operational friction in our routine. It wasn't about "organizing Figma folders", it was about *Team leverage*. Because components lacked a mathematical foundation, design approvals suffered from visual debt, and developers rebuilt the same margins multiple times, stagnating the product evolution cycle (*Scalability*).
 
 **BEHAVIORAL LOGIC AND ARCHITECTURE**
 Working in close collaboration with another design professional—who brought essential complementary perspectives and insights to the project—I combined my previous background in Design Ops to support the team. Together, we championed the premise that standardization cannot be sustained without cultural adoption. I actively collaborated in structuring the ecosystem to reduce manual interface interpretations, contributing to the implementation of a robust Token architecture using Figma Variables.
@@ -390,32 +518,45 @@ Working in close collaboration with another design professional—who brought es
 
 **CONSEQUENCES AND IMPACT**
 The impact was an exponential gain in scale: a decision made at the root of the Design System accelerated the prototyping of dozens of interfaces. Implementation consistency between UI and Front-end solidified trust and speed among squads, severely cutting down operational waste.
-      `
+      `,
     },
     imageUrl: "/ds-capa.png",
     category: "Design System",
-    tags: ["Design Ops", "Token architecture", "Scalability", "Team leverage", "Documentation strategy"],
+    tags: [
+      "Design Ops",
+      "Token architecture",
+      "Scalability",
+      "Team leverage",
+      "Documentation strategy",
+    ],
     technologies: ["Figma", "Tokens", "Documentation", "Mentorship"],
     client: "Confidencial",
     role: "Product Designer / UI",
     liveUrl: "#",
     gallery: [
-           { url: "/ds-cores.png", title: "Inventário de Cores Primitivas e Escalas" },
-      { url: "/ds-documentacao.png", title: "Documentação Funcional: Regras de UX e Anatomia de Componentes" }      
-    ]
+      {
+        url: "/ds-cores.png",
+        title: "Inventário de Cores Primitivas e Escalas",
+      },
+      {
+        url: "/ds-documentacao.png",
+        title: "Documentação Funcional: Regras de UX e Anatomia de Componentes",
+      },
+    ],
   },
 
- {
+  {
     id: "prevmax-previdencia",
     title: {
-      pt: "Previdência Complementar",
-      en: "Complementary Pension"
+      pt: "Confiança como variável de design: como traduzimos um produto financeiro de alta ansiedade para um público de baixo letramento digital.",
+      en: "Trust as a design variable: making a high-anxiety financial product accessible to low digital-literacy users.",
     },
     status: "active",
-    embedUrl: "https://embed.figma.com/proto/UowipTJL4ggqVwP828F6Eb/Portf%C3%B3lio-PLATAFORMA?page-id=0%3A1&node-id=4-4108&viewport=575%2C347%2C0.06&scaling=scale-down&content-scaling=fixed&starting-point-node-id=4%3A4094&embed-host=share",
+    embedUrl:
+      "https://embed.figma.com/proto/UowipTJL4ggqVwP828F6Eb/Portf%C3%B3lio-PLATAFORMA?page-id=0%3A1&node-id=4-4108&viewport=575%2C347%2C0.06&scaling=scale-down&content-scaling=fixed&starting-point-node-id=4%3A4094&embed-host=share",
     description: {
-      pt: "Confiança como variável de design: como traduzimos um produto financeiro de alta ansiedade para um público de baixo letramento digital.",
-      en: "Trust as a design variable: making a high-anxiety financial product accessible to low digital-literacy users."
+      pt: "Sistema de Previdência Complementar (Portal do Participante)",
+      en: "Complementary Pension System (Participant Portal)",
     },
     fullDescription: {
       pt: `
@@ -423,7 +564,7 @@ The impact was an exponential gain in scale: a decision made at the root of the 
 Fundos de pensão operam um produto de **alta ansiedade**: o futuro financeiro e de aposentadoria de pessoas reais. O desafio do projeto ia muito além da interface, pois o sistema é regido por regras regulatórias de extrema complexidade, com variáveis que mudam e se combinam de acordo com a situação trabalhista específica de cada participante. Descobrimos que os usuários (maioria 60+ com **Low digital literacy**) abandonavam as jornadas online devido à fricção cognitiva de tentar decifrar essas regras somadas ao jargão financeiro, recorrendo ao oneroso atendimento de call center.
 
 **ARQUITETURA REGULATÓRIA E INCLUSÃO**
-Para traduzir a burocracia em autonomia, conduzi uma investigação profunda na lógica de negócio. Além de realizar pesquisas com operadores de BPO, debrucei-me sobre diversos regulamentos de planos de previdência complementar fechada de grandes corporações clientes. O objetivo foi mapear as dezenas de matrizes e variáveis legais para garantir que o sistema e não o cérebro do usuário idoso absorvesse a complexidade computacional. Simplificar não significava esconder opções, mas usar a tecnologia para reduzir o esforço cognitivo. Sem essa fundação lógica aliada ao **trust & safety** visual, não haveria adoção do digital.
+Para traduzir a burocracia em autonomia, conduzi uma investigação profunda na lógica de negócio. Além de realizar pesquisas com operadores de BPO, debrucei-me sobre diversos regulamentos de planos de previdência complementar fechada de grandes corporações clientes. O objetivo foi mapear as dezenas de matrizes e variáveis legais para garantir que o sistema e não o cérebro do usuário idoso absorvesse a complexidade computacional. Simplificar não significava esconder opções, mas usar a tecnologia para reduzir o esforço cognitivo. Sem essa fundação lógica aliada ao **trust e safety** visual, não haveria adoção do digital.
 
 **DECISÕES DE INTERFACE E CONFIANÇA**
 • **Acessibilidade aplicada na Arquitetura:** As diretrizes da **WCAG** guiaram a criação de componentes de alto contraste, botões estruturados com linguagem de ação clara e tipografia adaptada para mitigar o impacto da perda de visão temporal natural em usuários idosos (**inclusive design**). O grande desafio de produto foi equilibrar os critérios rigorosos de conformidade técnica da *WCAG* com a obrigatoriedade de preservar as cores institucionais da marca (**brand identity**).
@@ -445,7 +586,7 @@ Este projeto foi desenvolvido em contexto corporativo. O nome "PrevMax", a ident
 Pension funds operate a **high-anxiety** product: the financial and retirement future of real people. The project's challenge went far beyond the interface, as the system is governed by highly complex regulatory rules, with variables that change and combine according to each participant's specific labor situation. We discovered that users (mostly 60+ with **Low digital literacy**) abandoned online journeys due to the cognitive friction of trying to decipher these rules combined with financial jargon, resorting to costly call center support.
 
 **REGULATORY ARCHITECTURE AND INCLUSION**
-To translate bureaucracy into autonomy, I conducted a deep investigation into the business logic. In addition to researching with BPO operators, I immersed myself in various closed complementary pension plan regulations from large corporate clients. The goal was to map the dozens of matrices and legal variables to ensure the system—not the elderly user's brain—absorbed the computational complexity. Simplifying didn't mean hiding options, but using technology to reduce cognitive effort. Without this logical foundation combined with visual **Trust & safety**, there would be no digital adoption.
+To translate bureaucracy into autonomy, I conducted a deep investigation into the business logic. In addition to researching with BPO operators, I immersed myself in various closed complementary pension plan regulations from large corporate clients. The goal was to map the dozens of matrices and legal variables to ensure the system—not the elderly user's brain—absorbed the computational complexity. Simplifying didn't mean hiding options, but using technology to reduce cognitive effort. Without this logical foundation combined with visual **Trust and safety**, there would be no digital adoption.
 
 **INTERFACE DECISIONS AND TRUST**
 • **Accessibility applied to Architecture:** *WCAG* guidelines guided the creation of high-contrast components, structured buttons with clear action language, and typography adapted to mitigate the impact of natural age-related vision loss (**Inclusive design**). The major product challenge was balancing strict technical *WCAG* compliance criteria with the mandatory preservation of the company's institutional brand identity.
@@ -461,90 +602,114 @@ By transforming complex rules into digestible flows and mitigating the inherent 
 
 **CONFIDENTIALITY NOTE**
 This project was developed in a corporate context. The name "PrevMax", the visual identity, and the logo are fictional elements created exclusively for portfolio purposes. This approach strictly preserves the real client's confidentiality while maintaining total fidelity to the process, challenges, and strategic design decisions.
-      `
+      `,
     },
     imageUrl: "/prevmax-capa.png",
     category: "UX Strategy",
-    tags: ["Trust & safety", "Inclusive design", "WCAG", "Anxiety reduction", "Low digital literacy"],
+    tags: [
+      "Trust e safety",
+      "Inclusive design",
+      "WCAG",
+      "Anxiety reduction",
+      "Low digital literacy",
+    ],
     technologies: ["Figma", "Miro", "Microsoft Clarity", "Prototyping"],
     client: "Confidencial",
     role: "Product Designer",
     liveUrl: "#",
     gallery: [
-      { url: "/prevmax-processo.png", title: "Processo de Design & Metodologia" },
-      { url: "/prevmax-benchmark.png", title: "Análise de Mercado (Benchmarking)" },
-      { url: "/prevmax-research.png", title: "Personas e Mapeamento de Histórias (User Story Map)" },
-      { url: "/prevmax-flow.png", title: "Fluxo do Usuário e Arquitetura de Informação" },
-      { url: "/prevmax-styleguide.png", title: "Style Guide: Tipografia e Cores Acessíveis" },
-      { url: "/prevmax-components.png", title: "Biblioteca de Componentes e UI Kit" }
-    ]
+      {
+        url: "/prevmax-processo.png",
+        title: "Processo de Design e Metodologia",
+      },
+      {
+        url: "/prevmax-benchmark.png",
+        title: "Análise de Mercado (Benchmarking)",
+      },
+      {
+        url: "/prevmax-research.png",
+        title: "Personas e Mapeamento de Histórias (User Story Map)",
+      },
+      {
+        url: "/prevmax-flow.png",
+        title: "Fluxo do Usuário e Arquitetura de Informação",
+      },
+      {
+        url: "/prevmax-styleguide.png",
+        title: "Style Guide: Tipografia e Cores Acessíveis",
+      },
+      {
+        url: "/prevmax-components.png",
+        title: "Biblioteca de Componentes e UI Kit",
+      },
+    ],
   },
-  
+
   // ========================================================================
   // PROJETOS FUTUROS (EM BREVE)
   // ========================================================================
   {
     id: "crm-financeiro",
     title: {
-      pt: "Portal CRM",
-      en: "CRM Portal"
+      pt: "Portal CRM: Gestão de relacionamento com cliente focado em cashback e portais administrativos.",
+      en: "CRM Portal: Customer relationship management focused on cashback and administrative portals.",
     },
     status: "coming-soon",
     description: {
-      pt: "Gestão de relacionamento com cliente focado em cashback e portais administrativos.",
-      en: "Customer relationship management focused on cashback and administrative portals."
+      pt: "Portal CRM",
+      en: "CRM Portal",
     },
     imageUrl: "",
     category: "Web",
     tags: ["Product Design", "B2B"],
-    fullDescription: { pt: "", en: "" }
+    fullDescription: { pt: "", en: "" },
   },
   {
     id: "gestao-buffet",
     title: {
-      pt: "Sistema de Gestão de Buffet",
-      en: "Buffet Management System"
+      pt: "Gestão de Buffet: Interface para configuração de layouts de rampas e gestão de recipientes gastronômicos.",
+      en: "Buffet Management System: Interface for configuring ramp layouts and managing gastronomic containers.",
     },
     status: "coming-soon",
     description: {
-      pt: "Interface para configuração de layouts de rampas e gestão de recipientes gastronômicos.",
-      en: "Interface for configuring ramp layouts and managing gastronomic containers."
+      pt: "Sistema de Gestão de Buffet",
+      en: "Buffet Management System",
     },
     imageUrl: "",
     category: "Tablet App",
     tags: ["UX Strategy", "User Flow"],
-    fullDescription: { pt: "", en: "" }
+    fullDescription: { pt: "", en: "" },
   },
   {
     id: "sistema-pesagem",
     title: {
-      pt: "App de reserva de restaurante",
-      en: "Restaurant Booking App"
+      pt: "Reserva de Restaurantes: Solução para agendamento de reservas e otimização de filas em restaurante.",
+      en: "Restaurant Booking: Solution for scheduling reservations and optimizing restaurant queues.",
     },
     status: "coming-soon",
     description: {
-      pt: "Solução para agendamento de reservas e otimização de filas em restaurante.",
-      en: "Solution for scheduling reservations and optimizing restaurant queues."
+      pt: "App de reserva de restaurante",
+      en: "Restaurant Booking App",
     },
     imageUrl: "",
     category: "UI",
     tags: ["Research", "UX/UI Design"],
-    fullDescription: { pt: "", en: "" }
+    fullDescription: { pt: "", en: "" },
   },
   {
     id: "dashboard-analytics",
     title: {
-      pt: "Esteira de sessão e CNAB",
-      en: "Session and CNAB Pipeline"
+      pt: "Dashboard Analytics: Painel de controle para esteira de sessão e CNAB.",
+      en: "Dashboard Analytics: Control panel for session and CNAB pipeline.",
     },
     status: "coming-soon",
     description: {
-      pt: "Painel de controle para esteira de sessão e CNAB.",
-      en: "Control panel for session and CNAB pipeline."
+      pt: "Esteira de sessão e CNAB",
+      en: "Session and CNAB Pipeline",
     },
     imageUrl: "",
     category: "UX/UI Design",
     tags: ["Dashboard", "UI Design"],
-    fullDescription: { pt: "", en: "" }
-  }
+    fullDescription: { pt: "", en: "" },
+  },
 ];
