@@ -22,14 +22,19 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
   // Função Auxiliar para puxar o texto correto dependendo do idioma
   const getText = (field: any) => {
     if (!field) return "";
-    return typeof field === "string" ? field : (field[language] || field.pt || "");
+    return typeof field === "string"
+      ? field
+      : field[language] || field.pt || "";
   };
 
   // Função de Renderização Editorial (O segredo da estética de revista)
   const renderEditorialCase = (text: string) => {
     if (!text) return null;
 
-    const blocks = text.split("\n").map(b => b.trim()).filter(Boolean);
+    const blocks = text
+      .split("\n")
+      .map((b) => b.trim())
+      .filter(Boolean);
 
     return (
       <div className="space-y-6 text-gray-600 text-[1.05rem] leading-relaxed">
@@ -37,13 +42,20 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
           // 1. Títulos de Seção: Transformados em tipografia miúda e espaçada
           if (block.startsWith("**") && block.endsWith("**")) {
             const titleText = block.replace(/\*\*/g, "");
-            const isImpactOrDiscarded = titleText.includes("IMPACTO") || titleText.includes("DESCARTAMOS") || titleText.includes("CONSEQUÊNCIAS") || titleText.includes("IMPACT") || titleText.includes("DISCARDED");
-            
+            const isImpactOrDiscarded =
+              titleText.includes("IMPACTO") ||
+              titleText.includes("DESCARTAMOS") ||
+              titleText.includes("CONSEQUÊNCIAS") ||
+              titleText.includes("IMPACT") ||
+              titleText.includes("DISCARDED");
+
             return (
-              <h4 
-                key={index} 
+              <h4
+                key={index}
                 className={`text-xs font-bold text-gray-900 uppercase tracking-widest block mb-4 ${
-                  isImpactOrDiscarded ? "pt-10 border-t border-gray-200 mt-12" : "mt-10"
+                  isImpactOrDiscarded
+                    ? "pt-10 border-t border-gray-200 mt-12"
+                    : "mt-10"
                 }`}
               >
                 {titleText}
@@ -56,13 +68,18 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
             const cleanBlock = block.replace("•", "").trim();
             const parts = cleanBlock.split("**");
             return (
-              <div key={index} className="pl-6 relative before:content-[''] before:absolute before:left-1 before:top-2.5 before:w-1.5 before:h-1.5 before:bg-gray-900 mb-4">
-                {parts.map((part, pIdx) => 
+              <div
+                key={index}
+                className="pl-6 relative before:content-[''] before:absolute before:left-1 before:top-2.5 before:w-1.5 before:h-1.5 before:bg-gray-900 mb-4"
+              >
+                {parts.map((part, pIdx) =>
                   pIdx % 2 === 1 ? (
-                    <strong key={pIdx} className="text-gray-900 font-bold">{part}</strong>
+                    <strong key={pIdx} className="text-gray-900 font-bold">
+                      {part}
+                    </strong>
                   ) : (
                     part
-                  )
+                  ),
                 )}
               </div>
             );
@@ -70,10 +87,10 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
 
           // 3. Blocos de destaque (Cards brutalistas com borda preta)
           const previousBlock = index > 0 ? blocks[index - 1] : "";
-          const isInsideHighlight = 
-            previousBlock.includes("DESCARTAMOS") || 
-            previousBlock.includes("POR QUÊ") || 
-            previousBlock.includes("IMPACTO") || 
+          const isInsideHighlight =
+            previousBlock.includes("DESCARTAMOS") ||
+            previousBlock.includes("POR QUÊ") ||
+            previousBlock.includes("IMPACTO") ||
             previousBlock.includes("CONSEQUÊNCIAS") ||
             previousBlock.includes("DISCARDED") ||
             previousBlock.includes("WHY") ||
@@ -81,10 +98,19 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
 
           if (isInsideHighlight) {
             return (
-              <div key={index} className="bg-gray-50 p-6 border-l-2 border-gray-900 my-6">
+              <div
+                key={index}
+                className="bg-gray-50 p-6 border-l-2 border-gray-900 my-6"
+              >
                 <p className="text-sm text-gray-600 leading-relaxed m-0">
-                  {block.split("**").map((part, pIdx) => 
-                    pIdx % 2 === 1 ? <strong key={pIdx} className="text-gray-900 font-bold">{part}</strong> : part
+                  {block.split("**").map((part, pIdx) =>
+                    pIdx % 2 === 1 ? (
+                      <strong key={pIdx} className="text-gray-900 font-bold">
+                        {part}
+                      </strong>
+                    ) : (
+                      part
+                    ),
                   )}
                 </p>
               </div>
@@ -94,8 +120,14 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
           // 4. Parágrafo de texto corrido
           return (
             <p key={index} className="mb-6 text-gray-600">
-              {block.split("**").map((part, pIdx) => 
-                pIdx % 2 === 1 ? <strong key={pIdx} className="text-gray-900 font-bold">{part}</strong> : part
+              {block.split("**").map((part, pIdx) =>
+                pIdx % 2 === 1 ? (
+                  <strong key={pIdx} className="text-gray-900 font-bold">
+                    {part}
+                  </strong>
+                ) : (
+                  part
+                ),
               )}
             </p>
           );
@@ -112,7 +144,6 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
       ></div>
 
       <div className="relative w-full max-w-5xl h-full md:max-h-[95vh] bg-white rounded-none shadow-2xl overflow-y-auto flex flex-col animate-in fade-in zoom-in-95 duration-300">
-        
         {/* Botão de Fechar Brutalista */}
         <button
           onClick={onClose}
@@ -157,17 +188,23 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
 
           {/* Descrição tratada com a estética de revista */}
           <div className="max-w-none text-gray-700 leading-loose">
-            {renderEditorialCase(getText(project.fullDescription) || getText(project.description))}
+            {renderEditorialCase(
+              getText(project.fullDescription) || getText(project.description),
+            )}
           </div>
 
           {/* Protótipo Interativo */}
           {project.embedUrl && (
             <div className="mt-16 mb-16">
               <h3 className="text-sm font-bold text-gray-900 uppercase tracking-widest border-b border-gray-200 pb-4 mb-8">
-                {language === 'pt' ? 'Protótipo Interativo' : 'Interactive Prototype'}
+                {language === "pt"
+                  ? "Protótipo Interativo"
+                  : "Interactive Prototype"}
               </h3>
               <p className="text-gray-500 mb-6 text-sm">
-                {language === 'pt' ? 'Teste a interface real abaixo (pode levar alguns segundos para carregar):' : 'Test the real interface below (it may take a few seconds to load):'}
+                {language === "pt"
+                  ? "Teste a interface real abaixo (pode levar alguns segundos para carregar):"
+                  : "Test the real interface below (it may take a few seconds to load):"}
               </p>
               <div className="w-full h-[500px] md:h-[650px] bg-gray-50 border border-gray-200 rounded-none overflow-hidden">
                 <iframe
@@ -185,7 +222,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
           {project.gallery && project.gallery.length > 0 && (
             <div className="mt-20 space-y-16">
               <h3 className="text-sm font-bold text-gray-900 uppercase tracking-widest border-b border-gray-200 pb-4">
-                {language === 'pt' ? 'Galeria do Projeto' : 'Project Gallery'}
+                {language === "pt" ? "Galeria do Projeto" : "Project Gallery"}
               </h3>
               <div className="grid grid-cols-1 gap-20 mt-12">
                 {project.gallery.map((item, index) => (

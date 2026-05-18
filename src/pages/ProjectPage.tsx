@@ -1,208 +1,265 @@
-import { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { projectsData } from '../data/projects';
-import { ArrowLeft, ExternalLink } from 'lucide-react';
-import { Project } from '../types';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { ArrowLeft, Lock } from "lucide-react";
+import { projectsData } from "../data/projects";
+import { useLanguage } from "../contexts/LanguageContext";
+import { motion } from "framer-motion";
 
 const ProjectPage = () => {
-  const { id } = useParams<{ id: string }>();
-  const [project, setProject] = useState<Project | null>(null);
-  const [loading, setLoading] = useState(true);
-  const { language } = useLanguage(); // Puxa o idioma ativo!
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const { language } = useLanguage();
+
+  const project = projectsData.find((p) => p.id === id);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      const foundProject = projectsData.find(p => p.id === id);
-      setProject(foundProject || null);
-      setLoading(false);
-    }, 500);
-
-    return () => clearTimeout(timer);
+    window.scrollTo(0, 0);
   }, [id]);
-
-  const renderDescription = (text: string) => {
-    if (!text) return null;
-    return text.split("**").map((part, index) =>
-      index % 2 === 1 ? (
-        <strong key={index} className="text-gray-900 font-bold">
-          {part}
-        </strong>
-      ) : (
-        part
-      )
-    );
-  };
-
-  if (loading) {
-    return (
-      <div className="flex justify-center items-center min-h-screen">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-600"></div>
-      </div>
-    );
-  }
 
   if (!project) {
     return (
-      <div className="container mx-auto px-4 pt-32 pb-20 text-center">
-        <h1 className="text-3xl font-bold text-gray-900 mb-4">
-          {language === 'pt' ? 'Projeto não encontrado' : 'Project not found'}
-        </h1>
-        <p className="text-gray-600 mb-8">
-          {language === 'pt' ? 'Desculpe, o projeto que você procura não existe ou foi removido.' : 'Sorry, the project you are looking for does not exist or has been removed.'}
-        </p>
-        <Link 
-          to="/#projects"
-          className="inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors font-medium"
-        >
-          {language === 'pt' ? 'Voltar aos Projetos' : 'Back to Projects'}
-        </Link>
+      <div className="min-h-screen flex items-center justify-center bg-white text-gray-900 font-bold text-2xl tracking-tight">
+        Projeto não encontrado.
       </div>
     );
   }
 
-  return (
-    <div className="pt-24 pb-20">
-      {/* Hero Section do Projeto */}
-      <div className="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-16">
-        <div className="container mx-auto px-4">
-          <Link 
-            to="/#projects"
-            className="inline-flex items-center text-blue-300 hover:text-blue-200 mb-8 transition-colors"
-          >
-            <ArrowLeft size={16} className="mr-2" /> 
-            {language === 'pt' ? 'Voltar aos Projetos' : 'Back to Projects'}
-          </Link>
-          
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            {project.title[language]}
-          </h1>
-          
-          <div className="flex flex-wrap gap-2 mb-6">
-            {project.tags.map((tag, index) => (
-              <span 
+  // Função Auxiliar de Idioma
+  const getText = (field: any) => {
+    if (!field) return "";
+    return typeof field === "string" ? field : field[language] || field.pt || "";
+  };
+
+  // Renderizador Editorial Brutalista (O segredo do texto de revista)
+  const renderEditorialCase = (text: string) => {
+    if (!text) return null;
+
+    const blocks = text.split("\n").map(b => b.trim()).filter(Boolean);
+
+    return (
+      <div className="space-y-6 text-gray-600 text-[1.1rem] leading-relaxed">
+        {blocks.map((block, index) => {
+          // 1. Títulos de Seção
+          if (block.startsWith("**") && block.endsWith("**")) {
+            const titleText = block.replace(/\*\*/g, "");
+            const isImpactOrDiscarded = titleText.includes("IMPACTO") || titleText.includes("DESCARTAMOS") || titleText.includes("CONSEQUÊNCIAS") || titleText.includes("IMPACT") || titleText.includes("DISCARDED");
+            
+            return (
+              <h4 
                 key={index} 
-                className="inline-block px-3 py-1 bg-blue-900/50 text-blue-100 text-sm font-medium rounded-md"
+                className={`text-xs font-bold text-gray-900 uppercase tracking-widest block mb-6 ${
+                  isImpactOrDiscarded ? "pt-12 border-t border-gray-200 mt-16" : "mt-12"
+                }`}
+              >
+                {titleText}
+              </h4>
+            );
+          }
+
+          // 2. Itens de lista (Bullet points)
+          if (block.startsWith("•")) {
+            const cleanBlock = block.replace("•", "").trim();
+            const parts = cleanBlock.split("**");
+            return (
+              <div key={index} className="pl-6 relative before:content-[''] before:absolute before:left-1 before:top-2.5 before:w-1.5 before:h-1.5 before:bg-gray-900 mb-4">
+                {parts.map((part, pIdx) => 
+                  pIdx % 2 === 1 ? (
+                    <strong key={pIdx} className="text-gray-900 font-bold">{part}</strong>
+                  ) : (
+                    part
+                  )
+                )}
+              </div>
+            );
+          }
+
+          // 3. Blocos de destaque (Trade-offs e Impacto em caixas cinzentas)
+          const previousBlock = index > 0 ? blocks[index - 1] : "";
+          const isInsideHighlight = 
+            previousBlock.includes("DESCARTAMOS") || 
+            previousBlock.includes("POR QUÊ") || 
+            previousBlock.includes("IMPACTO") || 
+            previousBlock.includes("CONSEQUÊNCIAS") ||
+            previousBlock.includes("DISCARDED") ||
+            previousBlock.includes("WHY") ||
+            previousBlock.includes("IMPACT");
+
+          if (isInsideHighlight) {
+            return (
+              <div key={index} className="bg-gray-50 p-8 border-l-2 border-gray-900 my-8">
+                <p className="text-base text-gray-600 leading-relaxed m-0">
+                  {block.split("**").map((part, pIdx) => 
+                    pIdx % 2 === 1 ? <strong key={pIdx} className="text-gray-900 font-bold">{part}</strong> : part
+                  )}
+                </p>
+              </div>
+            );
+          }
+
+          // 4. Parágrafo corrido
+          return (
+            <p key={index} className="mb-6 text-gray-600">
+              {block.split("**").map((part, pIdx) => 
+                pIdx % 2 === 1 ? <strong key={pIdx} className="text-gray-900 font-bold">{part}</strong> : part
+              )}
+            </p>
+          );
+        })}
+      </div>
+    );
+  };
+
+  return (
+    <div className="bg-white min-h-screen pt-24">
+      
+      {/* CABEÇALHO DO PROJETO (Editorial, fundo claro, tipografia gigante) */}
+      <div className="bg-gray-50 border-b border-gray-200 py-16 md:py-24">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <button
+            onClick={() => navigate(-1)}
+            className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-gray-900 transition-colors mb-12"
+          >
+            <ArrowLeft size={16} strokeWidth={2} />
+            {language === 'pt' ? 'Voltar aos Projetos' : 'Back to Projects'}
+          </button>
+
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight leading-[1.1] mb-8 max-w-4xl"
+          >
+            {getText(project.title)}
+          </motion.h1>
+
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="flex flex-wrap gap-2 mb-8"
+          >
+            {project.tags.map((tag, index) => (
+              <span
+                key={index}
+                className="px-3 py-1.5 bg-gray-900 text-white text-xs font-bold uppercase tracking-wider rounded-none"
               >
                 {tag}
               </span>
             ))}
-          </div>
-          
-          <p className="text-lg text-gray-300 max-w-3xl">
-            {project.description[language]}
+          </motion.div>
+
+          <p className="text-lg md:text-xl text-gray-500 font-medium">
+            {getText(project.description)}
           </p>
         </div>
       </div>
-      
-      {/* Conteúdo do Projeto */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          <div className="lg:col-span-2">
-            
-            {/* TEXTO DO PROJETO AGORA COMEÇA DIRETO AQUI (Sem a imagem gigante) */}
-            <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed whitespace-pre-wrap">
-              {renderDescription(project.fullDescription[language])}
-              
-              {/* Protótipo Interativo */}
-              {project.embedUrl && (
-                <div className="mt-12 mb-12">
-                  <h3 className="text-2xl font-bold text-gray-900 border-b pb-4 mb-6">
-                    {language === 'pt' ? 'Protótipo Interativo' : 'Interactive Prototype'}
-                  </h3>
-                  <p className="text-gray-600 mb-4">
-                    {language === 'pt' ? 'Teste a interface real abaixo (pode levar alguns segundos para carregar):' : 'Test the real interface below (it may take a few seconds to load):'}
-                  </p>
-                  <div className="w-full h-[500px] md:h-[600px] bg-gray-50 border border-gray-200 rounded-xl overflow-hidden shadow-sm">
-                    <iframe
-                      style={{ border: "none" }}
-                      width="100%"
-                      height="100%"
-                      src={project.embedUrl}
-                      allowFullScreen
-                    ></iframe>
-                  </div>
-                </div>
-              )}
 
-              {/* Galeria */}
-              {project.gallery && project.gallery.length > 0 && (
-                <div className="mt-16 space-y-16">
-                  <h3 className="text-2xl font-bold text-gray-900 border-b pb-4">
-                    {language === 'pt' ? 'Galeria do Projeto' : 'Project Gallery'}
-                  </h3>
-                  <div className="grid grid-cols-1 gap-16 not-prose">
-                    {project.gallery.map((item: any, index: number) => (
-                      <div key={index} className="space-y-4 flex flex-col items-center">
-                        <img 
-                          src={item.url} 
-                          alt={item.title} 
-                          className="w-full h-auto rounded-xl shadow-lg border border-gray-100"
-                        />
-                        <p className="w-full text-center text-gray-600 font-medium text-lg italic border-l-4 border-blue-600 pl-4 py-1 bg-gray-50 rounded-r">
-                          {item.title}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
+      {/* CONTEÚDO PRINCIPAL (Layout Assimétrico) */}
+      <div className="container mx-auto px-4 max-w-6xl py-16 md:py-24">
+        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
           
-          {/* Sidebar Lateral */}
-          <div>
-            <div className="bg-gray-50 rounded-lg p-6 shadow-md sticky top-24 border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-6">
-                {language === 'pt' ? 'Detalhes do Projeto' : 'Project Details'}
-              </h3>
-              
-              <div className="space-y-5">
-                <div>
-                  <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">
-                    {language === 'pt' ? 'CLIENTE' : 'CLIENT'}
-                  </h4>
-                  <p className="text-gray-800 font-medium">{(project as any).client || (language === 'pt' ? 'Projeto Pessoal' : 'Personal Project')}</p>
-                </div>
-                
-                <div>
-                  <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">
-                    {language === 'pt' ? 'ATUAÇÃO' : 'ROLE'}
-                  </h4>
-                  <p className="text-gray-800 font-medium">{(project as any).role || 'UX/UI Designer'}</p>
-                </div>
-                
-                <div>
-                  <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">
-                    {language === 'pt' ? 'TECNOLOGIAS' : 'TECHNOLOGIES'}
-                  </h4>
-                  <div className="flex flex-wrap gap-2 mt-2">
-                    {project.technologies?.map((tech, index) => (
-                      <span 
-                        key={index} 
-                        className="inline-block px-3 py-1 bg-white border border-gray-200 text-gray-700 text-xs font-semibold rounded-md shadow-sm"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
+          {/* COLUNA ESQUERDA: Texto do Case Study */}
+          <div className="lg:w-2/3">
+            {project.status === "coming-soon" ? (
+              <div className="bg-gray-50 p-12 border border-gray-200 text-center flex flex-col items-center">
+                <Lock className="text-gray-300 mb-4" size={48} strokeWidth={1} />
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Em fase de documentação</h3>
+                <p className="text-gray-500">O case completo estará disponível em breve.</p>
+              </div>
+            ) : (
+              <div className="prose-editorial">
+                {renderEditorialCase(getText(project.fullDescription))}
+              </div>
+            )}
+
+            {/* Protótipo Interativo */}
+            {project.embedUrl && (
+              <div className="mt-24">
+                <h3 className="text-xs font-bold text-gray-900 uppercase tracking-widest border-b border-gray-200 pb-4 mb-8">
+                  {language === 'pt' ? 'Protótipo Interativo' : 'Interactive Prototype'}
+                </h3>
+                <div className="w-full h-[500px] md:h-[650px] bg-gray-50 border border-gray-200 rounded-none overflow-hidden p-2">
+                  <iframe
+                    style={{ border: "none" }}
+                    width="100%"
+                    height="100%"
+                    src={project.embedUrl}
+                    allowFullScreen
+                    title="Protótipo"
+                  ></iframe>
                 </div>
               </div>
+            )}
+
+            {/* Galeria de Imagens */}
+            {project.gallery && project.gallery.length > 0 && (
+              <div className="mt-24 space-y-16">
+                <h3 className="text-xs font-bold text-gray-900 uppercase tracking-widest border-b border-gray-200 pb-4">
+                  {language === 'pt' ? 'Galeria do Projeto' : 'Project Gallery'}
+                </h3>
+                <div className="grid grid-cols-1 gap-16 mt-12">
+                  {project.gallery.map((item, index) => (
+                    <div key={index} className="space-y-4">
+                      <div className="border border-gray-100 bg-gray-50 p-2">
+                        <img
+                          src={item.url}
+                          alt={item.title}
+                          className="w-full h-auto object-contain"
+                        />
+                      </div>
+                      <p className="text-gray-500 text-xs font-bold uppercase tracking-widest border-l-2 border-gray-900 pl-4 py-1">
+                        {item.title}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* COLUNA DIREITA: Detalhes do Projeto (Sidebar Sticky Brutalista) */}
+          <div className="lg:w-1/3 lg:sticky lg:top-32 w-full border-t lg:border-t-0 lg:border-l border-gray-200 pt-12 lg:pt-0 lg:pl-12">
+            <h3 className="text-xs font-bold text-gray-900 uppercase tracking-widest mb-10">
+              {language === 'pt' ? 'Ficha Técnica' : 'Project Details'}
+            </h3>
+            
+            <div className="space-y-10">
+              <div>
+                <span className="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">
+                  {language === 'pt' ? 'Cliente' : 'Client'}
+                </span>
+                <span className="text-lg font-medium text-gray-900">
+                  {project.client}
+                </span>
+              </div>
               
-              <div className="mt-8 space-y-3">
-                {project.liveUrl && project.liveUrl !== '#' && (
-                  <a 
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors font-medium shadow-md"
-                  >
-                    {language === 'pt' ? 'Acessar Projeto' : 'View Live Project'} <ExternalLink size={18} className="ml-2" />
-                  </a>
-                )}
+              <div>
+                <span className="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">
+                  {language === 'pt' ? 'Atuação' : 'Role'}
+                </span>
+                <span className="text-lg font-medium text-gray-900">
+                  {project.role}
+                </span>
+              </div>
+
+              <div>
+                <span className="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">
+                  {language === 'pt' ? 'Tecnologias' : 'Stack & Tools'}
+                </span>
+                <div className="flex flex-wrap gap-2">
+                  {(project.technologies || []).map((tech, index) => (
+                    <span
+                      key={index}
+                      className="px-3 py-1.5 border border-gray-200 text-gray-600 font-bold text-xs uppercase tracking-wider rounded-none bg-white"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </div>
