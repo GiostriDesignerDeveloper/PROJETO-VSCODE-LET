@@ -5,20 +5,19 @@ export interface TranslatedText {
 
 export interface Project {
   id: string;
-  title: TranslatedText;
-  description: TranslatedText;
-  fullDescription: TranslatedText;
-  client?: string;
-  role?: string;
-  status?: string;
+  title: { pt: string; en: string };
+  status: "active" | "coming-soon";
+  embedUrl?: string;
+  description: { pt: string; en: string };
+  fullDescription: { pt: string; en: string };
   imageUrl: string;
-  embedUrl?: string; // Para o protótipo interativo do Figma
-  liveUrl?: string;
   category: string;
   tags: string[];
-  technologies?: string[];
-  gallery?: {
-    url: string;
-    title: string;
-  }[];
+  technologies: string[];
+  methods?: string[];      // Adicione esta linha
+  principles?: string[];   // Adicione esta linha
+  client: string;
+  role: string;
+  liveUrl: string;
+  gallery?: { url: string; title: string }[];
 }

@@ -7,104 +7,129 @@ export const projectsData: Project[] = [
   {
     id: "plataforma-b2b-compras",
     title: {
-      pt: "Redução de Carga Cognitiva: Como simplificamos decisões de alto impacto financeiro sem sacrificar a governança",
-      en: "Cognitive Load Reduction: How we reduced friction in high financial impact decisions without sacrificing governance",
+      pt: "Transformando um processo de compras complexo em decisões mais rápidas e confiáveis",
+      en: "Transforming a complex purchasing process into faster and more reliable decisions",
     },
     status: "active",
     embedUrl: "",
     description: {
-      pt: "Plataforma B2B de Compras e Cotações",
-      en: "B2B Purchasing and Quotation Platform",
+      pt: "Plataforma B2B criada para simplificar negociações entre compradores e fornecedores, reduzindo esforço operacional.",
+      en: "B2B platform designed to simplify negotiations between buyers and suppliers, reducing operational effort.",
     },
     fullDescription: {
       pt: `
-**A TENSÃO DE NEGÓCIO**
-O ecossistema de compras corporativas operava com alta fricção. A falta de uma plataforma centralizadora forçava os compradores a analisar dezenas de variáveis financeiras em sistemas fragmentados. O impacto não era apenas perda de tempo (Time-on-Task elevado), mas a alta probabilidade de erro humano em negociações milionárias e falhas na governança administrativa. 
+**AVISO**
 
-**LÓGICA COMPORTAMENTAL E DISCOVERY**
-A abordagem de **Systems thinking** e o **Pair Design** foram cruciais não apenas para desenhar telas, mas para destrinchar os **multi-agentes de fluxo**. Mapeamos as jornadas exclusivas de Compradores, Fornecedores e Administradores, justificando o comportamento de cada permissão no sistema para garantir que os interesses de auditoria não travassem a usabilidade da operação.
+**RESUMO DO PROJETO**
+• **Projeto:** Plataforma B2B de compras
+• **Desafio:** Simplificar decisões complexas entre compradores e fornecedores
+• **Minha atuação:** UX/UI + estruturação de fluxos e organização da experiência
+• **Impacto:** Mais clareza operacional e melhor comparação entre propostas
 
-**DECISÕES DE INTERFACE E ARQUITETURA**
-• **Combate à Carga Cognitiva Extrínseca:** A comparação de propostas exigia que os usuários memorizassem valores trocando de telas. Aplicamos a heurística de "Reconhecimento em vez de lembrança" criando grids densos de comparação lado a lado, transferindo o esforço da memória de trabalho do usuário para a interface.
-• **Governança por design:** Implementamos automações para cálculos e preenchimentos, mas mantivemos o controle de aprovações ("automação controlada") estritamente humano, exigindo confirmações deliberadas para proteger a governança financeira da operação.
+[IMG:1]
 
-**IA GENERATIVA NO FLUXO DE TRABALHO**
-Utilizei IA generativa como suporte à exploração estratégica de soluções, acelerando ciclos de ideação e validação sem comprometer a consistência da experiência e das decisões de produto.
+**TIME DO PROJETO**
+Projeto desenvolvido em parceria com outra product designer em um contexto colaborativo.
+Minha atuação esteve concentrada na estruturação dos fluxos críticos, organização das informações e simplificação da jornada de compra.
 
-**O QUE CONSIDERAMOS E DESCARTAMOS**
-• **Descartado:** Automação total da escolha do fornecedor baseada apenas no menor preço.
-• **Por quê:** O menor preço nem sempre atende a prazos urgentes corporativos. Optamos por fornecer a melhor visualização de dados para que o comprador contextualize a decisão e mantenha o poder de negociação.
+**O QUE ERA O PRODUTO**
+[IMG_SIDE:4]
+A plataforma conectava compradores e fornecedores para realizar cotações e negociações em larga escala.
+O sistema precisava lidar com regras específicas de compra, múltiplos fornecedores, regiões, histórico de negociação e diferentes perfis de usuário ao mesmo tempo.
 
-**CONSEQUÊNCIAS E IMPACTO**
-A plataforma elevou a maturidade do processo corporativo. A redução do esforço cognitivo na análise de dados acelerou o fechamento de cotações com maior assertividade de custo-benefício, garantindo 100% de rastreabilidade para auditorias internas.
+**Complexidade do desafio:**
+• Diferentes perfis de usuários
+• Regras operacionais específicas
+• Comparação entre múltiplos fornecedores
+• Integração com sistemas externos
+• Histórico de negociações
+• Necessidade de rastreabilidade
+
+**ANTES DE DESENHAR, ENTENDEMOS A OPERAÇÃO**
+Antes de propor soluções, foi necessário compreender como a operação realmente funcionava. Começamos analisando documentações do negócio, fluxos operacionais e dependências do sistema para entender restrições, regras do processo e pontos de fricção da experiência.
+
+**O que analisamos:**
+• Regras do processo
+• Fluxos operacionais
+• Dependências do sistema
+• Necessidades dos usuários
+
+**PROBLEMA**
+Os compradores precisavam analisar muitas informações ao mesmo tempo para tomar decisões importantes. Preço, prazo, disponibilidade e histórico estavam distribuídos em diferentes partes do processo, tornando a comparação lenta, cansativa e pouco clara. Isso gerava:
+• Excesso de esforço mental
+• Dificuldade de comparação
+• Retrabalho operacional
+• Risco de decisões inconsistentes
+
+**DECISÕES DE PRODUTO**
+[IMG:1]
+• **Centralizamos informações críticas:** Reunimos dados importantes no mesmo contexto para reduzir esforço durante comparações.
+• **Simplificamos a comparação entre fornecedores:** Criamos uma visualização mais clara para facilitar análise e tomada de decisão.
+• **Priorizamos informações importantes:** Organizamos visualmente os dados para reduzir distrações e tornar decisões mais rápidas.
+
+**Princípios aplicados:** Redução de esforço mental • Comparação facilitada • Clareza das informações • Prevenção de erros
+
+**DECISÕES DIFÍCEIS**
+[IMG_SIDE:0]
+Nem sempre o menor preço representava a melhor escolha. Em alguns cenários, prazo de entrega e disponibilidade tinham maior impacto operacional do que custo. O desafio foi equilibrar rapidez na decisão sem esconder informações importantes do negócio.
+
+**OUTROS FLUXOS DO PRODUTO**
+[IMG_SIDE:2]
+**Cadastro de fornecedores:** Estruturação do onboarding e organização das informações essenciais.
+
+[IMG_SIDE:3]
+**Gestão de preços:** Organização de tabelas comerciais, regiões e regras operacionais.
+
+**RESULTADO**
+A experiência trouxe mais clareza para comparação entre fornecedores, reduzindo atritos do processo e apoiando decisões operacionais complexas. Além disso, o produto ficou mais organizado e rastreável, facilitando o acompanhamento das negociações e reduzindo esforço operacional no dia a dia.
+
+[AI_NOTE] **IA generativa no fluxo de trabalho:** Utilizada como apoio à exploração de possibilidades de solução, refinamento de ideias e aceleração de ciclos de ideação, sem substituir decisões de experiência e produto.
+
+**APRENDIZADO**
+> “Em sistemas complexos, o papel do design nem sempre é simplificar tudo — mas tornar a complexidade compreensível.”
       `,
-      en: `
-**THE BUSINESS TENSION**
-The corporate purchasing ecosystem operated with high friction. The lack of a centralizing platform forced buyers to analyze dozens of financial variables across fragmented systems. The impact was not just lost time (high Time-on-Task), but the high probability of human error in million-dollar negotiations and failures in administrative governance.
-
-**BEHAVIORAL LOGIC AND DISCOVERY**
-The **Systems thinking** and **Pair Design** approaches were crucial not just to design screens, but to untangle **multi-actor flows**. We mapped the exclusive journeys of Buyers, Suppliers, and Administrators, behaviorally justifying each system permission to ensure audit interests wouldn't hinder operational usability.
-
-**INTERFACE AND ARCHITECTURE DECISIONS**
-• **Combating Extrinsic Cognitive Load:** Proposal comparison required users to memorize values while switching screens. We applied the "Recognition rather than recall" heuristic, creating dense side-by-side comparison grids, shifting the effort from the user's working memory to the interface (Information architecture).
-• **Governance by design:** We implemented automation for calculations and data entry, but kept approval controls ("controlled automation") strictly human, requiring deliberate confirmations to protect the financial governance of the operation.
-
-**GENERATIVE AI IN THE WORKFLOW**
-I used generative AI to support the strategic exploration of solutions, accelerating ideation and validation cycles without compromising the consistency of the experience and product decisions.
-
-**WHAT WE CONSIDERED AND DISCARDED**
-• **Discarded:** Full automation of supplier choice based solely on the lowest price.
-• **Why:** The lowest price doesn't always meet urgent corporate deadlines. We opted to provide the best data visualization so the buyer could contextualize the decision and retain negotiation power.
-
-**CONSEQUENCES AND IMPACT**
-The platform elevated the maturity of the corporate process. Reducing cognitive effort in data analysis accelerated the closing of quotes with greater cost-benefit assertiveness, ensuring 100% traceability for internal audits.
-      `,
+      // (Mantenha a versão em inglês similar)
     },
     imageUrl: "/cotacao.png",
     category: "UX/UI Design",
     tags: [
-      "Systems thinking",
-      "Information architecture",
-      "Cognitive load",
-      "Multi-actor flows",
-      "Governança por design",
+      "Sistemas complexos",
+      "Tomada de decisão",
+      "Experiência B2B",
+      "Simplificação de processos",
+      "Organização da informação",
+      "Fluxos operacionais",
+      "Redução de atritos",
+      "Rastreabilidade",
     ],
-    technologies: [
-      "Figma",
-      "Auto Layout",
-      "Usability Testing",
-      "Lovable",
-      "Google Stitch",
+    technologies: ["Figma", "Miro", "IA Generativa"],
+    methods: [
+      "Leitura e análise de documentação",
+      "Mapeamento de fluxos",
+      "Análise de chamados de suporte",
+      "Organização de regras do processo",
+      "Estruturação de jornadas",
+    ],
+    principles: [
+      "Redução de esforço mental",
+      "Comparação facilitada",
+      "Prevenção de erros",
+      "Clareza das informações",
     ],
     client: "Confidencial",
-    role: "UX/UI Designer",
+    role: "Product Designer",
     liveUrl: "#",
     gallery: [
-      {
-        url: "/negociacao.png",
-        title: "Fluxo de Negociação: Gestão de status e termos entre partes.",
-      },
+      { url: "/negociacao.png", title: "Fluxo de Negociação" },
       {
         url: "/cadastro-precos-fornecedores.png",
-        title:
-          "Comparação de Propostas: Base de dados estruturada para análise de preços e fornecedores.",
+        title: "Comparação de Propostas",
       },
-      {
-        url: "/cadastro-fornecedor.png",
-        title: "Cadastro de Fornecedor: Estruturação de dados.",
-      },
-      {
-        url: "/perfil-edicao.png",
-        title:
-          "Edição de Perfil: Mapeamento de perfis e gestão de dados do usuário.",
-      },
-      {
-        url: "/login.png",
-        title: "Portal de Acesso: Entrada do ecossistema B2B.",
-      },
+      { url: "/cadastro-fornecedor.png", title: "Cadastro de Fornecedor" },
+      { url: "/perfil-edicao.png", title: "Gestão de Preços" },
+      { url: "/login.png", title: "Portal de Acesso" },
     ],
   },
-
   {
     id: "healthdash-analise-usabilidade",
     title: {
@@ -117,42 +142,51 @@ The platform elevated the maturity of the corporate process. Reducing cognitive 
       pt: "HealthDash: Análise de Usabilidade Hospitalar",
       en: "HealthDash: Hospital Usability Analysis",
     },
+
     fullDescription: {
       pt: `
-**A TENSÃO DE NEGÓCIO**
-Em um sistema de gestão nutricional hospitalar, usabilidade ruim não é apenas um inconveniente é um risco clínico. Profissionais de saúde utilizavam a plataforma em tablets, muitas vezes se deslocando pelos corredores ou segurando o dispositivo com apenas uma mão. O layout "quebrava" frequentemente, ocultando dados vitais e gerando um ambiente altamente propenso a erros de prescrição dietética.
+**CONTEXTO**
+Melhoria de um sistema usado para gerenciar a nutrição de pacientes. O objetivo era adaptar a tela do tablet, usada pela equipe médica, para a realidade corrida e física dos corredores do hospital.
 
-**LÓGICA COMPORTAMENTAL E CONTEXTO**
-O design foi tratado estritamente como design orientado a riscos. O contexto físico (contexto de uso) guiou a minha avaliação heurística. Observamos que modais flutuantes cobrindo a tela inteira não eram apenas "feios"; quando o teclado virtual subia, ocultava o botão principal de salvar a dieta. Isso obrigava a nutricionista a fechar o teclado para salvar a prescrição, gerando falhas operacionais críticas na rotina.
+**PROBLEMA**
+As janelas sobrepostas da tela escondiam informações importantes enquanto os profissionais andavam pelo hospital. A tela travada dificultava o uso e criava um ambiente perigoso, com alto risco de a equipe receitar a dieta errada para o paciente.
 
-**DECISÕES DE INTERFACE E ERGONOMIA**
-• **Prevenção de Erros (Error prevention):** Ampliamos as áreas de toque para o padrão de 44x44px. Em um escritório calmo, isso é apenas seguir um manual de UI, mas no corredor de um hospital, onde o profissional digita andando e segurando o tablet com uma mão, essa adaptação ergonômica previne cliques acidentais e garante que a dieta não seja salva no prontuário do paciente errado.
-• **Ergonomia e Fluxo Linear:** Substituímos modais obstrutivos por telas inteiras, garantindo um fluxo sequencial previsível que acomoda perfeitamente teclados virtuais, eliminando as quebras de responsividade.
+**SOLUÇÃO**
+• **Botões maiores:** Aumentamos o tamanho dos botões para evitar cliques acidentais quando o profissional estivesse andando.
+• **Telas limpas e diretas:** Trocamos as janelas pequenas (pop-ups) por telas inteiras, para que o teclado do tablet não escondesse o botão de salvar.
+• **Informação dividida:** Separamos os dados dos pacientes por páginas, acabando com a necessidade de rolar a tela até o final e se perder.
 
-**O QUE CONSIDERAMOS E DESCARTAMOS**
-• **Descartado:** Scroll infinito para concentrar todos os dados médicos em uma única visão.
-• **Por quê:** O scroll infinito aumentava a incidência de toques acidentais em elementos cruciais durante a movimentação da nutricionista pelo hospital. Optamos pela paginação por blocos de dados.
+**PROCESSO DE TRABALHO**
+Fui até o hospital observar o uso real do sistema por [Inserir quantidade] nutricionistas. O foco da pesquisa foi entender os riscos físicos do uso do aplicativo.
+Os principais aprendizados foram:
+• O teclado nativo do tablet subia e escondia o botão de salvar a dieta, atrasando o trabalho.
+• As nutricionistas seguravam o tablet com uma mão e digitavam com a outra enquanto andavam, exigindo botões muito fáceis de acertar.
+• Rolar a tela longa para baixo fazia as profissionais clicarem em botões errados sem querer.
 
-**CONSEQUÊNCIAS E IMPACTO**
-A eliminação de barreiras arquitetônicas reduziu drasticamente a incidência de "misclicks" e o tempo por tarefa. O redesign provou que adequar a plataforma ao modelo mental e físico do usuário não é apenas estético, é uma camada vital de segurança de dados na saúde.
+**RESULTADO**
+Diminuímos drasticamente os cliques errados e o tempo gasto para receitar dietas. A mudança garantiu a segurança dos dados dos pacientes e provou que uma tela bem pensada ajuda a evitar erros de saúde graves.
       `,
       en: `
-**THE BUSINESS TENSION**
-In a hospital nutritional management system, poor usability is not just an inconvenience—it's a clinical risk. Healthcare professionals used the platform on tablets, often moving through corridors or holding the device with just one hand. The layout frequently broke, hiding vital data and creating an environment highly prone to dietary prescription errors.
+**CONTEXT**
+Improvement of a system used to manage patient nutrition. The goal was to adapt the tablet screen, used by the medical team, to the fast-paced and physical reality of hospital corridors.
 
-**THE BEHAVIORAL LOGIC AND CONTEXT**
-The design was treated strictly as *Risk-driven design*. The physical context (*Context of use*) guided our *Heuristic evaluation*. We observed that floating modals covering the entire screen were not just "ugly"; when the virtual keyboard popped up, it hid the main "save diet" button. This forced the nutritionist to close the keyboard to save the prescription, generating critical operational failures in the routine.
+**PROBLEM**
+Overlapping screen windows hid important information while professionals walked through the hospital. The freezing screens made it difficult to use and created a dangerous environment, with a high risk of the team prescribing the wrong diet for the patient.
 
-**INTERFACE AND ERGONOMICS DECISIONS**
-• **Error prevention:** We expanded touch areas to the 44x44px standard. In a quiet office, this is just following a UI manual; but in a hospital corridor, where the professional types while walking and holding the tablet with one hand, this ergonomic adaptation prevents accidental clicks and ensures the diet is not saved in the wrong patient's file.
-• **Ergonomics and Linear Flow:** We replaced obstructive modals with full screens, ensuring a predictable sequential flow that perfectly accommodates virtual keyboards, eliminating responsive breaks.
+**SOLUTION**
+• **Larger buttons:** We increased button sizes to prevent accidental clicks when the professional was walking.
+• **Clean and direct screens:** We replaced small windows (pop-ups) with full screens, so the tablet keyboard wouldn't hide the save button.
+• **Divided information:** We separated patient data by pages, eliminating the need to scroll to the bottom and get lost.
 
-**WHAT WE CONSIDERED AND DISCARDED**
-• **Discarded:** Infinite scroll to concentrate all medical data in a single view.
-• **Why:** Infinite scrolling increased the incidence of accidental touches on crucial elements while the nutritionist moved through the hospital. We opted for data block pagination.
+**WORKING PROCESS**
+I went to the hospital to observe the real use of the system by [Insert quantity] nutritionists. The research focused on understanding the physical risks of using the application.
+The main learnings were:
+• The native tablet keyboard popped up and hid the save diet button, delaying work.
+• Nutritionists held the tablet with one hand and typed with the other while walking, requiring very easy-to-hit buttons.
+• Scrolling down a long screen made professionals accidentally click the wrong buttons.
 
-**CONSEQUENCES AND IMPACT**
-The elimination of architectural barriers drastically reduced the incidence of "misclicks" and time-on-task. The redesign proved that adapting the platform to the user's mental and physical model is not just aesthetic, it is a vital layer of healthcare data security.
+**RESULT**
+We drastically reduced wrong clicks and the time spent prescribing diets. The change ensured the security of patient data and proved that a well-designed screen helps prevent serious healthcare errors.
       `,
     },
     imageUrl: "/healthdash-capa.png",
@@ -184,42 +218,46 @@ The elimination of architectural barriers drastically reduced the incidence of "
     },
     fullDescription: {
       pt: `
-**A TENSÃO DE NEGÓCIO**
-Os operadores financeiros enfrentavam um fenômeno clássico de "cegueira operacional". Ao conciliar grandes lotes de dados financeiros, o sistema legado não oferecia retornos visuais sobre o processamento. Na dúvida, usuários recarregavam páginas e geravam reprocessamentos acidentais. O problema de negócio explodia em volume de chamados de suporte e risco financeiro de conciliação dupla. A barreira técnica: alterar a estrutura core do Design System estava fora de cogitação devido a prazos rigorosos da engenharia.
+**CONTEXTO**
+Necessidade crítica de mitigar riscos operacionais no sistema legado de Gestão de Conciliação Financeira. O projeto exigia intervenção rápida na interface para operadores financeiros, operando sob uma restrição técnica severa de engenharia que nos proibia de refatorar o Design System core da tabela.
 
-**LÓGICA COMPORTAMENTAL E ESTRATÉGIA**
-Adotei uma abordagem de "**lean UX**" focada em "**delivery under constraint**". Restrições técnicas não são obstáculos de design são o contexto em que o design acontece. O foco mudou de "como criar a interface mais bonita" para "qual é a menor intervenção visual capaz de mitigar a insegurança do usuário e o risco de erro?".
+**PROBLEMA**
+Os operadores sofriam de "cegueira operacional", pois o sistema não fornecia retorno visual durante o processamento de grandes lotes. A incerteza gerava recarregamentos de página que resultavam em duplo processamento financeiro e em uma enxurrada de chamados para o time de suporte.
 
-**DECISÕES DE INTERFACE (DECISION LOG)**
-• **System Visibility:** Implementei barras de progresso contínuas durante os uploads. Nomeei e eliminei a "cegueira operacional" dando previsibilidade sistêmica ao cérebro do usuário. A revisão minuciosa permitiu justificar à engenharia exatamente onde o status precisava ser inserido para funcionar.
-• **Error Prevention:** Inserimos modais de confirmação (fricção deliberada) momentos antes de ações financeiras irreversíveis, quebrando o automatismo motor do usuário.
+**SOLUÇÃO**
+• **Visibilidade de Status:** Injeção de barras de progresso contínuas e status em texto apenas nas camadas sobrepostas (badges nativos do legado) para não atrasar as releases.
+• **Prevenção de Erros (Fricção):** Inserção de modais de confirmação momentos antes de ações financeiras irreversíveis.
 
-**O QUE CONSIDERAMOS E DESCARTAMOS**
-• **O Ideal:** Reescrever do zero a arquitetura da tabela de conciliações com novos componentes interativos.
-• **O Possível:** Adicionar status via texto nas tabelas legadas.
-• **O que escolhemos:** Intervir apenas nas camadas sobrepostas (modais nativos e Badges), garantindo impacto comportamental imediato sem atrasar os "**releases**" nem exigir refatoração do UI Kit atual.
+**PROCESSO DE TRABALHO**
+Adotamos a metodologia Lean UX para entregar valor real focando no "Delivery under constraint". A pesquisa focou no mapeamento do fluxo de erro com [Inserir métrica de tickets ou nº de analistas ouvidos].
+Os principais insights foram:
+• A refatoração completa com novos componentes interativos era tecnicamente inviável e atrasaria o go-to-market.
+• A insegurança visual gerava um modelo mental de "clicar novamente para garantir", o que causava o erro primário do sistema.
+• A fricção cognitiva deliberada em botões de exclusão quebra o automatismo motor do usuário e salva a operação financeira.
 
-**CONSEQUÊNCIAS E IMPACTO**
-A intervenção enxuta solucionou o vácuo de informação. A consequência de negócio foi direta: os tickets de suporte exigindo "status do sistema" caíram drasticamente em 75% e execuções financeiras acidentais foram zeradas, provando o valor das "**decisões**" alinhadas ao desenvolvimento.
+**RESULTADO**
+Intervenção visual enxuta que solucionou o vácuo de informação. Houve uma queda vertiginosa de 75% nos tickets de suporte e zeramos a ocorrência de execuções financeiras acidentais, provando o alto impacto de decisões alinhadas à capacidade de desenvolvimento.
       `,
       en: `
-**THE BUSINESS TENSION**
-Financial operators faced a classic phenomenon of "operational blindness". When reconciling large batches of financial data, the legacy system offered no visual feedback on processing. In doubt, users reloaded pages and generated accidental reprocessing. The business problem exploded in volume of support tickets and financial risk of double reconciliation. The technical barrier: altering the core structure of the Design System was out of the question due to strict engineering deadlines.
+**CONTEXT**
+Critical need to mitigate operational risks in the legacy Financial Reconciliation Management system. The project required rapid interface intervention for financial operators, operating under a severe technical engineering constraint that forbade us from refactoring the table's core Design System.
 
-**BEHAVIORAL LOGIC AND STRATEGY**
-We adopted a *Lean UX* approach focused on **Delivery under constraint**. Technical constraints are not design obstacles—they are the context in which design happens. The focus shifted from "how to create the most beautiful interface" to "what is the smallest visual intervention capable of mitigating user insecurity and risk of error?".
+**PROBLEM**
+Operators suffered from "operational blindness" because the system provided no visual feedback when processing large batches. The uncertainty led to page reloads that resulted in double financial processing and a flood of calls to the support team.
 
-**INTERFACE DECISIONS (DECISION LOG)**
-• **System Visibility:** We implemented continuous progress bars during uploads. We named and eliminated "operational blindness" by giving systemic predictability to the user's brain. Thorough review allowed us to justify to engineering exactly where the status needed to be inserted to work.
-• **Error Prevention:** We inserted confirmation modals (**deliberate friction**) moments before irreversible financial actions, breaking the user's motor automatism.
+**SOLUTION**
+• **Status Visibility:** Injection of continuous progress bars and text status only on overlapping layers (legacy native badges) to avoid delaying releases.
+• **Error Prevention (Friction):** Insertion of confirmation modals moments before irreversible financial actions.
 
-**WHAT WE CONSIDERED AND DISCARDED**
-• **The Ideal:** Rewrite from scratch the architecture of the reconciliation table with new interactive components.
-• **The Possible:** Add text status to legacy tables.
-• **What we chose:** Intervene only in the overlapping layers (Native Modals and Badges), ensuring immediate behavioral impact without delaying releases or requiring refactoring of the current UI Kit.
+**WORKING PROCESS**
+We adopted the Lean UX methodology to deliver real value focusing on "Delivery under constraint". Research focused on mapping the error flow with [Insert ticket metric or number of analysts heard].
+The main insights were:
+• Complete refactoring with new interactive components was technically unfeasible and would delay go-to-market.
+• Visual insecurity generated a mental model of "clicking again to make sure", which caused the primary system error.
+• Deliberate cognitive friction on deletion buttons breaks the user's motor automatism and saves the financial operation.
 
-**CONSEQUENCES AND IMPACT**
-The lean intervention solved the information vacuum. The business consequence was direct: support tickets demanding "system status" dropped drastically, and accidental financial executions were zeroed out, proving the value of *decisions* aligned with development.
+**RESULT**
+Lean visual intervention that solved the information vacuum. There was a staggering 75% drop in support tickets and we zeroed out the occurrence of accidental financial executions, proving the high impact of decisions aligned with development capabilities.
       `,
     },
     imageUrl: "/smartsettlement-capa.png",
@@ -269,40 +307,46 @@ The lean intervention solved the information vacuum. The business consequence wa
     },
     fullDescription: {
       pt: `
-**A TENSÃO DE NEGÓCIO**
-Analistas de compliance e PLD (Prevenção à Lavagem de Dinheiro) processam informações cruciais e ambíguas sob pressão de tempo. O custo de um falso negativo como autorizar uma holding fraudulenta ou um Beneficiário Final (UBO) ilícito tem um impacto regulatório e financeiro altíssimo. A tensão estava na fadiga de decisão gerado por ferramentas fragmentadas que exibiam dados crus, deixando a correlação cognitiva a cargo do analista.
+**CONTEXTO**
+Construção e evolução arquitetural de uma Plataforma de Inteligência em Compliance e PLD (Prevenção à Lavagem de Dinheiro). O objetivo de produto era capacitar analistas a aprovarem ou rejeitarem entidades jurídicas com alta precisão sob forte pressão regulatória.
 
-**LÓGICA COMPORTAMENTAL E ARQUITETURA**
-A etapa de Discovery e imersão junto aos analistas (discovery to architecture) não visou apenas "entender dores", mas alterar ativamente a hierarquia da informação. O problema central diagnosticado não era a ausência de dados, mas a enorme carga cognitiva intrínseca de interpretá-los.
+**PROBLEMA**
+Ferramentas fragmentadas exibiam dados textuais crus, obrigando o analista a fazer correlações cruzadas complexas de cabeça. O resultado prático era uma alta fadiga de decisão, elevando o risco e o custo milionário de se aprovar um falso negativo (Beneficiário Final ilícito).
 
-**DECISÕES DE INTERFACE E PREVENÇÃO DE RISCO**
-• **Redução de Esforço Cognitivo:** Transformamos dados de vínculos societários, que antes habitavam densas tabelas textuais lineares, em uma arquitetura de organograma visual (UBO). A hierarquia visual resolve o "quem é dono do quê" em segundos.
-• **Risk-driven UX:** Enquadramos as sinalizações de alerta ("red flags") e PEPs não como meras "features", mas como design deliberado para contexto de alto risco. O Dashboard destaca anomalias primárias forçando a atenção antes que a fadiga mental se instale, operando como prevenção direta de erros tipo 2 (falsos negativos).
+**SOLUÇÃO**
+• **Organograma Visual Societário:** Transformação das tabelas lineares de dados de empresas em fluxos visuais hierárquicos, facilitando a identificação imediata do dono (UBO).
+• **Dashboards de Anomalias:** Criação de agrupamentos visuais evidenciando "Red Flags" e listas PEP logo no topo da interface.
 
-**O QUE CONSIDERAMOS E DESCARTAMOS**
-• **Descartado:** Uma IA que aprovasse ou rejeitasse entidades automaticamente.
-• **Por quê:** O compliance exige julgamento humano crítico perante ambiguidades legais. Optamos por usar a tecnologia apenas para o agrupamento de evidências visuais (information hierarchy), garantindo a velocidade da auditoria humana sem remover o seu protagonismo.
+**PROCESSO DE TRABALHO**
+Fizemos um Discovery imersivo e mapeamento de fluxo junto a [Inserir nº de analistas ou sessões de shadow]. O processo focou fortemente em Arquitetura da Informação para alterar a exibição de dados.
+Os insights extraídos da pesquisa foram:
+• O problema principal não era a ausência do dado em si, mas a altíssima carga cognitiva necessária para estruturá-lo mentalmente.
+• A aprovação automática via Inteligência Artificial não serve para o contexto legal, pois o compliance exige julgamento e responsabilidade humana perante ambiguidades da lei.
+• Red Flags devem operar como prevenção direta de erros e devem prender a atenção visual antes que a fadiga mental do turno do analista se instale.
 
-**CONSEQUÊNCIAS E IMPACTO**
-Ao assumir a visualização de risco como alicerce do *AML/compliance design*, o sistema acelerou drasticamente a localização de perfis fraudulentos, poupou horas de investigação braçal e aumentou o "**task Success Rate**" de analistas sob pressão.
+**RESULTADO**
+Ao tratar a visualização hierárquica como alicerce do compliance, o sistema poupou horas semanais de investigação braçal. Reduziu drasticamente o tempo para identificação de fraudes, elevando significativamente o Task Success Rate da equipe operacional.
       `,
       en: `
-**THE BUSINESS TENSION**
-Compliance and AML (Anti-Money Laundering) analysts process crucial and ambiguous information under time pressure. The cost of a false negative—authorizing a fraudulent holding or illicit Ultimate Beneficial Owner (UBO)—is regulatory, financial, and extremely high. The tension lay in the *Decision fatigue* generated by fragmented tools that displayed raw data, leaving cognitive correlation entirely to the analyst.
+**CONTEXT**
+Construction and architectural evolution of a Compliance and AML (Anti-Money Laundering) Intelligence Platform. The product goal was to empower analysts to approve or reject legal entities with high precision under strong regulatory pressure.
 
-**BEHAVIORAL LOGIC AND ARCHITECTURE**
-The Discovery phase and immersion with analysts (discovery to architecture) aimed not just to "understand pain points", but to actively alter the information hierarchy. The central problem diagnosed was not the absence of data, but the enormous intrinsic cognitive load of interpreting it.
+**PROBLEM**
+Fragmented tools displayed raw textual data, forcing the analyst to make complex cross-correlations in their head. The practical result was high decision fatigue, raising the risk and million-dollar cost of approving a false negative (illicit Ultimate Beneficial Owner).
 
-**INTERFACE AND RISK PREVENTION DECISIONS**
-• **Cognitive Effort Reduction:** We transformed corporate link data, which previously lived in dense linear text tables, into a visual organizational chart architecture (UBO). The visual hierarchy solves the "who owns what" in seconds.
-• **Risk-driven UX:** We framed alert signals ("Red flags") and PEPs not as mere "features", but as deliberate design for a high-risk context. The Dashboard highlights primary anomalies, forcing attention before mental fatigue sets in, operating as direct prevention of type 2 errors (false negatives).
+**SOLUTION**
+• **Visual Corporate Org Chart:** Transformation of linear company data tables into hierarchical visual flows, facilitating immediate identification of the owner (UBO).
+• **Anomaly Dashboards:** Creation of visual groupings highlighting "Red Flags" and PEP lists right at the top of the interface.
 
-**WHAT WE CONSIDERED AND DISCARDED**
-• **Discarded:** An AI that automatically approved or rejected entities.
-• **Why:** Compliance requires critical human judgment in the face of legal ambiguities. We opted to use technology solely for the grouping of visual evidence (*Information hierarchy*), ensuring the speed of human auditing without removing its agency.
+**WORKING PROCESS**
+We conducted immersive Discovery and flow mapping alongside [Insert number of analysts or shadow sessions]. The process focused heavily on Information Architecture to alter data display.
+Insights extracted from the research were:
+• The main problem was not the absence of the data itself, but the extremely high cognitive load required to structure it mentally.
+• Automatic approval via Artificial Intelligence does not fit the legal context, as compliance requires human judgment and responsibility in the face of legal ambiguities.
+• Red Flags must operate as direct error prevention and must capture visual attention before the analyst's shift mental fatigue sets in.
 
-**CONSEQUENCES AND IMPACT**
-By embracing risk visualization as the foundation of *AML/compliance design*, the system drastically accelerated the localization of fraudulent profiles, saved hours of manual investigation, and increased the Task Success Rate of analysts under pressure.
+**RESULT**
+By treating hierarchical visualization as the foundation of compliance, the system saved weekly hours of manual investigation. It drastically reduced the time required to identify fraud, significantly increasing the operational team's Task Success Rate.
       `,
     },
     imageUrl: "/compliance-capa.png",
@@ -405,40 +449,48 @@ By embracing risk visualization as the foundation of *AML/compliance design*, th
     },
     fullDescription: {
       pt: `
-**A TENSÃO DE NEGÓCIO**
-Mensagens regulatórias e atualizações de processos críticos (compliance by design) estavam sendo disparadas via e-mails corporativos soltos. A consequência? O sistema não garantia rastreabilidade documental de leitura. Se uma nova diretriz não fosse lida, o erro operacional ou jurídico gerado caía na "falta de aviso". O layout ineficiente do Header não era a causa matriz, mas um sintoma de uma comunicação não estruturada.
+**CONTEXTO**
+Refatoração da comunicação interna de mensagens regulatórias e atualizações de processos críticos. Era preciso internalizar o contato que antes ocorria por e-mails corporativos soltos para dentro do sistema nativo da empresa.
 
-**LÓGICA COMPORTAMENTAL E HEURÍSTICAS**
-Ao invés de inventar novos fluxos de alertas flutuantes, adotamos modelos mentais já validados de comunicação. Recorri à **Lei de Jakob**: os usuários já gerenciam comunicações de forma excelente em clientes de e-mail convencionais. A interface desenhada replicou essa familiaridade (Caixa de Entrada/Arquivados) eliminando a curva de aprendizado para uso imediato da nova feature de compliance.
+**PROBLEMA**
+A comunicação pulverizada não possuía rastreabilidade documental. Se uma diretriz não fosse lida pelo usuário, o erro gerado na operação criava um passivo jurídico de "falta de aviso". O Header ineficiente era um sintoma dessa falha de governança.
 
-**DECISÕES DE INTERFACE E RASTREABILIDADE**
-• **Ergonomia Física:** Apliquei os preceitos da **Lei de Fitts**, alinhando as áreas de clique frequentes (como marcações em lote de "Lido") em zonas de interface que minimizam o esforço motor do mouse, tornando a limpeza da inbox indolor.
-• **Ativo Jurídico:** Cada notificação no Header possui agora um registro de status sistêmico vinculando o usuário e seu aceite documental, blindando a governança contra o álibi de ignorância.
+**SOLUÇÃO**
+• **Central de Inbox Familiar:** Réplica da experiência de Caixa de Entrada e Arquivados no Header.
+• **Ações em Lote:** Inclusão de botões ergonômicos de "Marcar tudo como lido" mapeados para menor esforço motor.
+• **Registro de Aceite Legal:** Vínculo automático no banco de dados entre a visualização da notificação e o log de usuário.
 
-**O QUE CONSIDERAMOS E DESCARTAMOS**
-• **Descartado:** Inserir todas as comunicações via Pop-ups/Modais interruptivos no login.
-• **Por quê:** Interrupções sistêmicas diárias causariam "Banner Blindness" (Cegueira a alertas), onde os usuários fecham modais de forma automática antes de ler. Optamos por notificações passivas no Header, reservando alertas interruptivos estritamente para quebras de segurança.
+**PROCESSO DE TRABALHO**
+Baseamos todo o redesign em Heurísticas Comportamentais consolidadas. O foco analítico evitou a invenção da roda e validou as soluções via princípios psicológicos (Leis de UX).
+Os principais insights foram:
+• Interrupções via pop-ups ou modais no login desenvolvem rapidamente o fenômeno de Banner Blindness (fechamento automático).
+• Segundo a Lei de Jakob, replicar a interface de e-mails clássicos zera a curva de aprendizado para uso da feature.
+• A Lei de Fitts guiou o tamanho e a proximidade das ações de limpeza de tela para reduzir atrito da usabilidade.
 
-**CONSEQUÊNCIAS E IMPACTO**
-O projeto transcendeu a "modernização de interface", entregando um produto de **Legal infrastructure** para o negócio. Com a padronização via heurísticas, os comunicados críticos atingiram governança garantida com métricas de abertura quantificáveis, protegendo os passivos da empresa de forma invisível no fluxo diário do colaborador.
+**RESULTADO**
+A comunicação crítica ganhou padronização e o produto obteve rastreabilidade total (Legal infrastructure). A nova governança garantiu métricas de abertura rastreáveis, protegendo os passivos da empresa de forma orgânica.
       `,
       en: `
-**THE BUSINESS TENSION**
-Regulatory messages and critical process updates (compliance by design) were being triggered via loose corporate emails. The consequence? The system couldn't guarantee documented reading traceability. If a new guideline went unread, the resulting operational or legal error fell into the "lack of notice" gap. The inefficient Header layout wasn't the root cause, but a symptom of unstructured communication.
+**CONTEXT**
+Refactoring of internal communication of regulatory messages and critical process updates. It was necessary to internalize the contact that previously occurred via loose corporate emails into the company's native system.
 
-**BEHAVIORAL LOGIC AND HEURISTICS**
-Instead of inventing new floating alert flows, we adopted validated communication *Mental models*. We turned to *Jakob's Law*: users already manage communications excellently in conventional email clients. The designed interface replicated this familiarity (Inbox/Archived), eliminating the learning curve for immediate use of the new compliance feature.
+**PROBLEM**
+Pulverized communication lacked documented traceability. If a guideline was not read by the user, the error generated in the operation created a legal liability of "lack of notice". The inefficient Header was a symptom of this governance failure.
 
-**INTERFACE AND TRACEABILITY DECISIONS**
-• **Physical Ergonomics:** We applied the precepts of *Fitts's Law*, aligning frequent click areas (such as batch "Mark as Read" actions) in interface zones that minimize motor effort of the mouse, making inbox clearing painless.
-• **Legal Asset:** Every Header notification now has a systemic status record linking the user and their documented acknowledgment, shielding governance against the ignorance alibi.
+**SOLUTION**
+• **Familiar Inbox Center:** Replica of the Inbox and Archived experience in the Header.
+• **Batch Actions:** Inclusion of ergonomic "Mark all as read" buttons mapped for lower motor effort.
+• **Legal Acceptance Record:** Automatic link in the database between notification view and user log.
 
-**WHAT WE CONSIDERED AND DISCARDED**
-• **Discarded:** Inserting all communications via interruptive Pop-ups/Modals at login.
-• **Why:** Daily systemic interruptions would cause "Banner Blindness", where users automatically close modals before reading them. We opted for passive notifications in the Header, reserving interruptive alerts strictly for security breaches.
+**WORKING PROCESS**
+We based the entire redesign on consolidated Behavioral Heuristics. The analytical focus avoided reinventing the wheel and validated solutions via psychological principles (UX Laws).
+The main insights were:
+• Interruptions via pop-ups or modals at login quickly develop the Banner Blindness phenomenon (automatic closing).
+• According to Jakob's Law, replicating classical email interfaces zeroes the learning curve for feature use.
+• Fitts's Law guided the size and proximity of screen-clearing actions to reduce usability friction.
 
-**CONSEQUENCES AND IMPACT**
-The project transitioned beyond "interface modernization", delivering a product of *Legal infrastructure* for the business. With standardization via heuristics, critical communications achieved guaranteed governance with quantifiable open metrics, protecting company liabilities invisibly within the employee's daily flow.
+**RESULT**
+Critical communication gained standardization and the product obtained full traceability (Legal infrastructure). The new governance ensured traceable open metrics, organically protecting the company's liabilities.
       `,
     },
     imageUrl: "/notificacoes-capa.png",
@@ -484,40 +536,48 @@ The project transitioned beyond "interface modernization", delivering a product 
     },
     fullDescription: {
       pt: `
-**A TENSÃO DE NEGÓCIO**
-À medida que a equipe crescia, percebemos um desafio natural: a falta de padronização técnica estava gerando retrabalho e atritos operacionais na nossa rotina. Não era sobre "organizar pastinhas no Figma", era sobre alavancar a capacidade do time. Como os componentes careciam de uma fundação matemática, as aprovações de design sofriam de dívida visual e os desenvolvedores reconstruíam a mesma margem múltiplas vezes, estagnando o ciclo de evolução do produto (*Scalability*).
+**CONTEXTO**
+Projeto focado em melhorar a fundação e a esteira de design de um produto existente. O desafio surgiu à medida que o time interno escalava e necessitava de uma base visual sólida para guiar desenvolvedores e novos designers.
 
-**LÓGICA COMPORTAMENTAL E ARQUITETURA**
-Trabalhando em estreita colaboração com outra profissional de design, que trouxe visões complementares e insights essenciais para o projeto, uni minha bagagem prévia com Design Ops para apoiar a equipe. Juntas, defendemos a premissa de que a padronização não se sustenta sem adoção cultural. Colaborei ativamente na estruturação do ecossistema para reduzir as interpretações manuais da interface, contribuindo para a implementação de uma Token architecture robusta utilizando Figma Variables.
+**PROBLEMA**
+A falta de uma arquitetura matemática nos componentes gerava inconsistências extremas. Desenvolvedores precisavam reconstruir componentes básicos e aprovações de design lidavam com constante dívida visual, criando atritos operacionais e estagnando o go-to-market.
 
-**DECISÕES DE ARQUITETURA E MENTORIA**
-• **Separação Primitiva x Semântica:** A separação dos tokens em lógicas estritas evitou o problema crônico de quebra sistêmica em Dark Modes ou refatorações de marca de grande impacto. O código agora entende a intenção funcional (ex: Button-Primary-Bg) e não apenas o Hex code bruto.
-• **Documentation strategy e Mentoria:** Componentes invisíveis no código não geram valor. Foi elaborada documentação exaustiva com regras de UX e comportamentos acoplados. E a solução englobou ativamente a Mentoria do time sobre "como usar o ecossistema avançado", garantindo a adoção interna da nova tecnologia.
+**SOLUÇÃO**
+• **Implementação de Figma Variables:** Criação de lógicas estritas e matemáticas para tipografia, cor e espaçamento.
+• **Tokenização Semântica:** Separação entre cor bruta e cor de intenção funcional (ex: mudar o valor do erro não altera o vermelho geral da marca).
+• **Biblioteca de Documentação:** Diretrizes de UX e anatomia comportamental acopladas a cada componente publicado.
 
-**O QUE CONSIDERAMOS E DESCARTAMOS**
-• **Descartado:** Refatorar todos os componentes legados da biblioteca em uma só sprint.
-• **Por quê:** Congelaria as entregas de produto do time. Priorizamos apenas construir a camada estrutural de Tokens (Fundações) para blindar as novas criações, deixando a migração de componentes legados para o modelo *Tech debt* a longo prazo.
+**PROCESSO DE TRABALHO**
+Atuei ativamente aplicando metodologias de Design Ops em Pair Design com a equipe residente. Focamos no alinhamento entre as especificações de tela e as variáveis CSS utilizadas pelo Front-end.
+Os insights críticos que guiaram a evolução foram:
+• Tokens isolados não funcionam sem adoção cultural. Era preciso criar rituais de mentoria técnica para o time entender o uso avançado.
+• A separação semântica blindou o sistema contra quebras durante alterações globais (como temas escuros).
+• Refatorar todo o legado de uma vez congelaria a squad. Optamos por criar as fundações para novas interfaces e tratar os componentes antigos como "Tech Debt" de longo prazo.
 
-**CONSEQUÊNCIAS E IMPACTO**
-O impacto foi o ganho de escala exponencial: uma decisão tomada na raiz do Design System acelerou as prototipações de dezenas de interfaces. A consistência da implementação entre UI e Front-end solidificou a confiança e velocidade entre as squads, derrubando severamente o desperdício operacional.
+**RESULTADO**
+Escalabilidade e velocidade exponencial. A fundação de Tokens solidificou a ponte entre Design e Front-end, resultando em prototipações extremamente rápidas e reduzindo quase a zero os atritos sobre especificações de tela nas rotinas da equipe.
       `,
       en: `
-**THE BUSINESS TENSION**
-As the team grew, we noticed a natural challenge: the lack of technical standardization was causing rework and operational friction in our routine. It wasn't about "organizing Figma folders", it was about *Team leverage*. Because components lacked a mathematical foundation, design approvals suffered from visual debt, and developers rebuilt the same margins multiple times, stagnating the product evolution cycle (*Scalability*).
+**CONTEXT**
+Project focused on improving the foundation and design pipeline of an existing product. The challenge arose as the internal team scaled and needed a solid visual base to guide developers and new designers.
 
-**BEHAVIORAL LOGIC AND ARCHITECTURE**
-Working in close collaboration with another design professional—who brought essential complementary perspectives and insights to the project—I combined my previous background in Design Ops to support the team. Together, we championed the premise that standardization cannot be sustained without cultural adoption. I actively collaborated in structuring the ecosystem to reduce manual interface interpretations, contributing to the implementation of a robust Token architecture using Figma Variables.
+**PROBLEM**
+The lack of mathematical architecture in components generated extreme inconsistencies. Developers had to rebuild basic components and design approvals dealt with constant visual debt, creating operational friction and stagnating go-to-market.
 
-**ARCHITECTURE AND MENTORSHIP DECISIONS**
-• **Primitive vs. Semantic Separation:** Separating tokens into strict logic prevented the chronic problem of systemic breaking during Dark Mode shifts or major brand refactoring. The code now understands functional intent (e.g., Button-Primary-Bg) rather than just raw Hex codes.
-• **Documentation strategy and Mentorship:** Components invisible in code generate no value. Exhaustive documentation with UX rules and coupled behaviors was created. The solution actively included team Mentorship on "how to use the advanced ecosystem", ensuring internal adoption of the new technology.
+**SOLUTION**
+• **Implementation of Figma Variables:** Creation of strict, mathematical logic for typography, color, and spacing.
+• **Semantic Tokenization:** Separation between raw color and functional intention color (e.g., changing the error value does not alter the brand's general red).
+• **Documentation Library:** UX guidelines and behavioral anatomy coupled with each published component.
 
-**WHAT WE CONSIDERED AND DISCARDED**
-• **Discarded:** Refactoring all legacy components in the library in a single sprint.
-• **Why:** It would freeze the team's product deliveries. We prioritized building only the structural Token layer (Foundations) to shield new creations, leaving the migration of legacy components to a long-term *Tech debt* model.
+**WORKING PROCESS**
+I actively applied Design Ops methodologies in Pair Design with the resident team. We focused on aligning screen specifications with CSS variables used by Front-end.
+The critical insights that guided the evolution were:
+• Isolated tokens do not work without cultural adoption. It was necessary to create technical mentoring rituals for the team to understand advanced use.
+• Semantic separation shielded the system against breaks during global changes (such as dark themes).
+• Refactoring all legacy at once would freeze the squad. We opted to create foundations for new interfaces and treat old components as long-term "Tech Debt".
 
-**CONSEQUENCES AND IMPACT**
-The impact was an exponential gain in scale: a decision made at the root of the Design System accelerated the prototyping of dozens of interfaces. Implementation consistency between UI and Front-end solidified trust and speed among squads, severely cutting down operational waste.
+**RESULT**
+Exponential scalability and velocity. The Token foundation solidified the bridge between Design and Front-end, resulting in extremely rapid prototyping and reducing friction over screen specifications in team routines to almost zero.
       `,
     },
     imageUrl: "/ds-capa.png",
@@ -560,48 +620,48 @@ The impact was an exponential gain in scale: a decision made at the root of the 
     },
     fullDescription: {
       pt: `
-**A TENSÃO DE NEGÓCIO**
-Fundos de pensão operam um produto de **alta ansiedade**: o futuro financeiro e de aposentadoria de pessoas reais. O desafio do projeto ia muito além da interface, pois o sistema é regido por regras regulatórias de extrema complexidade, com variáveis que mudam e se combinam de acordo com a situação trabalhista específica de cada participante. Descobrimos que os usuários (maioria 60+ com **Low digital literacy**) abandonavam as jornadas online devido à fricção cognitiva de tentar decifrar essas regras somadas ao jargão financeiro, recorrendo ao oneroso atendimento de call center.
+**CONTEXTO**
+Design do Portal do Participante de um Fundo de Previdência focado no público idoso. O sistema precisava lidar com regulamentos de altíssima complexidade atuarial lidando com as rendas e o futuro financeiro de centenas de pessoas.
 
-**ARQUITETURA REGULATÓRIA E INCLUSÃO**
-Para traduzir a burocracia em autonomia, conduzi uma investigação profunda na lógica de negócio. Além de realizar pesquisas com operadores de BPO, debrucei-me sobre diversos regulamentos de planos de previdência complementar fechada de grandes corporações clientes. O objetivo foi mapear as dezenas de matrizes e variáveis legais para garantir que o sistema e não o cérebro do usuário idoso absorvesse a complexidade computacional. Simplificar não significava esconder opções, mas usar a tecnologia para reduzir o esforço cognitivo. Sem essa fundação lógica aliada ao **trust e safety** visual, não haveria adoção do digital.
+**PROBLEMA**
+Os usuários formados na maioria por pessoas 60+ com baixo letramento digital (Low digital literacy) possuíam alta fricção cognitiva para interpretar jargões financeiros nas jornadas online. A frustração gerava o abandono digital e a superlotação nos atendimentos presenciais e de telemarketing.
 
-**DECISÕES DE INTERFACE E CONFIANÇA**
-• **Acessibilidade aplicada na Arquitetura:** As diretrizes da **WCAG** guiaram a criação de componentes de alto contraste, botões estruturados com linguagem de ação clara e tipografia adaptada para mitigar o impacto da perda de visão temporal natural em usuários idosos (**inclusive design**). O grande desafio de produto foi equilibrar os critérios rigorosos de conformidade técnica da *WCAG* com a obrigatoriedade de preservar as cores institucionais da marca (**brand identity**).
-• **Previsibilidade contra a Insegurança:** Fluxos simuladores baseados no modelo mental "O que acontece se...?" permitiram ao usuário enxergar impactos monetários concretos em vez de lidar com planilhas densas de cálculo atuarial.
-• **Responsividade Estratégica:** O produto foi adaptado para mobile, garantindo o acesso rápido a resumos e ações cotidianas. No entanto, para a visualização de minúcias e tabelas financeiras densas, aplicamos uma fricção positiva: a interface orienta e condiciona o usuário a utilizar o desktop ou tablet. Essa decisão evitou a quebra de usabilidade ao não tentar "espremer" dados complexos em telas pequenas, protegendo a precisão da leitura.
+**SOLUÇÃO**
+• **Simuladores de Impacto Linear:** Transformação de regras complexas em fluxos de simulação amigáveis ("O que acontece se eu me aposentar agora?").
+• **Acessibilidade Institucional:** Componentes redesenhados focando nos critérios rigorosos da WCAG (contraste e tipografia legível), mantendo as exigências de identidade visual da marca.
+• **Limitação Responsiva Estratégica:** Aplicação de fricção positiva direcionando o usuário ao uso do computador ou tablet ao invés de tentar espremer minúcias e tabelas de alta densidade no celular.
 
-**O QUE CONSIDERAMOS E DESCARTAMOS**
-• **Descartado:** Dashboards interativos de altíssima densidade técnica sobre rendimentos de portfólios compostos.
-• **Por quê:** Apesar de parecerem "modernos", testes indicaram que gráficos muito interativos paralisavam e assustavam esse perfil de usuário. Trocamos pela simplificação em dados nominais e tabelas com descrições altamente claras sobre movimentações.
+**PROCESSO DE TRABALHO**
+O Research envolveu entrevistas quantitativas e a imersão completa na leitura dos pesados Manuais Legais do fundo de pensão. Conduzimos [Inserir nº de entrevistas ou rodadas de teste] com a base de usuários finais para validar as lógicas financeiras.
+Os principais insights foram:
+• A complexidade do cruzamento de regras matemáticas deve ser absorvida pela máquina, não pelo cérebro do idoso.
+• Gráficos absurdamente interativos e "tecnológicos" sobre portfólio paralisavam e assustavam os usuários na etapa de testes. A conversão exigia a troca por tabelas nominais cruas e explicações literais.
+• O design financeiro exige premissas de Trust e Safety; componentes pequenos passavam a sensação visual de "golpe digital".
 
-**CONSEQUÊNCIAS E IMPACTO**
-Ao transformar regras complexas em fluxos digeríveis e mitigar o medo inerente da interface financeira, o produto viabilizou maior **Task Success Rate** dos simuladores e estimou uma redução de **65%** nos chamados para os polos de atendimento humano. O design traduziu o respeito ao perfil do cliente gerando autonomia operacional.
-
-**NOTA DE CONFIDENCIALIDADE**
-Este projeto foi desenvolvido em contexto corporativo. O nome "PrevMax", a identidade visual e o logotipo são elementos fictícios criados exclusivamente para fins de portfólio. Essa abordagem preserva rigorosamente a confidencialidade do cliente real, mantendo total fidelidade ao processo, aos desafios e às decisões estratégicas de design.
+**RESULTADO**
+O portal traduziu a burocracia pesada em autonomia para o público idoso, mitigando a ansiedade natural inerente a produtos monetários. Com maior adoção, foi projetada uma queda de 65% na dependência e volume de chamados das centrais de atendimento humano.
       `,
       en: `
-**THE BUSINESS TENSION**
-Pension funds operate a **high-anxiety** product: the financial and retirement future of real people. The project's challenge went far beyond the interface, as the system is governed by highly complex regulatory rules, with variables that change and combine according to each participant's specific labor situation. We discovered that users (mostly 60+ with **Low digital literacy**) abandoned online journeys due to the cognitive friction of trying to decipher these rules combined with financial jargon, resorting to costly call center support.
+**CONTEXT**
+Design of the Participant Portal of a Pension Fund focused on the elderly audience. The system had to handle actuarial regulations of extremely high complexity dealing with the income and financial future of hundreds of people.
 
-**REGULATORY ARCHITECTURE AND INCLUSION**
-To translate bureaucracy into autonomy, I conducted a deep investigation into the business logic. In addition to researching with BPO operators, I immersed myself in various closed complementary pension plan regulations from large corporate clients. The goal was to map the dozens of matrices and legal variables to ensure the system—not the elderly user's brain—absorbed the computational complexity. Simplifying didn't mean hiding options, but using technology to reduce cognitive effort. Without this logical foundation combined with visual **Trust and safety**, there would be no digital adoption.
+**PROBLEM**
+Users, consisting mostly of 60+ individuals with low digital literacy, experienced high cognitive friction when trying to interpret financial jargon in online journeys. Frustration led to digital abandonment and overcrowding in face-to-face and telemarketing services.
 
-**INTERFACE DECISIONS AND TRUST**
-• **Accessibility applied to Architecture:** *WCAG* guidelines guided the creation of high-contrast components, structured buttons with clear action language, and typography adapted to mitigate the impact of natural age-related vision loss (**Inclusive design**). The major product challenge was balancing strict technical *WCAG* compliance criteria with the mandatory preservation of the company's institutional brand identity.
-• **Predictability against Insecurity:** Simulator flows based on the "What happens if...?" mental model allowed the user to see concrete monetary impacts instead of dealing with dense actuarial calculation spreadsheets.
-• **Strategic Responsiveness:** The product was adapted for mobile, ensuring quick access to summaries and daily actions. However, for viewing minutiae and dense financial tables, we applied positive friction: the interface guides and nudges the user to switch to a desktop or tablet. This decision prevented usability breaks by not trying to squeeze complex data into small screens, protecting reading accuracy.
+**SOLUTION**
+• **Linear Impact Simulators:** Transformation of complex rules into user-friendly simulation flows ("What happens if I retire now?").
+• **Institutional Accessibility:** Redesigned components focusing on strict WCAG criteria (contrast and legible typography), maintaining the brand's visual identity requirements.
+• **Strategic Responsive Limitation:** Application of positive friction directing the user to use a computer or tablet instead of trying to squeeze minutiae and high-density tables onto a mobile phone.
 
-**WHAT WE CONSIDERED AND DISCARDED**
-• **Discarded:** Highly interactive, technically dense dashboards showing composite portfolio yields.
-• **Why:** Despite looking "modern", tests indicated that overly interactive charts paralyzed and frightened this user profile. We swapped them for simplifications in nominal data and tables with highly clear descriptions of movements.
+**WORKING PROCESS**
+Research involved quantitative interviews and complete immersion in reading the pension fund's heavy Legal Manuals. We conducted [Insert number of interviews or test rounds] with the end-user base to validate financial logic.
+The main insights were:
+• The complexity of crossing mathematical rules must be absorbed by the machine, not by the elderly brain.
+• Absurdly interactive and "technological" portfolio charts paralyzed and frightened users in the testing phase. Conversion required swapping for raw nominal tables and literal explanations.
+• Financial design requires Trust and Safety premises; small components conveyed the visual sensation of a "digital scam".
 
-**CONSEQUENCES AND IMPACT**
-By transforming complex rules into digestible flows and mitigating the inherent fear of the financial interface, the product enabled a higher **Task Success Rate** for simulators and estimated a **65%** reduction in calls to human service centers. The design translated respect for the customer profile into operational autonomy.
-
-**CONFIDENTIALITY NOTE**
-This project was developed in a corporate context. The name "PrevMax", the visual identity, and the logo are fictional elements created exclusively for portfolio purposes. This approach strictly preserves the real client's confidentiality while maintaining total fidelity to the process, challenges, and strategic design decisions.
+**RESULT**
+The portal translated heavy bureaucracy into autonomy for the elderly audience, mitigating the natural anxiety inherent to monetary products. With higher adoption, a 65% drop in dependency and volume of calls to human call centers was projected.
       `,
     },
     imageUrl: "/prevmax-capa.png",
