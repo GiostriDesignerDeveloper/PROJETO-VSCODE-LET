@@ -16,9 +16,7 @@ export const projectsData: Project[] = [
       pt: "Plataforma B2B criada para simplificar negociações entre compradores e fornecedores, reduzindo esforço operacional.",
       en: "B2B platform designed to simplify negotiations between buyers and suppliers, reducing operational effort.",
     },
-    fullDescription: {
-      pt: `
-**AVISO**
+    fullDescription: {      pt: `
 
 **RESUMO DO PROJETO**
 • **Projeto:** Plataforma B2B de compras
@@ -86,7 +84,7 @@ A experiência trouxe mais clareza para comparação entre fornecedores, reduzin
 [AI_NOTE] **IA generativa no fluxo de trabalho:** Utilizada como apoio à exploração de possibilidades de solução, refinamento de ideias e aceleração de ciclos de ideação, sem substituir decisões de experiência e produto.
 
 **APRENDIZADO**
-> “Em sistemas complexos, o papel do design nem sempre é simplificar tudo — mas tornar a complexidade compreensível.”
+“Em sistemas complexos, o papel do design nem sempre é simplificar tudo — mas tornar a complexidade compreensível.”
       `,
       // (Mantenha a versão em inglês similar)
     },
