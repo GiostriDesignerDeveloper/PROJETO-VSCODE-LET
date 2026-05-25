@@ -14,10 +14,11 @@ export interface Project {
   category: string;
   tags: string[];
   technologies: string[];
-  methods?: string[];      // Adicione esta linha
-  principles?: string[];   // Adicione esta linha
+  methods?: string[];      // Adicione isto
+  principles?: string[]; // Adicione esta linha
   client: string;
   role: string;
   liveUrl: string;
   gallery?: { url: string; title: string }[];
 }
+

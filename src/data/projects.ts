@@ -16,12 +16,12 @@ export const projectsData: Project[] = [
       pt: "Plataforma B2B criada para simplificar negociações entre compradores e fornecedores, reduzindo esforço operacional.",
       en: "B2B platform designed to simplify negotiations between buyers and suppliers, reducing operational effort.",
     },
-    fullDescription: {      pt: `
+    fullDescription: {
+      pt: `
 
 **RESUMO DO PROJETO**
 • **Projeto:** Plataforma B2B de compras
 • **Desafio:** Simplificar decisões complexas entre compradores e fornecedores
-• **Minha atuação:** UX/UI + estruturação de fluxos e organização da experiência
 • **Impacto:** Mais clareza operacional e melhor comparação entre propostas
 
 [IMG:1]
@@ -32,24 +32,23 @@ Minha atuação esteve concentrada na estruturação dos fluxos críticos, organ
 
 **O QUE ERA O PRODUTO**
 [IMG_SIDE:4]
-A plataforma conectava compradores e fornecedores para realizar cotações e negociações em larga escala.
-O sistema precisava lidar com regras específicas de compra, múltiplos fornecedores, regiões, histórico de negociação e diferentes perfis de usuário ao mesmo tempo.
-
-**Complexidade do desafio:**
+A plataforma conectava compradores e fornecedores para realizar cotações e negociações em larga escala. O sistema precisava lidar com diferentes regras de compra, regiões, preços, histórico de negociação e múltiplos perfis de usuário ao mesmo tempo.
+O desafio envolvia:
 • Diferentes perfis de usuários
-• Regras operacionais específicas
 • Comparação entre múltiplos fornecedores
+• Regras específicas de compra
 • Integração com sistemas externos
 • Histórico de negociações
-• Necessidade de rastreabilidade
+• Controle e rastreabilidade
 
-**ANTES DE DESENHAR, ENTENDEMOS A OPERAÇÃO**
-Antes de propor soluções, foi necessário compreender como a operação realmente funcionava. Começamos analisando documentações do negócio, fluxos operacionais e dependências do sistema para entender restrições, regras do processo e pontos de fricção da experiência.
-
-**O que analisamos:**
-• Regras do processo
+**COMO ENTENDI O PROBLEMA**
+Antes de desenhar soluções, foi necessário compreender como a operação realmente funcionava. Partimos da leitura e estruturação de documentações do negócio, regras operacionais, fluxos de compra e dependências do sistema para entender o contexto completo da experiência. Depois, mapeamos pontos de fricção e necessidades dos diferentes perfis envolvidos no processo.
+O que analisamos:
+• Documentações do processo
 • Fluxos operacionais
-• Dependências do sistema
+• Regras de negócio
+• Cenários de compra
+• Dependências entre áreas
 • Necessidades dos usuários
 
 **PROBLEMA**
@@ -59,17 +58,17 @@ Os compradores precisavam analisar muitas informações ao mesmo tempo para toma
 • Retrabalho operacional
 • Risco de decisões inconsistentes
 
-**DECISÕES DE PRODUTO**
-[IMG:1]
-• **Centralizamos informações críticas:** Reunimos dados importantes no mesmo contexto para reduzir esforço durante comparações.
-• **Simplificamos a comparação entre fornecedores:** Criamos uma visualização mais clara para facilitar análise e tomada de decisão.
-• **Priorizamos informações importantes:** Organizamos visualmente os dados para reduzir distrações e tornar decisões mais rápidas.
-
-**Princípios aplicados:** Redução de esforço mental • Comparação facilitada • Clareza das informações • Prevenção de erros
+**HIPÓTESES E DECISÕES**
+Acreditamos que, se as informações fossem centralizadas e comparáveis no mesmo contexto, compradores poderiam tomar decisões com menos esforço e mais confiança. 
+O que mudamos:
+• **Centralização das informações:** Reunimos dados importantes em um único contexto. Por quê? Menos alternância entre telas reduz esforço mental.
+• **Comparação simplificada:** Criamos uma estrutura mais clara para visualizar fornecedores. Por quê? Comparações organizadas facilitam decisões.
+• **Hierarquia visual:** Priorizamos visualmente informações mais relevantes. Por quê? Nem tudo precisava ter o mesmo peso na interface.
+• Princípios aplicados: Carga Cognitiva, Lei de Hick, Heurísticas de Nielsen, Gestalt.
 
 **DECISÕES DIFÍCEIS**
 [IMG_SIDE:0]
-Nem sempre o menor preço representava a melhor escolha. Em alguns cenários, prazo de entrega e disponibilidade tinham maior impacto operacional do que custo. O desafio foi equilibrar rapidez na decisão sem esconder informações importantes do negócio.
+Nem sempre o menor preço representava a melhor escolha. Em alguns cenários, prazo de entrega e disponibilidade tinham maior impacto operacional. O desafio foi equilibrar rapidez na decisão sem esconder informações importantes para o negócio.
 
 **OUTROS FLUXOS DO PRODUTO**
 [IMG_SIDE:2]
@@ -79,14 +78,89 @@ Nem sempre o menor preço representava a melhor escolha. Em alguns cenários, pr
 **Gestão de preços:** Organização de tabelas comerciais, regiões e regras operacionais.
 
 **RESULTADO**
-A experiência trouxe mais clareza para comparação entre fornecedores, reduzindo atritos do processo e apoiando decisões operacionais complexas. Além disso, o produto ficou mais organizado e rastreável, facilitando o acompanhamento das negociações e reduzindo esforço operacional no dia a dia.
+A experiência trouxe mais clareza para comparação entre fornecedores, reduzindo atritos do processo e facilitando decisões operacionais complexas. Além disso, o fluxo ficou mais organizado e rastreável.
 
 [AI_NOTE] **IA generativa no fluxo de trabalho:** Utilizada como apoio à exploração de possibilidades de solução, refinamento de ideias e aceleração de ciclos de ideação, sem substituir decisões de experiência e produto.
 
 **APRENDIZADO**
-“Em sistemas complexos, o papel do design nem sempre é simplificar tudo — mas tornar a complexidade compreensível.”
+Em sistemas complexos, o papel do design nem sempre é simplificar tudo mas tornar a complexidade compreensível.
+
+**AVISO**
+Para preservar a confidencialidade, nome, identidade visual e alguns dados do produto foram adaptados para apresentação deste case.
       `,
-      // (Mantenha a versão em inglês similar)
+      en: `
+
+**PROJECT SUMMARY**
+• **Project:** B2B purchasing platform
+• **Challenge:** Simplify complex decisions between buyers and suppliers
+• **Impact:** Greater operational clarity and better proposal comparison
+
+[IMG:1]
+
+**PROJECT TEAM**
+Developed in partnership with another product designer in a collaborative context.
+My role focused on structuring critical flows, organizing information, simplifying the purchasing journey, and interface decision-making.
+
+**WHAT THE PRODUCT WAS**
+[IMG_SIDE:4]
+The platform connected buyers and suppliers to conduct large-scale quotations and negotiations. The system had to handle different purchasing rules, regions, prices, negotiation history, and multiple user profiles simultaneously.
+The challenge involved:
+• Different user profiles
+• Comparison across multiple suppliers
+• Specific purchasing rules
+• Negotiation history
+• Integration with external systems
+• Control and traceability
+
+**HOW I UNDERSTOOD THE PROBLEM**
+Before designing solutions, it was necessary to understand how the operation actually worked. We started by reading and structuring business documentation, operational rules, purchasing flows, and system dependencies to understand the complete context of the experience. Then, we mapped friction points and the needs of the different profiles involved.
+What we analyzed:
+• Process documentation
+• Operational flows
+• Business rules
+• Purchasing scenarios
+• Dependencies between areas
+• User needs
+
+**PROBLEM**
+Buyers had to analyze too much information at once to make important decisions. Price, deadline, availability, and history were scattered across different parts of the process, making comparison slow, exhausting, and unclear. This caused:
+• Excessive mental effort
+• Difficulty in comparing options
+• Operational rework
+• Risk of inconsistent decisions
+
+**HYPOTHESES AND DECISIONS**
+[IMG:1]
+We believed that if information were centralized and comparable in the same context, buyers could make decisions with less effort and more confidence. 
+What we changed:
+• **Information centralization:** We gathered important data in a single context. Why? Less screen switching reduces mental effort.
+• **Simplified comparison:** We created a clearer visualization between suppliers, facilitating analysis and decision-making.
+• **Visual hierarchy:** We visually prioritized critical information to avoid excessive attention on secondary data.
+• Applied principles: Cognitive Load, Hick's Law, Nielsen's Heuristics, Gestalt.
+
+**HARD DECISIONS**
+[IMG_SIDE:0]
+The lowest price didn't always represent the best choice. In some scenarios, delivery time and availability had a greater operational impact than cost. The challenge was to balance decision speed without hiding important business information.
+
+**OTHER PRODUCT FLOWS**
+[IMG_SIDE:2]
+**Supplier registration:** Onboarding structuring and essential information organization.
+
+[IMG_SIDE:3]
+**Price management:** Organizing commercial tables, regions, and operational rules.
+
+**RESULT**
+The experience brought greater clarity to supplier comparisons, reducing process friction and facilitating complex operational decisions. Furthermore, the flow became more organized and traceable.
+
+[AI_NOTE] **Generative AI in the workflow:** Used as support to explore solution possibilities, refine ideas, and accelerate ideation cycles, without replacing UX and product decisions.
+
+**LEARNINGS**
+In complex systems, the role of design is not always to simplify everything but to make complexity understandable.
+
+**CONFIDENTIALITY NOTICE**
+To preserve confidentiality, the name, visual identity, and some product data were adapted for the presentation of this case study.
+      `,
+      
     },
     imageUrl: "/cotacao.png",
     category: "UX/UI Design",
@@ -121,13 +195,14 @@ A experiência trouxe mais clareza para comparação entre fornecedores, reduzin
       { url: "/negociacao.png", title: "Fluxo de Negociação" },
       {
         url: "/cadastro-precos-fornecedores.png",
-        title: "Comparação de Propostas",
+        title: "Cadastro de Preços de Fornecedores",
       },
       { url: "/cadastro-fornecedor.png", title: "Cadastro de Fornecedor" },
       { url: "/perfil-edicao.png", title: "Gestão de Preços" },
       { url: "/login.png", title: "Portal de Acesso" },
     ],
   },
+
   {
     id: "healthdash-analise-usabilidade",
     title: {
@@ -140,7 +215,6 @@ A experiência trouxe mais clareza para comparação entre fornecedores, reduzin
       pt: "HealthDash: Análise de Usabilidade Hospitalar",
       en: "HealthDash: Hospital Usability Analysis",
     },
-
     fullDescription: {
       pt: `
 **CONTEXTO**
@@ -155,7 +229,7 @@ As janelas sobrepostas da tela escondiam informações importantes enquanto os p
 • **Informação dividida:** Separamos os dados dos pacientes por páginas, acabando com a necessidade de rolar a tela até o final e se perder.
 
 **PROCESSO DE TRABALHO**
-Fui até o hospital observar o uso real do sistema por [Inserir quantidade] nutricionistas. O foco da pesquisa foi entender os riscos físicos do uso do aplicativo.
+Fui até o hospital observar o uso real do sistema por nutricionistas. O foco da pesquisa foi entender os riscos físicos do uso do aplicativo.
 Os principais aprendizados foram:
 • O teclado nativo do tablet subia e escondia o botão de salvar a dieta, atrasando o trabalho.
 • As nutricionistas seguravam o tablet com uma mão e digitavam com a outra enquanto andavam, exigindo botões muito fáceis de acertar.
@@ -177,7 +251,7 @@ Overlapping screen windows hid important information while professionals walked 
 • **Divided information:** We separated patient data by pages, eliminating the need to scroll to the bottom and get lost.
 
 **WORKING PROCESS**
-I went to the hospital to observe the real use of the system by [Insert quantity] nutritionists. The research focused on understanding the physical risks of using the application.
+I went to the hospital to observe the real use of the system by nutritionists. The research focused on understanding the physical risks of using the application.
 The main learnings were:
 • The native tablet keyboard popped up and hid the save diet button, delaying work.
 • Nutritionists held the tablet with one hand and typed with the other while walking, requiring very easy-to-hit buttons.
@@ -197,6 +271,8 @@ We drastically reduced wrong clicks and the time spent prescribing diets. The ch
       "Risk-driven design",
     ],
     technologies: ["Figma", "UX Research", "Accessibility", "UI Design"],
+    methods: [],
+    principles: [],
     client: "HealthDash",
     role: "UX/UI Designer",
     liveUrl: "#",
@@ -227,7 +303,7 @@ Os operadores sofriam de "cegueira operacional", pois o sistema não fornecia re
 • **Prevenção de Erros (Fricção):** Inserção de modais de confirmação momentos antes de ações financeiras irreversíveis.
 
 **PROCESSO DE TRABALHO**
-Adotamos a metodologia Lean UX para entregar valor real focando no "Delivery under constraint". A pesquisa focou no mapeamento do fluxo de erro com [Inserir métrica de tickets ou nº de analistas ouvidos].
+Adotamos a metodologia Lean UX para entregar valor real focando no "Delivery under constraint". A pesquisa focou no mapeamento do fluxo de erro e métricas de tickets.
 Os principais insights foram:
 • A refatoração completa com novos componentes interativos era tecnicamente inviável e atrasaria o go-to-market.
 • A insegurança visual gerava um modelo mental de "clicar novamente para garantir", o que causava o erro primário do sistema.
@@ -248,7 +324,7 @@ Operators suffered from "operational blindness" because the system provided no v
 • **Error Prevention (Friction):** Insertion of confirmation modals moments before irreversible financial actions.
 
 **WORKING PROCESS**
-We adopted the Lean UX methodology to deliver real value focusing on "Delivery under constraint". Research focused on mapping the error flow with [Insert ticket metric or number of analysts heard].
+We adopted the Lean UX methodology to deliver real value focusing on "Delivery under constraint". Research focused on mapping the error flow with support ticket metrics.
 The main insights were:
 • Complete refactoring with new interactive components was technically unfeasible and would delay go-to-market.
 • Visual insecurity generated a mental model of "clicking again to make sure", which caused the primary system error.
@@ -268,6 +344,8 @@ Lean visual intervention that solved the information vacuum. There was a stagger
       "Error prevention",
     ],
     technologies: ["Figma", "Redlining", "Information Architecture", "Lean UX"],
+    methods: [],
+    principles: [],
     client: "Confidencial",
     role: "Product Designer",
     liveUrl: "#",
@@ -316,7 +394,7 @@ Ferramentas fragmentadas exibiam dados textuais crus, obrigando o analista a faz
 • **Dashboards de Anomalias:** Criação de agrupamentos visuais evidenciando "Red Flags" e listas PEP logo no topo da interface.
 
 **PROCESSO DE TRABALHO**
-Fizemos um Discovery imersivo e mapeamento de fluxo junto a [Inserir nº de analistas ou sessões de shadow]. O processo focou fortemente em Arquitetura da Informação para alterar a exibição de dados.
+Fizemos um Discovery imersivo e mapeamento de fluxo. O processo focou fortemente em Arquitetura da Informação para alterar a exibição de dados.
 Os insights extraídos da pesquisa foram:
 • O problema principal não era a ausência do dado em si, mas a altíssima carga cognitiva necessária para estruturá-lo mentalmente.
 • A aprovação automática via Inteligência Artificial não serve para o contexto legal, pois o compliance exige julgamento e responsabilidade humana perante ambiguidades da lei.
@@ -337,7 +415,7 @@ Fragmented tools displayed raw textual data, forcing the analyst to make complex
 • **Anomaly Dashboards:** Creation of visual groupings highlighting "Red Flags" and PEP lists right at the top of the interface.
 
 **WORKING PROCESS**
-We conducted immersive Discovery and flow mapping alongside [Insert number of analysts or shadow sessions]. The process focused heavily on Information Architecture to alter data display.
+We conducted immersive Discovery and flow mapping. The process focused heavily on Information Architecture to alter data display.
 Insights extracted from the research were:
 • The main problem was not the absence of the data itself, but the extremely high cognitive load required to structure it mentally.
 • Automatic approval via Artificial Intelligence does not fit the legal context, as compliance requires human judgment and responsibility in the face of legal ambiguities.
@@ -362,6 +440,8 @@ By treating hierarchical visualization as the foundation of compliance, the syst
       "Arquitetura de Informação",
       "UX Research",
     ],
+    methods: [],
+    principles: [],
     client: "Confidencial",
     role: "Product Designer",
     liveUrl: "#",
@@ -501,6 +581,8 @@ Critical communication gained standardization and the product obtained full trac
       "Jakob's Law",
     ],
     technologies: ["Figma", "Design System", "Prototyping"],
+    methods: [],
+    principles: [],
     client: "Confidencial",
     role: "Product Designer",
     liveUrl: "#",
@@ -588,6 +670,8 @@ Exponential scalability and velocity. The Token foundation solidified the bridge
       "Documentation strategy",
     ],
     technologies: ["Figma", "Tokens", "Documentation", "Mentorship"],
+    methods: [],
+    principles: [],
     client: "Confidencial",
     role: "Product Designer / UI",
     liveUrl: "#",
@@ -630,7 +714,7 @@ Os usuários formados na maioria por pessoas 60+ com baixo letramento digital (L
 • **Limitação Responsiva Estratégica:** Aplicação de fricção positiva direcionando o usuário ao uso do computador ou tablet ao invés de tentar espremer minúcias e tabelas de alta densidade no celular.
 
 **PROCESSO DE TRABALHO**
-O Research envolveu entrevistas quantitativas e a imersão completa na leitura dos pesados Manuais Legais do fundo de pensão. Conduzimos [Inserir nº de entrevistas ou rodadas de teste] com a base de usuários finais para validar as lógicas financeiras.
+O Research envolveu entrevistas quantitativas e a imersão completa na leitura dos pesados Manuais Legais do fundo de pensão. Conduzimos testes com a base de usuários finais para validar as lógicas financeiras.
 Os principais insights foram:
 • A complexidade do cruzamento de regras matemáticas deve ser absorvida pela máquina, não pelo cérebro do idoso.
 • Gráficos absurdamente interativos e "tecnológicos" sobre portfólio paralisavam e assustavam os usuários na etapa de testes. A conversão exigia a troca por tabelas nominais cruas e explicações literais.
@@ -652,7 +736,7 @@ Users, consisting mostly of 60+ individuals with low digital literacy, experienc
 • **Strategic Responsive Limitation:** Application of positive friction directing the user to use a computer or tablet instead of trying to squeeze minutiae and high-density tables onto a mobile phone.
 
 **WORKING PROCESS**
-Research involved quantitative interviews and complete immersion in reading the pension fund's heavy Legal Manuals. We conducted [Insert number of interviews or test rounds] with the end-user base to validate financial logic.
+Research involved quantitative interviews and complete immersion in reading the pension fund's heavy Legal Manuals. We conducted tests with the end-user base to validate financial logic.
 The main insights were:
 • The complexity of crossing mathematical rules must be absorbed by the machine, not by the elderly brain.
 • Absurdly interactive and "technological" portfolio charts paralyzed and frightened users in the testing phase. Conversion required swapping for raw nominal tables and literal explanations.
@@ -672,6 +756,8 @@ The portal translated heavy bureaucracy into autonomy for the elderly audience, 
       "Low digital literacy",
     ],
     technologies: ["Figma", "Miro", "Microsoft Clarity", "Prototyping"],
+    methods: [],
+    principles: [],
     client: "Confidencial",
     role: "Product Designer",
     liveUrl: "#",
@@ -706,22 +792,7 @@ The portal translated heavy bureaucracy into autonomy for the elderly audience, 
   // ========================================================================
   // PROJETOS FUTUROS (EM BREVE)
   // ========================================================================
-  {
-    id: "crm-financeiro",
-    title: {
-      pt: "Portal CRM: Gestão de relacionamento com cliente focado em cashback e portais administrativos.",
-      en: "CRM Portal: Customer relationship management focused on cashback and administrative portals.",
-    },
-    status: "coming-soon",
-    description: {
-      pt: "Portal CRM",
-      en: "CRM Portal",
-    },
-    imageUrl: "",
-    category: "Web",
-    tags: ["Product Design", "B2B"],
-    fullDescription: { pt: "", en: "" },
-  },
+
   {
     id: "gestao-buffet",
     title: {
@@ -736,6 +807,12 @@ The portal translated heavy bureaucracy into autonomy for the elderly audience, 
     imageUrl: "",
     category: "Tablet App",
     tags: ["UX Strategy", "User Flow"],
+    technologies: [],
+    methods: [],
+    principles: [],
+    client: "Confidencial",
+    role: "Product Designer",
+    liveUrl: "#",
     fullDescription: { pt: "", en: "" },
   },
   {
@@ -752,6 +829,12 @@ The portal translated heavy bureaucracy into autonomy for the elderly audience, 
     imageUrl: "",
     category: "UI",
     tags: ["Research", "UX/UI Design"],
+    technologies: [],
+    methods: [],
+    principles: [],
+    client: "Confidencial",
+    role: "Product Designer",
+    liveUrl: "#",
     fullDescription: { pt: "", en: "" },
   },
   {
@@ -768,6 +851,12 @@ The portal translated heavy bureaucracy into autonomy for the elderly audience, 
     imageUrl: "",
     category: "UX/UI Design",
     tags: ["Dashboard", "UI Design"],
+    technologies: [],
+    methods: [],
+    principles: [],
+    client: "Confidencial",
+    role: "Product Designer",
+    liveUrl: "#",
     fullDescription: { pt: "", en: "" },
   },
 ];

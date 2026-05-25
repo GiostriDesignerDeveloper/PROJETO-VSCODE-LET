@@ -40,7 +40,6 @@ const ProjectPage = () => {
     return (
       <div className="space-y-6 text-gray-600 text-[1.1rem] leading-relaxed">
         {blocks.map((block, index) => {
-          // 1. Títulos
           if (block.startsWith("**") && block.endsWith("**") && !block.includes(":")) {
             const titleText = block.replace(/\*\*/g, "").trim();
             currentSection = titleText;
@@ -55,7 +54,6 @@ const ProjectPage = () => {
             );
           }
 
-          // 2. IMAGEM LARGURA TOTAL [IMG:x]
           if (block.startsWith("[IMG:") && block.endsWith("]")) {
             const imgIndex = parseInt(block.replace("[IMG:", "").replace("]", ""));
             const image = project.gallery?.[imgIndex];
@@ -73,14 +71,12 @@ const ProjectPage = () => {
             );
           }
 
-          // 3. IMAGEM LATERAL [IMG_SIDE:x] - GRID PARA ALINHAMENTO
           if (block.startsWith("[IMG_SIDE:") && block.endsWith("]")) {
             const imgIndex = parseInt(block.replace("[IMG_SIDE:", "").replace("]", ""));
             const image = project.gallery?.[imgIndex];
             if (!image) return null;
             
             const nextBlock = blocks[index + 1];
-            // Remove o próximo bloco para não duplicar na renderização
             blocks.splice(index + 1, 1);
 
             return (
@@ -100,7 +96,6 @@ const ProjectPage = () => {
             );
           }
 
-          // 4. BLOCO DE NOTA IA [AI_NOTE]
           if (block.startsWith("[AI_NOTE]")) {
             const cleanText = block.replace("[AI_NOTE]", "").trim();
             return (
@@ -114,7 +109,6 @@ const ProjectPage = () => {
             );
           }
 
-          // 5. BULLET POINTS
           if (block.startsWith("•")) {
             const cleanBlock = block.replace("•", "").trim();
             const parts = cleanBlock.split("**");
@@ -127,7 +121,6 @@ const ProjectPage = () => {
             );
           }
 
-          // 6. CAIXAS DE DESTAQUE
           const isHighlightSection = currentSection === "PROBLEMA" || currentSection === "PROBLEM" || currentSection === "RESULTADO" || currentSection === "RESULT";
           if (isHighlightSection) {
             return (
@@ -229,6 +222,26 @@ const ProjectPage = () => {
                 </div>
               </div>
             )}
+
+            {!hasInlineImages && project.gallery && project.gallery.length > 0 && (
+              <div className="mt-24 space-y-16 clear-both">
+                <h3 className="text-xs font-bold text-gray-900 uppercase tracking-widest border-b border-gray-200 pb-4">
+                  {language === 'pt' ? 'Galeria do Projeto' : 'Project Gallery'}
+                </h3>
+                <div className="grid grid-cols-1 gap-16 mt-12">
+                  {project.gallery.map((item, index) => (
+                    <div key={index} className="space-y-4">
+                      <div className="border border-gray-100 bg-gray-50 p-2">
+                        <img src={item.url} alt={item.title} className="w-full h-auto object-contain" />
+                      </div>
+                      <p className="text-gray-500 text-xs font-bold uppercase tracking-widest border-l-2 border-gray-900 pl-4 py-1">
+                        {item.title}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
 
           <div className="lg:w-1/3 lg:sticky lg:top-32 w-full border-t lg:border-t-0 lg:border-l border-gray-200 pt-12 lg:pt-0 lg:pl-12">
@@ -255,29 +268,32 @@ const ProjectPage = () => {
                 </span>
               </div>
 
-              <div>
-                <span className="block text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4">
-                  {language === 'pt' ? 'Ferramentas' : 'Tools'}
-                </span>
-                <div className="flex flex-wrap gap-2">
-                  {(project.technologies || []).map((tech, index) => (
-                    <span
-                      key={index}
-                      className="px-3 py-1.5 border border-gray-200 text-gray-600 font-bold text-xs uppercase tracking-wider rounded-none bg-white"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+              {/* Ajustado com optional chaining (?) e fallback (|| []) para satisfazer o TypeScript */}
+              {project.technologies && project.technologies.length > 0 && (
+                <div>
+                  <span className="block text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4">
+                    {language === 'pt' ? 'Ferramentas' : 'Tools'}
+                  </span>
+                  <div className="flex flex-wrap gap-2">
+                    {(project.technologies || []).map((tech, index) => (
+                      <span
+                        key={index}
+                        className="px-3 py-1.5 border border-gray-200 text-gray-600 font-bold text-xs uppercase tracking-wider rounded-none bg-white"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
 
-              {project.methods && (
+              {project.methods && project.methods.length > 0 && (
                 <div>
                   <span className="block text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4">
                     {language === 'pt' ? 'Métodos Utilizados' : 'Methods Used'}
                   </span>
                   <div className="flex flex-wrap gap-2">
-                    {project.methods.map((method: string, index: number) => (
+                    {(project.methods || []).map((method, index) => (
                       <span
                         key={index}
                         className="px-3 py-1.5 border border-gray-200 text-gray-600 font-bold text-xs uppercase tracking-wider rounded-none bg-white"
@@ -289,13 +305,13 @@ const ProjectPage = () => {
                 </div>
               )}
 
-              {project.principles && (
+              {project.principles && project.principles.length > 0 && (
                 <div>
                   <span className="block text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4">
                     {language === 'pt' ? 'Princípios de UX' : 'Applied UX Principles'}
                   </span>
                   <div className="flex flex-wrap gap-2">
-                    {project.principles.map((principle: string, index: number) => (
+                    {(project.principles || []).map((principle, index) => (
                       <span
                         key={index}
                         className="px-3 py-1.5 border border-gray-200 text-gray-600 font-bold text-xs uppercase tracking-wider rounded-none bg-white"
