@@ -28,32 +28,13 @@ const Footer = () => {
               {t("footer.created")}
             </p>
             <div className="flex space-x-5">
-              <a 
-                href="https://github.com/GiostriDesignerDeveloper" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="text-gray-500 hover:text-white transition-colors"
-                onClick={() => trackContactClick('GitHub')}
-                aria-label="GitHub"
-              >
+              <a href="https://github.com/GiostriDesignerDeveloper" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors" onClick={() => trackContactClick('GitHub')} aria-label="GitHub">
                 <Github size={22} />
               </a>
-              <a 
-                href="https://www.linkedin.com/in/leticiagouveiag" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="text-gray-500 hover:text-white transition-colors"
-                onClick={() => trackContactClick('LinkedIn')}
-                aria-label="LinkedIn"
-              >
+              <a href="https://www.linkedin.com/in/leticiagouveiag" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors" onClick={() => trackContactClick('LinkedIn')} aria-label="LinkedIn">
                 <Linkedin size={22} />
               </a>
-              <a 
-                href="mailto:leticiagouveiadesign@gmail.com" 
-                className="text-gray-500 hover:text-white transition-colors"
-                onClick={() => trackContactClick('Email')}
-                aria-label="Email"
-              >
+              <a href="mailto:leticiagouveiadesign@gmail.com" className="text-gray-500 hover:text-white transition-colors" onClick={() => trackContactClick('Email')} aria-label="Email">
                 <Mail size={22} />
               </a>
             </div>
@@ -65,26 +46,10 @@ const Footer = () => {
               {t("footer.links")}
             </h3>
             <ul className="space-y-4 text-sm font-medium">
-              <li>
-                <Link to="/" onClick={scrollToTop} className="text-gray-400 hover:text-white transition-colors">
-                  {t("nav.home")}
-                </Link>
-              </li>
-              <li>
-                <a href="/#projects" className="text-gray-400 hover:text-white transition-colors">
-                  {t("nav.projects")}
-                </a>
-              </li>
-              <li>
-                <Link to="/about" onClick={scrollToTop} className="text-gray-400 hover:text-white transition-colors">
-                  {t("nav.experience")}
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" onClick={scrollToTop} className="text-gray-400 hover:text-white transition-colors">
-                  {t("nav.contact")}
-                </Link>
-              </li>
+              <li><Link to="/" onClick={scrollToTop} className="text-gray-400 hover:text-white transition-colors">{t("nav.home")}</Link></li>
+              <li><a href="/#projects" className="text-gray-400 hover:text-white transition-colors">{t("nav.projects")}</a></li>
+              <li><Link to="/about" onClick={scrollToTop} className="text-gray-400 hover:text-white transition-colors">{t("nav.experience")}</Link></li>
+              <li><Link to="/contact" onClick={scrollToTop} className="text-gray-400 hover:text-white transition-colors">{t("nav.contact")}</Link></li>
             </ul>
           </div>
 
@@ -96,21 +61,13 @@ const Footer = () => {
             <ul className="space-y-6 text-sm">
               <li>
                 <span className="block text-gray-600 font-medium mb-1">Email</span>
-                <a 
-                  href="mailto:leticiagouveiadesign@gmail.com" 
-                  className="text-gray-300 hover:text-white transition-colors font-medium border-b border-gray-700 hover:border-white pb-0.5"
-                  onClick={() => trackContactClick('Email_Footer')}
-                >
+                <a href="mailto:leticiagouveiadesign@gmail.com" className="text-gray-300 hover:text-white transition-colors font-medium border-b border-gray-700 hover:border-white pb-0.5" onClick={() => trackContactClick('Email_Footer')}>
                   leticiagouveiadesign@gmail.com
                 </a>
               </li>
               <li>
-                <span className="block text-gray-600 font-medium mb-1">
-                  {t("contact.info.location.label")}
-                </span>
-                <span className="text-gray-300 font-medium">
-                  Belo Horizonte, MG - BR
-                </span>
+                <span className="block text-gray-600 font-medium mb-1">{t("contact.info.location.label")}</span>
+                <span className="text-gray-300 font-medium">Belo Horizonte, MG - BR</span>
               </li>
             </ul>
           </div>

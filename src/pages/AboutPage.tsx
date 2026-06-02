@@ -1,12 +1,52 @@
-import { Briefcase, GraduationCap, Award, Globe2, User, Wrench } from "lucide-react";
+import { Briefcase, GraduationCap, Award, Globe2, User, Wrench, Target } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { motion } from "framer-motion";
+import { projectsData } from "../data/projects"; // Importamos os seus projetos
 
 const AboutPage = () => {
   const { language } = useLanguage();
 
   // ==========================================================
-  // DADOS EM PORTUGUÊS (Atualizados sem "&")
+  // FUNÇÃO QUE BUSCA O IMPACTO DIRETAMENTE DO PROJECTS.TS
+  // ==========================================================
+  const getProjectImpacts = () => {
+    return projectsData.map(project => {
+      // Pega a descrição no idioma atual
+      const desc = typeof project.fullDescription === 'string' 
+        ? project.fullDescription 
+        : (project.fullDescription?.[language] || project.fullDescription?.pt || "");
+      
+      // Essa "fórmula" (Regex) procura a palavra RESULTADOS ou IMPACTO e pega o texto abaixo dela
+      const regex = /\*\*(?:RESULTADOS|RESULT|IMPACTO|IMPACT)\*\*\n([\s\S]*?)(?=\n\*\*|$)/i;
+      const match = desc.match(regex);
+
+      if (match && match[1].trim()) {
+        // Limpa o texto: remove tags de imagem e métricas brutas
+        const cleanLines = match[1]
+          .split('\n')
+          .map(line => line.trim())
+          .filter(line => line && !line.startsWith('[IMG') && !line.startsWith('[METRICS]'));
+          
+        if (cleanLines.length === 0) return null;
+
+        const title = typeof project.title === 'string' 
+          ? project.title 
+          : (project.title?.[language] || project.title?.pt || project.id);
+
+        return {
+          id: project.id,
+          title,
+          lines: cleanLines
+        };
+      }
+      return null;
+    }).filter(Boolean); // Remove os projetos que não têm essa seção
+  };
+
+  const projectImpacts = getProjectImpacts();
+
+  // ==========================================================
+  // DADOS EM PORTUGUÊS
   // ==========================================================
   const experiencesPT = [
     {
@@ -75,7 +115,7 @@ const AboutPage = () => {
           <div className="bg-gray-50 p-6 rounded-none border-l-2 border-gray-900">
             <strong className="text-gray-900 block mb-2 uppercase tracking-wider text-xs font-bold">Realizações a destacar:</strong>
             <p className="text-sm text-gray-600 leading-relaxed">
-              Implementei a padronização visual via Design System, o que reduziu falhas de comunicação e aumentou a velocidade de entrega (time-to-market) das evoluções de interface. Estabeleci um ciclo de melhoria contínua baseado em feedback real e análise de dados, garantindo que o product crescesse com escalabilidade visual e eficiência técnica, mantendo a consistência e a clareza em todos os pontos de contatos.
+              Implementei a padronização visual via Design System, o que reduziu falhas de comunicação e aumentou a velocidade de entrega (time-to-market) das evoluções de interface. Estabeleci um ciclo de melhoria contínua baseado em feedback real e análise de dados, garantindo que o produto crescesse com escalabilidade visual e eficiência técnica, mantendo a consistência e a clareza em todos os pontos de contatos.
             </p>
           </div>
         </div>
@@ -85,6 +125,7 @@ const AboutPage = () => {
 
   const resumeExtraPT = {
     education: [
+      "Pós-graduação em UX e Design de Produtos Digitais - PUC Minas - Em andamento",
       "Graduação em Design de Ambientes - Universidade Estadual de Minas Gerais (UEMG) - 2016-2021",
       "Optativa de destaque - Neurociência Cognitiva da Criatividade - UEMG"
     ],
@@ -105,7 +146,7 @@ const AboutPage = () => {
   ];
 
   // ==========================================================
-  // DADOS EM INGLÊS (Atualizados sem "&")
+  // DADOS EM INGLÊS
   // ==========================================================
   const experiencesEN = [
     {
@@ -184,6 +225,7 @@ const AboutPage = () => {
 
   const resumeExtraEN = {
     education: [
+      "Postgraduate Degree in UX and Digital Product Design - PUC Minas - Ongoing",
       "Bachelor's Degree in Environmental Design - State University of Minas Gerais (UEMG) - 2016-2021",
       "Key Elective - Cognitive Neuroscience of Creativity - UEMG"
     ],
@@ -284,12 +326,58 @@ const AboutPage = () => {
               </div>
             </motion.section>
 
+            {/* SEÇÃO NOVA: Impacto em Produto (Gerada dinamicamente) */}
+            {projectImpacts && projectImpacts.length > 0 && (
+              <motion.section 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="border-b border-gray-200 pb-12"
+              >
+                <div className="flex items-center mb-8">
+                  <Target size={22} strokeWidth={1.5} className="text-gray-900 mr-4" />
+                  <h2 className="text-xs font-bold text-gray-900 uppercase tracking-widest">
+                    {language === 'pt' ? 'Impacto em Produto' : 'Product & Experience Impact'}
+                  </h2>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {projectImpacts.map((impact: any, index: number) => (
+                    <div key={index} className="bg-gray-50 border border-gray-200 p-6 rounded-none">
+                      <h3 className="text-xs font-bold text-gray-900 mb-4 uppercase tracking-widest border-b border-gray-200 pb-3">
+                        {impact.title}
+                      </h3>
+                      <div className="space-y-3">
+                        {impact.lines.map((line: string, i: number) => {
+                          const isBullet = line.startsWith('•');
+                          const text = line.replace('•', '').trim();
+                          
+                          // Aplica negrito nas partes que usam asteriscos duplos
+                          const formattedText = text.replace(/\*\*(.*?)\*\*/g, '<strong class="text-gray-900">$1</strong>');
+
+                          return isBullet ? (
+                            <div key={i} className="flex gap-3 items-start text-sm text-gray-600">
+                              <span className="text-gray-900 font-bold mt-0.5">•</span>
+                              <span dangerouslySetInnerHTML={{ __html: formattedText }} />
+                            </div>
+                          ) : (
+                            <p key={i} className="text-sm text-gray-700 font-medium mb-1" dangerouslySetInnerHTML={{ __html: formattedText }} />
+                          );
+                        })}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </motion.section>
+            )}
+
             {/* Seção de Experiência Profissional */}
             <motion.section 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
               className="pb-12"
             >
               <div className="flex items-center mb-12">
@@ -302,7 +390,6 @@ const AboutPage = () => {
               <div className="space-y-16">
                 {activeExperiences.map((exp, index) => (
                   <div key={index} className="relative pl-8 border-l border-gray-200 group">
-                    {/* Marcador Minimalista Quadrado */}
                     <div className="absolute -left-[4.5px] top-1.5 w-2 h-2 bg-gray-900 border border-gray-950 transition-colors group-hover:bg-white"></div>
                     
                     <span className="inline-block text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">

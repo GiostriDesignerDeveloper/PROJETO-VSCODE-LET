@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { LanguageProvider } from './contexts/LanguageContext'; // 1. Importe o provedor aqui
+import { LanguageProvider } from './contexts/LanguageContext';
 
 import HomePage from './pages/HomePage';
 import ProjectPage from './pages/ProjectPage';
@@ -10,7 +10,6 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    // 2. Envolva toda a aplicação com o LanguageProvider
     <LanguageProvider>
       <Router>
         <div className="flex flex-col min-h-screen">

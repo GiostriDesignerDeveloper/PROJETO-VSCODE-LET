@@ -5,7 +5,8 @@ import { useLanguage } from "../contexts/LanguageContext";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { t, toggleLanguage } = useLanguage();
+  // Adicionei a extração da variável 'language' para podermos usar na tradução manual
+  const { t, toggleLanguage, language } = useLanguage();
   const location = useLocation();
 
   // Solução de Engenharia para corrigir o comportamento de rotas e âncoras (Hash Scrolling)
@@ -21,15 +22,17 @@ const Header = () => {
       }, 120);
       return () => clearTimeout(timer);
     } else {
-      // Se o usuário mudar para uma rota sem âncora (ex: ir para o topo da home ou sobre), garante que a página comece do topo
+      // Se o usuário mudar para uma rota sem âncora, garante que a página comece do topo
       window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
     }
   }, [location.pathname, location.hash]);
 
+  // AQUI ESTÁ A MÁGICA: Atualizamos a lista de links para refletir Currículo e Contato
   const navLinks = [
     { name: t("nav.home"), path: "/" },
     { name: t("nav.projects"), path: "/#projects" },
-    { name: t("nav.experience"), path: "/about" },
+    { name: language === 'en' ? 'Resume' : 'Currículo', path: "/about" },
+    { name: language === 'en' ? 'Contact' : 'Contato', path: "/contact" },
   ];
 
   return (
