@@ -4,7 +4,7 @@ export const projectsData: Project[] = [
   // ========================================================================
   // PROJETOS ATIVOS
   // ========================================================================
-  {
+{
     id: "plataforma-b2b-compras",
     title: {
       pt: "Transformando um processo de compras fragmentado em decisões mais rápidas e confiáveis",
@@ -13,293 +13,135 @@ export const projectsData: Project[] = [
     status: "active",
     embedUrl: "",
     description: {
-      pt: "Plataforma B2B criada para simplificar negociações entre compradores e fornecedores, reduzindo esforço operacional.",
-      en: "B2B platform designed to simplify negotiations between buyers and suppliers, reducing operational effort.",
+      pt: "Como transformamos um processo de compras baseado em planilhas, ligações e WhatsApp em uma experiência centralizada, reduzindo esforço operacional e facilitando a tomada de decisão.",
+      en: "How we transformed a purchasing process based on spreadsheets, phone calls, and WhatsApp into a centralized experience, reducing operational effort and improving decision-making.",
     },
     fullDescription: {
       pt: `
-**AVISO**
+**CONFIDENCIALIDADE**
 Nome, identidade visual e algumas informações foram adaptados para preservar a confidencialidade do projeto.
 
-**RESUMO DO PROJETO**
-• **Projeto:** Plataforma B2B de compras e cotações
-• **Desafio:** Reduzir a complexidade operacional entre compradores e fornecedores em um processo crítico de abastecimento
-• **Impacto esperado:** Menos esforço operacional, decisões mais rápidas e maior transparência no processo de negociação
+**VISÃO GERAL**
+• **Projeto:** Plataforma B2B de compras e cotações.
+• **Meu papel:** Product Designer (Atuação end-to-end).
+• **Escopo:** Discovery, user research, arquitetura da informação, fluxos, UX/UI e usabilidade.
+• **Objetivo:** Centralizar a jornada de compras, reduzindo retrabalho e otimizando decisões de negócio.
 
-**Complexidade do projeto:**
-• múltiplos perfis de usuário (comprador, fornecedor e administrador)
-• decisões financeiras de alto impacto
-• comparação entre múltiplos fornecedores
-• integração com sistemas legados
-• rastreabilidade do processo
-• grande volume de dados operacionais
-
-[IMG:1]
-
-**TIME DO PROJETO**
-Projeto desenvolvido em parceria com outra product designer, em um contexto colaborativo de construção de produto.
-Minha atuação esteve concentrada na estruturação dos fluxos críticos, organização das informações, simplificação da jornada e apoio à tomada de decisão da interface.
 
 **CONTEXTO**
-O projeto surgiu a partir de um problema recorrente enfrentado pelos clientes do sistema legado de compras.
-O processo de cotação era lento, fragmentado e altamente manual.
-Compradores precisavam alternar entre diferentes etapas, exportar planilhas, negociar por ligação ou WhatsApp, procurar fornecedores manualmente e consolidar informações dispersas para tomar decisões importantes.
-Além disso, erros de compra tinham impacto financeiro direto no negócio.
-Como o segmento opera com margens pequenas, decisões ruins de abastecimento podiam gerar prejuízos relevantes para a operação.
-Essa era uma dor frequentemente relatada pelos clientes e percebida internamente como um gargalo crítico do processo.
+O processo de compras dependia de ERP, planilhas e comunicação externa, tornando a operação lenta e difícil de auditar. A falta de precisão impactava diretamente a rentabilidade do negócio.
 
-**Oportunidade identificada**
-Em vez de apenas melhorar o sistema existente, surgiu a oportunidade de criar uma nova plataforma.
-Uma solução conectada ao ecossistema legado, mas desenhada para centralizar o relacionamento entre compradores, fornecedores e administradores.
-O objetivo não era apenas digitalizar o processo.
-Era tornar compras e negociações:
-• mais rápidas
-• mais transparentes
-• menos manuais
-• menos suscetíveis a erro
-• mais organizadas
+**PROBLEMA**
+Identificamos cinco desafios críticos:
+• Processo fragmentado entre múltiplas ferramentas.
+• Dados descentralizados que impediam comparações precisas.
+• Negociações externas sem rastreabilidade.
+• Alto esforço manual e retrabalho constante.
 
-**ANTES DE DESENHAR, ENTENDEMOS A OPERAÇÃO**
-Antes de propor soluções, foi necessário entender profundamente como a operação realmente funcionava.
-Partimos da leitura de documentações do produto, análise dos fluxos do sistema atual, regras operacionais e dores recorrentes reportadas pelos usuários.
-Também mapeamos dependências do ecossistema legado, restrições técnicas e necessidades específicas dos diferentes perfis envolvidos no processo.
+**Impacto:** Ciclos de cotação longos, maior margem de erro e baixa visibilidade operacional.
 
-**O que analisamos:**
-• sistema legado de compras
-• regras operacionais do negócio
-• fluxos de cotação e negociação
-• pontos recorrentes de fricção
-• dependências do ecossistema legado
-• necessidades de compradores e fornecedores
+**DISCOVERY E ESTRATÉGIA**
+Realizamos uma análise profunda do sistema legado, mapeando regras de negócio e jornadas de usuários.
+• **Pesquisa:** Conduzi entrevistas e testes de usabilidade para validar as dores.
+• **Estratégia:** Centralizar a jornada para reduzir a carga cognitiva dos compradores.
 
-**Restrições do projeto:**
-• decisões financeiras críticas
-• múltiplos perfis de usuário
-• necessidade de rastreabilidade
-• regras operacionais complexas
-• integração com sistemas existentes
-
-**O PROBLEMA**
-Ao analisar o sistema anterior, percebemos que tarefas recorrentes exigiam esforço excessivo.
-Os usuários precisavam repetir ações constantemente, lidar com interrupções frequentes e navegar por diferentes etapas para concluir tarefas simples.
-Na prática, isso tornava a experiência:
-• lenta
-• cansativa
-• repetitiva
-• sujeita a erros
-
-**Principais fricções identificadas no sistema anterior:**
-• **Processo fragmentado:** A jornada de cotação acontecia entre diferentes telas e submódulos, dificultando a continuidade da tarefa.
-• **Informações dispersas:** Preço, histórico, disponibilidade, comparação entre fornecedores e negociação apareciam em contextos diferentes, exigindo esforço mental constante.
-• **Dependência de processos paralelos:** Parte das negociações acontecia fora do sistema, utilizando ligação, WhatsApp e planilhas.
-• **Interrupções frequentes:** Confirmações e bloqueios interrompiam constantemente o fluxo do usuário.
-• **Baixa eficiência operacional:** Tarefas simples exigiam muitos cliques, espera e retrabalho.
-
-[IMG_SIDE:0]
-
-**COMO A NOVA PLATAFORMA RESPONDEU ÀS FRICÇÕES**
-
-**Centralizamos informações críticas**
-Criamos uma experiência onde compradores conseguem comparar fornecedores, preços, histórico e condições de negociação no mesmo contexto. O objetivo era reduzir esforço mental e evitar perda de contexto entre telas.
-
-**Estruturamos um fluxo mais linear**
-Organizamos a jornada em etapas mais previsíveis: cotação → negociação → apuração → ordem de compra, reduzindo navegação desnecessária e aumentando clareza operacional.
-
-**Reduzimos dependência de processos externos**
-Negociações, histórico e acompanhamento passaram a acontecer dentro da plataforma, reduzindo dependência de planilhas e canais paralelos.
-
-**Mantivemos governança sem aumentar complexidade**
-Mesmo com automações e sugestões do sistema, mantivemos a decisão final sob responsabilidade do comprador. Nem sempre o menor preço representava a melhor escolha. Prazo, disponibilidade, impostos e contexto operacional também precisavam ser considerados.
-
-**Organizamos grandes volumes de informação**
-Priorizamos escaneabilidade visual, comparação rápida e hierarquia da informação para facilitar decisões de alto impacto financeiro.
+**SOLUÇÃO**
+• **Jornada Linear:** Fluxo unificado (Cotação → Negociação → Apuração → Ordem de Compra).
+• **Centralização:** Preços, histórico e negociações em um único contexto.
+• **Governança:** Rastreabilidade integrada ao banco de dados, eliminando processos paralelos.
+• **Suporte à Decisão:** Hierarquia visual desenhada para facilitar análises complexas.
 
 [IMG:1]
 
-**COMPARATIVO ENTRE O SISTEMA LEGADO E O FLUXO OTIMIZADO**
-Com base na análise do comportamento observado no sistema anterior e no fluxo otimizado proposto para a nova plataforma, estimamos ganhos relevantes de eficiência operacional.
-
-**Impactos estimados da nova experiência:**
-• ≈ 60% menos tempo de jornada (de 10m23 → ~4min)
-• ≈ 88% menos tempo de espera operacional (de 4m09 → <30s)
-• ≈ 62% menos cliques (de 8 passos → 3 passos)
-• ≈ 88% menos esforço na seleção de períodos (de 17 cliques → 2 cliques)
-• 100% dos modais interruptivos eliminados (de múltiplas interrupções → feedback integrado à interface)
-
-**Impactos esperados no processo:**
-• redução de retrabalho operacional
-• mais rapidez na tomada de decisão
-• menor esforço cognitivo
-• maior transparência entre compradores e fornecedores
-• menor dependência de processos manuais
-• melhor rastreabilidade das negociações
+**RESULTADOS**
+O redesign gerou ganhos de eficiência mensuráveis:
+• 60% menos tempo na jornada de compra.
+• 88% menos espera operacional.
+• 62% menos cliques por tarefa.
+• 88% mais eficiência na seleção de períodos.
+• Eliminação total de modais de interrupção.
 
 **OUTROS FLUXOS DO PRODUTO**
 
-[IMG_SIDE:2]
-**Cadastro e relacionamento de fornecedores**
-Estruturação das regras de relacionamento entre fornecedores, regiões de atendimento e produtos.
+**Login e Registro**
+Ponto de entrada unificado com roteamento seguro baseado no perfil do usuário (comprador, fornecedor ou administrador).
+[IMG:0]
 
-[IMG_SIDE:3]
-**Gestão de preços e negociação**
-Fluxos voltados para comparação, renegociação e acompanhamento de preços.
+**Cadastro de fornecedores**
+Estruturação do onboarding e organização das informações essenciais.
+[IMG:4]
 
-[IMG_SIDE:4]
-**Governança e administração**
-Permissões, aprovações e rastreabilidade do processo para garantir controle operacional.
+**Negociação e acompanhamento**
+Comparação, renegociação e acompanhamento de propostas.
+[IMG:2]
 
-[AI_NOTE] **IA generativa no fluxo de trabalho:** Utilizei IA generativa como apoio à exploração de possibilidades de solução, refinamento de cenários e aceleração dos ciclos de ideação. As decisões finais continuaram orientadas pelas necessidades operacionais, comportamento dos usuários e restrições do negócio.
+**Gestão de preços**
+Organização de tabelas comerciais, regiões e regras operacionais.
+[IMG:3]
 
-**O QUE ESSE PROJETO REFORÇOU PARA MIM**
-• reduzir esforço também é estratégia de produto
-• decisões complexas precisam de contexto
-• nem sempre o menor preço representa a melhor escolha
-• simplificar não significa esconder complexidade
 
-Em sistemas complexos, o papel do design nem sempre é simplificar tudo mas tornar a complexidade compreensível.
+[AI_NOTE] **Uso de IA:** Utilizei IA generativa para acelerar exploração de cenários, refinamento de fluxos e geração de alternativas durante o processo de design. As decisões finais permaneceram orientadas por pesquisa, contexto operacional e necessidades dos usuários.
+
+**APRENDIZADOS**
+• Simplificar fluxos complexos gera mais valor que adicionar novas funcionalidades.
+• Decisões estratégicas dependem de dados organizados.
+• Design é ferramenta de governança e confiança operacional.
       `,
       en: `
-**CONFIDENTIALITY NOTICE**
-Name, visual identity, and some product data were adapted to preserve project confidentiality.
+**CONFIDENTIALITY**
+Project name, visual identity, and selected information were adapted to preserve confidentiality.
 
-**PROJECT SUMMARY**
-• **Project:** B2B purchasing and quotation platform
-• **Challenge:** Reduce operational complexity between buyers and suppliers in a critical supply process
-• **Expected impact:** Less operational effort, faster decisions, and greater transparency in the negotiation process
-
-**Project complexity:**
-• multiple user profiles (buyer, supplier, and administrator)
-• high-impact financial decisions
-• comparison across multiple suppliers
-• integration with legacy systems
-• process traceability
-• large volume of operational data
+**OVERVIEW**
+• **Project:** B2B purchasing and quotation platform.
+• **Role:** Product Designer (End-to-end ownership).
+• **Scope:** Discovery, user research, information architecture, user flows, UX/UI, and usability.
+• **Goal:** Centralize the purchasing journey, reducing rework and increasing process visibility.
 
 [IMG:1]
-
-**PROJECT TEAM**
-Developed in partnership with another product designer, in a collaborative product building context.
-My role focused on structuring critical flows, organizing information, simplifying the journey, and supporting interface decision-making.
 
 **CONTEXT**
-The project emerged from a recurring problem faced by clients of the legacy purchasing system.
-The quotation process was slow, fragmented, and highly manual.
-Buyers had to switch between different stages, export spreadsheets, negotiate via call or WhatsApp, search for suppliers manually, and consolidate dispersed information to make important decisions.
-Furthermore, purchasing errors had a direct financial impact on the business.
-Since the segment operates with tight margins, bad supply decisions could generate significant losses for the operation.
-This was a pain frequently reported by clients and perceived internally as a critical process bottleneck.
+The purchasing process relied on legacy ERP modules, spreadsheets, and external communication, making it slow and difficult to audit. Inaccuracies directly impacted profitability in a low-margin industry.
 
-**Identified opportunity**
-Instead of just improving the existing system, the opportunity arose to create a new platform.
-A solution connected to the legacy ecosystem, but designed to centralize the relationship between buyers, suppliers, and administrators.
-The goal was not just to digitize the process.
-It was to make purchases and negotiations:
-• faster
-• more transparent
-• less manual
-• less error-prone
-• more organized
+**PROBLEM**
+Key challenges identified:
+• Fragmented workflows across disconnected tools.
+• Decentralized data hindering accurate supplier comparison.
+• Negotiations occurring outside the system.
+• Excessive manual rework and effort.
 
-**BEFORE DESIGNING, WE UNDERSTOOD THE OPERATION**
-Before proposing solutions, it was necessary to deeply understand how the operation actually worked.
-We started by reading product documentation, analyzing current system flows, operational rules, and recurring pains reported by users.
-We also mapped legacy ecosystem dependencies, technical constraints, and specific needs of the different profiles involved.
+**Impact:** Longer quotation cycles, increased purchasing risk, and poor process visibility.
 
-**What we analyzed:**
-• legacy purchasing system
-• business operational rules
-• quotation and negotiation flows
-• recurring friction points
-• legacy ecosystem dependencies
-• buyer and supplier needs
+**DISCOVERY AND STRATEGY**
+We mapped workflows and business rules to identify bottlenecks.
+• **Research:** I conducted user research and usability testing to validate pain points.
+• **Strategy:** Centralized the purchasing journey to reduce cognitive load for buyers.
 
-**Project constraints:**
-• critical financial decisions
-• multiple user profiles
-• need for traceability
-• complex operational rules
-• integration with existing systems
-
-**THE PROBLEM**
-When analyzing the previous system, we noticed that recurring tasks required excessive effort.
-Users had to constantly repeat actions, deal with frequent interruptions, and navigate through different stages to complete simple tasks.
-In practice, this made the experience:
-• slow
-• exhausting
-• repetitive
-• error-prone
-
-**Main frictions identified in the previous system:**
-• **Fragmented process:** The quotation journey happened across different screens and submodules, hindering task continuity.
-• **Dispersed information:** Price, history, availability, supplier comparison, and negotiation appeared in different contexts, requiring constant mental effort.
-• **Dependence on parallel processes:** Part of the negotiations happened outside the system, using calls, WhatsApp, and spreadsheets.
-• **Frequent interruptions:** Confirmations and blocks constantly interrupted the user flow.
-• **Low operational efficiency:** Simple tasks required many clicks, waiting, and rework.
-
-[IMG_SIDE:0]
-
-**HOW THE NEW PLATFORM RESPONDED TO FRICTIONS**
-
-**We centralized critical information**
-We created an experience where buyers can compare suppliers, prices, history, and negotiation conditions in the same context. The goal was to reduce mental effort and prevent context loss between screens.
-
-**We structured a more linear flow**
-We organized the journey into more predictable stages: quotation → negotiation → calculation → purchase order, reducing unnecessary navigation and increasing operational clarity.
-
-**We reduced dependence on external processes**
-Negotiations, history, and tracking began to happen within the platform, reducing dependence on spreadsheets and parallel channels.
-
-**We maintained governance without increasing complexity**
-Even with system automations and suggestions, we kept the final decision under the buyer's responsibility. The lowest price didn't always represent the best choice. Deadline, availability, taxes, and operational context also had to be considered.
-
-**We organized large volumes of information**
-We prioritized visual scannability, rapid comparison, and information hierarchy to facilitate high financial impact decisions.
+**SOLUTION**
+• **Streamlined Workflow:** Unified process (Quotation → Negotiation → Evaluation → Purchase Order).
+• **Centralization:** Pricing, history, and negotiations accessible in one context.
+• **Traceability:** Integrated audit trails, eliminating the need for parallel manual processes.
+• **Decision Support:** Designed information hierarchy to facilitate high-impact financial comparisons.
 
 [IMG:1]
 
-**COMPARISON BETWEEN LEGACY SYSTEM AND OPTIMIZED FLOW**
-Based on the behavior analysis observed in the previous system and the optimized flow proposed for the new platform, we estimated relevant operational efficiency gains.
+**RESULTS**
+Our redesign significantly improved operational metrics:
+• 60% reduction in journey completion time.
+• 88% reduction in operational waiting time.
+• 62% reduction in clicks.
+• 88% efficiency gain in period selection.
+• Total elimination of interruptive modals.
 
-**Estimated impacts of the new experience:**
-• ≈ 60% less journey time (from 10m23 → ~4min)
-• ≈ 88% less operational wait time (from 4m09 → <30s)
-• ≈ 62% fewer clicks (from 8 steps → 3 steps)
-• ≈ 88% less effort selecting periods (from 17 clicks → 2 clicks)
-• 100% of interruptive modals eliminated (from multiple interruptions → feedback integrated into the interface)
+[AI_NOTE] **AI Usage:** Generative AI was used to accelerate ideation, workflow exploration, and concept refinement. Final decisions remained driven by research insights, business constraints, and user needs.
 
-**Expected impacts on the process:**
-• reduction of operational rework
-• faster decision making
-• less cognitive effort
-• greater transparency between buyers and suppliers
-• less dependence on manual processes
-• better negotiation traceability
-
-**OTHER PRODUCT FLOWS**
-
-[IMG_SIDE:2]
-**Supplier registration and relationship**
-Structuring relationship rules between suppliers, service regions, and products.
-
-[IMG_SIDE:3]
-**Price management and negotiation**
-Flows focused on price comparison, renegotiation, and tracking.
-
-[IMG_SIDE:4]
-**Governance and administration**
-Permissions, approvals, and process traceability to ensure operational control.
-
-[AI_NOTE] **Generative AI in the workflow:** I used generative AI as support to explore solution possibilities, refine scenarios, and accelerate ideation cycles. Final decisions remained guided by operational needs, user behavior, and business constraints.
-
-**LEARNINGS**
-• reducing effort is also a product strategy
-• complex decisions need context
-• the lowest price doesn't always represent the best choice
-• simplifying doesn't mean hiding complexity
-
-In complex systems, the role of design is not always to simplify everything but to make complexity understandable.
+**KEY LEARNINGS**
+• Simplifying complex processes creates more value than adding features.
+• Better decisions depend on well-organized information.
+• Design acts as a tool for governance and operational trust.
       `,
     },
+    imageUrl: "/b2b-cotacao.png",
+    category: "UX/UI Design",
     tags: [
       "Sistemas complexos",
       "Tomada de decisão",
@@ -307,16 +149,15 @@ In complex systems, the role of design is not always to simplify everything but 
       "Simplificação de processos",
       "Organização da informação",
       "Fluxos operacionais",
-      "Redução de atritos",
       "Rastreabilidade"
     ],
     technologies: ["Figma", "Miro", "IA Generativa"],
     methods: [
-      "Leitura e análise de documentação",
-      "Mapeamento de fluxos",
-      "Análise de chamados de suporte",
-      "Organização de regras do processo",
-      "Estruturação de jornadas"
+      "Discovery",
+      "User Research",
+      "Usability Testing",
+      "Arquitetura da Informação",
+      "Handoff"
     ],
     principles: [
       "Redução de esforço mental",
@@ -327,13 +168,12 @@ In complex systems, the role of design is not always to simplify everything but 
     client: "Confidencial",
     role: "Product Designer",
     liveUrl: "#",
-
     gallery: [
-      { url: "/negociacao.png", title: "Fluxo de Negociação" },
-      { url: "/cadastro-precos-fornecedores.png", title: "Comparação de Propostas" },
-      { url: "/cadastro-fornecedor.png", title: "Cadastro de Fornecedor" },
-      { url: "/perfil-edicao.png", title: "Gestão de Preços" },
-      { url: "/login.png", title: "Portal de Acesso" }
+      { url: "/b2b-login.png", title: { pt: "Portal de Acesso", en: "Access Portal" } },
+      { url: "/b2b-cotacao.png", title: { pt: "Fluxo de Cotação e Comparação", en: "Quotation and Comparison Flow" } },
+      { url: "/b2b-negociacao.png", title: { pt: "Interface de Negociação", en: "Negotiation Interface" } },
+      { url: "/b2b-produtos-fornecedores.png", title: { pt: "Gestão de Preços e Fornecedores", en: "Price and Supplier Management" } },
+      { url: "/b2b-cadastro-fornecedor.png", title: { pt: "Cadastro de Fornecedor", en: "Supplier Registration" } }
     ],
   },
 
@@ -486,19 +326,19 @@ Lean visual intervention that solved the information vacuum. There was a stagger
     gallery: [
       {
         url: "/smartsettlement-dados.png",
-        title: "Interface Principal: Hierarquia de dados e ações rápidas.",
+        title: { pt: "Interface Principal: Hierarquia de dados e ações rápidas.", en: "Main Interface: Data hierarchy and quick actions." },
       },
       {
         url: "/smartsettlement-loading.png",
-        title: "Feedback de Sistema: Visibilidade do status de processamento.",
+        title: { pt: "Feedback de Sistema: Visibilidade do status de processamento.", en: "System Feedback: Processing status visibility." },
       },
       {
         url: "/smartsettlement-modal.png",
-        title: "Prevenção de Erro: Modal de confirmação para ações críticas.",
+        title: { pt: "Prevenção de Erro: Modal de confirmação para ações críticas.", en: "Error Prevention: Confirmation modal for critical actions." },
       },
       {
         url: "/smartsettlement-fluxo.png",
-        title: "Documentação de Fluxo: Mapeamento de interações e estados.",
+        title: { pt: "Documentação de Fluxo: Mapeamento de interações e estados.", en: "Flow Documentation: Mapping of interactions and states." },
       },
     ],
   },
@@ -582,67 +422,63 @@ By treating hierarchical visualization as the foundation of compliance, the syst
     gallery: [
       {
         url: "/compliance-dores-ganhos.png",
-        title: "Discovery: Levantamento de dores e ganhos dos operadores.",
+        title: { pt: "Discovery: Levantamento de dores e ganhos dos operadores.", en: "Discovery: Mapping operators' pains and gains." },
       },
       {
         url: "/compliance-personas.png",
-        title: "Personas: Perfis detalhados do time de operação.",
+        title: { pt: "Personas: Perfis detalhados do time de operação.", en: "Personas: Detailed profiles of the operations team." },
       },
       {
         url: "/compliance-hipoteses.png",
-        title: "Hipóteses: Matriz de validação de problemas e soluções.",
+        title: { pt: "Hipóteses: Matriz de validação de problemas e soluções.", en: "Hypotheses: Validation matrix for problems and solutions." },
       },
       {
         url: "/compliance-arquitetura.png",
-        title: "Arquitetura: Estrutura da plataforma e fases de entrega.",
+        title: { pt: "Arquitetura: Estrutura da plataforma e fases de entrega.", en: "Architecture: Platform structure and delivery phases." },
       },
       {
         url: "/compliance-fluxo-novo.png",
-        title: "Novo Fluxo: Jornada otimizada para o analista.",
+        title: { pt: "Novo Fluxo: Jornada otimizada para o analista.", en: "New Flow: Optimized journey for the analyst." },
       },
       {
         url: "/compliance-dashboard-geral.png",
-        title:
-          "Dashboard Geral: Monitoramento gerencial de volumes e cadastros.",
+        title: { pt: "Dashboard Geral: Monitoramento gerencial de volumes e cadastros.", en: "General Dashboard: Management monitoring of volumes and registrations." },
       },
       {
         url: "/compliance-visao-geral.png",
-        title: "Visão Geral UI: Mapeamento de telas, componentes e estados.",
+        title: { pt: "Visão Geral UI: Mapeamento de telas, componentes e estados.", en: "UI Overview: Mapping of screens, components, and states." },
       },
       {
         url: "/compliance-monitoramento.png",
-        title:
-          "Monitoramento: Dashboard core com Score de Risco e alertas PEP.",
+        title: { pt: "Monitoramento: Dashboard core com Score de Risco e alertas PEP.", en: "Monitoring: Core dashboard with Risk Score and PEP alerts." },
       },
       {
         url: "/compliance-estrutura-societaria.png",
-        title:
-          "Estrutura Societária: Visualização hierárquica para identificação de UBO.",
+        title: { pt: "Estrutura Societária: Visualização hierárquica para identificação de UBO.", en: "Corporate Structure: Hierarchical visualization for UBO identification." },
       },
       {
         url: "/compliance-gestao-cadastros.png",
-        title: "Gestão de Cadastros: Listagem inteligente com status visuais.",
+        title: { pt: "Gestão de Cadastros: Listagem inteligente com status visuais.", en: "Registration Management: Smart listing with visual statuses." },
       },
       {
         url: "/compliance-filtros.png",
-        title: "Filtros Avançados: Otimização da busca e refinamento de dados.",
+        title: { pt: "Filtros Avançados: Otimização da busca e refinamento de dados.", en: "Advanced Filters: Search optimization and data refinement." },
       },
       {
         url: "/compliance-info-cnpj.png",
-        title: "Informações CNPJ: Perfil detalhado organizado por módulos.",
+        title: { pt: "Informações CNPJ: Perfil detalhado organizado por módulos.", en: "CNPJ Information: Detailed profile organized by modules." },
       },
       {
         url: "/compliance-documentos.png",
-        title: "Documentos: Interface de gestão e validação documental.",
+        title: { pt: "Documentos: Interface de gestão e validação documental.", en: "Documents: Interface for document management and validation." },
       },
       {
         url: "/compliance-detalhes-doc.png",
-        title:
-          "Detalhes Documentais: Rastreabilidade e histórico de alterações.",
+        title: { pt: "Detalhes Documentais: Rastreabilidade e histórico de alterações.", en: "Document Details: Traceability and alteration history." },
       },
       {
         url: "/compliance-contratos.png",
-        title: "Contratos: Organização de vigências e arquivos contratuais.",
+        title: { pt: "Contratos: Organização de vigências e arquivos contratuais.", en: "Contracts: Organization of validities and contractual files." },
       },
     ],
   },
@@ -723,15 +559,15 @@ Critical communication gained standardization and the product obtained full trac
     gallery: [
       {
         url: "/notificacoes-header.png",
-        title: "Redesign do Header com Heurísticas de Nielsen",
+        title: { pt: "Redesign do Header com Heurísticas de Nielsen", en: "Header Redesign using Nielsen Heuristics" },
       },
       {
         url: "/notificacoes-gestor.png",
-        title: "Painel do Gestor: Segmentação e Rastreabilidade",
+        title: { pt: "Painel do Gestor: Segmentação e Rastreabilidade", en: "Manager Panel: Segmentation and Traceability" },
       },
       {
         url: "/notificacoes-user.png",
-        title: "Painel do Usuário: Inbox e Preferências",
+        title: { pt: "Painel do Usuário: Inbox e Preferências", en: "User Panel: Inbox and Preferences" },
       },
     ],
   },
@@ -812,11 +648,11 @@ Exponential scalability and velocity. The Token foundation solidified the bridge
     gallery: [
       {
         url: "/ds-cores.png",
-        title: "Inventário de Cores Primitivas e Escalas",
+        title: { pt: "Inventário de Cores Primitivas e Escalas", en: "Primitive Colors and Scales Inventory" },
       },
       {
         url: "/ds-documentacao.png",
-        title: "Documentação Funcional: Regras de UX e Anatomia de Componentes",
+        title: { pt: "Documentação Funcional: Regras de UX e Anatomia de Componentes", en: "Functional Documentation: UX Rules and Component Anatomy" },
       },
     ],
   },
@@ -898,27 +734,27 @@ The portal translated heavy bureaucracy into autonomy for the elderly audience, 
     gallery: [
       {
         url: "/prevmax-processo.png",
-        title: "Processo de Design e Metodologia",
+        title: { pt: "Processo de Design e Metodologia", en: "Design Process and Methodology" },
       },
       {
         url: "/prevmax-benchmark.png",
-        title: "Análise de Mercado (Benchmarking)",
+        title: { pt: "Análise de Mercado (Benchmarking)", en: "Market Analysis (Benchmarking)" },
       },
       {
         url: "/prevmax-research.png",
-        title: "Personas e Mapeamento de Histórias (User Story Map)",
+        title: { pt: "Personas e Mapeamento de Histórias (User Story Map)", en: "Personas and User Story Mapping" },
       },
       {
         url: "/prevmax-flow.png",
-        title: "Fluxo do Usuário e Arquitetura de Informação",
+        title: { pt: "Fluxo do Usuário e Arquitetura de Informação", en: "User Flow and Information Architecture" },
       },
       {
         url: "/prevmax-styleguide.png",
-        title: "Style Guide: Tipografia e Cores Acessíveis",
+        title: { pt: "Style Guide: Tipografia e Cores Acessíveis", en: "Style Guide: Accessible Typography and Colors" },
       },
       {
         url: "/prevmax-components.png",
-        title: "Biblioteca de Componentes e UI Kit",
+        title: { pt: "Biblioteca de Componentes e UI Kit", en: "Component Library and UI Kit" },
       },
     ],
   },

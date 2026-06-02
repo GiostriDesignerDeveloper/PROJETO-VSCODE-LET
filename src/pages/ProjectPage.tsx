@@ -29,6 +29,11 @@ const ProjectPage = () => {
     return typeof field === "string" ? field : field[language] || field.pt || "";
   };
 
+  const getGalleryTitle = (titleField: any) => {
+    if (!titleField) return "";
+    return typeof titleField === "string" ? titleField : titleField[language] || titleField.pt || "";
+  };
+
   const hasInlineImages = getText(project.fullDescription).includes("[IMG");
 
   const renderEditorialCase = (text: string) => {
@@ -40,6 +45,7 @@ const ProjectPage = () => {
     return (
       <div className="space-y-6 text-gray-600 text-[1.1rem] leading-relaxed">
         {blocks.map((block, index) => {
+          // 1. Títulos
           if (block.startsWith("**") && block.endsWith("**") && !block.includes(":")) {
             const titleText = block.replace(/\*\*/g, "").trim();
             currentSection = titleText;
@@ -54,6 +60,7 @@ const ProjectPage = () => {
             );
           }
 
+          // 2. IMAGEM LARGURA TOTAL [IMG:x]
           if (block.startsWith("[IMG:") && block.endsWith("]")) {
             const imgIndex = parseInt(block.replace("[IMG:", "").replace("]", ""));
             const image = project.gallery?.[imgIndex];
@@ -62,40 +69,47 @@ const ProjectPage = () => {
             return (
               <div key={index} className="my-10 clear-both">
                 <div className="border border-gray-100 bg-gray-50 p-4 shadow-sm">
-                  <img src={image.url} alt={image.title} className="w-full h-auto object-contain" />
+                  <img src={image.url} alt={getGalleryTitle(image.title)} className="w-full h-auto object-contain" />
                 </div>
                 <p className="text-gray-500 text-xs font-bold uppercase tracking-widest border-l-2 border-gray-900 pl-4 py-1 mt-4">
-                  {image.title}
+                  {getGalleryTitle(image.title)}
                 </p>
               </div>
             );
           }
 
+          // 3. IMAGEM LATERAL [IMG_SIDE:x] (NOVO GRID ALINHADO)
           if (block.startsWith("[IMG_SIDE:") && block.endsWith("]")) {
             const imgIndex = parseInt(block.replace("[IMG_SIDE:", "").replace("]", ""));
             const image = project.gallery?.[imgIndex];
             if (!image) return null;
             
+            // Pega o texto do próximo bloco para emparelhar com a imagem no grid
             const nextBlock = blocks[index + 1];
-            blocks.splice(index + 1, 1);
+            if (nextBlock && !nextBlock.startsWith("[")) {
+              blocks.splice(index + 1, 1); // Remove o texto do fluxo normal para não duplicar
+            }
 
             return (
-              <div key={index} className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8 items-start clear-both">
-                <div className="border border-gray-100 bg-gray-50 p-3 shadow-sm">
-                  <img src={image.url} alt={image.title} className="w-full h-auto object-contain" />
-                  <p className="text-gray-400 text-[10px] font-bold uppercase tracking-widest mt-3">
-                    {image.title}
-                  </p>
-                </div>
+              <div key={index} className="grid grid-cols-1 md:grid-cols-2 gap-8 my-10 items-start clear-both">
                 <div className="text-gray-600">
                   {nextBlock?.split("**").map((part, pIdx) => 
                     pIdx % 2 === 1 ? <strong key={pIdx} className="text-gray-900 font-bold">{part}</strong> : part
                   )}
                 </div>
+                <div>
+                  <div className="border border-gray-100 bg-gray-50 p-3 shadow-sm">
+                    <img src={image.url} alt={getGalleryTitle(image.title)} className="w-full h-auto object-contain" />
+                  </div>
+                  <p className="text-gray-400 text-[10px] font-bold uppercase tracking-widest mt-3">
+                    {getGalleryTitle(image.title)}
+                  </p>
+                </div>
               </div>
             );
           }
 
+          // 4. BLOCO DE NOTA IA [AI_NOTE]
           if (block.startsWith("[AI_NOTE]")) {
             const cleanText = block.replace("[AI_NOTE]", "").trim();
             return (
@@ -109,11 +123,12 @@ const ProjectPage = () => {
             );
           }
 
+          // 5. BULLET POINTS
           if (block.startsWith("•")) {
             const cleanBlock = block.replace("•", "").trim();
             const parts = cleanBlock.split("**");
             return (
-              <div key={index} className="pl-6 relative before:content-[''] before:absolute before:left-1 before:top-2.5 before:w-1.5 before:h-1.5 before:bg-gray-900 mb-4 text-gray-600">
+              <div key={index} className="pl-6 relative before:content-[''] before:absolute before:left-1 before:top-2.5 before:w-1.5 before:h-1.5 before:bg-gray-900 mb-4 text-gray-600 clear-both">
                 {parts.map((part, pIdx) => 
                   pIdx % 2 === 1 ? <strong key={pIdx} className="text-gray-900 font-bold">{part}</strong> : part
                 )}
@@ -121,6 +136,7 @@ const ProjectPage = () => {
             );
           }
 
+          // 6. CAIXAS DE DESTAQUE
           const isHighlightSection = currentSection === "PROBLEMA" || currentSection === "PROBLEM" || currentSection === "RESULTADO" || currentSection === "RESULT";
           if (isHighlightSection) {
             return (
@@ -232,10 +248,10 @@ const ProjectPage = () => {
                   {project.gallery.map((item, index) => (
                     <div key={index} className="space-y-4">
                       <div className="border border-gray-100 bg-gray-50 p-2">
-                        <img src={item.url} alt={item.title} className="w-full h-auto object-contain" />
+                        <img src={item.url} alt={getGalleryTitle(item.title)} className="w-full h-auto object-contain" />
                       </div>
                       <p className="text-gray-500 text-xs font-bold uppercase tracking-widest border-l-2 border-gray-900 pl-4 py-1">
-                        {item.title}
+                        {getGalleryTitle(item.title)}
                       </p>
                     </div>
                   ))}
@@ -250,32 +266,35 @@ const ProjectPage = () => {
             </h3>
             
             <div className="space-y-10">
-              <div>
-                <span className="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">
-                  {language === 'pt' ? 'Cliente' : 'Client'}
-                </span>
-                <span className="text-lg font-medium text-gray-900">
-                  {project.client}
-                </span>
-              </div>
+              {project.client && (
+                <div>
+                  <span className="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">
+                    {language === 'pt' ? 'Cliente' : 'Client'}
+                  </span>
+                  <span className="text-lg font-medium text-gray-900">
+                    {project.client}
+                  </span>
+                </div>
+              )}
               
-              <div>
-                <span className="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">
-                  {language === 'pt' ? 'Atuação' : 'Role'}
-                </span>
-                <span className="text-lg font-medium text-gray-900">
-                  {project.role}
-                </span>
-              </div>
+              {project.role && (
+                <div>
+                  <span className="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">
+                    {language === 'pt' ? 'Atuação' : 'Role'}
+                  </span>
+                  <span className="text-lg font-medium text-gray-900">
+                    {project.role}
+                  </span>
+                </div>
+              )}
 
-              {/* Ajustado com optional chaining (?) e fallback (|| []) para satisfazer o TypeScript */}
               {project.technologies && project.technologies.length > 0 && (
                 <div>
                   <span className="block text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4">
                     {language === 'pt' ? 'Ferramentas' : 'Tools'}
                   </span>
                   <div className="flex flex-wrap gap-2">
-                    {(project.technologies || []).map((tech, index) => (
+                    {project.technologies.map((tech, index) => (
                       <span
                         key={index}
                         className="px-3 py-1.5 border border-gray-200 text-gray-600 font-bold text-xs uppercase tracking-wider rounded-none bg-white"
@@ -293,7 +312,7 @@ const ProjectPage = () => {
                     {language === 'pt' ? 'Métodos Utilizados' : 'Methods Used'}
                   </span>
                   <div className="flex flex-wrap gap-2">
-                    {(project.methods || []).map((method, index) => (
+                    {project.methods.map((method: string, index: number) => (
                       <span
                         key={index}
                         className="px-3 py-1.5 border border-gray-200 text-gray-600 font-bold text-xs uppercase tracking-wider rounded-none bg-white"
@@ -311,7 +330,7 @@ const ProjectPage = () => {
                     {language === 'pt' ? 'Princípios de UX' : 'Applied UX Principles'}
                   </span>
                   <div className="flex flex-wrap gap-2">
-                    {(project.principles || []).map((principle, index) => (
+                    {project.principles.map((principle: string, index: number) => (
                       <span
                         key={index}
                         className="px-3 py-1.5 border border-gray-200 text-gray-600 font-bold text-xs uppercase tracking-wider rounded-none bg-white"

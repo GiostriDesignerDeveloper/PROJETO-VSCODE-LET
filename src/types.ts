@@ -5,20 +5,19 @@ export interface TranslatedText {
 
 export interface Project {
   id: string;
-  title: { pt: string; en: string };
+  title: TranslatedText;
   status: "active" | "coming-soon";
   embedUrl?: string;
-  description: { pt: string; en: string };
-  fullDescription: { pt: string; en: string };
+  description: TranslatedText;
+  fullDescription: TranslatedText;
   imageUrl: string;
   category: string;
   tags: string[];
-  technologies: string[];
-  methods?: string[];      // Adicione isto
-  principles?: string[]; // Adicione esta linha
-  client: string;
-  role: string;
-  liveUrl: string;
-  gallery?: { url: string; title: string }[];
+  technologies?: string[];
+  methods?: string[];
+  principles?: string[];
+  client?: string;
+  role?: string;
+  liveUrl?: string;
+  gallery?: { url: string; title: TranslatedText }[];
 }
-
