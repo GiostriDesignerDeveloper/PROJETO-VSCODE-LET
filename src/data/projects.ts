@@ -203,7 +203,7 @@ As janelas sobrepostas da tela escondiam informações importantes enquanto os p
 • **Informação dividida:** Separamos os dados dos pacientes por páginas, acabando com a necessidade de rolar a tela até o final e se perder.
 
 **PROCESSO DE TRABALHO**
-Fui até o hospital observar o uso real do sistema por nutricionistas. O foco da pesquisa foi entender os riscos físicos do uso do aplicativo.
+O foco da pesquisa foi entender os riscos físicos do uso do aplicativo.
 Os principais aprendizados foram:
 • O teclado nativo do tablet subia e escondia o botão de salvar a dieta, atrasando o trabalho.
 • As nutricionistas seguravam o tablet com uma mão e digitavam com a outra enquanto andavam, exigindo botões muito fáceis de acertar.
@@ -225,7 +225,7 @@ Overlapping screen windows hid important information while professionals walked 
 • **Divided information:** We separated patient data by pages, eliminating the need to scroll to the bottom and get lost.
 
 **WORKING PROCESS**
-I went to the hospital to observe the real use of the system by nutritionists. The research focused on understanding the physical risks of using the application.
+The research focused on understanding the physical risks of using the application.
 The main learnings were:
 • The native tablet keyboard popped up and hid the save diet button, delaying work.
 • Nutritionists held the tablet with one hand and typed with the other while walking, requiring very easy-to-hit buttons.
@@ -255,7 +255,7 @@ We drastically reduced wrong clicks and the time spent prescribing diets. The ch
   {
     id: "smartsettlement-gestao-financeira",
     title: {
-      pt: "Design sob restrição: como entregar impacto máximo sem tocar no Design System, e por que isso é a decisão certa.",
+      pt: "Design sob restrição: como entregar resultados sem mexer na estrutura do sistema, e por que isso foi a decisão certa.",
       en: "Constrained design as strategy: maximum impact without breaking the system and the behavioral logic behind it.",
     },
     status: "active",
@@ -266,79 +266,117 @@ We drastically reduced wrong clicks and the time spent prescribing diets. The ch
     },
     fullDescription: {
       pt: `
-**CONTEXTO**
-Necessidade crítica de mitigar riscos operacionais no sistema legado de Gestão de Conciliação Financeira. O projeto exigia intervenção rápida na interface para operadores financeiros, operando sob uma restrição técnica severa de engenharia que nos proibia de refatorar o Design System core da tabela.
+**VISÃO GERAL**
+Melhoria rápida na interface do sistema de gestão financeira. O desafio era corrigir erros operacionais graves sem que a engenharia precisasse refazer a base de componentes da tabela (Design System).
 
 **PROBLEMA**
-Os operadores sofriam de "cegueira operacional", pois o sistema não fornecia retorno visual durante o processamento de grandes lotes. A incerteza gerava recarregamentos de página que resultavam em duplo processamento financeiro e em uma enxurrada de chamados para o time de suporte.
+Os operadores financeiros sofriam com a falta de retorno visual ao processar pagamentos. Como não sabiam se o sistema estava trabalhando, eles recarregavam a página, o que causava pagamentos em duplicidade e sobrecarregava o suporte.
+
+**PESQUISA E ESTRATÉGIA**
+Para entender o impacto real, analisei os chamados de suporte recebidos antes da mudança. Também conversei diretamente com os operadores financeiros para entender por que eles sentiam necessidade de clicar várias vezes no mesmo botão.
+• **Insight:** O erro não era do usuário, mas da falta de clareza visual do sistema.
+• **Decisão:** Em vez de redesenhar tudo, focamos em injeções pontuais de feedback visual e em criar pequenas barreiras (fricção) para evitar cliques acidentais em botões de exclusão.
 
 **SOLUÇÃO**
-• **Visibilidade de Status:** Injeção de barras de progresso contínuas e status em texto apenas nas camadas sobrepostas (badges nativos do legado) para não atrasar as releases.
-• **Prevenção de Erros (Fricção):** Inserção de modais de confirmação momentos antes de ações financeiras irreversíveis.
+• **Feedback visual:** Adicionamos barras de progresso e status de texto em tempo real sobre os elementos existentes.
+• **Prevenção de erro:** Criamos uma etapa extra de confirmação antes de ações financeiras irreversíveis.
 
-**PROCESSO DE TRABALHO**
-Adotamos a metodologia Lean UX para entregar valor real focando no "Delivery under constraint". A pesquisa focou no mapeamento do fluxo de erro e métricas de tickets.
-Os principais insights foram:
-• A refatoração completa com novos componentes interativos era tecnicamente inviável e atrasaria o go-to-market.
-• A insegurança visual gerava um modelo mental de "clicar novamente para garantir", o que causava o erro primário do sistema.
-• A fricção cognitiva deliberada em botões de exclusão quebra o automatismo motor do usuário e salva a operação financeira.
+[IMG:0]
+*Interface principal e hierarquia de ações.*
 
-**RESULTADO**
-Intervenção visual enxuta que solucionou o vácuo de informação. Houve uma queda vertiginosa de 75% nos tickets de suporte e zeramos a ocorrência de execuções financeiras acidentais, provando o alto impacto de decisões alinhadas à capacidade de desenvolvimento.
+[IMG:1]
+*Status de processamento em tempo real.*
+
+[IMG:2]
+*Confirmação de segurança para evitar erros.*
+
+**RESULTADOS**
+Comparamos os dados de chamados de suporte de antes e depois da mudança.
+• Queda de 75% nos chamados de suporte.
+• Fim das execuções financeiras acidentais.
+• Depoimentos dos operadores confirmaram que o sistema ficou mais confiável e menos estressante.
+
+**APRENDIZADOS**
+• Às vezes, o design precisa de cirurgia, às vezes, apenas de curativo.
+• Entender a rotina de quem usa o sistema vale mais que qualquer dashboard.
+• Pequenas mudanças na interface podem salvar operações financeiras inteiras.
       `,
       en: `
-**CONTEXT**
-Critical need to mitigate operational risks in the legacy Financial Reconciliation Management system. The project required rapid interface intervention for financial operators, operating under a severe technical engineering constraint that forbade us from refactoring the table's core Design System.
+**OVERVIEW**
+Rapid improvement of the financial management system interface. The challenge was to fix critical operational errors without requiring engineering to rebuild the core component library.
 
 **PROBLEM**
-Operators suffered from "operational blindness" because the system provided no visual feedback when processing large batches. The uncertainty led to page reloads that resulted in double financial processing and a flood of calls to the support team.
+Financial operators lacked visual feedback when processing batches. Uncertain if the system was working, they would reload the page, leading to duplicate payments and an overflow of support tickets.
+
+**RESEARCH AND STRATEGY**
+To understand the real impact, I analyzed support tickets from before the changes and interviewed the financial operators to learn why they felt forced to click buttons repeatedly.
+• **Insight:** The error wasn't user-driven; it was caused by the lack of clear visual feedback.
+• **Decision:** Instead of a full redesign, we focused on targeted visual feedback and adding friction to prevent accidental clicks on sensitive buttons.
 
 **SOLUTION**
-• **Status Visibility:** Injection of continuous progress bars and text status only on overlapping layers (legacy native badges) to avoid delaying releases.
-• **Error Prevention (Friction):** Insertion of confirmation modals moments before irreversible financial actions.
+• **Visual feedback:** Added real-time progress bars and status text over existing elements.
+• **Error prevention:** Added a confirmation step before irreversible financial actions.
 
-**WORKING PROCESS**
-We adopted the Lean UX methodology to deliver real value focusing on "Delivery under constraint". Research focused on mapping the error flow with support ticket metrics.
-The main insights were:
-• Complete refactoring with new interactive components was technically unfeasible and would delay go-to-market.
-• Visual insecurity generated a mental model of "clicking again to make sure", which caused the primary system error.
-• Deliberate cognitive friction on deletion buttons breaks the user's motor automatism and saves the financial operation.
+[IMG:0]
+*Main interface and action hierarchy.*
 
-**RESULT**
-Lean visual intervention that solved the information vacuum. There was a staggering 75% drop in support tickets and we zeroed out the occurrence of accidental financial executions, proving the high impact of decisions aligned with development capabilities.
+[IMG:1]
+*Real-time processing status.*
+
+[IMG:2]
+*Safety confirmation to prevent errors.*
+
+**RESULTS**
+We compared support ticket data from before and after the intervention.
+• 75% reduction in support tickets.
+• Zero accidental financial executions.
+• Operator feedback confirmed the system became more reliable and less stressful.
+
+**KEY LEARNINGS**
+• Sometimes design needs surgery; sometimes, it just needs a bandage.
+• Understanding the user's daily routine is more valuable than any dashboard.
+• Small interface changes can save entire financial operations.
       `,
     },
     imageUrl: "/smartsettlement-capa.png",
     category: "Fintech",
     tags: [
-      "Decisions",
-      "Lean UX",
-      "Delivery under constraint",
-      "System visibility",
-      "Error prevention",
+      "Tomada de decisão",
+      "UX para finanças",
+      "Prevenção de erros",
+      "Visibilidade de sistema",
+      "Pesquisa com usuário"
     ],
-    technologies: ["Figma", "Redlining", "Information Architecture", "Lean UX"],
-    methods: [],
-    principles: [],
+    technologies: ["Figma", "Arquitetura da Informação"],
+    methods: [
+      "Análise de chamados de suporte",
+      "Entrevistas com usuários",
+      "Mapeamento de fluxo de erros", "Handoff para engenharia"
+    ],
+    principles: [
+      "Prevenção de erros",
+      "Visibilidade do status",
+      "Clareza visual"
+    ],
     client: "Confidencial",
     role: "Product Designer",
     liveUrl: "#",
     gallery: [
       {
         url: "/smartsettlement-dados.png",
-        title: { pt: "Interface Principal: Hierarquia de dados e ações rápidas.", en: "Main Interface: Data hierarchy and quick actions." },
+        title: { pt: "Interface Principal", en: "Main Interface" },
       },
       {
         url: "/smartsettlement-loading.png",
-        title: { pt: "Feedback de Sistema: Visibilidade do status de processamento.", en: "System Feedback: Processing status visibility." },
+        title: { pt: "Feedback de Sistema", en: "System Feedback" },
       },
       {
         url: "/smartsettlement-modal.png",
-        title: { pt: "Prevenção de Erro: Modal de confirmação para ações críticas.", en: "Error Prevention: Confirmation modal for critical actions." },
+        title: { pt: "Prevenção de Erro", en: "Error Prevention" },
       },
       {
         url: "/smartsettlement-fluxo.png",
-        title: { pt: "Documentação de Fluxo: Mapeamento de interações e estados.", en: "Flow Documentation: Mapping of interactions and states." },
+        title: { pt: "Documentação de Fluxo", en: "Flow Documentation" },
       },
     ],
   },
@@ -402,11 +440,12 @@ By treating hierarchical visualization as the foundation of compliance, the syst
     imageUrl: "/compliance-capa.png",
     category: "UX/UI Design e Arquitetura",
     tags: [
-      "Decision fatigue",
-      "Information hierarchy",
-      "Risk-driven UX",
-      "Discovery to architecture",
-      "AML/compliance design",
+      "Fadiga de decisão",
+      "Hierarquia da informação",
+      "UX orientada a riscos",
+      "Da descoberta à arquitetura",
+      "Design de AML(Anti-Money Laundering)",
+      "Análise de dados/conformidade",
     ],
     technologies: [
       "Miro",
@@ -414,7 +453,7 @@ By treating hierarchical visualization as the foundation of compliance, the syst
       "Arquitetura de Informação",
       "UX Research",
     ],
-    methods: [],
+    methods: ["Benchmarking", "Discovery", "Mapeamento de Fluxos", "Arquitetura da Informação"],
     principles: [],
     client: "Confidencial",
     role: "Product Designer",
@@ -544,13 +583,13 @@ Critical communication gained standardization and the product obtained full trac
     imageUrl: "/notificacoes-capa.png",
     category: "UI Design",
     tags: [
-      "Behavioral heuristics",
-      "Mental models",
-      "Compliance by design",
-      "Fitts's Law",
-      "Jakob's Law",
+      "Heutísticas de Nielsen",
+      "Modelos mentais de UX",
+      "Design de notificações e compliance",
+      "Leis de UX e Fitts",
+      "Leis de Jakob",
     ],
-    technologies: ["Figma", "Design System", "Prototyping"],
+    technologies: ["Figma", "Design System", "Prototyping","Variables","Tokens", "Benchmarking"],
     methods: [],
     principles: [],
     client: "Confidencial",
@@ -598,11 +637,11 @@ A falta de uma arquitetura matemática nos componentes gerava inconsistências e
 • **Biblioteca de Documentação:** Diretrizes de UX e anatomia comportamental acopladas a cada componente publicado.
 
 **PROCESSO DE TRABALHO**
-Atuei ativamente aplicando metodologias de Design Ops em Pair Design com a equipe residente. Focamos no alinhamento entre as especificações de tela e as variáveis CSS utilizadas pelo Front-end.
+Atuei ativamente aplicando metodologias de Design Ops em conjunto com outra Designer e sempre em contato com a equipe de desenvolvimento para saber viabilidades e entender tipos de linguagem que serão usadas. Focamos no alinhamento entre as especificações de tela e as variáveis CSS utilizadas pelo Front-end.
 Os insights críticos que guiaram a evolução foram:
 • Tokens isolados não funcionam sem adoção cultural. Era preciso criar rituais de mentoria técnica para o time entender o uso avançado.
 • A separação semântica blindou o sistema contra quebras durante alterações globais (como temas escuros).
-• Refatorar todo o legado de uma vez congelaria a squad. Optamos por criar as fundações para novas interfaces e tratar os componentes antigos como "Tech Debt" de longo prazo.
+• Refatorar todo o legado de uma vez congelaria a squad. Optamos por criar as fundações para novas interfaces e tratar os componentes antigos como "débito técnico" de longo prazo.
 
 **RESULTADO**
 Escalabilidade e velocidade exponencial. A fundação de Tokens solidificou a ponte entre Design e Front-end, resultando em prototipações extremamente rápidas e reduzindo quase a zero os atritos sobre especificações de tela nas rotinas da equipe.
@@ -620,7 +659,7 @@ The lack of mathematical architecture in components generated extreme inconsiste
 • **Documentation Library:** UX guidelines and behavioral anatomy coupled with each published component.
 
 **WORKING PROCESS**
-I actively applied Design Ops methodologies in Pair Design with the resident team. We focused on aligning screen specifications with CSS variables used by Front-end.
+I actively applied Design Ops methodologies together with another designer, always in contact with the development team to understand feasibility and the types of languages ​​that would be used. We focused on aligning screen specifications with the CSS variables used by the front-end.
 The critical insights that guided the evolution were:
 • Isolated tokens do not work without cultural adoption. It was necessary to create technical mentoring rituals for the team to understand advanced use.
 • Semantic separation shielded the system against breaks during global changes (such as dark themes).
@@ -634,16 +673,16 @@ Exponential scalability and velocity. The Token foundation solidified the bridge
     category: "Design System",
     tags: [
       "Design Ops",
-      "Token architecture",
-      "Scalability",
-      "Team leverage",
-      "Documentation strategy",
+      "Arquitetura de Tokens",
+      "Escalabilidade de Design",
+      "Alavancar equipe",
+      "Estratégia de documentação",
     ],
     technologies: ["Figma", "Tokens", "Documentation", "Mentorship"],
     methods: [],
     principles: [],
     client: "Confidencial",
-    role: "Product Designer / UI",
+    role: "Product Designer / UI / Design Ops",
     liveUrl: "#",
     gallery: [
       {
