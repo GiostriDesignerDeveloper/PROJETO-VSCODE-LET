@@ -1,7 +1,7 @@
 import { Briefcase, GraduationCap, Award, Globe2, User, Wrench, Target } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { motion } from "framer-motion";
-import { projectsData } from "../data/projects"; // Importamos os seus projetos
+import { projectsData } from "../data/projects";
 
 const AboutPage = () => {
   const { language } = useLanguage();
@@ -11,17 +11,14 @@ const AboutPage = () => {
   // ==========================================================
   const getProjectImpacts = () => {
     return projectsData.map(project => {
-      // Pega a descrição no idioma atual
       const desc = typeof project.fullDescription === 'string' 
         ? project.fullDescription 
         : (project.fullDescription?.[language] || project.fullDescription?.pt || "");
       
-      // Essa "fórmula" (Regex) procura a palavra RESULTADOS ou IMPACTO e pega o texto abaixo dela
       const regex = /\*\*(?:RESULTADOS|RESULT|IMPACTO|IMPACT)\*\*\n([\s\S]*?)(?=\n\*\*|$)/i;
       const match = desc.match(regex);
 
       if (match && match[1].trim()) {
-        // Limpa o texto: remove tags de imagem e métricas brutas
         const cleanLines = match[1]
           .split('\n')
           .map(line => line.trim())
@@ -33,20 +30,16 @@ const AboutPage = () => {
           ? project.title 
           : (project.title?.[language] || project.title?.pt || project.id);
 
-        return {
-          id: project.id,
-          title,
-          lines: cleanLines
-        };
+        return { id: project.id, title, lines: cleanLines };
       }
       return null;
-    }).filter(Boolean); // Remove os projetos que não têm essa seção
+    }).filter(Boolean);
   };
 
   const projectImpacts = getProjectImpacts();
 
   // ==========================================================
-  // DADOS EM PORTUGUÊS
+  // DADOS EM PORTUGUÊS (100% Atualizados com seu novo currículo)
   // ==========================================================
   const experiencesPT = [
     {
@@ -56,13 +49,16 @@ const AboutPage = () => {
       description: (
         <div className="space-y-4 mt-4 text-gray-600 text-[1.05rem] leading-relaxed">
           <p>
-            Nesta atuação em um ecossistema SaaS B2B complexo, fui responsável por conduzir o ciclo completo de produto aplicando o modelo do Triplo Diamante, com foco em diagnósticos operacionais, arquitetura de sistemas ERP e evolução técnica do Design System em colaboração direta com Product Owners e Engenharia. Sigo atuando na concepção de soluções de gestão de desperdícios, na Plataforma B2B de Compras e Cotações e em projetos de Auditoria, transformando requisitos técnicos em interfaces responsivas e funcionais.
+            Responsável por iniciativas de discovery, redesign de fluxos críticos e evolução da experiência em ecossistema ERP SaaS B2B.
           </p>
           <div className="bg-gray-50 p-6 rounded-none border-l-2 border-gray-900">
-            <strong className="text-gray-900 block mb-2 uppercase tracking-wider text-xs font-bold">Realizações a destacar:</strong>
-            <p className="text-sm text-gray-600 leading-relaxed">
-              Identifiquei problemas críticos de usabilidade e redesenhei jornadas end-to-end (Recebimento/Resíduos), resultando na eliminação de redundâncias e na redução drástica de cliques e etapas manuais, otimizando a eficiência operacional. Estruturei formulários de diagnóstico UX que elevaram a taxa de resposta e utilizei análise de dados quantitativos para embasar o roadmap, mitigando riscos de desenvolvimento através de testes de usabilidade que asseguraram a aderência técnica e a acessibilidade antes da fase de código.
-            </p>
+            <strong className="text-gray-900 block mb-3 uppercase tracking-wider text-xs font-bold">Principais resultados:</strong>
+            <ul className="space-y-3 text-sm text-gray-600 leading-relaxed">
+              <li className="flex items-start gap-2"><span className="text-gray-900 font-bold mt-0.5">•</span> Condução de entrevistas, testes de usabilidade e análises comportamentais para identificação de oportunidades de produto.</li>
+              <li className="flex items-start gap-2"><span className="text-gray-900 font-bold mt-0.5">•</span> Transformação de insights em decisões estratégicas para evolução de jornadas críticas.</li>
+              <li className="flex items-start gap-2"><span className="text-gray-900 font-bold mt-0.5">•</span> Evolução do Design System para aumentar consistência e escalabilidade entre produtos.</li>
+              <li className="flex items-start gap-2"><span className="text-gray-900 font-bold mt-0.5">•</span> Estruturação de processos UX end-to-end reduzindo retrabalho e aumentando alinhamento com Engenharia.</li>
+            </ul>
           </div>
         </div>
       ),
@@ -74,13 +70,17 @@ const AboutPage = () => {
       description: (
         <div className="space-y-4 mt-4 text-gray-600 text-[1.05rem] leading-relaxed">
           <p>
-            Nesta posição em uma Fintech, fui responsável pela governança do Design System e pelo design de interfaces para soluções de Banking as a Service (BaaS) e Content as a Service (CaaS), articulando soluções de design com times de Engenharia, Produto e Dados. Atuei no refinamento de fluxos financeiros críticos, garantindo que as soluções estivessem alinhadas aos objetivos de negócio e às necessidades dos usuários.
+            Atuação em plataforma Banking as a Service (BaaS) voltada para operações financeiras complexas.
           </p>
           <div className="bg-gray-50 p-6 rounded-none border-l-2 border-gray-900">
-            <strong className="text-gray-900 block mb-2 uppercase tracking-wider text-xs font-bold">Realizações a destacar:</strong>
-            <p className="text-sm text-gray-600 leading-relaxed">
-              Liderei o projeto de Gestão de Conciliação Financeira e o Redesign de Navegação e Sistema de Notificações, onde a simplificação das jornadas e a aplicação de princípios de hierarquia da informação resultaram na queda direta de 90% no volume de chamados ao suporte em módulos específicos. A evolução da biblioteca de componentes permitiu uma aceleração no time-to-market, enquanto a implementação de protótipos de alta fidelidade e testes de usabilidade validaram hipóteses orientadas a dados, reduzindo custos com retrabalho.
-            </p>
+            <strong className="text-gray-900 block mb-3 uppercase tracking-wider text-xs font-bold">Principais resultados:</strong>
+            <ul className="space-y-3 text-sm text-gray-600 leading-relaxed">
+              <li className="flex items-start gap-2"><span className="text-gray-900 font-bold mt-0.5">•</span> Liderança do redesign de Conciliação Financeira, Navegação e Sistema de Notificações.</li>
+              <li className="flex items-start gap-2"><span className="text-gray-900 font-bold mt-0.5">•</span> Redução de até 75% dos chamados de suporte em módulos financeiros.</li>
+              <li className="flex items-start gap-2"><span className="text-gray-900 font-bold mt-0.5">•</span> Redução de erros em operações financeiras críticas.</li>
+              <li className="flex items-start gap-2"><span className="text-gray-900 font-bold mt-0.5">•</span> Aumento da produtividade operacional dos usuários.</li>
+              <li className="flex items-start gap-2"><span className="text-gray-900 font-bold mt-0.5">•</span> Evolução do Design System acelerando entregas e reduzindo retrabalho.</li>
+            </ul>
           </div>
         </div>
       ),
@@ -92,13 +92,17 @@ const AboutPage = () => {
       description: (
         <div className="space-y-4 mt-4 text-gray-600 text-[1.05rem] leading-relaxed">
           <p>
-            Durante este período, fui responsável por estruturar o processo de Product Discovery e UX Research de ponta a ponta, utilizando métodos como Matriz CSD, entrevistas, desk research e cardsorting para alinhar dores dos usuários aos objetivos do negócio.
+            Atuação em produtos financeiros complexos e plataforma de previdência complementar voltada ao público 60+.
           </p>
           <div className="bg-gray-50 p-6 rounded-none border-l-2 border-gray-900">
-            <strong className="text-gray-900 block mb-2 uppercase tracking-wider text-xs font-bold">Realizações a destacar:</strong>
-            <p className="text-sm text-gray-600 leading-relaxed">
-              Atuei no design da plataforma de Previdência Complementar Fechada voltada ao público 60+, onde priorizei a acessibilidade e inclusão para reduzir a carga cognitiva em fluxos complexos, mitigando riscos de erro e aumentando a autonomia do usuário. A criação de um Style Guide documentado e a condução de Design Reviews elevaram a eficiência operacional do time de tecnologia e a maturidade de design no produto, garantindo consistência visual e escalabilidade em cenários dinâmicos de crescimento.
-            </p>
+            <strong className="text-gray-900 block mb-3 uppercase tracking-wider text-xs font-bold">Principais resultados:</strong>
+            <ul className="space-y-3 text-sm text-gray-600 leading-relaxed">
+              <li className="flex items-start gap-2"><span className="text-gray-900 font-bold mt-0.5">•</span> Estruturação de processos de Discovery e UX Research.</li>
+              <li className="flex items-start gap-2"><span className="text-gray-900 font-bold mt-0.5">•</span> Tradução de regras de negócio complexas em experiências acessíveis.</li>
+              <li className="flex items-start gap-2"><span className="text-gray-900 font-bold mt-0.5">•</span> Redução da carga cognitiva em jornadas críticas.</li>
+              <li className="flex items-start gap-2"><span className="text-gray-900 font-bold mt-0.5">•</span> Aumento da autonomia dos usuários.</li>
+              <li className="flex items-start gap-2"><span className="text-gray-900 font-bold mt-0.5">•</span> Evolução da maturidade de design e padronização da experiência.</li>
+            </ul>
           </div>
         </div>
       ),
@@ -110,13 +114,17 @@ const AboutPage = () => {
       description: (
         <div className="space-y-4 mt-4 text-gray-600 text-[1.05rem] leading-relaxed">
           <p>
-            Nesta experiência com alto nível de autonomia, fui responsável por conduzir pesquisas de mercado e análise de dados para o desenvolvimento de soluções personalizadas e aderentes às necessidades reais dos clientes.
+            Atuação em projetos de transformação digital B2C, conduzindo iniciativas de discovery, validação de soluções e estruturação de experiências digitais alinhadas aos objetivos de negócio.
           </p>
           <div className="bg-gray-50 p-6 rounded-none border-l-2 border-gray-900">
-            <strong className="text-gray-900 block mb-2 uppercase tracking-wider text-xs font-bold">Realizações a destacar:</strong>
-            <p className="text-sm text-gray-600 leading-relaxed">
-              Implementei a padronização visual via Design System, o que reduziu falhas de comunicação e aumentou a velocidade de entrega (time-to-market) das evoluções de interface. Estabeleci um ciclo de melhoria contínua baseado em feedback real e análise de dados, garantindo que o produto crescesse com escalabilidade visual e eficiência técnica, mantendo a consistência e a clareza em todos os pontos de contatos.
-            </p>
+            <strong className="text-gray-900 block mb-3 uppercase tracking-wider text-xs font-bold">Principais contribuições & Impacto:</strong>
+            <ul className="space-y-3 text-sm text-gray-600 leading-relaxed">
+              <li className="flex items-start gap-2"><span className="text-gray-900 font-bold mt-0.5">•</span> Conduzi pesquisas com usuários, análises competitivas e levantamento de requisitos para apoiar decisões estratégicas.</li>
+              <li className="flex items-start gap-2"><span className="text-gray-900 font-bold mt-0.5">•</span> Utilizei a metodologia Google Design Sprint para acelerar processos de descoberta, ideação e validação.</li>
+              <li className="flex items-start gap-2"><span className="text-gray-900 font-bold mt-0.5">•</span> Criei Design Systems e padrões reutilizáveis para aumentar consistência e escalabilidade das interfaces.</li>
+              <li className="flex items-start gap-2"><span className="text-gray-900 font-bold mt-0.5">•</span> <strong>Impacto:</strong> Aumento do alinhamento entre necessidades dos usuários e objetivos estratégicos do negócio.</li>
+              <li className="flex items-start gap-2"><span className="text-gray-900 font-bold mt-0.5">•</span> <strong>Impacto:</strong> Redução de falhas de comunicação e maior velocidade na evolução de produtos digitais.</li>
+            </ul>
           </div>
         </div>
       ),
@@ -125,7 +133,7 @@ const AboutPage = () => {
 
   const resumeExtraPT = {
     education: [
-      "Pós-graduação em UX e Design de Produtos Digitais - PUC Minas - Em andamento",
+      "Pós-graduação em UX e Design de Produtos Digitais - PUC Minas - 2026-2027 (Em andamento)",
       "Graduação em Design de Ambientes - Universidade Estadual de Minas Gerais (UEMG) - 2016-2021",
       "Optativa de destaque - Neurociência Cognitiva da Criatividade - UEMG"
     ],
@@ -134,15 +142,18 @@ const AboutPage = () => {
   };
 
   const skillsPT = [
-    "UX Research", "Arquitetura da Informação", "Discovery", "Prototipação", 
-    "Métricas de Usabilidade", "Figma Avancado", "Design Systems", 
-    "UI Design", "Trabalho em times multidisciplinares", "IAs generativas no workflow", "Front-end (HTML, CSS, React)"
+    "Descoberta de Produto (Discovery)", "Estratégia de Design", "Pesquisa de UX", 
+    "Entrevistas com Usuários", "Testes de Usabilidade", "Arquitetura da Informação", 
+    "Design de Interação", "Design Systems", "Prototipagem", "Pensamento de Produto", 
+    "Métricas de Produto", "Design Orientado a Dados", "Design Ops", "Contato com Stakeholders",
+    "Colaboração Interfuncional", "Acessibilidade", "Design Responsivo", "Jornada do Cliente", "Design de Serviço"
   ];
 
   const toolsPT = [
-    "Figma", "Figma AI", "Claude", "Gemini", "GPT", "Lovable", "Cursor", "V0", 
-    "Bolt", "Google Workspace", "Miro", "FigJam", "ClickUp", "Jira", "Trello", 
-    "Maze", "Google Forms", "FlowMapp", "Uizard", "Stark", "Google Analytics"
+    // Ferramentas
+    "Figma", "FigJam", "Miro", "Maze", "Microsoft Clarity", "Google Analytics", "Notion", "Jira", "Trello", "ClickUp",
+    // Tecnologia e IA
+    "HTML", "CSS", "React", "Claude", "ChatGPT", "Lovable", "Bolt", "v0", "Google Stitch", "Cursor"
   ];
 
   // ==========================================================
@@ -156,13 +167,16 @@ const AboutPage = () => {
       description: (
         <div className="space-y-4 mt-4 text-gray-600 text-[1.05rem] leading-relaxed">
           <p>
-            In this role within a complex B2B SaaS ecosystem, I was responsible for conducting the full product cycle applying the Triple Diamond model, focusing on operational diagnostics, ERP systems architecture, and the technical evolution of the Design System in direct collaboration with Product Owners and Engineering. I continue to work on the conception of waste management solutions, the B2B Purchasing and Quotation Platform, and Audit projects, transforming technical requirements into responsive and functional interfaces.
+            Responsible for discovery initiatives, critical flows redesign, and experience evolution in a B2B SaaS ERP ecosystem.
           </p>
           <div className="bg-gray-50 p-6 rounded-none border-l-2 border-gray-900">
-            <strong className="text-gray-900 block mb-2 uppercase tracking-wider text-xs font-bold">Key Achievements:</strong>
-            <p className="text-sm text-gray-600 leading-relaxed">
-              Identified critical usability issues and redesigned end-to-end journeys (Receiving/Waste), resulting in the elimination of redundancies and a drastic reduction of clicks and manual steps, optimizing operational efficiency. Structured UX diagnostic forms that raised the response rate and used quantitative data analysis to support the roadmap, mitigating development risks through usability testing that ensured technical adherence and accessibility prior to the coding phase.
-            </p>
+            <strong className="text-gray-900 block mb-3 uppercase tracking-wider text-xs font-bold">Key Results:</strong>
+            <ul className="space-y-3 text-sm text-gray-600 leading-relaxed">
+              <li className="flex items-start gap-2"><span className="text-gray-900 font-bold mt-0.5">•</span> Conducted interviews, usability tests, and behavioral analysis to identify product opportunities.</li>
+              <li className="flex items-start gap-2"><span className="text-gray-900 font-bold mt-0.5">•</span> Transformed insights into strategic decisions for the evolution of critical journeys.</li>
+              <li className="flex items-start gap-2"><span className="text-gray-900 font-bold mt-0.5">•</span> Evolved the Design System to increase consistency and scalability across products.</li>
+              <li className="flex items-start gap-2"><span className="text-gray-900 font-bold mt-0.5">•</span> Structured end-to-end UX processes reducing rework and increasing alignment with Engineering.</li>
+            </ul>
           </div>
         </div>
       ),
@@ -174,13 +188,17 @@ const AboutPage = () => {
       description: (
         <div className="space-y-4 mt-4 text-gray-600 text-[1.05rem] leading-relaxed">
           <p>
-            In this position at a Fintech, I was responsible for the governance of the Design System and interface design for Banking as a Service (BaaS) and Content as a Service (CaaS) solutions, articulating design solutions with Engineering, Product, and Data teams. I worked on refining critical financial flows, ensuring solutions were aligned with business objectives and user needs.
+            Worked on a Banking as a Service (BaaS) platform focused on complex financial operations.
           </p>
           <div className="bg-gray-50 p-6 rounded-none border-l-2 border-gray-900">
-            <strong className="text-gray-900 block mb-2 uppercase tracking-wider text-xs font-bold">Key Achievements:</strong>
-            <p className="text-sm text-gray-600 leading-relaxed">
-              Led the Financial Reconciliation Management project and the Redesign of the Navigation and Notification System, where the simplification of journeys and application of information hierarchy principles resulted in a direct 90% drop in support ticket volume in specific modules. The evolution of the component library accelerated time-to-market, while the implementation of high-fidelity prototypes and usability testing validated data-driven hypotheses, reducing rework costs.
-            </p>
+            <strong className="text-gray-900 block mb-3 uppercase tracking-wider text-xs font-bold">Key Results:</strong>
+            <ul className="space-y-3 text-sm text-gray-600 leading-relaxed">
+              <li className="flex items-start gap-2"><span className="text-gray-900 font-bold mt-0.5">•</span> Led the redesign of Financial Reconciliation, Navigation, and Notification System.</li>
+              <li className="flex items-start gap-2"><span className="text-gray-900 font-bold mt-0.5">•</span> Reduced support tickets in financial modules by up to 75%.</li>
+              <li className="flex items-start gap-2"><span className="text-gray-900 font-bold mt-0.5">•</span> Reduced errors in critical financial operations.</li>
+              <li className="flex items-start gap-2"><span className="text-gray-900 font-bold mt-0.5">•</span> Increased user operational productivity.</li>
+              <li className="flex items-start gap-2"><span className="text-gray-900 font-bold mt-0.5">•</span> Evolved the Design System accelerating delivery and reducing rework.</li>
+            </ul>
           </div>
         </div>
       ),
@@ -192,13 +210,17 @@ const AboutPage = () => {
       description: (
         <div className="space-y-4 mt-4 text-gray-600 text-[1.05rem] leading-relaxed">
           <p>
-            During this period, I was responsible for structuring the end-to-end Product Discovery and UX Research process, using methods such as CSD Matrix, interviews, desk research, and card sorting to align user pain points with business goals.
+            Worked on complex financial products and a supplementary pension platform aimed at the 60+ audience.
           </p>
           <div className="bg-gray-50 p-6 rounded-none border-l-2 border-gray-900">
-            <strong className="text-gray-900 block mb-2 uppercase tracking-wider text-xs font-bold">Key Achievements:</strong>
-            <p className="text-sm text-gray-600 leading-relaxed">
-              Designed the Closed Supplementary Pension platform aimed at a 60+ audience, prioritizing accessibility and inclusion to reduce cognitive load in complex flows, mitigating error risks and increasing user autonomy. The creation of a documented Style Guide and conduction of Design Reviews raised the engineering team's operational efficiency and product design maturity, ensuring visual consistency and scalability in dynamic growth scenarios.
-            </p>
+            <strong className="text-gray-900 block mb-3 uppercase tracking-wider text-xs font-bold">Key Results:</strong>
+            <ul className="space-y-3 text-sm text-gray-600 leading-relaxed">
+              <li className="flex items-start gap-2"><span className="text-gray-900 font-bold mt-0.5">•</span> Structured Discovery and UX Research processes.</li>
+              <li className="flex items-start gap-2"><span className="text-gray-900 font-bold mt-0.5">•</span> Translated complex business rules into accessible experiences.</li>
+              <li className="flex items-start gap-2"><span className="text-gray-900 font-bold mt-0.5">•</span> Reduced cognitive load in critical journeys.</li>
+              <li className="flex items-start gap-2"><span className="text-gray-900 font-bold mt-0.5">•</span> Increased user autonomy.</li>
+              <li className="flex items-start gap-2"><span className="text-gray-900 font-bold mt-0.5">•</span> Evolved design maturity and experience standardization.</li>
+            </ul>
           </div>
         </div>
       ),
@@ -210,13 +232,17 @@ const AboutPage = () => {
       description: (
         <div className="space-y-4 mt-4 text-gray-600 text-[1.05rem] leading-relaxed">
           <p>
-            In this highly autonomous experience, I was responsible for conducting market research and data analysis to develop customized solutions aligned with real customer needs.
+            Worked on B2C digital transformation projects, leading discovery initiatives, solution validation, and digital experience structuring aligned with business goals.
           </p>
           <div className="bg-gray-50 p-6 rounded-none border-l-2 border-gray-900">
-            <strong className="text-gray-900 block mb-2 uppercase tracking-wider text-xs font-bold">Key Achievements:</strong>
-            <p className="text-sm text-gray-600 leading-relaxed">
-              Implemented visual standardization via a Design System, which reduced communication failures and increased the delivery speed (time-to-market) of interface evolutions. Established a continuous improvement cycle based on real feedback and data analysis, ensuring the product grew with visual scalability and technical efficiency, maintaining consistency and clarity across all touchpoints.
-            </p>
+            <strong className="text-gray-900 block mb-3 uppercase tracking-wider text-xs font-bold">Contributions & Impact:</strong>
+            <ul className="space-y-3 text-sm text-gray-600 leading-relaxed">
+              <li className="flex items-start gap-2"><span className="text-gray-900 font-bold mt-0.5">•</span> Conducted user research, competitive analysis, and requirements gathering to support strategic decisions.</li>
+              <li className="flex items-start gap-2"><span className="text-gray-900 font-bold mt-0.5">•</span> Utilized Google Design Sprint to accelerate discovery, ideation, and validation processes.</li>
+              <li className="flex items-start gap-2"><span className="text-gray-900 font-bold mt-0.5">•</span> Created Design Systems and reusable patterns to increase visual consistency and scalability.</li>
+              <li className="flex items-start gap-2"><span className="text-gray-900 font-bold mt-0.5">•</span> <strong>Impact:</strong> Increased alignment between user needs and strategic business goals.</li>
+              <li className="flex items-start gap-2"><span className="text-gray-900 font-bold mt-0.5">•</span> <strong>Impact:</strong> Reduced communication failures and achieved faster digital product evolution.</li>
+            </ul>
           </div>
         </div>
       ),
@@ -225,7 +251,7 @@ const AboutPage = () => {
 
   const resumeExtraEN = {
     education: [
-      "Postgraduate Degree in UX and Digital Product Design - PUC Minas - Ongoing",
+      "Postgraduate Degree in UX and Digital Product Design - PUC Minas - 2026-2027 (Ongoing)",
       "Bachelor's Degree in Environmental Design - State University of Minas Gerais (UEMG) - 2016-2021",
       "Key Elective - Cognitive Neuroscience of Creativity - UEMG"
     ],
@@ -234,15 +260,19 @@ const AboutPage = () => {
   };
 
   const skillsEN = [
-    "UX Research", "Information Architecture", "Discovery", "Prototyping", 
-    "Usability Metrics", "Advanced Figma", "Design Systems", 
-    "UI Design", "Cross-functional Teamwork", "Generative AI in Workflow", "Front-end (HTML, CSS, React)"
+    "Product Discovery", "Design Strategy", "UX Research", "User Interviews", 
+    "Usability Testing", "Information Architecture", "Interaction Design", 
+    "Design Systems", "Prototyping", "Product Thinking", "Product Metrics", 
+    "Data-Informed Design", "Design Ops", "Stakeholder Collaboration", 
+    "Cross-functional Teamwork", "Accessibility", "Responsive Design", 
+    "Customer Journey Mapping", "Service Design"
   ];
 
   const toolsEN = [
-    "Figma", "Figma AI", "Claude", "Gemini", "GPT", "Lovable", "Cursor", "V0", 
-    "Bolt", "Google Workspace", "Miro", "FigJam", "ClickUp", "Jira", "Trello", 
-    "Maze", "Google Forms", "FlowMapp", "Uizard", "Stark", "Google Analytics"
+    // Tools
+    "Figma", "FigJam", "Miro", "Maze", "Microsoft Clarity", "Google Analytics", "Notion", "Jira", "Trello", "ClickUp",
+    // Tech & AI
+    "HTML", "CSS", "React", "Claude", "ChatGPT", "Lovable", "Bolt", "v0", "Google Stitch", "Cursor"
   ];
 
   // ==========================================================
@@ -301,32 +331,26 @@ const AboutPage = () => {
                 {language === 'pt' ? (
                   <>
                     <p>
-                      Product Designer (UX/UI) com 4 anos de experiência em produtos SaaS, ERPs e sistemas de alta complexidade. Atuação end-to-end em discovery, definição e entrega, com foco em tomada de decisão orientada a dados, arquitetura da informação e design de fluxos analíticos.
+                      Product Designer (UX/UI) com forte foco estratégico e analítico, impulsionando resultados de negócio através de interfaces eficientes.
                     </p>
                     <p>
-                      Experiência na evolução de Design Systems escaláveis, colaborando intimamente com engenharia e produto para aumentar consistência técnica, eficiência de componentes e velocidade de entrega no go-to-market.
-                    </p>
-                    <p>
-                      Histórico comprovado em traduzir regras complexas de negócio em fluxos operacionais lógicos e de baixa carga cognitiva, gerando redução direta de chamados de suporte, mitigação de retrabalho e otimização de métricas de usabilidade.
+                      Minha atuação é moldada pela conexão entre necessidades dos usuários e viabilidade técnica, liderando iniciativas de Product Discovery, estruturação de Design Systems escaláveis e pesquisa de usabilidade end-to-end. Tenho paixão por desmistificar regras de negócio complexas, transformando-as em fluxos de trabalho lógicos que reduzem a carga cognitiva e o esforço operacional.
                     </p>
                   </>
                 ) : (
                   <>
                     <p>
-                      Product Designer (UX/UI) with 4 years of experience in SaaS products, ERPs, and highly complex systems. End-to-end execution in discovery, definition, and delivery, focusing on data-driven decision making, information architecture, and analytical flow design.
+                      Product Designer (UX/UI) with a strong strategic and analytical focus, driving business results through efficient interfaces.
                     </p>
                     <p>
-                      Experience in evolving scalable Design Systems, collaborating closely with engineering and product to increase technical consistency, component efficiency, and go-to-market speed.
-                    </p>
-                    <p>
-                      Proven track record of translating complex business rules into logical, low-cognitive-load operational flows, driving down support tickets, mitigating rework, and optimizing usability metrics.
+                      My work is shaped by connecting user needs with technical viability, leading Product Discovery initiatives, structuring scalable Design Systems, and conducting end-to-end usability research. I am passionate about demystifying complex business rules, translating them into logical workflows that reduce cognitive load and operational friction.
                     </p>
                   </>
                 )}
               </div>
             </motion.section>
 
-            {/* SEÇÃO NOVA: Impacto em Produto (Gerada dinamicamente) */}
+            {/* SEÇÃO DINÂMICA: Impacto em Produto */}
             {projectImpacts && projectImpacts.length > 0 && (
               <motion.section 
                 initial={{ opacity: 0, y: 20 }}
@@ -338,7 +362,7 @@ const AboutPage = () => {
                 <div className="flex items-center mb-8">
                   <Target size={22} strokeWidth={1.5} className="text-gray-900 mr-4" />
                   <h2 className="text-xs font-bold text-gray-900 uppercase tracking-widest">
-                    {language === 'pt' ? 'Impacto em Produto' : 'Product & Experience Impact'}
+                    {language === 'pt' ? 'Impacto em Projetos' : 'Project Impact'}
                   </h2>
                 </div>
                 
@@ -353,7 +377,7 @@ const AboutPage = () => {
                           const isBullet = line.startsWith('•');
                           const text = line.replace('•', '').trim();
                           
-                          // Aplica negrito nas partes que usam asteriscos duplos
+                          // Aplica negrito nas partes que usam asteriscos duplos (do projects.ts)
                           const formattedText = text.replace(/\*\*(.*?)\*\*/g, '<strong class="text-gray-900">$1</strong>');
 
                           return isBullet ? (
@@ -414,10 +438,10 @@ const AboutPage = () => {
           {/* Sidebar Técnica (Sticky no Desktop) */}
           <div className="lg:col-span-1 space-y-12 lg:sticky lg:top-32 border-t lg:border-t-0 lg:border-l border-gray-200 pt-12 lg:pt-0 lg:pl-12">
             
-            {/* Habilidades (Foco Técnico e Sóbrio) */}
+            {/* Habilidades */}
             <section>
               <h3 className="text-xs font-bold text-gray-900 uppercase tracking-widest mb-6">
-                {language === 'pt' ? 'Habilidades' : 'Skills'}
+                {language === 'pt' ? 'Habilidades Core' : 'Core Skills'}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {activeSkills.map((skill, i) => (
@@ -428,12 +452,12 @@ const AboutPage = () => {
               </div>
             </section>
 
-            {/* Ferramentas */}
+            {/* Ferramentas e Tech */}
             <section>
               <div className="flex items-center mb-6">
                 <Wrench size={16} strokeWidth={1.5} className="text-gray-900 mr-3" />
                 <h3 className="text-xs font-bold text-gray-900 uppercase tracking-widest">
-                  {language === 'pt' ? 'Ferramentas' : 'Tools'}
+                  {language === 'pt' ? 'Ferramentas & Tecnologias' : 'Tools & Technologies'}
                 </h3>
               </div>
               <div className="flex flex-wrap gap-2">
@@ -450,7 +474,7 @@ const AboutPage = () => {
               <div className="flex items-center mb-6">
                 <GraduationCap size={18} strokeWidth={1.5} className="text-gray-900 mr-3" />
                 <h3 className="text-xs font-bold text-gray-900 uppercase tracking-widest">
-                  {language === 'pt' ? 'Formação' : 'Education'}
+                  {language === 'pt' ? 'Formação Acadêmica' : 'Education'}
                 </h3>
               </div>
               <ul className="space-y-4 text-gray-600 text-sm leading-relaxed">
