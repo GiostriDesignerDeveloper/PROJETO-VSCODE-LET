@@ -84,8 +84,8 @@ const Hero = () => {
                 </span>
                 <span className="text-lg font-medium text-gray-900">
                   {language === "pt" 
-                    ? "UI/UX, Arquitetura, Design Systems e Métricas" 
-                    : "UI/UX, Architecture, Design Systems and Metrics"}
+                    ? "UX Research, UI/UX, Arquitetura, Design Systems e Métricas" 
+                    : "UX Research, UI/UX, Architecture, Design Systems and Metrics"}
                 </span>
               </li>
               <li>
