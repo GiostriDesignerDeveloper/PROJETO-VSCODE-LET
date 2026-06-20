@@ -24,7 +24,8 @@ Nome, identidade visual e algumas informações foram adaptados para preservar a
 **VISÃO GERAL**
 • **Projeto:** Plataforma B2B de compras e cotações.
 • **Meu papel:** Product Designer (Atuação end-to-end).
-• **Escopo:** Discovery, user research, arquitetura da informação, fluxos, UX/UI e usabilidade.
+• **Escopo:** Discovery, UX research, arquitetura da informação, fluxos, UX/UI e usabilidade.
+• **Métodos de pesquisa:** Entrevistas qualitativas, Mapeamento de Jornada, Benchmarking, Testes de Usabilidade e Análise Comportamental Quantitativa (Microsoft Clarity).
 • **Objetivo:** Centralizar a jornada de compras, reduzindo retrabalho e otimizando decisões de negócio.
 
 
@@ -59,7 +60,7 @@ O redesign gerou ganhos de eficiência mensuráveis:
 • 88% menos espera operacional.
 • 62% menos cliques por tarefa.
 • 88% mais eficiência na seleção de períodos.
-• Eliminação total de modais de interrupção.
+• Eliminação de modais de interrupção.
 
 **OUTROS FLUXOS DO PRODUTO**
 
@@ -94,7 +95,8 @@ Project name, visual identity, and selected information were adapted to preserve
 **OVERVIEW**
 • **Project:** B2B purchasing and quotation platform.
 • **Role:** Product Designer (End-to-end ownership).
-• **Scope:** Discovery, user research, information architecture, user flows, UX/UI, and usability.
+• **Scope:** Discovery, UX research, information architecture, user flows, UX/UI, and usability.
+• **Methods:** Qualitative Research (Interviews), Benchmarking, Usability Testing, and Quantitative Analysis (Microsoft Clarity).
 • **Goal:** Centralize the purchasing journey, reducing rework and increasing process visibility.
 
 [IMG:1]
@@ -130,7 +132,7 @@ Our redesign significantly improved operational metrics:
 • 88% reduction in operational waiting time.
 • 62% reduction in clicks.
 • 88% efficiency gain in period selection.
-• Total elimination of interruptive modals.
+• Elimination of interruptive modals.
 
 [AI_NOTE] **AI Usage:** Generative AI was used to accelerate ideation, workflow exploration, and concept refinement. Final decisions remained driven by research insights, business constraints, and user needs.
 
@@ -177,82 +179,7 @@ Our redesign significantly improved operational metrics:
     ],
   },
 
-  {
-    id: "healthdash-analise-usabilidade",
-    title: {
-      pt: "Quando a interface falha, o paciente paga o preço: como heurísticas de Nielsen se tornam questão de segurança operacional.",
-      en: "Interface failure as clinical risk: applying behavioral heuristics to redesign a hospital nutrition system.",
-    },
-    status: "active",
-    embedUrl: "",
-    description: {
-      pt: "HealthDash: Análise de Usabilidade Hospitalar",
-      en: "HealthDash: Hospital Usability Analysis",
-    },
-    fullDescription: {
-      pt: `
-**CONTEXTO**
-Melhoria de um sistema usado para gerenciar a nutrição de pacientes. O objetivo era adaptar a tela do tablet, usada pela equipe médica, para a realidade corrida e física dos corredores do hospital.
-
-**PROBLEMA**
-As janelas sobrepostas da tela escondiam informações importantes enquanto os profissionais andavam pelo hospital. A tela travada dificultava o uso e criava um ambiente perigoso, com alto risco de a equipe receitar a dieta errada para o paciente.
-
-**SOLUÇÃO**
-• **Botões maiores:** Aumentamos o tamanho dos botões para evitar cliques acidentais quando o profissional estivesse andando.
-• **Telas limpas e diretas:** Trocamos as janelas pequenas (pop-ups) por telas inteiras, para que o teclado do tablet não escondesse o botão de salvar.
-• **Informação dividida:** Separamos os dados dos pacientes por páginas, acabando com a necessidade de rolar a tela até o final e se perder.
-
-**PROCESSO DE TRABALHO**
-O foco da pesquisa foi entender os riscos físicos do uso do aplicativo.
-Os principais aprendizados foram:
-• O teclado nativo do tablet subia e escondia o botão de salvar a dieta, atrasando o trabalho.
-• As nutricionistas seguravam o tablet com uma mão e digitavam com a outra enquanto andavam, exigindo botões muito fáceis de acertar.
-• Rolar a tela longa para baixo fazia as profissionais clicarem em botões errados sem querer.
-
-**RESULTADO**
-Diminuímos drasticamente os cliques errados e o tempo gasto para receitar dietas. A mudança garantiu a segurança dos dados dos pacientes e provou que uma tela bem pensada ajuda a evitar erros de saúde graves.
-      `,
-      en: `
-**CONTEXT**
-Improvement of a system used to manage patient nutrition. The goal was to adapt the tablet screen, used by the medical team, to the fast-paced and physical reality of hospital corridors.
-
-**PROBLEM**
-Overlapping screen windows hid important information while professionals walked through the hospital. The freezing screens made it difficult to use and created a dangerous environment, with a high risk of the team prescribing the wrong diet for the patient.
-
-**SOLUTION**
-• **Larger buttons:** We increased button sizes to prevent accidental clicks when the professional was walking.
-• **Clean and direct screens:** We replaced small windows (pop-ups) with full screens, so the tablet keyboard wouldn't hide the save button.
-• **Divided information:** We separated patient data by pages, eliminating the need to scroll to the bottom and get lost.
-
-**WORKING PROCESS**
-The research focused on understanding the physical risks of using the application.
-The main learnings were:
-• The native tablet keyboard popped up and hid the save diet button, delaying work.
-• Nutritionists held the tablet with one hand and typed with the other while walking, requiring very easy-to-hit buttons.
-• Scrolling down a long screen made professionals accidentally click the wrong buttons.
-
-**RESULT**
-We drastically reduced wrong clicks and the time spent prescribing diets. The change ensured the security of patient data and proved that a well-designed screen helps prevent serious healthcare errors.
-      `,
-    },
-    imageUrl: "/healthdash-capa.png",
-    category: "UX Research",
-    tags: [
-      "Heuristic evaluation",
-      "Ergonomics",
-      "Error prevention",
-      "Context of use",
-      "Risk-driven design",
-    ],
-    technologies: ["Figma", "UX Research", "Accessibility", "UI Design"],
-    methods: [],
-    principles: [],
-    client: "HealthDash",
-    role: "UX/UI Designer",
-    liveUrl: "#",
-  },
-
-  {
+   {
     id: "smartsettlement-gestao-financeira",
     title: {
       pt: "Design sob restrição: como entregar resultados sem mexer na estrutura do sistema, e por que isso foi a decisão certa.",
@@ -267,7 +194,11 @@ We drastically reduced wrong clicks and the time spent prescribing diets. The ch
     fullDescription: {
       pt: `
 **VISÃO GERAL**
-Melhoria rápida na interface do sistema de gestão financeira. O desafio era corrigir erros operacionais graves sem que a engenharia precisasse refazer a base de componentes da tabela (Design System).
+• **Projeto:** Gestão de Conciliação Financeira.
+• **Meu papel:** Product Designer.
+• **Escopo:** UX Research, arquitetura da interface, prevenção de erros e usabilidade.
+• **Métodos:** Análise Quantitativa (Métricas de Suporte) e Pesquisa Qualitativa (Entrevistas e Observação Contextual).
+• **Objetivo:** Mitigar pagamentos duplicados e erros operacionais sob rigorosas restrições de engenharia.
 
 **PROBLEMA**
 Os operadores financeiros sofriam com a falta de retorno visual ao processar pagamentos. Como não sabiam se o sistema estava trabalhando, eles recarregavam a página, o que causava pagamentos em duplicidade e sobrecarregava o suporte.
@@ -303,7 +234,11 @@ Comparamos os dados de chamados de suporte de antes e depois da mudança.
       `,
       en: `
 **OVERVIEW**
-Rapid improvement of the financial management system interface. The challenge was to fix critical operational errors without requiring engineering to rebuild the core component library.
+• **Project:** Financial Reconciliation Management.
+• **Role:** Product Designer.
+• **Scope:** UX Research, interface architecture, error prevention, and usability.
+• **Methods:** Quantitative Analysis (Support Tickets) and Qualitative Research (Interviews and Contextual Observation / Shadowing).
+• **Goal:** Mitigate duplicate payments and operational errors under strict engineering constraints.
 
 **PROBLEM**
 Financial operators lacked visual feedback when processing batches. Uncertain if the system was working, they would reload the page, leading to duplicate payments and an overflow of support tickets.
@@ -520,6 +455,80 @@ By treating hierarchical visualization as the foundation of compliance, the syst
         title: { pt: "Contratos: Organização de vigências e arquivos contratuais.", en: "Contracts: Organization of validities and contractual files." },
       },
     ],
+  },
+ {
+    id: "healthdash-analise-usabilidade",
+    title: {
+      pt: "Quando a interface falha, o paciente paga o preço: como heurísticas de Nielsen se tornam questão de segurança operacional.",
+      en: "Interface failure as clinical risk: applying behavioral heuristics to redesign a hospital nutrition system.",
+    },
+    status: "active",
+    embedUrl: "",
+    description: {
+      pt: "HealthDash: Análise de Usabilidade Hospitalar",
+      en: "HealthDash: Hospital Usability Analysis",
+    },
+    fullDescription: {
+      pt: `
+**CONTEXTO**
+Melhoria de um sistema usado para gerenciar a nutrição de pacientes. O objetivo era adaptar a tela do tablet, usada pela equipe médica, para a realidade corrida e física dos corredores do hospital.
+
+**PROBLEMA**
+As janelas sobrepostas da tela escondiam informações importantes enquanto os profissionais andavam pelo hospital. A tela travada dificultava o uso e criava um ambiente perigoso, com alto risco de a equipe receitar a dieta errada para o paciente.
+
+**SOLUÇÃO**
+• **Botões maiores:** Aumentamos o tamanho dos botões para evitar cliques acidentais quando o profissional estivesse andando.
+• **Telas limpas e diretas:** Trocamos as janelas pequenas (pop-ups) por telas inteiras, para que o teclado do tablet não escondesse o botão de salvar.
+• **Informação dividida:** Separamos os dados dos pacientes por páginas, acabando com a necessidade de rolar a tela até o final e se perder.
+
+**PROCESSO DE TRABALHO**
+O foco da pesquisa foi entender os riscos físicos do uso do aplicativo.
+Os principais aprendizados foram:
+• O teclado nativo do tablet subia e escondia o botão de salvar a dieta, atrasando o trabalho.
+• As nutricionistas seguravam o tablet com uma mão e digitavam com a outra enquanto andavam, exigindo botões muito fáceis de acertar.
+• Rolar a tela longa para baixo fazia as profissionais clicarem em botões errados sem querer.
+
+**RESULTADO**
+Diminuímos drasticamente os cliques errados e o tempo gasto para receitar dietas. A mudança garantiu a segurança dos dados dos pacientes e provou que uma tela bem pensada ajuda a evitar erros de saúde graves.
+      `,
+      en: `
+**CONTEXT**
+Improvement of a system used to manage patient nutrition. The goal was to adapt the tablet screen, used by the medical team, to the fast-paced and physical reality of hospital corridors.
+
+**PROBLEM**
+Overlapping screen windows hid important information while professionals walked through the hospital. The freezing screens made it difficult to use and created a dangerous environment, with a high risk of the team prescribing the wrong diet for the patient.
+
+**SOLUTION**
+• **Larger buttons:** We increased button sizes to prevent accidental clicks when the professional was walking.
+• **Clean and direct screens:** We replaced small windows (pop-ups) with full screens, so the tablet keyboard wouldn't hide the save button.
+• **Divided information:** We separated patient data by pages, eliminating the need to scroll to the bottom and get lost.
+
+**WORKING PROCESS**
+The research focused on understanding the physical risks of using the application.
+The main learnings were:
+• The native tablet keyboard popped up and hid the save diet button, delaying work.
+• Nutritionists held the tablet with one hand and typed with the other while walking, requiring very easy-to-hit buttons.
+• Scrolling down a long screen made professionals accidentally click the wrong buttons.
+
+**RESULT**
+We drastically reduced wrong clicks and the time spent prescribing diets. The change ensured the security of patient data and proved that a well-designed screen helps prevent serious healthcare errors.
+      `,
+    },
+    imageUrl: "/healthdash-capa.png",
+    category: "UX Research",
+    tags: [
+      "Heuristic evaluation",
+      "Ergonomics",
+      "Error prevention",
+      "Context of use",
+      "Risk-driven design",
+    ],
+    technologies: ["Figma", "UX Research", "Accessibility", "UI Design"],
+    methods: [],
+    principles: [],
+    client: "HealthDash",
+    role: "UX/UI Designer",
+    liveUrl: "#",
   },
 
   {

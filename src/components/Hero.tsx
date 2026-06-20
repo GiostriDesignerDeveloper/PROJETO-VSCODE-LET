@@ -75,7 +75,7 @@ const Hero = () => {
                   {language === "pt" ? "Especialidade" : "Specialty"}
                 </span>
                 <span className="text-lg font-medium text-gray-900">
-                  {language === "pt" ? "Sistemas Complexos, ERP e SaaS" : "Complex Systems, ERP and SaaS"}
+                  {language === "pt" ? "Sistemas Complexos B2C e B2B, ERP e SaaS" : "Complex Systems B2C and B2B, ERP and SaaS"}
                 </span>
               </li>
               <li>
@@ -93,7 +93,7 @@ const Hero = () => {
                   {language === "pt" ? "Localização" : "Location"}
                 </span>
                 <span className="text-lg font-medium text-gray-900">
-                  Belo Horizonte, MG — Brasil
+                  Belo Horizonte, MG - Brasil
                 </span>
               </li>
             </ul>
