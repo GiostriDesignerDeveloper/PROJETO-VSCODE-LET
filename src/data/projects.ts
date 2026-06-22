@@ -708,74 +708,121 @@ Exponential scalability and velocity. The Token foundation solidified the bridge
   {
     id: "prevmax-previdencia",
     title: {
-      pt: "Confiança como variável de design: como traduzimos um produto financeiro de alta ansiedade para um público de baixo letramento digital.",
-      en: "Trust as a design variable: making a high-anxiety financial product accessible to low digital-literacy users.",
+      pt: "Confiança como variável de design: como traduzimos um produto financeiro complexo para um público de baixo letramento digital.",
+      en: "Trust as a design variable: making a complex financial product accessible to low digital-literacy users.",
     },
     status: "active",
     embedUrl:
       "https://embed.figma.com/proto/UowipTJL4ggqVwP828F6Eb/Portf%C3%B3lio-PLATAFORMA?page-id=0%3A1&node-id=4-4108&viewport=575%2C347%2C0.06&scaling=scale-down&content-scaling=fixed&starting-point-node-id=4%3A4094&embed-host=share",
     description: {
-      pt: "Sistema de Previdência Complementar (Portal do Participante)",
-      en: "Complementary Pension System (Participant Portal)",
+      pt: "Plataforma Digital de Gestão de Previdência Privada",
+      en: "Digital Private Pension Management Platform",
     },
     fullDescription: {
       pt: `
+**VISÃO GERAL**
+• **Projeto:** Plataforma Digital de Gestão de Previdência Privada.
+• **Meu papel:** Product Designer.
+• **Escopo:** Pesquisa contextual, arquitetura da informação, UI/UX, criação de componentes e testes de validação.
+• **Métodos:** Pesquisa de Imersão em Domínio Regulatório, Entrevistas Estruturadas, Benchmarking e Mapeamento de Fluxos.
+• **Objetivo:** Reduzir a fricção na adesão e tornar dados financeiros/regulatórios acessíveis sem simplificação indevida.
+
 **CONTEXTO**
-Design do Portal do Participante de um Fundo de Previdência focado no público idoso. O sistema precisava lidar com regulamentos de altíssima complexidade atuarial lidando com as rendas e o futuro financeiro de centenas de pessoas.
+A plataforma centraliza o ciclo de vida previdenciário (adesão, gestão cadastral, rentabilidade e portabilidade) para participantes e beneficiários. O desafio central era o cenário regulatório de alta complexidade (leis de tributação, validação FATCA, Pessoa Politicamente Exposta), que precisava ser exposto de forma ética e clara para um público com níveis variados de familiaridade digital.
 
 **PROBLEMA**
-Os usuários formados na maioria por pessoas 60+ com baixo letramento digital (Low digital literacy) possuíam alta fricção cognitiva para interpretar jargões financeiros nas jornadas online. A frustração gerava o abandono digital e a superlotação nos atendimentos presenciais e de telemarketing.
+A versão anterior comprometia a operação da entidade gestora e frustrava os usuários finais:
+• Fluxos fragmentados sem indicação de progresso, causando alto abandono.
+• Terminologia regulatória abrupta e sem contexto.
+• Ausência de hierarquia visual nos painéis financeiros (dificultando a leitura de saldo e rentabilidade).
+• Muitas empresas faziam de modo muito manual, o que gerava muitos erros e sobrecarga de atendimento.
+
+**MÉTODOS DE PESQUISA E PROCESSO DE DESIGN**
+Devido ao alto rigor regulatório, a tomada de decisão dependeu de uma imersão profunda antes do design visual:
+• **Imersão no Domínio:** Leitura sistemática de legislações e documentos institucionais para diferenciar o que era "exigência legal inegociável" do que era apenas "limitação de sistema legado".
+• **Entrevistas Estruturadas:** Conversas com especialistas do domínio e stakeholders com perfil espelhado ao usuário final, mapeando atalhos operacionais e jargões que causavam ansiedade.
+• **Benchmarking:** Análise de plataformas de gestão de benefícios para referenciar a apresentação de múltiplas variáveis financeiras.
+• **Mapeamento de Fluxos:** Criação da arquitetura de informação detalhada para todas as rotas (Adesão, Cadastro, Empréstimos e Portabilidade), identificando gargalos lógicos.
 
 **SOLUÇÃO**
-• **Simuladores de Impacto Linear:** Transformação de regras complexas em fluxos de simulação amigáveis ("O que acontece se eu me aposentar agora?").
-• **Acessibilidade Institucional:** Componentes redesenhados focando nos critérios rigorosos da WCAG (contraste e tipografia legível), mantendo as exigências de identidade visual da marca.
-• **Limitação Responsiva Estratégica:** Aplicação de fricção positiva direcionando o usuário ao uso do computador ou tablet ao invés de tentar espremer minúcias e tabelas de alta densidade no celular.
+• **Arquitetura de Componentes:** Invertemos o processo estabelecendo uma biblioteca modular primeiro (estados de input, abas, cards de dados), garantindo escalabilidade para a engenharia.
+• **Adesão Progressiva:** Fluxo de entrada passo a passo com validação de dados pré-carregados, eliminando formulários intimidadantes.
+• **Gestão Regulatória Guiada:** Inclusão de textos auxiliares diretamente na interface para explicar obrigações legais (como PEP e FATCA), devolvendo a segurança ao usuário.
+• **Dashboard Financeiro Hierárquico:** Visualização focada no saldo e separação clara entre a contribuição do indivíduo e da empresa, com gráficos de rentabilidade facilmente alternáveis.
 
-**PROCESSO DE TRABALHO**
-O Research envolveu entrevistas quantitativas e a imersão completa na leitura dos pesados Manuais Legais do fundo de pensão. Conduzimos testes com a base de usuários finais para validar as lógicas financeiras.
-Os principais insights foram:
-• A complexidade do cruzamento de regras matemáticas deve ser absorvida pela máquina, não pelo cérebro do idoso.
-• Gráficos absurdamente interativos e "tecnológicos" sobre portfólio paralisavam e assustavam os usuários na etapa de testes. A conversão exigia a troca por tabelas nominais cruas e explicações literais.
-• O design financeiro exige premissas de Trust e Safety; componentes pequenos passavam a sensação visual de "golpe digital".
+**RESULTADOS**
+• Entrega de um protótipo navegável validado cobrindo todos os módulos vitais do ecossistema.
+• Aprovação com stakeholders confirmou a eficácia na compreensão de dados sensíveis e na nova disposição do cadastro bancário.
+• Adoção da nova arquitetura projeta uma redução agressiva na dependência de centrais de atendimento humano.
 
-**RESULTADO**
-O portal traduziu a burocracia pesada em autonomia para o público idoso, mitigando a ansiedade natural inerente a produtos monetários. Com maior adoção, foi projetada uma queda de 65% na dependência e volume de chamados das centrais de atendimento humano.
+**APRENDIZADOS**
+• Em sistemas altamente regulados, simplificar não significa omitir informações legais. O design atua como um facilitador de leitura e confiança.
+• A imersão técnica no domínio do negócio evita quebras de compliance na interface.
+• Construir o sistema de componentes antes das telas reduz drasticamente o débito técnico da equipe de tecnologia.
       `,
       en: `
+**OVERVIEW**
+• **Project:** Digital Private Pension Management Platform.
+• **Role:** Product Designer.
+• **Scope:** Contextual research, information architecture, UI/UX, component creation, and validation testing.
+• **Methods:** Regulatory Domain Immersion, Structured Interviews, Benchmarking, and Flow Mapping.
+• **Goal:** Reduce friction during onboarding and make financial/regulatory data accessible without undue simplification.
+
 **CONTEXT**
-Design of the Participant Portal of a Pension Fund focused on the elderly audience. The system had to handle actuarial regulations of extremely high complexity dealing with the income and financial future of hundreds of people.
+The platform centralizes the pension lifecycle (enrollment, registration management, profitability, and portability) for participants and beneficiaries. The core challenge was the highly complex regulatory landscape (tax laws, FATCA validation, Politically Exposed Person rules), which needed to be presented ethically and clearly to an audience with varying digital literacy.
 
 **PROBLEM**
-Users, consisting mostly of 60+ individuals with low digital literacy, experienced high cognitive friction when trying to interpret financial jargon in online journeys. Frustration led to digital abandonment and overcrowding in face-to-face and telemarketing services.
+The legacy version compromised the managing entity's operation and frustrated end users:
+• Fragmented flows with no progress indication, causing high drop-off rates.
+• Abrupt regulatory terminology lacking context.
+• Poor visual hierarchy in financial dashboards (making balance and profitability hard to read).
+• Many companies did it in a very manual way, which generated many errors and overloaded customer service.
+
+**RESEARCH METHODS AND DESIGN PROCESS**
+Due to strict regulatory requirements, decision-making required deep immersion before any visual design began:
+• **Domain Immersion:** Systematic reading of legislation and institutional documents to differentiate "non-negotiable legal requirements" from mere "legacy system limitations."
+• **Structured Interviews:** Conversations with domain experts and stakeholders mirroring the end-user profile to map operational shortcuts and anxiety-inducing jargon.
+• **Benchmarking:** Analysis of benefit management platforms to reference the presentation of complex financial variables.
+• **Flow Mapping:** Creation of detailed information architecture for all routes (Enrollment, Registration, Loans, Portability), identifying logical bottlenecks.
 
 **SOLUTION**
-• **Linear Impact Simulators:** Transformation of complex rules into user-friendly simulation flows ("What happens if I retire now?").
-• **Institutional Accessibility:** Redesigned components focusing on strict WCAG criteria (contrast and legible typography), maintaining the brand's visual identity requirements.
-• **Strategic Responsive Limitation:** Application of positive friction directing the user to use a computer or tablet instead of trying to squeeze minutiae and high-density tables onto a mobile phone.
+• **Component Architecture:** We inverted the process by establishing a modular library first (input states, tabs, data cards), ensuring scalability for engineering.
+• **Progressive Enrollment:** Step-by-step onboarding flow leveraging pre-loaded data validation, eliminating intimidating forms.
+• **Guided Regulatory Management:** Inclusion of helper texts directly in the interface to explain legal obligations (such as PEP and FATCA), restoring user confidence.
+• **Hierarchical Financial Dashboard:** Visualization focused on the core balance, clearly separating individual and company contributions, with easily toggleable profitability charts.
 
-**WORKING PROCESS**
-Research involved quantitative interviews and complete immersion in reading the pension fund's heavy Legal Manuals. We conducted tests with the end-user base to validate financial logic.
-The main insights were:
-• The complexity of crossing mathematical rules must be absorbed by the machine, not by the elderly brain.
-• Absurdly interactive and "technological" portfolio charts paralyzed and frightened users in the testing phase. Conversion required swapping for raw nominal tables and literal explanations.
-• Financial design requires Trust and Safety premises; small components conveyed the visual sensation of a "digital scam".
+**RESULTS**
+• Delivered a validated interactive prototype covering all vital modules of the ecosystem.
+• Stakeholder approval confirmed effectiveness in understanding sensitive data and the new bank registration layout.
+• Adoption of the new architecture projects an aggressive reduction in dependence on human call centers.
 
-**RESULT**
-The portal translated heavy bureaucracy into autonomy for the elderly audience, mitigating the natural anxiety inherent to monetary products. With higher adoption, a 65% drop in dependency and volume of calls to human call centers was projected.
+**KEY LEARNINGS**
+• In highly regulated systems, simplifying does not mean omitting legal information. Design acts as a facilitator of readability and trust.
+• Technical immersion in the business domain prevents compliance breaches in the interface.
+• Building the component system before designing screens drastically reduces the tech team's technical debt.
       `,
     },
     imageUrl: "/prevmax-capa.png",
     category: "UX Strategy",
     tags: [
-      "Trust e safety",
-      "Inclusive design",
-      "WCAG",
-      "Anxiety reduction",
-      "Low digital literacy",
+      "Pesquisa de UX",
+      "Sistemas Complexos",
+      "Design de Compliance",
+      "Redução de Carga Cognitiva",
+      "B2B SaaS",
     ],
-    technologies: ["Figma", "Miro", "Microsoft Clarity", "Prototyping"],
-    methods: [],
-    principles: [],
+    technologies: ["Figma", "Prototyping", "Component Architecture"],
+    methods: [
+      "Imersão em Domínio (Domain Immersion)",
+      "Entrevistas Estruturadas (Interviews)",
+      "Benchmarking",
+      "Mapeamento de Fluxos (Flow Mapping)"
+    ],
+    principles: [
+      "Acessibilidade da Informação",
+      "Prevenção de Erros",
+      "Transparência Regulatória"
+    ],
     client: "Confidencial",
     role: "Product Designer",
     liveUrl: "#",
