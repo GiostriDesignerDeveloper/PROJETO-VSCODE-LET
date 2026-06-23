@@ -30,12 +30,10 @@ const AboutSection = () => {
   ];
 
   return (
-    <section className="py-24 md:py-32 bg-white relative border-t border-gray-100">
+    <section className="py-24 md:py-32 bg-transparent relative border-t border-gray-100">
       <div className="container mx-auto px-4 max-w-6xl">
-        
         {/* Layout Assimétrico: Mesma estrutura da área de Projetos */}
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-20 items-start">
-          
           {/* COLUNA ESQUERDA: Texto e CTA (Sticky no Desktop) */}
           <div className="lg:w-5/12 lg:sticky lg:top-32">
             <motion.div
@@ -55,16 +53,15 @@ const AboutSection = () => {
                       ? "Product Designer (UI/UX) com 4 anos de experiência"
                       : "Product Designer (UI/UX) with 4 years of experience"}
                   </strong>
-                  {/* 👇 AQUI ESTÁ A CORREÇÃO DO ESPAÇO E DAS MÉTRICAS */}
-                  {" "}
+                  {/* 👇 AQUI ESTÁ A CORREÇÃO DO ESPAÇO E DAS MÉTRICAS */}{" "}
                   {t("about.bio.p1")
                     .replace(
                       "Product Designer (UI/UX) com 4 anos de experiência ",
-                      ""
+                      "",
                     )
                     .replace(
                       "Product Designer (UI/UX) with 4 years of experience ",
-                      ""
+                      "",
                     )
                     .replace("KPIs", "métricas")
                     .replace("KPIs", "metrics")}
@@ -83,7 +80,6 @@ const AboutSection = () => {
 
           {/* COLUNA DIREITA: Grid de Skills e Listas (Scroll) */}
           <div className="lg:w-7/12 w-full space-y-16">
-            
             {/* Grid Brutalista de Habilidades */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {skills.map((skill, index) => (
@@ -109,37 +105,45 @@ const AboutSection = () => {
               <h4 className="text-xs font-bold text-gray-900 mb-8 uppercase tracking-widest">
                 {t("about.skills.title")}
               </h4>
-              
+
               <ul className="grid grid-cols-1 gap-6 text-sm">
                 <li className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-6 border-b border-gray-100 pb-4">
                   <span className="text-gray-900 font-bold uppercase tracking-wider w-32 shrink-0 text-xs mt-1">
                     {language === "pt" ? "Estratégia" : "Strategy"}
                   </span>
-                  <span className="text-gray-600 leading-relaxed">UX Research, Discovery, Design Systems, Usability Metrics.</span>
+                  <span className="text-gray-600 leading-relaxed">
+                    UX Research, Discovery, Design Systems, Usability Metrics.
+                  </span>
                 </li>
                 <li className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-6 border-b border-gray-100 pb-4">
                   <span className="text-gray-900 font-bold uppercase tracking-wider w-32 shrink-0 text-xs mt-1">
                     {language === "pt" ? "Design" : "Design"}
                   </span>
-                  <span className="text-gray-600 leading-relaxed">Figma (Tokens/Variables), Information Architecture.</span>
+                  <span className="text-gray-600 leading-relaxed">
+                    Figma (Tokens/Variables), Information Architecture.
+                  </span>
                 </li>
                 <li className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-6 border-b border-gray-100 pb-4">
                   <span className="text-gray-900 font-bold uppercase tracking-wider w-32 shrink-0 text-xs mt-1">
                     {language === "pt" ? "Tech" : "Tech"}
                   </span>
-                  <span className="text-gray-600 leading-relaxed">React, HTML/CSS.</span>
+                  <span className="text-gray-600 leading-relaxed">
+                    React, HTML/CSS.
+                  </span>
                 </li>
                 <li className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-6">
                   <span className="text-gray-900 font-bold uppercase tracking-wider w-32 shrink-0 text-xs mt-1">
                     {language === "pt" ? "Ferramentas" : "Tools"}
                   </span>
                   <span className="text-gray-600 leading-relaxed">
-                    Figma, Figma AI, Claude, Gemini, GPT, Lovable, Cursor, V0, Bolt, Google Workspace, Miro, FigJam, ClickUp, Jira, Trello, Maze, Google Forms, FlowMapp, Uizard, Stark {language === "pt" ? "e" : "and"} Google Analytics.
+                    Figma, Figma AI, Claude, Gemini, GPT, Lovable, Cursor, V0,
+                    Bolt, Google Workspace, Miro, FigJam, ClickUp, Jira, Trello,
+                    Maze, Google Forms, FlowMapp, Uizard, Stark{" "}
+                    {language === "pt" ? "e" : "and"} Google Analytics.
                   </span>
                 </li>
               </ul>
             </div>
-
           </div>
         </div>
       </div>

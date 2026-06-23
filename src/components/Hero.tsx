@@ -5,13 +5,21 @@ import { useLanguage } from "../contexts/LanguageContext";
 const Hero = () => {
   const { language } = useLanguage();
 
+  const scrollToProjects = () => {
+    const projectsSection = document.getElementById("projetos") || document.getElementById("projects");
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.scrollBy({ top: window.innerHeight - 80, behavior: "smooth" });
+    }
+  };
+
   return (
-    <section className="min-h-[85vh] flex flex-col justify-center bg-white px-4 pt-32 pb-12 md:pt-40">
+    <section className="py-20 md:py-32 px-4 bg-white">
       <div className="container mx-auto max-w-6xl">
-        
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
           
-          {/* LADO ESQUERDO: A Proposta de Valor */}
+          {/* LADO ESQUERDO: Texto e Explorar */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -20,41 +28,35 @@ const Hero = () => {
           >
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight leading-[1.2] mb-6">
               {language === "pt" ? (
-                <>
-                  Product Designer transformando problemas complexos em <span className="text-gray-500">eficiência operacional.</span>
-                </>
+                <>Product Designer transformando problemas complexos em <span className="text-gray-500">eficiência operacional.</span></>
               ) : (
-                <>
-                  Product Designer turning complex problems into <span className="text-gray-500">operational efficiency.</span>
-                </>
+                <>Product Designer turning complex problems into <span className="text-gray-500">operational efficiency.</span></>
               )}
             </h1>
             
-            <p className="text-lg md:text-xl text-gray-500 leading-relaxed max-w-2xl">
+            <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">
               {language === "pt"
                 ? "Sou Letícia Giostri. Crio produtos digitais escaláveis através de arquiteturas densas, Design Systems e decisões pautadas em métricas de negócio."
                 : "I'm Letícia Giostri. I create scalable digital products through dense architectures, Design Systems, and decisions driven by business metrics."}
             </p>
 
-            <motion.div 
+            <motion.button 
+              onClick={scrollToProjects}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8, duration: 1 }}
-              className="mt-16 flex items-center gap-3 text-gray-400 font-medium"
+              className="mt-16 flex items-center gap-3 text-gray-400 hover:text-gray-900 font-medium cursor-pointer transition-colors duration-300 outline-none"
             >
-              <motion.div
-                animate={{ y: [0, 8, 0] }}
-                transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-              >
+              <div className="animate-bounce">
                 <ArrowDown size={20} />
-              </motion.div>
+              </div>
               <span className="text-xs uppercase tracking-widest font-bold">
                 {language === "pt" ? "Explorar Cases" : "Explore Cases"}
               </span>
-            </motion.div>
+            </motion.button>
           </motion.div>
 
-          {/* LADO DIREITO: O "Fast-Fact" para o recrutador ler em 5 segundos */}
+          {/* LADO DIREITO: Lista de Fatos Rápidos */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -98,7 +100,6 @@ const Hero = () => {
               </li>
             </ul>
           </motion.div>
-
         </div>
       </div>
     </section>

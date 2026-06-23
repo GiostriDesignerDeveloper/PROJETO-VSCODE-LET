@@ -1,4 +1,4 @@
-import { Briefcase, GraduationCap, Award, Globe2, User, Wrench, Target } from "lucide-react";
+import { Briefcase, GraduationCap, Award, Globe2, User, Wrench, Target, Download } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { motion } from "framer-motion";
 import { projectsData } from "../data/projects";
@@ -39,7 +39,7 @@ const AboutPage = () => {
   const projectImpacts = getProjectImpacts();
 
   // ==========================================================
-  // DADOS EM PORTUGUÊS (100% Atualizados com seu novo currículo)
+  // DADOS EM PORTUGUÊS
   // ==========================================================
   const experiencesPT = [
     {
@@ -150,9 +150,7 @@ const AboutPage = () => {
   ];
 
   const toolsPT = [
-    // Ferramentas
     "Figma", "FigJam", "Miro", "Maze", "Microsoft Clarity", "Google Analytics", "Notion", "Jira", "Trello", "ClickUp",
-    // Tecnologia e IA
     "HTML", "CSS", "React", "Claude", "ChatGPT", "Lovable", "Bolt", "v0", "Google Stitch", "Cursor"
   ];
 
@@ -269,9 +267,7 @@ const AboutPage = () => {
   ];
 
   const toolsEN = [
-    // Tools
     "Figma", "FigJam", "Miro", "Maze", "Microsoft Clarity", "Google Analytics", "Notion", "Jira", "Trello", "ClickUp",
-    // Tech & AI
     "HTML", "CSS", "React", "Claude", "ChatGPT", "Lovable", "Bolt", "v0", "Google Stitch", "Cursor"
   ];
 
@@ -293,15 +289,31 @@ const AboutPage = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+            className="flex flex-col md:flex-row md:items-end justify-between gap-8"
           >
-            <h1 className="text-5xl md:text-7xl font-bold text-gray-900 tracking-tight leading-[1.1] mb-6">
-              {language === 'pt' ? 'Currículo e Experiências.' : 'Resume and Experience.'}
-            </h1>
-            <p className="text-xl text-gray-500 max-w-3xl leading-relaxed">
-              {language === 'pt' 
-                ? 'Trajetória profissional estruturada em arquitetura de informação, evolução de sistemas complexos e impacto analítico.' 
-                : 'Professional trajectory structured in information architecture, evolution of complex systems, and analytical impact.'}
-            </p>
+            <div>
+              <h1 className="text-5xl md:text-7xl font-bold text-gray-900 tracking-tight leading-[1.1] mb-6">
+                {language === 'pt' ? 'Currículo.' : 'Resume.'}
+              </h1>
+              <p className="text-xl text-gray-500 max-w-3xl leading-relaxed">
+                {language === 'pt' 
+                  ? 'Trajetória profissional estruturada em arquitetura de informação, evolução de sistemas complexos e impacto analítico.' 
+                  : 'Professional trajectory structured in information architecture, evolution of complex systems, and analytical impact.'}
+              </p>
+            </div>
+
+            {/* BOTÃO DE DOWNLOAD AQUI */}
+            <a 
+              href="/curriculo-leticia-giostri.pdf" 
+              download="Curriculo_Leticia_Giostri.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gray-900 hover:bg-gray-800 text-white font-bold tracking-wide uppercase text-sm rounded-none transition-colors shrink-0"
+            >
+              <Download size={18} strokeWidth={2} />
+              {language === 'pt' ? 'Baixar PDF' : 'Download PDF'}
+            </a>
+
           </motion.div>
         </div>
       </div>
@@ -377,7 +389,7 @@ const AboutPage = () => {
                           const isBullet = line.startsWith('•');
                           const text = line.replace('•', '').trim();
                           
-                          // Aplica negrito nas partes que usam asteriscos duplos (do projects.ts)
+                          // Aplica negrito nas partes que usam asteriscos duplos
                           const formattedText = text.replace(/\*\*(.*?)\*\*/g, '<strong class="text-gray-900">$1</strong>');
 
                           return isBullet ? (

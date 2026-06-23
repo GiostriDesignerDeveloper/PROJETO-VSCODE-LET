@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Garante que o fundo das suas seções cubra o efeito interativo */
+body {
+  background-color: white;
+}
+
+main section, 
+main div {
+  background-color: white; /* Força o fundo branco em tudo que for seção */
+  position: relative;
+  z-index: 1;
+}
+
+/* Exceção: o próprio fundo não deve ter cor */
+#root > div:first-child {
+  background-color: transparent !important;
+}
