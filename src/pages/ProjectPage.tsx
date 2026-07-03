@@ -18,7 +18,7 @@ const ProjectPage = () => {
 
   if (!project) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-white text-gray-900 font-bold text-2xl tracking-tight">
+      <div className="min-h-screen flex items-center justify-center bg-transparent text-gray-900 font-bold text-2xl tracking-tight">
         Projeto não encontrado.
       </div>
     );

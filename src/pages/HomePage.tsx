@@ -6,7 +6,7 @@ import ContactSection from '../components/ContactSection';
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="bg-transparent">
       <Hero />
       <ProjectsSection />
       <AboutSection />

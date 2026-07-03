@@ -6,9 +6,6 @@ import { projectsData } from "../data/projects";
 const AboutPage = () => {
   const { language } = useLanguage();
 
-  // ==========================================================
-  // FUNÇÃO QUE BUSCA O IMPACTO DIRETAMENTE DO PROJECTS.TS
-  // ==========================================================
   const getProjectImpacts = () => {
     return projectsData.map(project => {
       const desc = typeof project.fullDescription === 'string' 
@@ -38,9 +35,6 @@ const AboutPage = () => {
 
   const projectImpacts = getProjectImpacts();
 
-  // ==========================================================
-  // DADOS EM PORTUGUÊS
-  // ==========================================================
   const experiencesPT = [
     {
       period: "Julho 2025 - Atual",
@@ -154,9 +148,6 @@ const AboutPage = () => {
     "HTML", "CSS", "React", "Claude", "ChatGPT", "Lovable", "Bolt", "v0", "Google Stitch", "Cursor"
   ];
 
-  // ==========================================================
-  // DADOS EM INGLÊS
-  // ==========================================================
   const experiencesEN = [
     {
       period: "July 2025 - Present",
@@ -271,19 +262,17 @@ const AboutPage = () => {
     "HTML", "CSS", "React", "Claude", "ChatGPT", "Lovable", "Bolt", "v0", "Google Stitch", "Cursor"
   ];
 
-  // ==========================================================
-  // Controle de Idioma
-  // ==========================================================
   const activeExperiences = language === 'pt' ? experiencesPT : experiencesEN;
   const activeExtra = language === 'pt' ? resumeExtraPT : resumeExtraEN;
   const activeSkills = language === 'pt' ? skillsPT : skillsEN;
   const activeTools = language === 'pt' ? toolsPT : toolsEN;
 
   return (
-    <div className="pt-32 pb-24 bg-white min-h-screen">
+    // Corrigido bg-transparente para bg-transparent
+    <div className="pt-32 pb-24 bg-transparent min-h-screen">
       
       {/* Header Editorial Minimalista */}
-      <div className="bg-white border-b border-gray-100 py-16 md:py-24">
+      <div className="bg-transparent border-b border-gray-100 py-16 md:py-24">
         <div className="container mx-auto px-4 max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -291,7 +280,8 @@ const AboutPage = () => {
             transition={{ duration: 0.6 }}
             className="flex flex-col md:flex-row md:items-end justify-between gap-8"
           >
-            <div>
+            {/* ESCUDO 1: Envelopando o título e subtítulo */}
+            <div className="bg-white p-4 -ml-4 rounded-xl inline-block">
               <h1 className="text-5xl md:text-7xl font-bold text-gray-900 tracking-tight leading-[1.1] mb-6">
                 {language === 'pt' ? 'Currículo.' : 'Resume.'}
               </h1>
@@ -302,17 +292,19 @@ const AboutPage = () => {
               </p>
             </div>
 
-            {/* BOTÃO DE DOWNLOAD AQUI */}
-            <a 
-              href="/curriculo-leticia-giostri.pdf" 
-              download="Curriculo_Leticia_Giostri.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gray-900 hover:bg-gray-800 text-white font-bold tracking-wide uppercase text-sm rounded-none transition-colors shrink-0"
-            >
-              <Download size={18} strokeWidth={2} />
-              {language === 'pt' ? 'Baixar PDF' : 'Download PDF'}
-            </a>
+            {/* BOTÃO DE DOWNLOAD */}
+            <div className="bg-white p-2 rounded-xl inline-block shrink-0">
+              <a 
+                href="/curriculo-leticia-giostri.pdf" 
+                download="Curriculo_Leticia_Giostri.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gray-900 hover:bg-gray-800 text-white font-bold tracking-wide uppercase text-sm rounded-none transition-colors"
+              >
+                <Download size={18} strokeWidth={2} />
+                {language === 'pt' ? 'Baixar PDF' : 'Download PDF'}
+              </a>
+            </div>
 
           </motion.div>
         </div>
@@ -333,13 +325,15 @@ const AboutPage = () => {
               transition={{ duration: 0.5 }}
               className="border-b border-gray-200 pb-12"
             >
-              <div className="flex items-center mb-8">
+              <div className="flex items-center mb-4">
                 <User size={22} strokeWidth={1.5} className="text-gray-900 mr-4" />
-                <h2 className="text-xs font-bold text-gray-900 uppercase tracking-widest">
+                <h2 className="text-xs font-bold text-gray-900 uppercase tracking-widest bg-white py-1 px-2 rounded">
                   {language === 'pt' ? 'Resumo Profissional' : 'Professional Summary'}
                 </h2>
               </div>
-              <div className="space-y-6 text-gray-500 text-[1.1rem] leading-relaxed">
+              
+              {/* ESCUDO 2: Resumo */}
+              <div className="bg-white p-6 rounded-xl space-y-6 text-gray-500 text-[1.1rem] leading-relaxed border border-transparent hover:border-gray-100 transition-colors">
                 {language === 'pt' ? (
                   <>
                     <p>
@@ -373,14 +367,14 @@ const AboutPage = () => {
               >
                 <div className="flex items-center mb-8">
                   <Target size={22} strokeWidth={1.5} className="text-gray-900 mr-4" />
-                  <h2 className="text-xs font-bold text-gray-900 uppercase tracking-widest">
+                  <h2 className="text-xs font-bold text-gray-900 uppercase tracking-widest bg-white py-1 px-2 rounded">
                     {language === 'pt' ? 'Impacto em Projetos' : 'Project Impact'}
                   </h2>
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {projectImpacts.map((impact: any, index: number) => (
-                    <div key={index} className="bg-gray-50 border border-gray-200 p-6 rounded-none">
+                    <div key={index} className="bg-white border border-gray-200 p-6 rounded-xl hover:shadow-sm transition-all">
                       <h3 className="text-xs font-bold text-gray-900 mb-4 uppercase tracking-widest border-b border-gray-200 pb-3">
                         {impact.title}
                       </h3>
@@ -388,8 +382,6 @@ const AboutPage = () => {
                         {impact.lines.map((line: string, i: number) => {
                           const isBullet = line.startsWith('•');
                           const text = line.replace('•', '').trim();
-                          
-                          // Aplica negrito nas partes que usam asteriscos duplos
                           const formattedText = text.replace(/\*\*(.*?)\*\*/g, '<strong class="text-gray-900">$1</strong>');
 
                           return isBullet ? (
@@ -418,29 +410,32 @@ const AboutPage = () => {
             >
               <div className="flex items-center mb-12">
                 <Briefcase size={22} strokeWidth={1.5} className="text-gray-900 mr-4" />
-                <h2 className="text-xs font-bold text-gray-900 uppercase tracking-widest">
+                <h2 className="text-xs font-bold text-gray-900 uppercase tracking-widest bg-white py-1 px-2 rounded">
                   {language === 'pt' ? 'Experiência Profissional' : 'Professional Experience'}
                 </h2>
               </div>
               
-              <div className="space-y-16">
+              <div className="space-y-8">
                 {activeExperiences.map((exp, index) => (
                   <div key={index} className="relative pl-8 border-l border-gray-200 group">
-                    <div className="absolute -left-[4.5px] top-1.5 w-2 h-2 bg-gray-900 border border-gray-950 transition-colors group-hover:bg-white"></div>
+                    <div className="absolute -left-[4.5px] top-6 w-2 h-2 bg-gray-900 border border-gray-950 transition-colors group-hover:bg-white z-10"></div>
                     
-                    <span className="inline-block text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">
-                      {exp.period}
-                    </span>
-                    
-                    <h3 className="text-2xl font-bold text-gray-900 mb-1 tracking-tight">
-                      {exp.title}
-                    </h3>
-                    
-                    <p className="text-sm font-bold text-gray-600 uppercase tracking-wide mb-6">
-                      {exp.company}
-                    </p>
-                    
-                    <div>{exp.description}</div>
+                    {/* ESCUDO 3: Envolvendo cada bloco de experiência profissional */}
+                    <div className="bg-white p-6 rounded-xl border border-transparent hover:border-gray-100 transition-colors ml-2">
+                      <span className="inline-block text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">
+                        {exp.period}
+                      </span>
+                      
+                      <h3 className="text-2xl font-bold text-gray-900 mb-1 tracking-tight">
+                        {exp.title}
+                      </h3>
+                      
+                      <p className="text-sm font-bold text-gray-600 uppercase tracking-wide mb-6">
+                        {exp.company}
+                      </p>
+                      
+                      <div>{exp.description}</div>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -450,8 +445,8 @@ const AboutPage = () => {
           {/* Sidebar Técnica (Sticky no Desktop) */}
           <div className="lg:col-span-1 space-y-12 lg:sticky lg:top-32 border-t lg:border-t-0 lg:border-l border-gray-200 pt-12 lg:pt-0 lg:pl-12">
             
-            {/* Habilidades */}
-            <section>
+            {/* ESCUDO 4: Habilidades */}
+            <section className="bg-white p-6 rounded-xl border border-transparent hover:border-gray-100 transition-colors">
               <h3 className="text-xs font-bold text-gray-900 uppercase tracking-widest mb-6">
                 {language === 'pt' ? 'Habilidades Core' : 'Core Skills'}
               </h3>
@@ -464,8 +459,8 @@ const AboutPage = () => {
               </div>
             </section>
 
-            {/* Ferramentas e Tech */}
-            <section>
+            {/* ESCUDO 5: Ferramentas e Tech */}
+            <section className="bg-white p-6 rounded-xl border border-transparent hover:border-gray-100 transition-colors">
               <div className="flex items-center mb-6">
                 <Wrench size={16} strokeWidth={1.5} className="text-gray-900 mr-3" />
                 <h3 className="text-xs font-bold text-gray-900 uppercase tracking-widest">
@@ -474,15 +469,15 @@ const AboutPage = () => {
               </div>
               <div className="flex flex-wrap gap-2">
                 {activeTools.map((tool, i) => (
-                  <span key={i} className="px-3 py-1.5 border border-gray-200 text-gray-600 text-xs font-semibold bg-white rounded-none">
+                  <span key={i} className="px-3 py-1.5 border border-gray-200 text-gray-600 text-xs font-semibold bg-gray-50 rounded-none">
                     {tool}
                   </span>
                 ))}
               </div>
             </section>
 
-            {/* Formação Acadêmica */}
-            <section className="border-t border-gray-100 pt-8">
+            {/* ESCUDO 6: Formação Acadêmica */}
+            <section className="bg-white p-6 rounded-xl border border-transparent hover:border-gray-100 transition-colors">
               <div className="flex items-center mb-6">
                 <GraduationCap size={18} strokeWidth={1.5} className="text-gray-900 mr-3" />
                 <h3 className="text-xs font-bold text-gray-900 uppercase tracking-widest">
@@ -499,8 +494,8 @@ const AboutPage = () => {
               </ul>
             </section>
 
-            {/* Certificações e Cursos */}
-            <section className="border-t border-gray-100 pt-8">
+            {/* ESCUDO 7: Certificações e Cursos */}
+            <section className="bg-white p-6 rounded-xl border border-transparent hover:border-gray-100 transition-colors">
               <div className="flex items-center mb-6">
                 <Award size={18} strokeWidth={1.5} className="text-gray-900 mr-3" />
                 <h3 className="text-xs font-bold text-gray-900 uppercase tracking-widest">
@@ -516,8 +511,8 @@ const AboutPage = () => {
               </ul>
             </section>
 
-            {/* Idiomas */}
-            <section className="border-t border-gray-100 pt-8">
+            {/* ESCUDO 8: Idiomas */}
+            <section className="bg-white p-6 rounded-xl border border-transparent hover:border-gray-100 transition-colors">
               <div className="flex items-center mb-6">
                 <Globe2 size={18} strokeWidth={1.5} className="text-gray-900 mr-3" />
                 <h3 className="text-xs font-bold text-gray-900 uppercase tracking-widest">
