@@ -57,9 +57,7 @@ Realizamos uma análise profunda do sistema legado, mapeando regras de negócio 
 **RESULTADOS**
 O redesign gerou ganhos de eficiência mensuráveis:
 • 60% menos tempo na jornada de compra.
-• 88% menos espera operacional.
 • 62% menos cliques por tarefa.
-• 88% mais eficiência na seleção de períodos.
 • Eliminação de modais de interrupção.
 
 **OUTROS FLUXOS DO PRODUTO**
@@ -77,7 +75,7 @@ Comparação, renegociação e acompanhamento de propostas.
 [IMG:2]
 
 **Cadastro de produtos (SKU)**
-Padronização de código, unidade e classificação fiscal (NCM/EAN) para manter a base de itens consistente
+Padronização de código, unidade e classificação fiscal (NCM/EAN) para manter a base de itens consistente.
 [IMG:3]
 
 
