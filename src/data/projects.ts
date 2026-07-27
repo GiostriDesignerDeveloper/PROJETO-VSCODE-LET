@@ -5,6 +5,7 @@ export const projectsData: Project[] = [
   // PROJETOS ATIVOS
   // ========================================================================
 {
+    {
     id: "plataforma-b2b-compras",
     title: {
       pt: "Transformando um processo de compras fragmentado em decisões mais rápidas e confiáveis",
@@ -52,6 +53,7 @@ Realizamos uma análise profunda do sistema legado, mapeando regras de negócio 
 • **Governança:** Rastreabilidade integrada ao banco de dados, eliminando processos paralelos.
 • **Suporte à Decisão:** Hierarquia visual desenhada para facilitar análises complexas.
 
+[IMG:5]
 [IMG:1]
 
 **RESULTADOS**
@@ -97,7 +99,6 @@ Project name, visual identity, and selected information were adapted to preserve
 • **Methods:** Qualitative Research (Interviews), Benchmarking, Usability Testing, and Quantitative Analysis (Microsoft Clarity).
 • **Goal:** Centralize the purchasing journey, reducing rework and increasing process visibility.
 
-[IMG:1]
 
 **CONTEXT**
 The purchasing process relied on legacy ERP modules, spreadsheets, and external communication, making it slow and difficult to audit. Inaccuracies directly impacted profitability in a low-margin industry.
@@ -122,14 +123,13 @@ We mapped workflows and business rules to identify bottlenecks.
 • **Traceability:** Integrated audit trails, eliminating the need for parallel manual processes.
 • **Decision Support:** Designed information hierarchy to facilitate high-impact financial comparisons.
 
+[IMG:5]
 [IMG:1]
 
 **RESULTS**
 Our redesign significantly improved operational metrics:
 • 60% reduction in journey completion time.
-• 88% reduction in operational waiting time.
 • 62% reduction in clicks.
-• 88% efficiency gain in period selection.
 • Elimination of interruptive modals.
 
 [AI_NOTE] **AI Usage:** Generative AI was used to accelerate ideation, workflow exploration, and concept refinement. Final decisions remained driven by research insights, business constraints, and user needs.
@@ -173,7 +173,8 @@ Our redesign significantly improved operational metrics:
       { url: "/b2b-cotacao.png", title: { pt: "Fluxo de Cotação e Comparação", en: "Quotation and Comparison Flow" } },
       { url: "/b2b-negociacao.png", title: { pt: "Interface de Negociação", en: "Negotiation Interface" } },
       { url: "/b2b-produtos-fornecedores.png", title: { pt: "Gestão de Preços e Fornecedores", en: "Price and Supplier Management" } },
-      { url: "/b2b-cadastro-fornecedor.png", title: { pt: "Cadastro de Fornecedor", en: "Supplier Registration" } }
+      { url: "/b2b-cadastro-fornecedor.png", title: { pt: "Cadastro de Fornecedor", en: "Supplier Registration" } },
+      { url: "/b2b-cotacoes-fornecedor.png", title: { pt: "Lista de Cotações - Visão Fornecedor", en: "Quotations List - Supplier View" } }
     ],
   },
 
