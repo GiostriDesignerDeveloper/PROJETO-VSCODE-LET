@@ -268,7 +268,6 @@ const AboutPage = () => {
   const activeTools = language === 'pt' ? toolsPT : toolsEN;
 
   return (
-    // Corrigido bg-transparente para bg-transparent
     <div className="pt-32 pb-24 bg-transparent min-h-screen">
       
       {/* Header Editorial Minimalista */}
@@ -292,11 +291,11 @@ const AboutPage = () => {
               </p>
             </div>
 
-            {/* BOTÃO DE DOWNLOAD */}
+            {/* BOTÃO DE DOWNLOAD CORRIGIDO AQUI */}
             <div className="bg-white p-2 rounded-xl inline-block shrink-0">
               <a 
-                href="/curriculo-leticia-giostri.pdf" 
-                download="Curriculo_Leticia_Giostri.pdf"
+                href="/Curriculo_Leticia_Gouveia_Design.pdf" 
+                download="Curriculo_Leticia_Gouveia_Design.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gray-900 hover:bg-gray-800 text-white font-bold tracking-wide uppercase text-sm rounded-none transition-colors"
