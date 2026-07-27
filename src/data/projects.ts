@@ -1,11 +1,10 @@
 import { Project } from "../types";
 
 export const projectsData: Project[] = [
-  // ========================================================================
+  // ==========================================================
   // PROJETOS ATIVOS
-  // ========================================================================
-{
-    {
+  // ==========================================================
+  {
     id: "plataforma-b2b-compras",
     title: {
       pt: "Transformando um processo de compras fragmentado em decisões mais rápidas e confiáveis",
