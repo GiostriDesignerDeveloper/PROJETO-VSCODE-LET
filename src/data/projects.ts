@@ -11,6 +11,7 @@ export const projectsData: Project[] = [
       en: "Transforming a fragmented purchasing process into faster and more reliable decisions",
     },
     status: "active",
+    // Aqui vai APENAS o link puro, pois o ProjectPage já constrói o <iframe> em volta dele
     embedUrl: "",
     description: {
       pt: "Como transformamos um processo de compras baseado em planilhas, ligações e WhatsApp em uma experiência centralizada, reduzindo esforço operacional e facilitando a tomada de decisão.",
