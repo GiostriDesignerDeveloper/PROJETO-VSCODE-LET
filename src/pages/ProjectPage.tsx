@@ -166,42 +166,51 @@ const ProjectPage = () => {
     <div className="bg-white min-h-screen pt-24">
       <div className="bg-gray-50 border-b border-gray-200 py-16 md:py-24">
         <div className="container mx-auto px-4 max-w-6xl">
-          <button
-            onClick={() => navigate(-1)}
-            className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-gray-900 transition-colors mb-12"
-          >
-            <ArrowLeft size={16} strokeWidth={2} />
-            {language === 'pt' ? 'Voltar aos Projetos' : 'Back to Projects'}
-          </button>
+          
+          {/* Adicionado "p-5" aqui: cria exatamente 20px de padding interno nas bordas! */}
+          <div className="flex flex-col gap-5 p-5">
+            {/* 1. Botão Voltar */}
+            <button
+              onClick={() => navigate(-1)}
+              className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-gray-900 transition-colors w-fit"
+            >
+              <ArrowLeft size={16} strokeWidth={2} />
+              {language === 'pt' ? 'Voltar aos Projetos' : 'Back to Projects'}
+            </button>
 
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight leading-[1.1] mb-8 max-w-4xl"
-          >
-            {getText(project.title)}
-          </motion.h1>
+            {/* 2. Título do Case */}
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight leading-[1.1] max-w-4xl"
+            >
+              {getText(project.title)}
+            </motion.h1>
 
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex flex-wrap gap-2 mb-8"
-          >
-            {project.tags.map((tag, index) => (
-              <span
-                key={index}
-                className="px-3 py-1.5 bg-gray-900 text-white text-xs font-bold uppercase tracking-wider rounded-none"
-              >
-                {tag}
-              </span>
-            ))}
-          </motion.div>
+            {/* 3. Tags Escuras */}
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="flex flex-wrap gap-2"
+            >
+              {project.tags.map((tag, index) => (
+                <span
+                  key={index}
+                  className="px-3 py-1.5 bg-gray-900 text-white text-xs font-bold uppercase tracking-wider rounded-none"
+                >
+                  {tag}
+                </span>
+              ))}
+            </motion.div>
 
-          <p className="text-lg md:text-xl text-gray-500 font-medium">
-            {getText(project.description)}
-          </p>
+            {/* 4. Descrição */}
+            <p className="text-lg md:text-xl text-gray-500 font-medium">
+              {getText(project.description)}
+            </p>
+          </div>
+
         </div>
       </div>
 

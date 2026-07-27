@@ -621,8 +621,8 @@ Critical communication gained standardization and the product obtained full trac
   {
     id: "evolucao-design-system",
     title: {
-      pt: "Design Ops como alavanca: como uma arquitetura de tokens reduziu inconsistências e acelerou o ciclo de entrega do time.",
-      en: "Design Ops as leverage: how a token architecture reduced visual debt and accelerated team delivery velocity.",
+      pt: "Design System como alavanca: como uma arquitetura de tokens reduziu inconsistências e acelerou o ciclo de entrega do time.",
+      en: "Design System as leverage: how a token architecture reduced visual debt and accelerated team delivery velocity.",
     },
     status: "active",
     embedUrl: "",
@@ -644,7 +644,7 @@ A falta de uma arquitetura matemática nos componentes gerava inconsistências e
 • **Biblioteca de Documentação:** Diretrizes de UX e anatomia comportamental acopladas a cada componente publicado.
 
 **PROCESSO DE TRABALHO**
-Atuei ativamente aplicando metodologias de Design Ops em conjunto com outra Designer e sempre em contato com a equipe de desenvolvimento para saber viabilidades e entender tipos de linguagem que serão usadas. Focamos no alinhamento entre as especificações de tela e as variáveis CSS utilizadas pelo Front-end.
+Atuei ativamente aplicando metodologias de Design System em conjunto com outra Designer e sempre em contato com a equipe de desenvolvimento para saber viabilidades e entender tipos de linguagem que serão usadas. Focamos no alinhamento entre as especificações de tela e as variáveis CSS utilizadas pelo Front-end.
 Os insights críticos que guiaram a evolução foram:
 • Tokens isolados não funcionam sem adoção cultural. Era preciso criar rituais de mentoria técnica para o time entender o uso avançado.
 • A separação semântica blindou o sistema contra quebras durante alterações globais (como temas escuros).
@@ -666,7 +666,7 @@ The lack of mathematical architecture in components generated extreme inconsiste
 • **Documentation Library:** UX guidelines and behavioral anatomy coupled with each published component.
 
 **WORKING PROCESS**
-I actively applied Design Ops methodologies together with another designer, always in contact with the development team to understand feasibility and the types of languages ​​that would be used. We focused on aligning screen specifications with the CSS variables used by the front-end.
+I actively applied Design System methodologies together with another designer, always in contact with the development team to understand feasibility and the types of languages ​​that would be used. We focused on aligning screen specifications with the CSS variables used by the front-end.
 The critical insights that guided the evolution were:
 • Isolated tokens do not work without cultural adoption. It was necessary to create technical mentoring rituals for the team to understand advanced use.
 • Semantic separation shielded the system against breaks during global changes (such as dark themes).
@@ -679,7 +679,7 @@ Exponential scalability and velocity. The Token foundation solidified the bridge
     imageUrl: "/ds-capa.png",
     category: "Design System",
     tags: [
-      "Design Ops",
+      "Design System",
       "Arquitetura de Tokens",
       "Escalabilidade de Design",
       "Alavancar equipe",
@@ -689,7 +689,7 @@ Exponential scalability and velocity. The Token foundation solidified the bridge
     methods: [],
     principles: [],
     client: "Confidencial",
-    role: "Product Designer / UI / Design Ops",
+    role: "Product Designer / UI / Design system",
     liveUrl: "#",
     gallery: [
       {
