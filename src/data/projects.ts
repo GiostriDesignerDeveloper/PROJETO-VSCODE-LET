@@ -76,8 +76,8 @@ Estruturação do onboarding e organização das informações essenciais.
 Comparação, renegociação e acompanhamento de propostas.
 [IMG:2]
 
-**Gestão de preços**
-Organização de tabelas comerciais, regiões e regras operacionais.
+**Cadastro de produtos (SKU)**
+Padronização de código, unidade e classificação fiscal (NCM/EAN) para manter a base de itens consistente
 [IMG:3]
 
 
