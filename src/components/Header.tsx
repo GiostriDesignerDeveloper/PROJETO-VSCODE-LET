@@ -8,7 +8,6 @@ const Header = () => {
   const { t, toggleLanguage, language } = useLanguage();
   const location = useLocation();
 
-  // Scroll suave para as âncoras (Hash Scrolling)
   useEffect(() => {
     if (location.hash) {
       const id = location.hash.replace("#", "");
@@ -34,11 +33,10 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 w-full bg-white z-[100] border-b border-gray-100">
       
-      {/* A MÁGICA ESTÁ AQUI: max-w-6xl para bater com o alinhamento das outras páginas */}
+      {/* Container Padronizado: px-4 e max-w-6xl */}
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="flex justify-between items-center h-24">
           
-          {/* Logo Minimalista */}
           <Link
             to="/"
             className="text-xl font-bold text-gray-900 tracking-tight hover:text-gray-600 transition-colors"
@@ -46,7 +44,6 @@ const Header = () => {
             Letícia Giostri.
           </Link>
 
-          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-10">
             {navLinks.map((link) => (
               <Link
@@ -58,7 +55,6 @@ const Header = () => {
               </Link>
             ))}
 
-            {/* Language Switch */}
             <button
               onClick={toggleLanguage}
               className="flex items-center gap-2 text-sm font-bold text-gray-400 hover:text-gray-900 transition-colors uppercase tracking-widest border-l border-gray-200 pl-10"
@@ -69,7 +65,6 @@ const Header = () => {
             </button>
           </nav>
 
-          {/* Mobile Actions */}
           <div className="flex items-center gap-6 md:hidden">
             <button
               onClick={toggleLanguage}
@@ -90,7 +85,6 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile Navigation Menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-white border-b border-gray-100 shadow-xl absolute w-full left-0 top-24">
           <div className="container mx-auto px-4 py-8 flex flex-col space-y-6 max-w-6xl">
