@@ -4,14 +4,13 @@ export const projectsData: Project[] = [
   // ==========================================================
   // PROJETOS ATIVOS
   // ==========================================================
-  {
+{
     id: "plataforma-b2b-compras",
     title: {
       pt: "Transformando um processo de compras fragmentado em decisões mais rápidas e confiáveis",
       en: "Transforming a fragmented purchasing process into faster and more reliable decisions",
     },
     status: "active",
-    // Aqui vai APENAS o link puro, pois o ProjectPage já constrói o <iframe> em volta dele
     embedUrl: "",
     description: {
       pt: "Como transformamos um processo de compras baseado em planilhas, ligações e WhatsApp em uma experiência centralizada, reduzindo esforço operacional e facilitando a tomada de decisão.",
@@ -48,10 +47,10 @@ Realizamos uma análise profunda do sistema legado, mapeando regras de negócio 
 • **Estratégia:** Centralizar a jornada para reduzir a carga cognitiva dos compradores.
 
 **SOLUÇÃO**
-• **Jornada Linear:** Fluxo unificado (Cotação → Negociação → Apuração → Ordem de Compra).
-• **Centralização:** Preços, histórico e negociações em um único contexto.
-• **Governança:** Rastreabilidade integrada ao banco de dados, eliminando processos paralelos.
-• **Suporte à Decisão:** Hierarquia visual desenhada para facilitar análises complexas.
+Chegando na solução visual, estruturamos um fluxo linear (Cotação → Negociação → Apuração → Ordem de Compra).
+• **Hierarquia de Dados Tabulares:** Como a densidade de informação é alta, projetamos a tabela principal priorizando a escaneabilidade horizontal e vertical. O uso de pesos tipográficos (Bold para valores críticos e Regular para metadados secundários) guia o olho do operador instantaneamente para discrepâncias de preços.
+• **Cards de Metadados e Contexto:** Ao interagir com uma linha, a tela transita para o painel detalhado de cotação. Os cards foram estruturados (Cliente, Localização, Queda de Valores e Notas do Comprador) utilizando espaçamentos baseados em múltiplos consistentes de grid, separando visualmente os blocos de ação primária e secundária.
+• **Gestão de Estados e Feedback:** Cada componente de input e botão possui estados bem definidos (default, hover, active, disabled e loading) para mitigar erros de interpretação do usuário durante a inserção de dados fiscais (NCM/EAN) e cotações.
 
 [IMG:5]
 [IMG:1]
@@ -118,10 +117,10 @@ We mapped workflows and business rules to identify bottlenecks.
 • **Strategy:** Centralized the purchasing journey to reduce cognitive load for buyers.
 
 **SOLUTION**
-• **Streamlined Workflow:** Unified process (Quotation → Negotiation → Evaluation → Purchase Order).
-• **Centralization:** Pricing, history, and negotiations accessible in one context.
-• **Traceability:** Integrated audit trails, eliminating the need for parallel manual processes.
-• **Decision Support:** Designed information hierarchy to facilitate high-impact financial comparisons.
+Moving to the visual solution, we structured a linear flow (Quotation → Negotiation → Evaluation → Purchase Order).
+• **Tabular Data Hierarchy:** Given the high information density, we designed the main table prioritizing horizontal and vertical scannability. The use of typographic weights (Bold for critical values and Regular for secondary metadata) instantly guides the operator's eye to price discrepancies.
+• **Metadata and Context Cards:** Upon interacting with a row, the screen transitions to the detailed quotation panel. The cards were structured (Client, Location, Value Drops, and Buyer Notes) using spacings based on consistent grid multiples, visually separating primary and secondary action blocks.
+• **State Management and Feedback:** Each input component and button has well-defined states (default, hover, active, disabled, and loading) to mitigate user interpretation errors during the input of tax data (NCM/EAN) and quotations.
 
 [IMG:5]
 [IMG:1]
@@ -177,7 +176,6 @@ Our redesign significantly improved operational metrics:
       { url: "/b2b-cotacoes-fornecedor.png", title: { pt: "Lista de Cotações - Visão Fornecedor", en: "Quotations List - Supplier View" } }
     ],
   },
-
    {
     id: "smartsettlement-gestao-financeira",
     title: {
