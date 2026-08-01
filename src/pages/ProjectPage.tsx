@@ -45,18 +45,18 @@ const ProjectPage = () => {
     return (
       <div className="space-y-6 text-gray-600 text-[1.1rem] leading-relaxed">
         {blocks.map((block, index) => {
-          // 1. Títulos
+          // 1. Títulos Principais (Corrigido para a medida exata de 1.25rem = text-xl)
           if (block.startsWith("**") && block.endsWith("**") && !block.includes(":")) {
             const titleText = block.replace(/\*\*/g, "").trim();
             currentSection = titleText;
             
             return (
-              <h4 
+              <h3 
                 key={index} 
-                className="clear-both text-xs font-bold text-gray-900 uppercase tracking-widest block mb-4 mt-12 pt-4 border-t border-gray-100"
+                className="clear-both text-xl font-bold text-gray-900 tracking-tight block mb-6 mt-16 pt-8 border-t border-gray-200"
               >
                 {titleText}
-              </h4>
+              </h3>
             );
           }
 
@@ -165,11 +165,10 @@ const ProjectPage = () => {
   return (
     <div className="bg-white min-h-screen pt-24">
       <div className="bg-gray-50 border-b border-gray-200 py-16 md:py-24">
+        {/* Container Padronizado: px-4 e max-w-6xl */}
         <div className="container mx-auto px-4 max-w-6xl">
           
-          {/* Adicionado "p-5" aqui: cria exatamente 20px de padding interno nas bordas! */}
-          <div className="flex flex-col gap-5 p-5">
-            {/* 1. Botão Voltar */}
+          <div className="flex flex-col gap-5 py-5">
             <button
               onClick={() => navigate(-1)}
               className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-gray-900 transition-colors w-fit"
@@ -178,7 +177,6 @@ const ProjectPage = () => {
               {language === 'pt' ? 'Voltar aos Projetos' : 'Back to Projects'}
             </button>
 
-            {/* 2. Título do Case */}
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -188,7 +186,6 @@ const ProjectPage = () => {
               {getText(project.title)}
             </motion.h1>
 
-            {/* 3. Tags Escuras */}
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -205,7 +202,6 @@ const ProjectPage = () => {
               ))}
             </motion.div>
 
-            {/* 4. Descrição */}
             <p className="text-lg md:text-xl text-gray-500 font-medium">
               {getText(project.description)}
             </p>
