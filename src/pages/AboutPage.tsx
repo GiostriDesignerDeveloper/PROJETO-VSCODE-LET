@@ -291,13 +291,22 @@ const AboutPage = () => {
               </p>
             </div>
 
-            {/* BOTÃO DE DOWNLOAD CORRIGIDO AQUI */}
+            {/* BOTÃO DE DOWNLOAD COM GOOGLE ANALYTICS */}
             <div className="bg-white p-2 rounded-xl inline-block shrink-0">
               <a 
                 href="/Curriculo_Leticia_Gouveia_Design.pdf" 
                 download="Curriculo_Leticia_Gouveia_Design.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => {
+                  // Dispara o evento para o Google Analytics
+                  if (typeof window !== "undefined" && (window as any).gtag) {
+                    (window as any).gtag('event', 'download_pdf', {
+                      event_category: 'engagement',
+                      event_label: 'Curriculo_PDF',
+                    });
+                  }
+                }}
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gray-900 hover:bg-gray-800 text-white font-bold tracking-wide uppercase text-sm rounded-none transition-colors"
               >
                 <Download size={18} strokeWidth={2} />
