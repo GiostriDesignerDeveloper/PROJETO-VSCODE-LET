@@ -42,3 +42,7 @@ src/
 ├── pages/            # Views de roteamento (Home, ProjectPage, AboutPage)
 ├── types/            # Definições de interfaces do TypeScript
 └── index.css         # Configurações globais do Tailwind CSS
+
+Autora
+Letícia Giostri
+Product Designer transformando problemas complexos em eficiência operacional.
