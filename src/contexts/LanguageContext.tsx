@@ -140,7 +140,16 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [language, setLanguage] = useState<Language>('pt');
 
   const toggleLanguage = () => {
-    setLanguage((prev) => (prev === 'pt' ? 'en' : 'pt'));
+    const newLanguage = language === 'pt' ? 'en' : 'pt';
+    setLanguage(newLanguage);
+
+    // Rastreamento da troca de idioma
+    if (typeof window !== "undefined" && (window as any).gtag) {
+      (window as any).gtag('event', 'toggle_language', {
+        event_category: 'behavior',
+        selected_language: newLanguage
+      });
+    }
   };
 
   const t = (key: keyof typeof translations['pt']) => {

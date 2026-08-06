@@ -30,6 +30,25 @@ const Header = () => {
     { name: language === 'en' ? 'Contact' : 'Contato', path: "/contact" },
   ];
 
+  // NOVA FUNÇÃO: Intercepta o clique e dispara o GA4 apenas no "Contato"
+  const handleNavClick = (path: string, isMobile: boolean = false) => {
+    // Fecha o menu se for mobile
+    if (isMobile) {
+      setIsMenuOpen(false);
+    }
+    
+    // Rastreamento GA4
+    if (path === "/contact") {
+      if (typeof window !== "undefined" && (window as any).gtag) {
+        (window as any).gtag('event', 'click_contact', {
+          event_category: 'navigation',
+          event_label: 'Menu_Header',
+          method: 'header_link' // Identifica que o interesse em contato começou no topo da página
+        });
+      }
+    }
+  };
+
   return (
     <header className="fixed top-0 left-0 w-full bg-white z-[100] border-b border-gray-100">
       
@@ -49,6 +68,7 @@ const Header = () => {
               <Link
                 key={link.name}
                 to={link.path}
+                onClick={() => handleNavClick(link.path)}
                 className="text-sm text-gray-500 hover:text-gray-900 font-bold tracking-widest uppercase transition-colors"
               >
                 {link.name}
@@ -93,7 +113,7 @@ const Header = () => {
                 key={link.name}
                 to={link.path}
                 className="text-2xl font-bold text-gray-900 tracking-tight border-b border-gray-100 pb-4"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => handleNavClick(link.path, true)}
               >
                 {link.name}
               </Link>

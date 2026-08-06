@@ -14,7 +14,14 @@ const ProjectPage = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [id]);
+    // Dispara o evento de visualização do case no momento que a página abre
+    if (typeof window !== "undefined" && (window as any).gtag && project) {
+      (window as any).gtag('event', 'view_case_study', {
+        event_category: 'engagement',
+        case_name: project.id
+      });
+    }
+  }, [id, project]);
 
   if (!project) {
     return (
@@ -45,7 +52,6 @@ const ProjectPage = () => {
     return (
       <div className="space-y-6 text-gray-600 text-[1.1rem] leading-relaxed">
         {blocks.map((block, index) => {
-          // 1. Títulos Principais (Corrigido para a medida exata de 1.25rem = text-xl)
           if (block.startsWith("**") && block.endsWith("**") && !block.includes(":")) {
             const titleText = block.replace(/\*\*/g, "").trim();
             currentSection = titleText;
@@ -60,7 +66,6 @@ const ProjectPage = () => {
             );
           }
 
-          // 2. IMAGEM LARGURA TOTAL [IMG:x]
           if (block.startsWith("[IMG:") && block.endsWith("]")) {
             const imgIndex = parseInt(block.replace("[IMG:", "").replace("]", ""));
             const image = project.gallery?.[imgIndex];
@@ -78,16 +83,14 @@ const ProjectPage = () => {
             );
           }
 
-          // 3. IMAGEM LATERAL [IMG_SIDE:x] (NOVO GRID ALINHADO)
           if (block.startsWith("[IMG_SIDE:") && block.endsWith("]")) {
             const imgIndex = parseInt(block.replace("[IMG_SIDE:", "").replace("]", ""));
             const image = project.gallery?.[imgIndex];
             if (!image) return null;
             
-            // Pega o texto do próximo bloco para emparelhar com a imagem no grid
             const nextBlock = blocks[index + 1];
             if (nextBlock && !nextBlock.startsWith("[")) {
-              blocks.splice(index + 1, 1); // Remove o texto do fluxo normal para não duplicar
+              blocks.splice(index + 1, 1);
             }
 
             return (
@@ -109,7 +112,6 @@ const ProjectPage = () => {
             );
           }
 
-          // 4. BLOCO DE NOTA IA [AI_NOTE]
           if (block.startsWith("[AI_NOTE]")) {
             const cleanText = block.replace("[AI_NOTE]", "").trim();
             return (
@@ -123,7 +125,6 @@ const ProjectPage = () => {
             );
           }
 
-          // 5. BULLET POINTS
           if (block.startsWith("•")) {
             const cleanBlock = block.replace("•", "").trim();
             const parts = cleanBlock.split("**");
@@ -136,7 +137,6 @@ const ProjectPage = () => {
             );
           }
 
-          // 6. CAIXAS DE DESTAQUE
           const isHighlightSection = currentSection === "PROBLEMA" || currentSection === "PROBLEM" || currentSection === "RESULTADO" || currentSection === "RESULT";
           if (isHighlightSection) {
             return (
@@ -165,7 +165,6 @@ const ProjectPage = () => {
   return (
     <div className="bg-white min-h-screen pt-24">
       <div className="bg-gray-50 border-b border-gray-200 py-16 md:py-24">
-        {/* Container Padronizado: px-4 e max-w-6xl */}
         <div className="container mx-auto px-4 max-w-6xl">
           
           <div className="flex flex-col gap-5 py-5">
@@ -231,7 +230,20 @@ const ProjectPage = () => {
                 <h3 className="text-xs font-bold text-gray-900 uppercase tracking-widest border-b border-gray-200 pb-4 mb-8">
                   {language === 'pt' ? 'Protótipo Interativo' : 'Interactive Prototype'}
                 </h3>
-                <div className="w-full h-[500px] md:h-[650px] bg-gray-50 border border-gray-200 rounded-none overflow-hidden p-2">
+                
+                {/* RASTREAMENTO DO FIGMA ADICIONADO NO onMouseEnter */}
+                <div 
+                  className="w-full h-[500px] md:h-[650px] bg-gray-50 border border-gray-200 rounded-none overflow-hidden p-2"
+                  onMouseEnter={() => {
+                    if (typeof window !== "undefined" && (window as any).gtag && !(window as any).hasTrackedFigma) {
+                      (window as any).gtag('event', 'interact_prototype', {
+                        event_category: 'engagement',
+                        case_name: project.id
+                      });
+                      (window as any).hasTrackedFigma = true; 
+                    }
+                  }}
+                >
                   <iframe
                     style={{ border: "none" }}
                     width="100%"

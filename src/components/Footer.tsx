@@ -1,13 +1,22 @@
 import { Github, Linkedin, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../contexts/LanguageContext";
-import { trackContactClick } from '../utils/analytics';
 
 const Footer = () => {
   const { t } = useLanguage();
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  // Função interna para disparar o GA4
+  const trackContactClick = (method: string) => {
+    if (typeof window !== "undefined" && (window as any).gtag) {
+      (window as any).gtag('event', 'click_contact', {
+        event_category: 'conversion',
+        method: method
+      });
+    }
   };
 
   return (
@@ -28,13 +37,13 @@ const Footer = () => {
               {t("footer.created")}
             </p>
             <div className="flex space-x-5">
-              <a href="https://github.com/GiostriDesignerDeveloper" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors" onClick={() => trackContactClick('GitHub')} aria-label="GitHub">
+              <a href="https://github.com/GiostriDesignerDeveloper" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors" onClick={() => trackContactClick('github')} aria-label="GitHub">
                 <Github size={22} />
               </a>
-              <a href="https://www.linkedin.com/in/leticiagouveiag" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors" onClick={() => trackContactClick('LinkedIn')} aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/leticiagouveiag" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors" onClick={() => trackContactClick('linkedin')} aria-label="LinkedIn">
                 <Linkedin size={22} />
               </a>
-              <a href="mailto:leticiagouveiadesign@gmail.com" className="text-gray-500 hover:text-white transition-colors" onClick={() => trackContactClick('Email')} aria-label="Email">
+              <a href="mailto:leticiagouveiadesign@gmail.com" className="text-gray-500 hover:text-white transition-colors" onClick={() => trackContactClick('email')} aria-label="Email">
                 <Mail size={22} />
               </a>
             </div>
@@ -61,7 +70,7 @@ const Footer = () => {
             <ul className="space-y-6 text-sm">
               <li>
                 <span className="block text-gray-600 font-medium mb-1">Email</span>
-                <a href="mailto:leticiagouveiadesign@gmail.com" className="text-gray-300 hover:text-white transition-colors font-medium border-b border-gray-700 hover:border-white pb-0.5" onClick={() => trackContactClick('Email_Footer')}>
+                <a href="mailto:leticiagouveiadesign@gmail.com" className="text-gray-300 hover:text-white transition-colors font-medium border-b border-gray-700 hover:border-white pb-0.5" onClick={() => trackContactClick('email_footer')}>
                   leticiagouveiadesign@gmail.com
                 </a>
               </li>

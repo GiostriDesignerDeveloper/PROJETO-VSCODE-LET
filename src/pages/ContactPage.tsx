@@ -7,7 +7,6 @@ const ContactPage = () => {
   return (
     <div className="pt-32 pb-20 min-h-screen bg-transparent">
       <div className="container mx-auto px-4">
-        {/* Cabeçalho limpo */}
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight leading-[1.1]">
             {t("contact.title") || "Entre em contato."}
@@ -17,8 +16,6 @@ const ContactPage = () => {
               "Tem um projeto em mente ou quer apenas bater um papo? Sinta-se à vontade para me contatar pelos canais abaixo."}
           </p>
         </div>
-
-        {/* O Cartão centralizado com a foto dentro */}
         <ContactCard />
       </div>
     </div>
