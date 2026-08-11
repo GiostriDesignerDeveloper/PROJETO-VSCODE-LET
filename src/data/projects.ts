@@ -23,14 +23,15 @@ Nome, identidade visual e algumas informações foram adaptados para preservar a
 
 **VISÃO GERAL**
 • **Projeto:** Plataforma B2B de compras e cotações.
-• **Meu papel:** Product Designer (Atuação end-to-end).
+• **Meu papel:** Product Designer (Discovery, arquitetura de informação, criação de fluxos, design de interface no Figma e testes de usabilidade).
+• **Colaboração:** Trabalho em dupla com outra product designer nas fases de Discovery e de criação de telas. Validação de regras de negócio (fiscais) e de viabilidade técnica construídas a quatro mãos com a Engenharia.
 • **Escopo:** Discovery, UX research, arquitetura da informação, fluxos, UX/UI e usabilidade.
 • **Métodos de pesquisa:** Entrevistas qualitativas, Mapeamento de Jornada, Benchmarking, Testes de Usabilidade e Análise Comportamental Quantitativa (Microsoft Clarity).
-• **Objetivo:** Centralizar a jornada de compras, reduzindo retrabalho e otimizando decisões de negócio.
-
+• **Objetivo:** Centralizar a jornada de compras, reduzindo retrabalho e otimizando as decisões de negócio.
+• **Handover:** Componentes e variáveis documentados no Figma para garantir a transição para o código sem atrito.
 
 **CONTEXTO**
-O processo de compras dependia de ERP, planilhas e comunicação externa, tornando a operação lenta e difícil de auditar. A falta de precisão impactava diretamente a rentabilidade do negócio.
+O processo de compras dependia de um ERP, de planilhas e de comunicação externa, o que tornava a operação lenta e difícil de auditar. A falta de precisão impactava diretamente a rentabilidade do negócio.
 
 **PROBLEMA**
 Identificamos cinco desafios críticos:
@@ -39,27 +40,41 @@ Identificamos cinco desafios críticos:
 • Negociações externas sem rastreabilidade.
 • Alto esforço manual e retrabalho constante.
 
-**Impacto:** Ciclos de cotação longos, maior margem de erro e baixa visibilidade operacional.
+**Impacto:** Ciclos de cotação longos, margem de erro maior e baixa visibilidade operacional.
 
 **DISCOVERY E ESTRATÉGIA**
-Realizamos uma análise profunda do sistema legado, mapeando regras de negócio e jornadas de usuários.
+Realizamos uma análise aprofundada do sistema legado, mapeando as regras de negócio e as jornadas dos usuários.
 • **Pesquisa:** Conduzi entrevistas e testes de usabilidade para validar as dores.
 • **Estratégia:** Centralizar a jornada para reduzir a carga cognitiva dos compradores.
 
-**SOLUÇÃO**
-Chegando na solução visual, estruturamos um fluxo linear (Cotação → Negociação → Apuração → Ordem de Compra).
-• **Hierarquia de Dados Tabulares:** Como a densidade de informação é alta, projetamos a tabela principal priorizando a escaneabilidade horizontal e vertical. O uso de pesos tipográficos (Bold para valores críticos e Regular para metadados secundários) guia o olho do operador instantaneamente para discrepâncias de preços.
-• **Cards de Metadados e Contexto:** Ao interagir com uma linha, a tela transita para o painel detalhado de cotação. Os cards foram estruturados (Cliente, Localização, Queda de Valores e Notas do Comprador) utilizando espaçamentos baseados em múltiplos consistentes de grid, separando visualmente os blocos de ação primária e secundária.
-• **Gestão de Estados e Feedback:** Cada componente de input e botão possui estados bem definidos (default, hover, active, disabled e loading) para mitigar erros de interpretação do usuário durante a inserção de dados fiscais (NCM/EAN) e cotações.
+[IMG_SIDE:6]
+**DESCONSTRUÇÃO DO LEGADO E REDUÇÃO DA CARGA COGNITIVA**
+O sistema original era um exemplo clássico de débito técnico em interfaces de alta densidade. Ao analisar o legado, mapeei três ofensores principais que transformavam a tela em uma barreira operacional:
+• **Contraste nulo e escala tipográfica:**Textos minúsculos e absoluta falta de variação de peso (font-weight). Valores monetários, códigos e descrições competiam pela mesma atenção, exigindo esforço extremo na leitura e na comparação de cotações.
+• **Quebra de Grid e Alinhamento:** A ausência de um sistema de grid rígido e o desalinhamento das colunas financeiras (que deveriam ser numéricas e alinhadas à direita) destruíam os padrões de escaneabilidade em “F” ou “Z”. O olho do usuário não tinha um caminho lógico para seguir.
+• **Sobrecarga Cognitiva:** Sem distinção clara entre áreas de navegação, ações primárias (escondidas e pequenas no rodapé) e dados críticos, tudo tinha o mesmo peso visual. O usuário simplesmente não sabia por onde começar, o que aumentou o tempo de tarefa (Time on Task) e a probabilidade de erros graves.
 
+**SOLUÇÃO**
+Chegando à solução visual, estruturamos um fluxo linear: Cotação → Negociação → Apuração → Ordem de Compra.
+• **Hierarquia de Dados Tabulares:** Como a densidade de informação é alta, projetamos a tabela principal priorizando a escaneabilidade horizontal e vertical. O uso de pesos tipográficos (Bold para valores críticos e Regular para metadados secundários) guia instantaneamente o olhar do operador para discrepâncias de preço.
+• **Cards de Metadados e Contexto:** Ao interagir com uma linha, a tela é redirecionada para o painel detalhado de cotação. Os cards foram estruturados (Cliente, Localização, Queda de Valores e Notas do Comprador) com espaçamentos baseados em múltiplos consistentes do grid, separando visualmente os blocos de ação primária e secundária.
+• **Gestão de Estados e Feedback:** Cada componente de input e botão possui estados bem definidos (default, hover, active, disabled e loading) para mitigar erros de interpretação por parte do usuário durante a inserção de dados fiscais (NCM/EAN) e de cotações.
+• **Iteração:**  hipótese inicial era um fluxo passo a passo para reduzir a carga cognitiva. Usamos a estratégia de iteração para telas organizadas por peso tipográfico.
 [IMG:5]
 [IMG:1]
 
+**DECISÕES DE UI**
+Para elevar o padrão visual e garantir a usabilidade em um sistema de alta densidade de dados, o processo de interface foi tratado com rigor técnico, focando em escalabilidade e redução da carga cognitiva:
+• **Sistema de Grids e Espaçamento:**Estruturei toda a interface com uma base-grid rígida de 8px. Essa decisão matemática garantiu ritmo vertical e horizontal constantes, permitindo que tabelas complexas respirassem (uso intencional de White Space) sem perder a densidade de informação necessária à operação.
+• **Data e Escala Tipográfica:** Em telas de cotação financeira, o design visual é uma ferramenta de governança. Apliquei uma hierarquia tipográfica estrita: uso de fontes monoespaçadas (tabular figures) para valores monetários (garantindo alinhamento perfeito das decimais) e pesos de fonte contrastantes (Bold vs Regular) para guiar o olhar do operador diretamente para as discrepâncias de preços e de *savings*.
+• **Anatomia e Estados dos Componentes:** A arquitetura visual não se limitou ao “caminho feliz”. Cada elemento interativo (inputs de NCM, botões de ação primária/secundária e data tables) foi projetado e documentado com todos os seus estados lógicos (*default*, *hover*, *active*, *disabled* e *error*), utilizando Auto Layout avançado e variáveis no Figma para garantir um handover sem atritos com a Engenharia.
+• **Acessibilidade (WCAG) e Semântica de Cores:** O sistema de feedback operacional (sucesso na ordem de compra, alertas de negociação, erros fiscais) não depende exclusivamente de cor. Integrei iconografia de apoio e testei exaustivamente os contrastes das paletas semânticas para garantir aprovação no nível AA do WCAG, mitigando erros de interpretação por daltônicos ou usuários com fadiga visual.
+
 **RESULTADOS**
-O redesign gerou ganhos de eficiência mensuráveis:
-• 60% menos tempo na jornada de compra.
-• 62% menos cliques por tarefa.
-• Eliminação de modais de interrupção.
+Métricas validadas via Microsoft Clarity (Heatmaps e Logs): Comparamos o comportamento no sistema legado com o novo fluxo. O redesign gerou ganhos de eficiência mensuráveis:
+• **Aumento de Produtividade:** 60% menos tempo na jornada de compra e 62% menos cliques por tarefa, eliminando barreiras operacionais.
+• **Redução de Erros (Impacto Direto):** A hierarquia visual clara reduziu drasticamente os tickets de suporte relacionados a erros de inserção fiscal, protegendo a rentabilidade da operação.
+
 
 **OUTROS FLUXOS DO PRODUTO**
 
@@ -76,16 +91,16 @@ Comparação, renegociação e acompanhamento de propostas.
 [IMG:2]
 
 **Cadastro de produtos (SKU)**
-Padronização de código, unidade e classificação fiscal (NCM/EAN) para manter a base de itens consistente.
+Padronização do código, da unidade e da classificação fiscal (NCM/EAN) para manter a consistência da base de itens.
 [IMG:3]
 
 
-[AI_NOTE] **Uso de IA:** Utilizei IA generativa para acelerar exploração de cenários, refinamento de fluxos e geração de alternativas durante o processo de design. As decisões finais permaneceram orientadas por pesquisa, contexto operacional e necessidades dos usuários.
+[AI_NOTE] **Uso de IA:** Utilizei IA generativa para acelerar a exploração de cenários, o refinamento de fluxos e a geração de alternativas durante o processo de design. As decisões finais permaneceram orientadas pela pesquisa, pelo contexto operacional e pelas necessidades dos usuários.
 
 **APRENDIZADOS**
-• Simplificar fluxos complexos gera mais valor que adicionar novas funcionalidades.
+• Simplificar fluxos complexos gera mais valor do que adicionar novas funcionalidades.
 • Decisões estratégicas dependem de dados organizados.
-• Design é ferramenta de governança e confiança operacional.
+• Design é uma ferramenta de governança e de confiança operacional.
       `,
       en: `
 **CONFIDENTIALITY**
@@ -93,14 +108,17 @@ Project name, visual identity, and selected information were adapted to preserve
 
 **OVERVIEW**
 • **Project:** B2B purchasing and quotation platform.
-• **Role:** Product Designer (End-to-end ownership).
+• **Role:** Product Designer (Discovery, information architecture, flow creation, UI design in Figma, and usability testing).
+• **Collaboration:** Work in a team with another product designer during Discovery and UI creation phases. Validated business rules (tax) and technical feasibility hand-in-hand with Engineering.
 • **Scope:** Discovery, UX research, information architecture, user flows, UX/UI, and usability.
 • **Methods:** Qualitative Research (Interviews), Benchmarking, Usability Testing, and Quantitative Analysis (Microsoft Clarity).
 • **Goal:** Centralize the purchasing journey, reducing rework and increasing process visibility.
+• **Handover:** Components and variables documented in Figma to ensure a frictionless transition to code.
 
 
 **CONTEXT**
 The purchasing process relied on legacy ERP modules, spreadsheets, and external communication, making it slow and difficult to audit. Inaccuracies directly impacted profitability in a low-margin industry.
+
 
 **PROBLEM**
 Key challenges identified:
@@ -116,20 +134,53 @@ We mapped workflows and business rules to identify bottlenecks.
 • **Research:** I conducted user research and usability testing to validate pain points.
 • **Strategy:** Centralized the purchasing journey to reduce cognitive load for buyers.
 
+[IMG_SIDE:6]
+**LEGACY DECONSTRUCTION AND COGNITIVE LOAD REDUCTION**
+The original system was a classic example of technical debt in high-density interfaces. Upon analyzing the legacy UI, I mapped three main offenders that turned the screen into an operational barrier:
+• **Zero Contrast and Typographic Scale:** Tiny text and an absolute lack of font-weight variation. Monetary values, codes, and descriptions competed for the same attention, requiring extreme effort to read and compare quotations.
+• **Broken Grid and Alignment:** The absence of a rigid grid system and misaligned financial columns (which should be tabular and right-aligned) destroyed standard “F” or “Z” scannability patterns. The user’s eye had no logical path to follow.
+• **Cognitive Overload:** With no clear distinction between navigation areas, primary actions (hidden and small in the footer), and critical data, everything carried the same visual weight. Users didn’t know where to look first, drastically increasing Time on Task and the likelihood of critical errors.
+
+
 **SOLUTION**
 Moving to the visual solution, we structured a linear flow (Quotation → Negotiation → Evaluation → Purchase Order).
-• **Tabular Data Hierarchy:** Given the high information density, we designed the main table prioritizing horizontal and vertical scannability. The use of typographic weights (Bold for critical values and Regular for secondary metadata) instantly guides the operator's eye to price discrepancies.
+• **Tabular Data Hierarchy:** Given the high information density, we designed the main table prioritizing horizontal and vertical scannability. The use of typographic weights (Bold for critical values and Regular for secondary metadata) instantly guides the operator’s eye to price discrepancies.
 • **Metadata and Context Cards:** Upon interacting with a row, the screen transitions to the detailed quotation panel. The cards were structured (Client, Location, Value Drops, and Buyer Notes) using spacings based on consistent grid multiples, visually separating primary and secondary action blocks.
-• **State Management and Feedback:** Each input component and button has well-defined states (default, hover, active, disabled, and loading) to mitigate user interpretation errors during the input of tax data (NCM/EAN) and quotations.
+• **State Management and Feedback:** Each input component and button has well-defined states (default, hover, active, disabled, and loading) to mitigate user interpretation errors when entering tax data (NCM/EAN) and quotations.
+• **Iteration:** The initial hypothesis was a step-by-step flow to reduce cognitive load. We used an iteration strategy, organizing screens by typographic weight.
 
 [IMG:5]
 [IMG:1]
 
-**RESULTS**
-Our redesign significantly improved operational metrics:
-• 60% reduction in journey completion time.
-• 62% reduction in clicks.
-• Elimination of interruptive modals.
+**UI DECISIONS**
+To elevate the visual standard and ensure usability in a high-data-density system, the interface process was handled with technical rigor, focusing on scalability and cognitive load reduction:
+• **Grid System and Spacing:** I structured the entire interface using a strict 8px base grid. This mathematical decision ensured a constant vertical and horizontal rhythm, allowing complex tables to breathe (intentional use of White Space) without losing the data density required for the operation.
+• **Data and Typographic Scale:** In financial quotation screens, visual design is a governance tool. I applied a strict typographic hierarchy: using monospaced fonts (tabular figures) for monetary values (ensuring perfect decimal alignment) and contrasting font weights (Bold vs. Regular) to guide the operator’s eye directly to price discrepancies and savings.
+• **Component Anatomy and States:** The visual architecture didn’t stop at the “happy path”. Every interactive element (NCM inputs, primary/secondary action buttons, and data tables) was designed and documented with all its logical states (default, hover, active, disabled, and error), using advanced Auto Layout and Figma variables to ensure frictionless handover to Engineering.
+• **Accessibility (WCAG) and Color Semantics:** The operational feedback system (purchase order success, negotiation alerts, tax errors) does not rely exclusively on color. I integrated supporting iconography and exhaustively tested semantic palette contrasts to ensure WCAG AA compliance, mitigating interpretation errors by colorblind users or those with visual fatigue.
+
+**RESULTS AND BUSINESS IMPACT**
+Metrics validated via Microsoft Clarity (Heatmaps and Logs): We compared behavior in the legacy system with the new flow. The redesign generated measurable efficiency gains:
+• **Increased Team Productivity:**  60% reduction in journey completion time and 62% fewer clicks per task, eliminating operational barriers.
+• **Reduction in Purchasing Errors (Direct Impact):** Clear visual hierarchy drastically reduced support tickets related to tax insertion errors, protecting the operation’s profitability.
+
+**OTHER PRODUCT FLOWS**
+
+**Login and Registration**
+Unified entry point with secure routing based on user profile (buyer, supplier, or administrator).
+[IMG:0]
+
+**Supplier Registration** 
+Onboarding, structuring, and organization of essential information.
+[IMG:4]
+
+**Negotiation and Tracking**
+Comparison, renegotiation, and tracking of proposals.
+[IMG:2]
+
+**Product (SKU) Registration**
+Standardization of code, unit, and tax classification (NCM/EAN) to maintain a consistent item base.
+[IMG:3]
 
 [AI_NOTE] **AI Usage:** Generative AI was used to accelerate ideation, workflow exploration, and concept refinement. Final decisions remained driven by research insights, business constraints, and user needs.
 
@@ -141,29 +192,60 @@ Our redesign significantly improved operational metrics:
     },
     imageUrl: "/b2b-cotacao.png",
     category: "UX/UI Design",
-    tags: [
-      "Sistemas complexos",
-      "Tomada de decisão",
-      "Experiência B2B",
-      "Simplificação de processos",
-      "Organização da informação",
-      "Fluxos operacionais",
-      "Rastreabilidade"
-    ],
-    technologies: ["Figma", "Miro", "IA Generativa"],
-    methods: [
-      "Discovery",
-      "User Research",
-      "Usability Testing",
-      "Arquitetura da Informação",
-      "Handoff"
-    ],
-    principles: [
-      "Redução de esforço mental",
-      "Comparação facilitada",
-      "Prevenção de erros",
-      "Clareza das informações"
-    ],
+    tags: {
+      pt: [
+        "Sistemas complexos",
+        "Tomada de decisão",
+        "Experiência B2B",
+        "Simplificação de processos",
+        "Organização da informação",
+        "Fluxos operacionais",
+        "Rastreabilidade"
+      ],
+      en: [
+        "Complex systems",
+        "Decision making",
+        "B2B Experience",
+        "Process simplification",
+        "Information organization",
+        "Operational workflows",
+        "Traceability"
+      ]
+    },
+    technologies: {
+      pt: ["Figma", "Miro", "IA Generativa"],
+      en: ["Figma", "Miro", "Generative AI"]
+    },
+    methods: {
+      pt: [
+        "Discovery",
+        "User Research",
+        "Testes de Usabilidade",
+        "Arquitetura da Informação",
+        "Handoff"
+      ],
+      en: [
+        "Discovery",
+        "User Research",
+        "Usability Testing",
+        "Information Architecture",
+        "Handoff"
+      ]
+    },
+    principles: {
+      pt: [
+        "Redução de esforço mental",
+        "Comparação facilitada",
+        "Prevenção de erros",
+        "Clareza das informações"
+      ],
+      en: [
+        "Cognitive load reduction",
+        "Easy comparison",
+        "Error prevention",
+        "Information clarity"
+      ]
+    },
     client: "Confidencial",
     role: "Product Designer",
     liveUrl: "#",
@@ -173,7 +255,8 @@ Our redesign significantly improved operational metrics:
       { url: "/b2b-negociacao.png", title: { pt: "Interface de Negociação", en: "Negotiation Interface" } },
       { url: "/b2b-produtos-fornecedores.png", title: { pt: "Gestão de Preços e Fornecedores", en: "Price and Supplier Management" } },
       { url: "/b2b-cadastro-fornecedor.png", title: { pt: "Cadastro de Fornecedor", en: "Supplier Registration" } },
-      { url: "/b2b-cotacoes-fornecedor.png", title: { pt: "Lista de Cotações - Visão Fornecedor", en: "Quotations List - Supplier View" } }
+      { url: "/b2b-cotacoes-fornecedor.png", title: { pt: "Lista de Cotações - Visão Fornecedor", en: "Quotations List - Supplier View" } },
+      { url: "/b2b-legado.png", title: { pt: "Interface Legada - Alta Carga Cognitiva", en: "Legacy Interface - High Cognitive Load" } }
     ],
   },
    {

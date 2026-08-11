@@ -41,6 +41,13 @@ const ProjectPage = () => {
     return typeof titleField === "string" ? titleField : titleField[language] || titleField.pt || "";
   };
 
+  // NOVA FUNÇÃO: Lida com listas simples (legado) e listas bilíngues
+  const getArray = (field: any) => {
+    if (!field) return [];
+    if (Array.isArray(field)) return field; // Fallback: não quebra se o projeto tiver tags antigas sem tradução
+    return field[language] || field.pt || [];
+  };
+
   const hasInlineImages = getText(project.fullDescription).includes("[IMG");
 
   const renderEditorialCase = (text: string) => {
@@ -191,7 +198,7 @@ const ProjectPage = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="flex flex-wrap gap-2"
             >
-              {project.tags.map((tag, index) => (
+              {getArray(project.tags).map((tag: string, index: number) => (
                 <span
                   key={index}
                   className="px-3 py-1.5 bg-gray-900 text-white text-xs font-bold uppercase tracking-wider rounded-none"
@@ -305,13 +312,13 @@ const ProjectPage = () => {
                 </div>
               )}
 
-              {project.technologies && project.technologies.length > 0 && (
+              {project.technologies && getArray(project.technologies).length > 0 && (
                 <div>
                   <span className="block text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4">
                     {language === 'pt' ? 'Ferramentas' : 'Tools'}
                   </span>
                   <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech, index) => (
+                    {getArray(project.technologies).map((tech: string, index: number) => (
                       <span
                         key={index}
                         className="px-3 py-1.5 border border-gray-200 text-gray-600 font-bold text-xs uppercase tracking-wider rounded-none bg-white"
@@ -323,13 +330,13 @@ const ProjectPage = () => {
                 </div>
               )}
 
-              {project.methods && project.methods.length > 0 && (
+              {project.methods && getArray(project.methods).length > 0 && (
                 <div>
                   <span className="block text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4">
                     {language === 'pt' ? 'Métodos Utilizados' : 'Methods Used'}
                   </span>
                   <div className="flex flex-wrap gap-2">
-                    {project.methods.map((method: string, index: number) => (
+                    {getArray(project.methods).map((method: string, index: number) => (
                       <span
                         key={index}
                         className="px-3 py-1.5 border border-gray-200 text-gray-600 font-bold text-xs uppercase tracking-wider rounded-none bg-white"
@@ -341,13 +348,13 @@ const ProjectPage = () => {
                 </div>
               )}
 
-              {project.principles && project.principles.length > 0 && (
+              {project.principles && getArray(project.principles).length > 0 && (
                 <div>
                   <span className="block text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4">
                     {language === 'pt' ? 'Princípios de UX' : 'Applied UX Principles'}
                   </span>
                   <div className="flex flex-wrap gap-2">
-                    {project.principles.map((principle: string, index: number) => (
+                    {getArray(project.principles).map((principle: string, index: number) => (
                       <span
                         key={index}
                         className="px-3 py-1.5 border border-gray-200 text-gray-600 font-bold text-xs uppercase tracking-wider rounded-none bg-white"

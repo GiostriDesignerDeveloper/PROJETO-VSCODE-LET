@@ -12,10 +12,10 @@ export interface Project {
   fullDescription: TranslatedText;
   imageUrl: string;
   category: string;
-  tags: string[];
-  technologies?: string[];
-  methods?: string[];
-  principles?: string[];
+tags: string[] | { pt: string[]; en: string[] };
+technologies?: string[] | { pt: string[]; en: string[] };
+methods?: string[] | { pt: string[]; en: string[] };
+principles?: string[] | { pt: string[]; en: string[] };
   client?: string;
   role?: string;
   liveUrl?: string;

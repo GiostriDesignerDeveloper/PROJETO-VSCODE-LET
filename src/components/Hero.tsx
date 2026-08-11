@@ -44,7 +44,7 @@ const Hero = () => {
               <p className="text-lg md:text-xl text-gray-500 leading-relaxed max-w-2xl">
                 {language === "pt"
                   ? "Sou Letícia Giostri. Crio produtos digitais escaláveis através de arquiteturas densas, Design Systems e decisões pautadas em métricas de negócio."
-                  : "I'm Letícia Giostri. I create scalable digital products through dense architectures, Design Systems, and decisions driven by business metrics."}
+                  : "I'm Letícia Giostri. I create scalable digital products through dense architectures, Design Systems, and business-driven decisions."}
               </p>
             </div>
 
