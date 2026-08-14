@@ -12,6 +12,13 @@ interface ProjectCardProps {
 const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
   const { language } = useLanguage();
 
+  // Função auxiliar para lidar com as listas bilíngues
+  const getArray = (field: any) => {
+    if (!field) return [];
+    if (Array.isArray(field)) return field; 
+    return field[language] || field.pt || [];
+  };
+
   const handleInteraction = () => {
     trackProjectView(project.title.pt);
     if (project.status !== "coming-soon") {
@@ -47,7 +54,7 @@ const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
       }`}
       onClick={handleInteraction}
     >
-      {/* Imagem do Projeto (Largura fixa de 300px no desktop, sem grayscale, alinhada no topo) */}
+      {/* Imagem do Projeto */}
       <div className="w-full md:w-[300px] aspect-[4/3] overflow-hidden bg-gray-50 border border-gray-100 relative shrink-0">
         {project.imageUrl ? (
           <img 
@@ -76,9 +83,9 @@ const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
           <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">
             {project.category}
           </span>
-          {/* Tags foram movidas para cima para limpar a base do card */}
           <div className="flex gap-2">
-            {project.tags.slice(0, 2).map((tag) => (
+            {/* CORREÇÃO APLICADA AQUI */}
+            {getArray(project.tags).slice(0, 2).map((tag: string) => (
               <span key={tag} className="text-[9px] text-gray-600 font-bold px-2 py-0.5 border border-gray-200 uppercase tracking-wider">
                 {tag}
               </span>
@@ -86,7 +93,7 @@ const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
           </div>
         </div>
         
-        {/* Título com a tipografia tratada pela função */}
+        {/* Título */}
         <h3 className="text-2xl md:text-3xl mb-4 tracking-tight leading-snug group-hover:text-gray-600 transition-colors">
           {formatEditorialTitle(project.title[language])}
         </h3>

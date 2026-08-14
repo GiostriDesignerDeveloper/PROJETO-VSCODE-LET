@@ -4,7 +4,7 @@ export const projectsData: Project[] = [
   // ==========================================================
   // PROJETOS ATIVOS
   // ==========================================================
-{
+  {
     id: "plataforma-b2b-compras",
     title: {
       pt: "Transformando um processo de compras fragmentado em decisões mais rápidas e confiáveis",
@@ -259,7 +259,7 @@ Standardization of code, unit, and tax classification (NCM/EAN) to maintain a co
       { url: "/b2b-legado.png", title: { pt: "Interface Legada - Alta Carga Cognitiva", en: "Legacy Interface - High Cognitive Load" } }
     ],
   },
-   {
+  {
     id: "smartsettlement-gestao-financeira",
     title: {
       pt: "Design sob restrição: como entregar resultados sem mexer na estrutura do sistema, e por que isso foi a decisão certa.",
@@ -355,24 +355,52 @@ We compared support ticket data from before and after the intervention.
     },
     imageUrl: "/smartsettlement-capa.png",
     category: "Fintech",
-    tags: [
-      "Tomada de decisão",
-      "UX para finanças",
-      "Prevenção de erros",
-      "Visibilidade de sistema",
-      "Pesquisa com usuário"
-    ],
-    technologies: ["Figma", "Arquitetura da Informação"],
-    methods: [
-      "Análise de chamados de suporte",
-      "Entrevistas com usuários",
-      "Mapeamento de fluxo de erros", "Handoff para engenharia"
-    ],
-    principles: [
-      "Prevenção de erros",
-      "Visibilidade do status",
-      "Clareza visual"
-    ],
+    tags: {
+      pt: [
+        "Tomada de decisão",
+        "UX para finanças",
+        "Prevenção de erros",
+        "Visibilidade de sistema",
+        "Pesquisa com usuário"
+      ],
+      en: [
+        "Decision making",
+        "UX for Finance",
+        "Error prevention",
+        "System visibility",
+        "User research"
+      ]
+    },
+    technologies: {
+      pt: ["Figma", "Arquitetura da Informação"],
+      en: ["Figma", "Information Architecture"]
+    },
+    methods: {
+      pt: [
+        "Análise de chamados de suporte",
+        "Entrevistas com usuários",
+        "Mapeamento de fluxo de erros", 
+        "Handoff para engenharia"
+      ],
+      en: [
+        "Support ticket analysis",
+        "User interviews",
+        "Error flow mapping", 
+        "Engineering handoff"
+      ]
+    },
+    principles: {
+      pt: [
+        "Prevenção de erros",
+        "Visibilidade do status",
+        "Clareza visual"
+      ],
+      en: [
+        "Error prevention",
+        "Status visibility",
+        "Visual clarity"
+      ]
+    },
     client: "Confidencial",
     role: "Product Designer",
     liveUrl: "#",
@@ -395,7 +423,6 @@ We compared support ticket data from before and after the intervention.
       },
     ],
   },
-
   {
     id: "compliance-kyc",
     title: {
@@ -454,22 +481,43 @@ By treating hierarchical visualization as the foundation of compliance, the syst
     },
     imageUrl: "/compliance-capa.png",
     category: "UX/UI Design e Arquitetura",
-    tags: [
-      "Fadiga de decisão",
-      "Hierarquia da informação",
-      "UX orientada a riscos",
-      "Da descoberta à arquitetura",
-      "Design de AML(Anti-Money Laundering)",
-      "Análise de dados/conformidade",
-    ],
-    technologies: [
-      "Miro",
-      "Mapeamento de Fluxos",
-      "Arquitetura de Informação",
-      "UX Research",
-    ],
-    methods: ["Benchmarking", "Discovery", "Mapeamento de Fluxos", "Arquitetura da Informação"],
-    principles: [],
+    tags: {
+      pt: [
+        "Fadiga de decisão",
+        "Hierarquia da informação",
+        "UX orientada a riscos",
+        "Da descoberta à arquitetura",
+        "Design de AML(Anti-Money Laundering)",
+        "Análise de dados/conformidade"
+      ],
+      en: [
+        "Decision fatigue",
+        "Information hierarchy",
+        "Risk-driven UX",
+        "From discovery to architecture",
+        "AML Design",
+        "Data/Compliance analysis"
+      ]
+    },
+    technologies: {
+      pt: [
+        "Miro",
+        "Mapeamento de Fluxos",
+        "Arquitetura de Informação",
+        "UX Research"
+      ],
+      en: [
+        "Miro",
+        "Flow Mapping",
+        "Information Architecture",
+        "UX Research"
+      ]
+    },
+    methods: {
+      pt: ["Benchmarking", "Discovery", "Mapeamento de Fluxos", "Arquitetura da Informação"],
+      en: ["Benchmarking", "Discovery", "Flow Mapping", "Information Architecture"]
+    },
+    principles: { pt: [], en: [] },
     client: "Confidencial",
     role: "Product Designer",
     liveUrl: "#",
@@ -536,7 +584,7 @@ By treating hierarchical visualization as the foundation of compliance, the syst
       },
     ],
   },
- {
+  {
     id: "healthdash-analise-usabilidade",
     title: {
       pt: "Quando a interface falha, o paciente paga o preço: como heurísticas de Nielsen se tornam questão de segurança operacional.",
@@ -596,21 +644,32 @@ We drastically reduced wrong clicks and the time spent prescribing diets. The ch
     },
     imageUrl: "/healthdash-capa.png",
     category: "UX Research",
-    tags: [
-      "Heuristic evaluation",
-      "Ergonomics",
-      "Error prevention",
-      "Context of use",
-      "Risk-driven design",
-    ],
-    technologies: ["Figma", "UX Research", "Accessibility", "UI Design"],
-    methods: [],
-    principles: [],
+    tags: {
+      pt: [
+        "Avaliação heurística",
+        "Ergonomia",
+        "Prevenção de erros",
+        "Contexto de uso",
+        "Design orientado a risco"
+      ],
+      en: [
+        "Heuristic evaluation",
+        "Ergonomics",
+        "Error prevention",
+        "Context of use",
+        "Risk-driven design"
+      ]
+    },
+    technologies: {
+      pt: ["Figma", "UX Research", "Acessibilidade", "UI Design"],
+      en: ["Figma", "UX Research", "Accessibility", "UI Design"]
+    },
+    methods: { pt: [], en: [] },
+    principles: { pt: [], en: [] },
     client: "HealthDash",
     role: "UX/UI Designer",
     liveUrl: "#",
   },
-
   {
     id: "redesign-navegacao-notificacoes",
     title: {
@@ -671,16 +730,28 @@ Critical communication gained standardization and the product obtained full trac
     },
     imageUrl: "/notificacoes-capa.png",
     category: "UI Design",
-    tags: [
-      "Heutísticas de Nielsen",
-      "Modelos mentais de UX",
-      "Design de notificações e compliance",
-      "Leis de UX e Fitts",
-      "Leis de Jakob",
-    ],
-    technologies: ["Figma", "Design System", "Prototyping","Variables","Tokens", "Benchmarking"],
-    methods: [],
-    principles: [],
+    tags: {
+      pt: [
+        "Heurísticas de Nielsen",
+        "Modelos mentais de UX",
+        "Design de notificações e compliance",
+        "Leis de UX e Fitts",
+        "Leis de Jakob"
+      ],
+      en: [
+        "Nielsen Heuristics",
+        "UX Mental Models",
+        "Notification and Compliance Design",
+        "UX and Fitts's Laws",
+        "Jakob's Law"
+      ]
+    },
+    technologies: {
+      pt: ["Figma", "Design System", "Prototipação", "Variáveis", "Tokens", "Benchmarking"],
+      en: ["Figma", "Design System", "Prototyping", "Variables", "Tokens", "Benchmarking"]
+    },
+    methods: { pt: [], en: [] },
+    principles: { pt: [], en: [] },
     client: "Confidencial",
     role: "Product Designer",
     liveUrl: "#",
@@ -699,7 +770,6 @@ Critical communication gained standardization and the product obtained full trac
       },
     ],
   },
-
   {
     id: "evolucao-design-system",
     title: {
@@ -760,16 +830,28 @@ Exponential scalability and velocity. The Token foundation solidified the bridge
     },
     imageUrl: "/ds-capa.png",
     category: "Design System",
-    tags: [
-      "Design System",
-      "Arquitetura de Tokens",
-      "Escalabilidade de Design",
-      "Alavancar equipe",
-      "Estratégia de documentação",
-    ],
-    technologies: ["Figma", "Tokens", "Documentation", "Mentorship"],
-    methods: [],
-    principles: [],
+    tags: {
+      pt: [
+        "Design System",
+        "Arquitetura de Tokens",
+        "Escalabilidade de Design",
+        "Alavancar equipe",
+        "Estratégia de documentação"
+      ],
+      en: [
+        "Design System",
+        "Token Architecture",
+        "Design Scalability",
+        "Team Leverage",
+        "Documentation Strategy"
+      ]
+    },
+    technologies: {
+      pt: ["Figma", "Tokens", "Documentação", "Mentoria"],
+      en: ["Figma", "Tokens", "Documentation", "Mentorship"]
+    },
+    methods: { pt: [], en: [] },
+    principles: { pt: [], en: [] },
     client: "Confidencial",
     role: "Product Designer / UI / Design system",
     liveUrl: "#",
@@ -784,7 +866,6 @@ Exponential scalability and velocity. The Token foundation solidified the bridge
       },
     ],
   },
-
   {
     id: "prevmax-previdencia",
     title: {
@@ -884,25 +965,52 @@ Due to strict regulatory requirements, decision-making required deep immersion b
     },
     imageUrl: "/prevmax-capa.png",
     category: "UX Strategy",
-    tags: [
-      "Pesquisa de UX",
-      "Sistemas Complexos",
-      "Design de Compliance",
-      "Redução de Carga Cognitiva",
-      "B2B SaaS",
-    ],
-    technologies: ["Figma", "Prototyping", "Component Architecture"],
-    methods: [
-      "Imersão em Domínio (Domain Immersion)",
-      "Entrevistas Estruturadas (Interviews)",
-      "Benchmarking",
-      "Mapeamento de Fluxos (Flow Mapping)"
-    ],
-    principles: [
-      "Acessibilidade da Informação",
-      "Prevenção de Erros",
-      "Transparência Regulatória"
-    ],
+    tags: {
+      pt: [
+        "Pesquisa de UX",
+        "Sistemas Complexos",
+        "Design de Compliance",
+        "Redução de Carga Cognitiva",
+        "B2B SaaS"
+      ],
+      en: [
+        "UX Research",
+        "Complex Systems",
+        "Compliance Design",
+        "Cognitive Load Reduction",
+        "B2B SaaS"
+      ]
+    },
+    technologies: {
+      pt: ["Figma", "Prototipação", "Arquitetura de Componentes"],
+      en: ["Figma", "Prototyping", "Component Architecture"]
+    },
+    methods: {
+      pt: [
+        "Imersão em Domínio (Domain Immersion)",
+        "Entrevistas Estruturadas (Interviews)",
+        "Benchmarking",
+        "Mapeamento de Fluxos (Flow Mapping)"
+      ],
+      en: [
+        "Domain Immersion",
+        "Structured Interviews",
+        "Benchmarking",
+        "Flow Mapping"
+      ]
+    },
+    principles: {
+      pt: [
+        "Acessibilidade da Informação",
+        "Prevenção de Erros",
+        "Transparência Regulatória"
+      ],
+      en: [
+        "Information Accessibility",
+        "Error Prevention",
+        "Regulatory Transparency"
+      ]
+    },
     client: "Confidencial",
     role: "Product Designer",
     liveUrl: "#",
@@ -937,7 +1045,6 @@ Due to strict regulatory requirements, decision-making required deep immersion b
   // ========================================================================
   // PROJETOS FUTUROS (EM BREVE)
   // ========================================================================
-
   {
     id: "gestao-buffet",
     title: {
@@ -951,10 +1058,13 @@ Due to strict regulatory requirements, decision-making required deep immersion b
     },
     imageUrl: "",
     category: "Tablet App",
-    tags: ["UX Strategy", "User Flow"],
-    technologies: [],
-    methods: [],
-    principles: [],
+    tags: {
+      pt: ["Estratégia de UX", "Fluxo de Usuário"],
+      en: ["UX Strategy", "User Flow"]
+    },
+    technologies: { pt: [], en: [] },
+    methods: { pt: [], en: [] },
+    principles: { pt: [], en: [] },
     client: "Confidencial",
     role: "Product Designer",
     liveUrl: "#",
@@ -973,10 +1083,13 @@ Due to strict regulatory requirements, decision-making required deep immersion b
     },
     imageUrl: "",
     category: "UI",
-    tags: ["Research", "UX/UI Design"],
-    technologies: [],
-    methods: [],
-    principles: [],
+    tags: {
+      pt: ["Pesquisa", "UX/UI Design"],
+      en: ["Research", "UX/UI Design"]
+    },
+    technologies: { pt: [], en: [] },
+    methods: { pt: [], en: [] },
+    principles: { pt: [], en: [] },
     client: "Confidencial",
     role: "Product Designer",
     liveUrl: "#",
@@ -995,10 +1108,13 @@ Due to strict regulatory requirements, decision-making required deep immersion b
     },
     imageUrl: "",
     category: "UX/UI Design",
-    tags: ["Dashboard", "UI Design"],
-    technologies: [],
-    methods: [],
-    principles: [],
+    tags: {
+      pt: ["Dashboard", "UI Design"],
+      en: ["Dashboard", "UI Design"]
+    },
+    technologies: { pt: [], en: [] },
+    methods: { pt: [], en: [] },
+    principles: { pt: [], en: [] },
     client: "Confidencial",
     role: "Product Designer",
     liveUrl: "#",
